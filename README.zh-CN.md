@@ -12,7 +12,7 @@ ConcordTree 使用一张 NVIDIA GPU，直接从已经对齐的 DNA 或 RNA 序�
 
 两种选项使用完全相同的建树流程，只替换负责局部判断的神经网络模型。
 
-**[查看完整测试与对比结果](docs/index.html)**
+**[查看完整测试与对比结果](https://pullmyboots.github.io/ConcordTree/)**
 
 ## 运行要求
 
@@ -139,5 +139,5 @@ concordtree validate \
   --actual runs/my-tree/tree.nwk
 ```
 
-[English](README.md) · [测试结果与方法](docs/index.html) ·
+[English](README.md) · [测试结果与方法](https://pullmyboots.github.io/ConcordTree/) ·
 [许可证](LICENSE)

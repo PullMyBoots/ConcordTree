@@ -15,7 +15,7 @@ choose either of two model architectures:
 Both choices run the same tree-building procedure; only the neural model used
 for local comparisons changes.
 
-**[See the complete benchmark and comparison results](docs/index.html)**
+**[See the complete benchmark and comparison results](https://pullmyboots.github.io/ConcordTree/)**
 
 ## Requirements
 
@@ -146,5 +146,5 @@ concordtree validate \
   --actual runs/my-tree/tree.nwk
 ```
 
-[中文说明](README.zh-CN.md) · [Results and method](docs/index.html) ·
+[中文说明](README.zh-CN.md) · [Results and method](https://pullmyboots.github.io/ConcordTree/) ·
 [License](LICENSE)
