@@ -281,6 +281,11 @@
 
           <div class="schedule-block" data-i18n-html="nniSchedule"><strong>执行顺序：</strong>每棵 AP-NJ 树先运行 View NNI，得到 T₁,…,Tₖ；合并得到 T₀ 后，依次运行 Coordinate NNI 和 Saturation NNI，输出最终树 T*。</div>
         </section>
+
+        <section class="method-part" aria-labelledby="method-complexity-title">
+          <div class="method-part-heading"><span>Part 5</span><h3 id="method-complexity-title" data-i18n="methodComplexityTitle">计算复杂度</h3></div>
+          <p data-i18n-html="complexityText">设 <em>N</em> 为物种数，<em>L</em> 为比对长度，<em>K</em> 为 View 数量，<em>S</em> 为每个 View 使用的最大位点数，<em>R</em> 为三个 NNI 阶段的总轮数。读取 MSA 需要 O(<em>NL</em>) 时间；AP-NJ 的期望时间为 O(<em>KNS</em> log <em>N</em>)，无需建立传统 NJ 的稠密 <em>N</em>×<em>N</em> 距离矩阵；NNI 精修检查 O(<em>RN</em>) 条内部边，且每条边使用固定大小的四元组上下文。因此，在 <em>K</em>、<em>S</em> 和 <em>R</em> 固定时，通常的时间增长为 O(<em>NL</em>+<em>N</em> log <em>N</em>)。分支合并对平衡树为 O(<em>KN</em> log <em>N</em>)，在完全阶梯化树上的最坏情况为 O(<em>KN</em><sup>2</sup>)。主要内存为输入 MSA 的 O(<em>NL</em>) 与 View 轮廓的 O(<em>NS</em>)；稠密距离矩阵不占用内存。</p>
+        </section>
       </article>
     </section>
   </main>
@@ -288,6 +293,6 @@
   <footer class="site-footer">
     <div class="page footer-inner"><span>ConcordTree v0.1.2</span><span data-i18n="localOnly">本地预览 · 尚未发布</span></div>
   </footer>
-  <script src="assets/site.js?v=20260921-1115"></script>
+  <script src="assets/site.js?v=20260921-1200"></script>
 </body>
 </html>

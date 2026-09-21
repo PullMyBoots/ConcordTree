@@ -115,6 +115,8 @@ const translations = {
     nniAlgorithmIO: '<strong>输入：</strong>树 <em>T</em>、阶段 <em>z</em>、评分器 <em>m</em>、停止参数 (ε<sub>z</sub>,<em>R</em><sub>z</sub>)。<strong>输出：</strong>精修后的树。',
     nniAlgorithmSteps: '<li>若 z=View，令目标集合为 T 的全部内部边；否则令目标集合为当前树中未获全部 View 一致支持的边。</li><li>按照阶段 z 的规则构造代表物种上下文，并计算每条目标边三种局部拓扑的势函数。</li><li>从正收益候选中按收益排序，选择一组互不冲突的 NNI。</li><li>同时应用选中的 NNI，得到下一轮树并计算交换比例 ρ<sub>r</sub>。</li><li>若没有交换、ρ<sub>r</sub>≤ε<sub>z</sub> 或达到 <em>R</em><sub>z</sub>，则返回当前树；否则重新构造上下文并继续下一轮。</li>',
     nniSchedule: '<strong>执行顺序：</strong>每棵 AP-NJ 树先运行 View NNI，得到 T₁,…,T<sub>K</sub>；合并得到 T₀ 后，依次运行 Coordinate NNI 和 Saturation NNI，输出最终树 T*。',
+    methodComplexityTitle: "计算复杂度",
+    complexityText: '设 <em>N</em> 为物种数，<em>L</em> 为比对长度，<em>K</em> 为 View 数量，<em>S</em> 为每个 View 使用的最大位点数，<em>R</em> 为三个 NNI 阶段的总轮数。读取 MSA 需要 O(<em>NL</em>) 时间；AP-NJ 的期望时间为 O(<em>KNS</em> log <em>N</em>)，无需建立传统 NJ 的稠密 <em>N</em>×<em>N</em> 距离矩阵；NNI 精修检查 O(<em>RN</em>) 条内部边，且每条边使用固定大小的四元组上下文。因此，在 <em>K</em>、<em>S</em> 和 <em>R</em> 固定时，通常的时间增长为 O(<em>NL</em>+<em>N</em> log <em>N</em>)。分支合并对平衡树为 O(<em>KN</em> log <em>N</em>)，在完全阶梯化树上的最坏情况为 O(<em>KN</em><sup>2</sup>)。主要内存为输入 MSA 的 O(<em>NL</em>) 与 View 轮廓的 O(<em>NS</em>)；稠密距离矩阵不占用内存。',
     localOnly: "本地预览 · 尚未发布"
   },
   en: {
@@ -233,6 +235,8 @@ const translations = {
     nniAlgorithmIO: '<strong>Input:</strong> tree <em>T</em>, stage <em>z</em>, scorer <em>m</em>, and stopping controls (ε<sub>z</sub>,<em>R</em><sub>z</sub>). <strong>Output:</strong> the refined tree.',
     nniAlgorithmSteps: '<li>If z=View, target every internal edge of T; otherwise target the current edges without unanimous View support.</li><li>Construct representative-taxon context according to stage z and evaluate the three local-topology potentials for each target edge.</li><li>Order positive-gain candidates by gain and select a conflict-free NNI set.</li><li>Apply the selected NNIs simultaneously, obtain the next-round tree, and compute ρ<sub>r</sub>.</li><li>If there is no move, ρ<sub>r</sub>≤ε<sub>z</sub>, or <em>R</em><sub>z</sub> is reached, return the current tree; otherwise rebuild context and continue.</li>',
     nniSchedule: '<strong>Schedule:</strong> each AP-NJ tree first undergoes View NNI, producing T₁,…,T<sub>K</sub>. Their merge gives T₀, which then passes through Coordinate NNI and Saturation NNI to produce the final tree T*.',
+    methodComplexityTitle: "Computational complexity",
+    complexityText: 'Let <em>N</em> be the number of taxa, <em>L</em> the alignment length, <em>K</em> the number of Views, <em>S</em> the maximum sites used by each View, and <em>R</em> the total number of rounds across the three NNI stages. Reading the MSA takes O(<em>NL</em>) time. AP-NJ takes O(<em>KNS</em> log <em>N</em>) expected time and does not construct the dense <em>N</em>×<em>N</em> distance matrix used by conventional NJ. NNI refinement examines O(<em>RN</em>) internal edges, with a fixed-size quartet context at each edge. Thus, when <em>K</em>, <em>S</em>, and <em>R</em> are fixed, typical runtime scales as O(<em>NL</em>+<em>N</em> log <em>N</em>). Split merging takes O(<em>KN</em> log <em>N</em>) on balanced trees and O(<em>KN</em><sup>2</sup>) in the worst-case caterpillar topology. The main memory terms are O(<em>NL</em>) for the loaded MSA and O(<em>NS</em>) for View profiles; no dense distance matrix is stored.',
     localOnly: "Local preview · not published"
   }
 };
