@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=77", "wheel>=0.45"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "concordtree"
+version = "0.1.2"
+description = "GPU-accelerated multiview neural phylogeny inference"
+readme = "README.md"
+requires-python = "==3.10.*"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{name = "Scalable Neural Phylogeny project contributors"}]
+keywords = ["phylogenetics", "MSA", "quartets", "neural networks", "CUDA"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Environment :: Console",
+  "Operating System :: POSIX :: Linux",
+  "Programming Language :: Python :: 3.10",
+  "Topic :: Scientific/Engineering :: Bio-Informatics",
+]
+dependencies = [
+  "numpy>=2.1,<3",
+  "torch==2.5.1",
+  "triton==3.1.0",
+  "tqdm==4.67.1",
+  "ete3==3.1.3",
+]
+
+[project.scripts]
+concordtree = "concordtree.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["concordtree*"]
+
+[tool.setuptools.package-data]
+concordtree = [
+  "assets/models/*.pt",
+  "assets/models/*.pth",
+  "assets/models/homogeneous/*.pt",
+  "assets/models/homogeneous/*.pth",
+  "assets/backends/*.so",
+]

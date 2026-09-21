@@ -1,0 +1,53 @@
+figure.facecolor: white
+axes.facecolor: white
+savefig.facecolor: white
+savefig.edgecolor: white
+savefig.bbox: tight
+savefig.pad_inches: 0.04
+savefig.dpi: 300
+
+axes.edgecolor: 0.42
+axes.labelcolor: 0.14
+axes.linewidth: 0.8
+axes.grid: True
+axes.axisbelow: True
+axes.spines.top: False
+axes.spines.right: False
+axes.titlelocation: left
+axes.titlesize: 10.5
+axes.labelsize: 9.5
+axes.xmargin: 0.02
+axes.ymargin: 0.04
+
+grid.color: 0.88
+grid.linewidth: 0.55
+grid.linestyle: -
+grid.alpha: 0.7
+
+font.size: 9
+font.family: serif
+font.serif: DejaVu Serif, STIX Two Text, Times New Roman
+
+xtick.color: 0.28
+ytick.color: 0.28
+xtick.labelsize: 8
+ytick.labelsize: 8
+xtick.major.size: 3
+ytick.major.size: 3
+xtick.major.width: 0.7
+ytick.major.width: 0.7
+
+legend.frameon: False
+legend.fontsize: 8
+legend.title_fontsize: 8
+legend.borderaxespad: 0.3
+legend.handlelength: 1.8
+
+lines.linewidth: 1.7
+lines.markersize: 4.0
+patch.linewidth: 0.0
+errorbar.capsize: 2.2
+
+pdf.fonttype: 42
+ps.fonttype: 42
+svg.fonttype: none

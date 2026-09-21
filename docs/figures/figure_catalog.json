@@ -1,0 +1,60 @@
+{
+  "surface_class": "paper_main",
+  "figures": [
+    {
+      "id": "species-tree-accuracy",
+      "source_data": [
+        "artifacts/experiment/v012-unified-transformer-all-test-20260919/records.json",
+        "artifacts/experiment/v012-test-convergence-dipper-gpu0-20260920/continuations",
+        "artifacts/baseline/small-test-fasttree-caster-v1-20260907/records.json",
+        "artifacts/baseline/dipper-gpu-small-test-forcebinary-v0.1.5-20260907/records",
+        "artifacts/baseline/large-test-vft-rapidnj-fastme-n512-n1024-20260910/records.json",
+        "artifacts/experiment/v174-vs-dipper-large-le1k-20260910/comparison/records.json"
+      ],
+      "script": "docs/figures/scripts/generate_benchmark_figures.py",
+      "exports": ["docs/assets/species-tree-accuracy.svg", "docs/assets/species-tree-accuracy.pdf", "docs/assets/species-tree-accuracy.png"],
+      "claim": "Mean species-tree nRF on the complete Small panel and the paired 512/1024 Large subset.",
+      "review_revision": "Recomputed complete-panel lightweight means by replacing 128 initial outputs with their retained continuation results; preserved compact two-panel bars and bootstrap confidence intervals."
+    },
+    {
+      "id": "gene-tree-accuracy",
+      "source_data": [
+        "artifacts/experiment/v012-unified-transformer-all-test-20260919/records.json",
+        "artifacts/experiment/v012-test-convergence-dipper-gpu0-20260920/continuations",
+        "artifacts/experiment/cpu-baselines-alisim-homogeneous-v3-20260918/records.json",
+        "artifacts/baseline/dipper-gpu-alisim-homogeneous-v3-full200-20260918/records.json"
+      ],
+      "script": "docs/figures/scripts/generate_benchmark_figures.py",
+      "exports": ["docs/assets/gene-tree-accuracy.svg", "docs/assets/gene-tree-accuracy.pdf", "docs/assets/gene-tree-accuracy.png"],
+      "claim": "Mean gene-tree nRF on 200 AliSim single-history alignments.",
+      "review_revision": "Recomputed the complete 200-record lightweight mean with the continuation overlay; retained uncertainty and the restrained method hierarchy."
+    },
+    {
+      "id": "runtime-scaling",
+      "source_data": [
+        "artifacts/experiment/v012-unified-transformer-all-test-20260919/records.json",
+        "artifacts/experiment/v012-test-convergence-dipper-gpu0-20260920/continuations",
+        "artifacts/experiment/cpu-baselines-alisim-homogeneous-v3-20260918/records.json",
+        "artifacts/benchmark/dipper-gpu-site-correction-v1-20260919/timing/records.json"
+      ],
+      "script": "docs/figures/scripts/generate_benchmark_figures.py",
+      "exports": ["docs/assets/runtime-scaling.svg", "docs/assets/runtime-scaling.pdf", "docs/assets/runtime-scaling.png"],
+      "claim": "Median runtime scaling on the same ten records per taxon scale; DIPPER uses GPU placement K=10 in a single sequential process.",
+      "review_revision": "Invalid concurrent DIPPER timings were discarded; the new plot uses matched record indices, log scale, and interquartile bands."
+    },
+    {
+      "id": "method-overview",
+      "source_data": [
+        "docs/index.html",
+        "src/concordtree/inference.py"
+      ],
+      "script": "docs/figures/scripts/generate_method_overview.py",
+      "exports": [
+        "docs/assets/method-overview.svg",
+        "docs/assets/method-overview.png"
+      ],
+      "claim": "The frozen ConcordTree inference path consists of parallel view construction, compatible split projection, and two-pass quartet-guided local continuation.",
+      "review_revision": "Rendered at the deployed 1200 × 760 aspect ratio and inspected at full resolution. Panels a–d use a consistent six-taxon example. MSA site columns, View marks, and trees share exact color codes. Panel b names the first refinement View NNI. Panel d now shows the common Quartet scorer feeding Coordinate NNI and Saturation NNI between complete consensus and final trees; local quartet formulas and engineering details were removed."
+    }
+  ]
+}

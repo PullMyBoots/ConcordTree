@@ -1,0 +1,17 @@
+name: concordtree-012
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+dependencies:
+  - python=3.10
+  - pip
+  - setuptools>=77
+  - wheel>=0.45
+  - numpy=2.1.2
+  - pytorch=2.5.1
+  - pytorch-cuda=12.1
+  - tqdm=4.67.1
+  - pip:
+      - triton==3.1.0
+      - ete3==3.1.3

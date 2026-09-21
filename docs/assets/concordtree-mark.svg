@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">ConcordTree mark</title>
+  <desc id="desc">Four leaves joined by one resolved internal edge.</desc>
+  <rect x="1" y="1" width="62" height="62" fill="#fbfbf8" stroke="#173f70" stroke-width="2"/>
+  <g fill="none" stroke="#173f70" stroke-width="3" stroke-linecap="square">
+    <path d="M11 14h10l11 18h11l10-18"/>
+    <path d="M11 50h10l11-18"/>
+    <path d="M43 32l10 18"/>
+  </g>
+  <g fill="#fbfbf8" stroke="#173f70" stroke-width="2">
+    <circle cx="11" cy="14" r="3"/><circle cx="11" cy="50" r="3"/>
+    <circle cx="53" cy="14" r="3"/><circle cx="53" cy="50" r="3"/>
+  </g>
+</svg>

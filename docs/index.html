@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Accuracy and runtime results for ConcordTree.">
+  <title>ConcordTree · 测试结果</title>
+  <link rel="icon" href="assets/concordtree-mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="page nav" aria-label="Primary navigation">
+      <a class="brand" href="#top"><img src="assets/concordtree-mark.svg" alt=""><span>ConcordTree</span></a>
+      <div class="nav-links">
+        <a href="#accuracy" data-i18n="navAccuracy">准确性</a>
+        <a href="#performance" data-i18n="navPerformance">性能</a>
+        <a href="#appendix" data-i18n="navAppendix">附录</a>
+        <a href="#method" data-i18n="navMethod">方法</a>
+        <a id="readme-link" href="../README.zh-CN.md">README</a>
+        <div class="language" aria-label="Language">
+          <button type="button" data-lang="zh" class="active">中</button><span>/</span><button type="button" data-lang="en">EN</button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top" class="page paper">
+    <header class="paper-header">
+      <p class="series">ConcordTree <span>v0.1.2</span></p>
+      <h1>ConcordTree</h1>
+    </header>
+
+    <section id="accuracy" class="paper-section">
+      <div class="section-heading"><span>1</span><h2 data-i18n="accuracyTitle">准确性测试</h2></div>
+
+      <section class="subsection" aria-labelledby="species-title">
+        <div class="subheading"><span>1.1</span><h3 id="species-title" data-i18n="speciesTitle">物种树</h3></div>
+        <p class="source-note" data-i18n-html="speciesSource"><a href="https://github.com/adamallo/SimPhy">SimPhy 1.0.2</a> 与 AliSim 模拟的 100 基因座数据；Small 为 32–256 个物种，Large 为 512–4096 个物种。</p>
+        <figure class="figure chart-figure wide-figure">
+          <img src="assets/species-tree-accuracy.svg?v=20260921-0315" alt="Two-panel comparison of mean normalized RF distance on SimPhy Small and Large species-tree datasets">
+          <figcaption><strong data-i18n="figSpecies">图 1.</strong> <span data-i18n="figSpeciesCaption">SimPhy Small 与 Large 上的平均 nRF（95% bootstrap 置信区间）。</span></figcaption>
+        </figure>
+      </section>
+
+      <section class="subsection" aria-labelledby="gene-title">
+        <div class="subheading"><span>1.2</span><h3 id="gene-title" data-i18n="geneTitle">基因树</h3></div>
+        <p class="source-note" data-i18n-html="geneSource"><a href="https://iqtree.github.io/doc/AliSim">AliSim</a> 模拟的 200 条 DNA 比对，覆盖 256–4096 个物种。</p>
+        <figure class="figure chart-figure wide-figure">
+          <img src="assets/gene-tree-accuracy.svg?v=20260921-0315" alt="Comparison of mean normalized RF distance on the AliSim single-history gene-tree panel">
+          <figcaption><strong data-i18n="figGene">图 2.</strong> <span data-i18n="figGeneCaption">AliSim 基因树数据上的平均 nRF（95% bootstrap 置信区间）。</span></figcaption>
+        </figure>
+      </section>
+
+      <section class="subsection" aria-labelledby="real-title">
+        <div class="subheading"><span>1.3</span><h3 id="real-title" data-i18n="realTitle">真实数据与 DIPPER 数据</h3></div>
+        <h4 data-i18n="empiricalTitle">已发表真实数据</h4>
+        <div class="table-wrap">
+          <table class="result-table empirical-table">
+            <thead><tr><th data-i18n="dataset">数据来源</th><th>ConcordTree<br><span data-i18n="attention">注意力</span></th><th>ConcordTree<br><span data-i18n="lightweight">轻量</span></th><th>DIPPER GPU</th><th>FastTree</th><th>CASTER</th></tr></thead>
+            <tbody>
+              <tr><td>Wang 2020 · Wolbachia</td><td>0.1000</td><td>0.0667</td><td>1.0000</td><td class="best">0.0000</td><td>0.1667</td></tr>
+              <tr><td>Pflug 2024 · Bembidion</td><td>0.2093</td><td>0.1860</td><td>0.6512</td><td class="best">0.1163</td><td class="best">0.1163</td></tr>
+              <tr><td>Wang 2022 · Oakleaf</td><td class="best">0.0286</td><td class="best">0.0286</td><td>0.6286</td><td>—</td><td class="best">0.0286</td></tr>
+              <tr><td>Chakrabarty 2017 · Ostariophysan</td><td class="best">0.0625</td><td class="best">0.0625</td><td>0.5312</td><td class="best">0.0625</td><td>0.1562</td></tr>
+              <tr><td>Parada 2021 · Sigmodontinae</td><td>0.1579</td><td>0.1404</td><td>0.9298</td><td class="best">0.0175</td><td>0.1404</td></tr>
+              <tr><td>Liu 2017 · Placental</td><td>0.1646</td><td>0.1519</td><td>1.0000</td><td>0.1519</td><td class="best">0.1392</td></tr>
+              <tr><td>Foley 2023 · Mammals241</td><td>0.0084</td><td>0.0126</td><td>0.0462</td><td class="best">0.0000</td><td>0.0126</td></tr>
+              <tr><td>Choi 2022 · Papilionoid</td><td>0.0373</td><td>0.0581</td><td>0.2614</td><td class="best">0.0207</td><td>0.0705</td></tr>
+              <tr><td>Chen 2019 · Ruminant</td><td>0.0408</td><td>0.0408</td><td>0.3469</td><td class="best">0.0000</td><td>0.0408</td></tr>
+              <tr><td>Leebens-Mack 2019 · 1KP</td><td>0.1200</td><td>0.1183</td><td>0.9591</td><td class="best">0.0979</td><td>0.2613</td></tr>
+              <tr class="summary-row"><td data-i18n="mean">平均</td><td>0.0929</td><td>0.0866</td><td>0.6355</td><td class="best">0.0519*</td><td>0.1133</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h4 class="dipper-heading" data-i18n="dipperTitle">DIPPER 论文模拟数据</h4>
+        <p class="source-note" data-i18n-html="dipperSource">DIPPER 论文公开的 AliSim 10K–50K 与 RNASim 10K–500K 数据（<a href="https://doi.org/10.1038/s43588-026-01015-8">Walia et al., 2026</a>）。</p>
+        <div class="table-wrap">
+          <table class="result-table dipper-table">
+            <thead><tr><th data-i18n="datasetShort">数据</th><th data-i18n="taxa">物种数</th><th>ConcordTree<br><span data-i18n="lightweight">轻量</span></th><th>DIPPER GPU</th></tr></thead>
+            <tbody>
+              <tr><td>A10</td><td>10,000</td><td>0.27928</td><td class="best">0.25589</td></tr>
+              <tr><td>R10</td><td>10,000</td><td class="best">0.12474</td><td>0.16405</td></tr>
+              <tr><td>A20</td><td>20,000</td><td>0.26184</td><td class="best">0.25974</td></tr>
+              <tr><td>R20</td><td>20,000</td><td class="best">0.11062</td><td>0.15712</td></tr>
+              <tr><td>A50</td><td>50,000</td><td class="best">0.20801</td><td>0.26010</td></tr>
+              <tr><td>R50</td><td>50,000</td><td class="best">0.09561</td><td>0.18214</td></tr>
+              <tr><td>R100</td><td>100,000</td><td class="best">0.08831</td><td>0.16072</td></tr>
+              <tr><td>R200</td><td>200,000</td><td class="best">0.08966</td><td>0.13990</td></tr>
+              <tr><td>R500</td><td>500,000</td><td class="best">0.08882</td><td>0.11711</td></tr>
+              <tr class="summary-row"><td data-i18n="mean">平均</td><td>—</td><td class="best">0.14965</td><td>0.18853</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </section>
+
+    <section id="performance" class="paper-section">
+      <div class="section-heading"><span>2</span><h2 data-i18n="performanceTitle">性能测试</h2></div>
+      <p class="source-note" data-i18n="performanceSource">NVIDIA L40S 上的实测时间；每个物种规模包含 10 条 AliSim 数据。</p>
+      <figure class="figure runtime-figure">
+        <img src="assets/runtime-scaling.svg?v=20260921-0315" alt="Median runtime with interquartile range across taxon scales on a logarithmic axis">
+        <figcaption><strong data-i18n="figRuntime">图 3.</strong> <span data-i18n="figRuntimeCaption">每条 MSA 的中位运行时间；阴影为四分位区间。</span></figcaption>
+      </figure>
+      <div class="table-wrap">
+        <table class="result-table runtime-table">
+          <thead><tr><th data-i18n="taxa">物种数</th><th>ConcordTree<br><span data-i18n="lightweight">轻量</span></th><th>ConcordTree<br><span data-i18n="attention">注意力</span></th><th>DIPPER GPU</th><th>VeryFastTree</th><th>RapidNJ</th><th>FastME</th></tr></thead>
+          <tbody>
+            <tr><td>256</td><td class="best">0.72 s</td><td>0.74 s</td><td>3.69 s</td><td>10.13 s</td><td>0.96 s</td><td>6.11 s</td></tr>
+            <tr><td>512</td><td class="best">1.69 s</td><td>1.99 s</td><td>3.77 s</td><td>33.96 s</td><td>65.53 s</td><td>40.01 s</td></tr>
+            <tr><td>1,024</td><td>4.60 s</td><td>5.76 s</td><td class="best">3.85 s</td><td>42.58 s</td><td>92.65 s</td><td>88.71 s</td></tr>
+            <tr><td>2,048</td><td>8.93 s</td><td>10.36 s</td><td class="best">4.00 s</td><td>132.69 s</td><td>562.91 s</td><td>683.45 s</td></tr>
+            <tr><td>4,096</td><td>8.11 s</td><td>10.79 s</td><td class="best">4.42 s</td><td>158.58 s</td><td>827.72 s</td><td>1,623.33 s</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <h4 data-i18n="rnasimRuntimeTitle">RNASim 大规模运行时间</h4>
+      <p class="source-note" data-i18n="rnasimRuntimeSource">同一批 DIPPER 论文 RNASim 数据，在单张 NVIDIA L40S 上运行。</p>
+      <div class="table-wrap">
+        <table class="result-table runtime-table">
+          <thead><tr><th data-i18n="taxa">物种数</th><th>ConcordTree<br><span data-i18n="lightweight">轻量</span></th><th>DIPPER GPU</th><th data-i18n="runtimeMultiple">耗时倍数</th></tr></thead>
+          <tbody>
+            <tr><td>10K</td><td>33.07 s</td><td class="best">8.94 s</td><td>3.70×</td></tr>
+            <tr><td>20K</td><td>1:14.62</td><td class="best">39.93 s</td><td>1.87×</td></tr>
+            <tr><td>50K</td><td>4:20.54</td><td class="best">39.19 s</td><td>6.65×</td></tr>
+            <tr><td>100K</td><td>12:02.01</td><td class="best">2:21.77</td><td>5.09×</td></tr>
+            <tr><td>200K</td><td>40:17.53</td><td class="best">10:27.40</td><td>3.85×</td></tr>
+            <tr><td>500K</td><td>3:08:36.52</td><td class="best">1:05:01.28</td><td>2.90×</td></tr>
+            <tr class="summary-row"><td data-i18n="total">合计</td><td>4:07:04.28</td><td class="best">1:19:18.51</td><td>3.12×</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="source-note result-note" data-i18n="rnasimRuntimeNote">两种方法均按下述测试配置运行；表中报告单张 NVIDIA L40S 上的完整算法时间。</p>
+    </section>
+
+    <section id="appendix" class="paper-section appendix-section">
+      <div class="section-heading"><span>A</span><h2 data-i18n="appendixTitle">附录：数据与测试配置</h2></div>
+      <div class="appendix-body">
+        <section aria-labelledby="appendix-species-title">
+          <h3 id="appendix-species-title" data-i18n="appendixSpeciesTitle">A.1 物种树模拟</h3>
+          <p data-i18n-html="appendixSpeciesP1"><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4748750/">SimPhy 1.0.2</a> 为每条记录生成一棵物种树和 100 棵基因树。ILS 组的基因树差异来自不完全谱系排序；complex 组在此基础上加入基因复制、基因丢失和水平转移。随后使用 <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9113491/">AliSim</a> 沿每棵基因树模拟 DNA 序列。每个基因座为每个物种保留一条代表序列，缺失的基因座以缺口表示，再将 100 个基因座连接为一个超矩阵。评测时以生成的物种树为参考。</p>
+          <p data-i18n="appendixSpeciesP2">Small 数据包含 32、64、128、192 和 256 个物种，每个规模各有 50 条 ILS 和 50 条 complex 比对，共 500 条。Large 准确性图使用 512 和 1,024 个物种的共同数据，每个规模同样包含两种条件各 50 条，共 200 条。</p>
+          <div class="table-wrap">
+            <table class="result-table parameter-table">
+              <thead><tr><th data-i18n="parameter">参数</th><th>ILS</th><th>complex</th></tr></thead>
+              <tbody>
+                <tr><td data-i18n="taxonScales">物种数</td><td colspan="2">Small: 32, 64, 128, 192, 256<br>Large: 512, 1,024, 2,048, 3,072, 4,096</td></tr>
+                <tr><td data-i18n="speciationRate">物种形成率</td><td colspan="2">Lognormal(−14, 1)</td></tr>
+                <tr><td data-i18n="speciesTreeHeight">物种树高度</td><td colspan="2">Uniform(100,000, 10,000,000)</td></tr>
+                <tr><td data-i18n="individualsPerSpecies">每物种个体数</td><td colspan="2">Discrete uniform {1, …, 6}</td></tr>
+                <tr><td data-i18n="effectivePopulation">有效群体大小</td><td colspan="2">Lognormal(12, 0.5)</td></tr>
+                <tr><td data-i18n="generationTime">世代时间</td><td colspan="2">1</td></tr>
+                <tr><td data-i18n="substitutionRate">全树替换率</td><td colspan="2">Exponential(10,000,000)</td></tr>
+                <tr><td data-i18n="rateHeterogeneity">分支替换率异质性</td><td colspan="2">species: Lognormal(1.5, 1); locus: Lognormal(1.2, 1); gene × lineage: Lognormal(1.4, 1)</td></tr>
+                <tr><td data-i18n="duplicationLoss">基因复制与丢失</td><td data-i18n="absent">不模拟</td><td>GB ~ Uniform(−25, −15); LD ~ Lognormal(GB, 0.4); LB = LD</td></tr>
+                <tr><td data-i18n="horizontalTransfer">水平转移</td><td data-i18n="absent">不模拟</td><td>GT = GB; LT ~ Lognormal(GT, 0.4); <span data-i18n="distanceDependent">受供体—受体进化距离约束</span></td></tr>
+                <tr><td data-i18n="sequenceModel">序列演化模型</td><td colspan="2">GTR+F+G4, <span data-i18n="optionalInvariant">可选 +I；参数由经验拟合库逐基因座抽取</span></td></tr>
+                <tr><td data-i18n="locusLength">单基因座序列长度</td><td colspan="2">104–8,000 nt</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="source-note" data-i18n-html="raxmlGroveSource">AliSim 使用的逐基因座序列长度、缺口比例、碱基频率、替换率、Γ 形状参数和不变位点比例来自 <a href="https://github.com/angtft/RAxMLGrove">RAxML Grove</a> 经验参数库。该开放数据库汇集了 RAxML 与 RAxML-NG Web 服务器上真实分析任务的匿名化模型估计（<a href="https://doi.org/10.1093/bioinformatics/btab863">Höhler et al., 2022</a>）。</p>
+          <p class="source-note" data-i18n="simphyNotation">Lognormal 后两个数字分别为对数尺度的位置与尺度参数；GB、GT、LD、LB 和 LT 为 SimPhy 对基因复制、转移、丢失及其逐基因座速率的参数记号。</p>
+        </section>
+
+        <section aria-labelledby="appendix-gene-title">
+          <h3 id="appendix-gene-title" data-i18n="appendixGeneTitle">A.2 基因树模拟</h3>
+          <p data-i18n-html="appendixGeneP1"><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9113491/">AliSim 2.4.0</a> 直接在一棵随机树上模拟一条 DNA 比对，因此每条比对中的全部位点共享同一进化历史。生成树同时作为该条记录的参考树。</p>
+          <p data-i18n="appendixGeneP2">数据覆盖 256、512、1,024、2,048 和 4,096 个物种，每个规模 40 条，共 200 条。树形包括 Yule-Harding、均匀随机、平衡树和阶梯树；序列使用多组 GTR 核苷酸替换参数、碱基频率和位点速率异质性，根序列长度为 2,048–16,384 个位点，并在部分记录中模拟插入和缺失。</p>
+        </section>
+
+        <section aria-labelledby="appendix-dipper-title">
+          <h3 id="appendix-dipper-title" data-i18n="appendixDipperTitle">A.3 DIPPER 论文数据</h3>
+          <p data-i18n-html="appendixDipperP1">该组数据直接采用 <a href="https://doi.org/10.1038/s43588-026-01015-8">DIPPER 论文</a>公开的比对和生成树。A10、A20 和 A50 是 AliSim 生成的 DNA 数据；R10、R20、R50、R100、R200 和 R500 是 <a href="https://arxiv.org/abs/0912.2326">RNASim</a> 生成的 RNA 数据，覆盖 10K–500K 个物种。</p>
+        </section>
+
+        <section aria-labelledby="appendix-config-title">
+          <h3 id="appendix-config-title" data-i18n="appendixConfigTitle">A.4 测试配置</h3>
+          <p data-i18n="appendixConfigP1">ConcordTree 使用 4 个视图。表格中的“轻量”和“注意力”仅表示四元组评分器的两种可选实现，其余推断流程一致。局部优化以交换比例 0.005 为停止阈值；若拓扑进入重复循环，则保留循环中评分最优的树并停止。</p>
+          <p data-i18n="appendixConfigP2">DIPPER 论文数据使用适合其稀疏且相干覆盖结构的缺失感知距离，其余面板使用标准距离。DIPPER GPU 按论文配置运行。</p>
+        </section>
+      </div>
+    </section>
+
+    <section id="method" class="paper-section method-section">
+      <div class="section-heading"><span>B</span><h2 data-i18n="methodAppendixTitle">附录：方法</h2></div>
+      <div class="method-lead-block">
+        <h3 data-i18n="methodOverviewTitle">B.1 方法概览</h3>
+      </div>
+      <figure class="figure method-figure wide-figure">
+        <img src="assets/method-overview.svg?v=20260921-0705" alt="Overview of the ConcordTree inference algorithm">
+      </figure>
+
+      <article class="method-article">
+        <section class="method-part" aria-labelledby="method-parameters-title">
+          <div class="method-part-heading"><span>Part 1</span><h3 id="method-parameters-title" data-i18n="methodParametersTitle">推断参数</h3></div>
+          <p data-i18n-html="methodParametersIntro">令 <em>X</em>∈Σ<sup><em>N</em>×<em>L</em></sup> 表示包含 <em>N</em> 个物种和 <em>L</em> 个对齐位点的 MSA。ConcordTree 的输出是与输入具有相同叶集的一棵无根二叉树 <em>T</em>。一次推断由下列参数组确定：</p>
+          <div class="equation">Θ=(<em>t</em>, <em>g</em>, <em>m</em>, <em>K</em>; ε<sub>V</sub>, <em>R</em><sub>V</sub>, ε<sub>C</sub>, <em>R</em><sub>C</sub>, ε<sub>S</sub>, <em>R</em><sub>S</sub>).</div>
+          <dl class="parameter-list">
+            <div><dt><em>t</em> · <span data-i18n="parameterTreeTarget">任务类型</span></dt><dd data-i18n="parameterTreeTargetText">可选基因树或物种树，默认为物种树。</dd></div>
+            <div><dt><em>g</em> · <span data-i18n="parameterDistance">AP-NJ 距离</span></dt><dd data-i18n="parameterDistanceText">可选标准距离或缺失感知距离，默认为标准距离。</dd></div>
+            <div><dt><em>m</em> · <span data-i18n="parameterScorer">四元组评分器</span></dt><dd data-i18n="parameterScorerText">对从一条内部边的四个相邻分支各选一个物种形成的四元组，评分器分别为 AB|CD、AC|BD 和 AD|BC 给出支持分数。分数越高，表示该拓扑与 MSA 中的序列模式越相容；NNI 使用候选拓扑相对当前拓扑的分数增益。可选轻量 MLP 或 Transformer，默认为 MLP。View NNI 始终使用与任务类型匹配的 MLP。</dd></div>
+            <div><dt><em>K</em> · <span data-i18n="parameterViews">View 数量</span></dt><dd data-i18n="parameterViewsText">可设为 2–8，默认为 4。每个 View 选择一个互补位点子集，并最终产生一棵包含全部 N 个物种的树。</dd></div>
+            <div><dt>ε<sub>z</sub>, <em>R</em><sub>z</sub> · <span data-i18n="parameterStops">精修控制</span></dt><dd data-i18n-html="parameterStopsText">对阶段 <em>z</em>∈{View, Coordinate, Saturation}，ε<sub>z</sub> 是交换比例阈值，<em>R</em><sub>z</sub> 是最大轮数。三个阶段的默认值依次为 (0.01,24)、(0.005,4) 和 (0.005,5)。</dd></div>
+          </dl>
+        </section>
+
+        <section class="method-part" aria-labelledby="method-apnj-title">
+          <div class="method-part-heading"><span>Part 2</span><h3 id="method-apnj-title" data-i18n="methodApnjTitle">AP-NJ：无矩阵聚合轮廓邻接法</h3></div>
+          <p data-i18n-html="apnjIntro">第 <em>k</em> 个 View 选择位点集合 <em>J</em><sub>k</sub>⊆{1,…,<em>L</em>}，但始终保留全部 <em>N</em> 个物种。AP-NJ 在该子矩阵上构造一棵完整骨架树。每个物种或已合并簇在位点 <em>s</em> 上由四维状态轮廓表示；观测碱基对应 one-hot 向量，缺失状态由距离模型 <em>g</em> 处理。</p>
+          <p data-i18n-html="apnjStandardText">在标准模型中，缺失状态使用该位点的经验碱基频率 <em>q</em><sub>s</sub> 表示。若 <em>r</em><sub>is</sub> 和 <em>r</em><sub>js</sub> 是两个簇的状态轮廓，则位点不匹配距离为</p>
+          <div class="equation">d<sub>s</sub><sup>std</sup>(i,j)=1−r<sub>is</sub><sup>T</sup>r<sub>js</sub>.</div>
+          <p data-i18n="apnjStandardExplain">内积表示两个轮廓在该位点取相同碱基的概率，因此一减去该值就是期望不匹配概率。</p>
+          <p data-i18n-html="apnjCoverageText">在缺失感知模型中，<em>p</em><sub>is</sub> 只记录实际观测质量，<em>m</em><sub>is</sub>=1<sup>T</sup><em>p</em><sub>is</sub> 是观测质量，π<sub>s</sub>=1−‖<em>q</em><sub>s</sub>‖<sub>2</sub><sup>2</sup> 是背景不匹配概率，<em>w</em><sub>s</sub>=<em>c</em><sub>s</sub><sup>2</sup> 表示随机两个物种同时观测到该位点的概率。令</p>
+          <div class="equation">h<sub>is</sub>=p<sub>is</sub><sup>T</sup>[(1−q<sub>s</sub>)−π<sub>s</sub>1],</div>
+          <p data-i18n="apnjCoverageFormulaLead">则缺失感知的位点距离为</p>
+          <div class="equation equation-long">d<sub>s</sub><sup>cov</sup>(i,j)=π<sub>s</sub>+(1−π<sub>s</sub>)m<sub>is</sub>m<sub>js</sub>−p<sub>is</sub><sup>T</sup>p<sub>js</sub>+w<sub>s</sub>[h<sub>is</sub>(1−m<sub>js</sub>)+h<sub>js</sub>(1−m<sub>is</sub>)].</div>
+          <p data-i18n="apnjCoverageExplain">当两端均被观测时，该式退化为普通不匹配；当两端均缺失时，距离回到位点先验；只有一端被观测时，它在边际化和经验填补之间连续插值。</p>
+
+          <h4 class="method-subheading" data-i18n="csiTitle">相干稀疏指数</h4>
+          <p data-i18n-html="csiIntro">CSI 同时描述物种对的共同观测稀疏度，以及不同物种是否在相同区域缺失。令 <em>S</em><sub>i</sub>为物种 <em>i</em> 具有实际观测的位点集合。对每一对物种，定义共同观测比例 <em>O</em><sub>ij</sub> 和观测掩码的 Jaccard 相似度 <em>J</em><sub>ij</sub>：</p>
+          <div class="equation equation-pair">
+            <span>O<sub>ij</sub>=|S<sub>i</sub>∩S<sub>j</sub>|/L,</span>
+            <span>J<sub>ij</sub>=|S<sub>i</sub>∩S<sub>j</sub>|/|S<sub>i</sub>∪S<sub>j</sub>|.</span>
+          </div>
+          <p data-i18n-html="csiDefinitionLead">相干稀疏指数（coherent sparsity index, CSI）定义为</p>
+          <div class="equation">CSI=[1−median<sub>i&lt;j</sub>(O<sub>ij</sub>)] median<sub>i&lt;j</sub>(J<sub>ij</sub>).</div>
+          <p data-i18n-html="csiExplain">第一项在物种对能够共同观测的位点较少时增大，表示“稀疏性”；第二项在不同物种的观测区域高度重合时增大，表示“相干性”。只有两者同时出现，CSI 才高。因此，CSI 区分了普通的分散缺失与成块、相关的缺失，后者正是缺失感知距离所建模的情形。</p>
+          <p class="method-note" data-i18n-html="csiGuidance">CSI≤0.25：选择标准距离。CSI≥0.35：选择缺失感知距离。0.25&lt;CSI&lt;0.35：比较两种距离。</p>
+
+          <p data-i18n-html="apnjAggregateText">两种距离对簇轮廓都是仿射双线性的。令当前活动簇集合为 <em>A</em>、簇数为 <em>n</em><sub>A</sub>，聚合轮廓为 <em>P</em><sub>s</sub>=∑<sub><em>j</em>∈<em>A</em></sub><em>p</em><sub>js</sub>。算法可以直接由 <em>P</em><sub>s</sub> 得到标准 NJ 行和 <em>R</em><sub>i</sub>=∑<sub><em>j</em>∈<em>A</em></sub><em>d</em><sub>g</sub>(<em>i</em>,<em>j</em>)，无需建立稠密的 <em>N</em>×<em>N</em> 距离矩阵。对于稀疏候选对，仍使用标准 NJ 准则</p>
+          <div class="equation">Q(i,j)=(n<sub>A</sub>−2)d<sub>g</sub>(i,j)−R<sub>i</sub>−R<sub>j</sub>.</div>
+          <p data-i18n="apnjQExplain">其中 d₍g₎(i,j) 是参数 g 选择的簇间距离，Rᵢ 和 Rⱼ 是对应的距离行和。AP-NJ 只稀疏化候选对的搜索；候选对的距离、行和与 Q 值均按选定公式计算。</p>
+
+          <div class="algorithm-block">
+            <div class="algorithm-title"><span data-i18n="algorithmLabel">算法</span> 1 · <span>AP-NJ</span></div>
+            <div class="algorithm-io" data-i18n-html="apnjAlgorithmIO"><strong>输入：</strong>View 子矩阵 <em>X</em><sub>J</sub>，距离模型 <em>g</em>。<strong>输出：</strong>包含全部物种的二叉树。</div>
+            <ol class="algorithm-steps" data-i18n-html="apnjAlgorithmSteps"><li>为每个物种初始化状态轮廓，并令活动簇集合 <em>A</em> 为全部叶节点。</li><li>当 |<em>A</em>|&gt;3 时，利用轮廓投影为每个簇提出少量近邻候选。</li><li>由聚合轮廓计算所有活动簇的精确 NJ 行和 <em>R</em><sub>i</sub>。</li><li>对候选对计算 <em>Q</em>(<em>i</em>,<em>j</em>)，选择互为最佳且彼此不重叠的簇对。</li><li>并行合并选中的簇对；更新平均轮廓和距离偏移，使后续距离满足标准 NJ 递推式。</li><li>连接最后三个活动簇并返回树。</li></ol>
+          </div>
+        </section>
+
+        <section class="method-part" aria-labelledby="method-merge-title">
+          <div class="method-part-heading"><span>Part 3</span><h3 id="method-merge-title" data-i18n="methodMergeTitle">相容分支合并</h3></div>
+          <p data-i18n-html="mergeIntro">每棵 View 树 <em>T</em><sub>k</sub> 被写成非平凡二分分支集合 <em>S</em>(<em>T</em><sub>k</sub>)。算法首先建立分支库 𝒮=⋃<sub><em>k</em>=1</sub><sup><em>K</em></sup><em>S</em>(<em>T</em><sub>k</sub>)。对分支 <em>s</em>，其 View 支持数为</p>
+          <div class="equation">c(s)=∑<sub>k=1</sub><sup>K</sup>1[s∈S(T<sub>k</sub>)].</div>
+          <p data-i18n="mergeSupportExplain">c(s)=K 表示所有 View 一致支持该分支。其余分支按局部神经收益是否在所有可用 View 中为非负、支持数、收益中位数和均值依次排序。</p>
+          <p data-i18n-html="mergeCompatibilityText">两个分支 <em>A</em>|<em>A</em><sup>c</sup> 和 <em>B</em>|<em>B</em><sup>c</sup> 相容，当且仅当下面四个交集至少有一个为空：</p>
+          <div class="equation">A∩B, A∩B<sup>c</sup>, A<sup>c</sup>∩B, A<sup>c</sup>∩B<sup>c</sup>.</div>
+          <p data-i18n="mergeCompatibilityExplain">这个条件保证两个二分分支能够同时出现在同一棵无根树中。算法按证据顺序依次接收相容分支，因此得到的是该顺序下的极大相容集合，而不是声称求解全局加权最优树。</p>
+          <p data-i18n-html="mergeMedoidText">为了给尚未解析的区域提供一致锚点，定义中心 View 为</p>
+          <div class="equation">k<sup>*</sup>=arg min<sub>k</sub> ∑<sub>ℓ=1</sub><sup>K</sup>|S(T<sub>k</sub>) △ S(T<sub>ℓ</sub>)|.</div>
+          <p data-i18n="mergeMedoidExplain">其中 △ 表示对称差，其大小就是两棵树不同的分支数。中心 View 因此是与其余 View 总分支差最小的那棵树；它只补足锚点，不覆盖已接受的相容分支。</p>
+
+          <div class="algorithm-block">
+            <div class="algorithm-title"><span data-i18n="algorithmLabel">算法</span> 2 · <span data-i18n="mergeAlgorithmName">相容分支合并</span></div>
+            <div class="algorithm-io" data-i18n-html="mergeAlgorithmIO"><strong>输入：</strong>View 树 <em>T</em><sub>1</sub>,…,<em>T</em><sub>K</sub> 及其分支证据。<strong>输出：</strong>共识树 <em>T</em><sub>0</sub>。</div>
+            <ol class="algorithm-steps" data-i18n-html="mergeAlgorithmSteps"><li>提取全部 View 树的规范化二分分支并建立分支库。</li><li>将所有 c(s)=K 的一致分支加入集合 𝒞。</li><li>按稳定性、View 支持数和神经证据对其余分支排序。</li><li>依次扫描分支；若候选分支与 𝒞 中全部分支相容，则将其加入 𝒞。</li><li>继续加入中心 View 中与 𝒞 相容的锚点分支。</li><li>确定性补全 𝒞，直到包含 N−3 个内部边，并将其实体化为 T₀。</li></ol>
+          </div>
+        </section>
+
+        <section class="method-part" aria-labelledby="method-nni-title">
+          <div class="method-part-heading"><span>Part 4</span><h3 id="method-nni-title" data-i18n="methodNniTitle">三种 NNI 精修</h3></div>
+          <p data-i18n-html="nniIntro">对于内部边 <em>e</em>，其四个相邻分支记为 <em>A</em>、<em>B</em>、<em>C</em> 和 <em>D</em>。保持当前拓扑与两种 NNI 交换构成三个候选状态：AB|CD、AC|BD 和 AD|BC。四元组评分器给出势函数</p>
+          <div class="equation">L<sub>m</sub>(AB|CD), L<sub>m</sub>(AC|BD), L<sub>m</sub>(AD|BC),</div>
+          <p data-i18n-html="nniGainText">其中 <em>m</em> 是所选评分器。若当前状态为 τ<sub>0</sub>，最佳替代状态为 τ<sup>*</sup>，则交换收益为 Δ(<em>e</em>)=<em>L</em><sub>m</sub>(τ<sup>*</sup>)−<em>L</em><sub>m</sub>(τ<sub>0</sub>)。每轮只执行收益满足该阶段准则且互不共享内部节点的 NNI，以避免同时修改相邻边。</p>
+          <div class="nni-comparison">
+            <section><h4>View NNI</h4><p data-i18n="viewNniText">在每棵 AP-NJ 树上检查全部内部边。树的初始拓扑来自该 View 的位点子集，但 NNI 评分读取完整 MSA。它从四个相邻分支各取少量邻近代表，用轻量评分器消除明显局部错误。</p></section>
+            <section><h4>Coordinate NNI</h4><p data-i18n="coordinateNniText">从 T₀ 开始，只检查没有得到全部 View 一致支持的边。一个上下文面板可以服务多条邻近边，每条边由两个覆盖视角共同确认，从而批量修复共识树。</p></section>
+            <section><h4>Saturation NNI</h4><p data-i18n="saturationNniText">在 Coordinate 输出树上重新识别不确定边，并为每条边建立专属且四向均衡的上下文。它要求整体收益和代表四元组的中位收益均为正，用于集中复查剩余边。</p></section>
+          </div>
+          <p data-i18n-html="nniStopText">设第 <em>r</em> 轮接受的交换集合为 <em>M</em><sub>r</sub>。一棵含 <em>N</em> 个叶的无根二叉树具有 <em>N</em>−3 条内部边，因此定义归一化交换比例</p>
+          <div class="equation">ρ<sub>r</sub>=|M<sub>r</sub>|/(N−3).</div>
+          <p data-i18n-html="nniStopExplain">阶段 <em>z</em> 在没有可接受交换、ρ<sub>r</sub>≤ε<sub>z</sub> 或 <em>r</em>≥<em>R</em><sub>z</sub> 时停止。ε<sub>z</sub> 控制收敛程度，<em>R</em><sub>z</sub> 控制最坏运行预算。</p>
+
+          <div class="algorithm-block">
+            <div class="algorithm-title"><span data-i18n="algorithmLabel">算法</span> 3 · <span data-i18n="nniAlgorithmName">统一 NNI 精修</span></div>
+            <div class="algorithm-io" data-i18n-html="nniAlgorithmIO"><strong>输入：</strong>树 <em>T</em>、阶段 <em>z</em>、评分器 <em>m</em>、停止参数 (ε<sub>z</sub>,<em>R</em><sub>z</sub>)。<strong>输出：</strong>精修后的树。</div>
+            <ol class="algorithm-steps" data-i18n-html="nniAlgorithmSteps"><li>若 z=View，令目标集合为 T 的全部内部边；否则令目标集合为当前树中未获全部 View 一致支持的边。</li><li>按照阶段 z 的规则构造代表物种上下文，并计算每条目标边三种局部拓扑的势函数。</li><li>从正收益候选中按收益排序，选择一组互不冲突的 NNI。</li><li>同时应用选中的 NNI，得到下一轮树并计算交换比例 ρᵣ。</li><li>若没有交换、ρᵣ≤ε_z 或达到 R_z，则返回当前树；否则重新构造上下文并继续下一轮。</li></ol>
+          </div>
+
+          <div class="schedule-block" data-i18n-html="nniSchedule"><strong>执行顺序：</strong>每棵 AP-NJ 树先运行 View NNI，得到 T₁,…,Tₖ；合并得到 T₀ 后，依次运行 Coordinate NNI 和 Saturation NNI，输出最终树 T*。</div>
+        </section>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="page footer-inner"><span>ConcordTree v0.1.2</span><span data-i18n="localOnly">本地预览 · 尚未发布</span></div>
+  </footer>
+  <script src="assets/site.js?v=20260921-0910"></script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+include LICENSE
+include README.md
+include README.zh-CN.md
+include environment.yml
+include requirements-lock.txt
+recursive-include src/concordtree/assets *.pt *.pth *.so
+recursive-include examples *.phy *.md
+recursive-include docs *.html *.css *.js *.svg *.json
+include scripts/build_release.sh
+include scripts/create_environment.sh
+recursive-include native_src *.cpp *.cu *.py *.md

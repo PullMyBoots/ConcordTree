@@ -1,0 +1,207 @@
+#!/usr/bin/env python3
+"""Generate the publication-style ConcordTree method overview.
+
+The figure is deliberately authored as SVG so that labels and tree edges remain
+sharp in the website, printed appendix, and later manuscript exports.
+"""
+
+from pathlib import Path
+
+
+ROOT = Path(__file__).resolve().parents[3]
+OUT = ROOT / "docs" / "assets" / "method-overview.svg"
+
+SVG = r'''<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">ConcordTree method overview</title>
+  <desc id="desc">An alignment is converted into parallel view trees, projected into a compatible split tree, and refined by quartet-guided local continuation.</desc>
+  <defs>
+    <style>
+      .panel{fill:#fff;stroke:#202428;stroke-width:1.2}
+      .rule{fill:none;stroke:#8e959b;stroke-width:1.1}
+      .tree{fill:none;stroke:#202428;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+      .tree2{fill:none;stroke:#35618e;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+      .tree3{fill:none;stroke:#9b5d54;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+      .tree4{fill:none;stroke:#698263;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+      .arrow{fill:none;stroke:#202428;stroke-width:1.35;marker-end:url(#arrow)}
+      .soft{fill:#f5f7f8;stroke:#aeb4b8;stroke-width:1}
+      .bluebox{fill:#eef3f8;stroke:#35618e;stroke-width:1.1}
+      .rosebox{fill:#f8f0ef;stroke:#9b5d54;stroke-width:1.1}
+      .greenbox{fill:#f0f5ef;stroke:#698263;stroke-width:1.1}
+      .title{font:600 18px Georgia,'Times New Roman',serif;fill:#171a1d}
+      .panelletter{font:700 21px Arial,sans-serif;fill:#171a1d}
+      .label{font:600 13px Arial,'Noto Sans',sans-serif;fill:#202428}
+      .small{font:12px Arial,'Noto Sans',sans-serif;fill:#42484d}
+      .tiny{font:10.5px Arial,'Noto Sans',sans-serif;fill:#4d5459}
+      .math{font:italic 12px Georgia,'Times New Roman',serif;fill:#202428}
+      .accent{fill:#173f70}
+      .muted{fill:#687077}
+      .dash{fill:none;stroke:#8e959b;stroke-width:1;stroke-dasharray:4 4}
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L8,4 L0,8 z" fill="#202428"/></marker>
+  </defs>
+
+  <rect width="1200" height="760" fill="#fbfbf8"/>
+
+  <!-- a. Input and inference configuration -->
+  <rect class="panel" x="18" y="18" width="1164" height="144"/>
+  <text class="panelletter" x="32" y="43">a</text>
+  <text class="title" x="62" y="43">Input and inference configuration</text>
+  <g transform="translate(66 62)">
+    <text class="label" x="0" y="13">Aligned sequences</text>
+    <rect class="soft" x="0" y="24" width="170" height="70"/>
+    <g class="tiny"><text x="9" y="38">S1</text><text x="9" y="48">S2</text><text x="9" y="58">S3</text><text x="9" y="68">S4</text><text x="9" y="78">S5</text><text x="9" y="88">S6</text></g>
+    <g class="tiny muted"><text x="35" y="38">ACGT—TACGCTA</text><text x="35" y="48">ACGTTTAC—CTA</text><text x="35" y="58">A—GTTTACGCTA</text><text x="35" y="68">ACGTNTACG—TA</text><text x="35" y="78">TCGT—TACGCAA</text><text x="35" y="88">ACCTTT—CGCTA</text></g>
+  </g>
+  <path class="arrow" d="M250 102 H282"/>
+  <g transform="translate(296 60)">
+    <text class="label accent" x="0" y="13">Inference configuration</text>
+    <g transform="translate(0 25)">
+      <rect class="soft" x="0" y="0" width="144" height="48" rx="2"/>
+      <text class="label" x="72" y="29" text-anchor="middle">Phylogenetic target</text>
+
+      <rect class="soft" x="155" y="0" width="144" height="48" rx="2"/>
+      <text class="label" x="227" y="29" text-anchor="middle">NJ distance</text>
+
+      <rect class="soft" x="310" y="0" width="144" height="48" rx="2"/>
+      <text class="label" x="382" y="29" text-anchor="middle">Quartet scorer</text>
+
+      <rect class="soft" x="465" y="0" width="118" height="48" rx="2"/>
+      <text class="label" x="524" y="29" text-anchor="middle">View count</text>
+
+      <rect class="soft" x="594" y="0" width="210" height="48" rx="2"/>
+      <text class="label" x="699" y="29" text-anchor="middle">Refinement controls</text>
+    </g>
+  </g>
+
+  <!-- b. Parallel view construction -->
+  <rect class="panel" x="18" y="180" width="1164" height="250"/>
+  <text class="panelletter" x="32" y="205">b</text>
+  <text class="title" x="62" y="205">Construction of K View trees</text>
+  <g transform="translate(58 234)">
+    <text class="label" x="77" y="0" text-anchor="middle">MSA</text>
+    <g transform="translate(0 16)">
+      <rect class="soft" x="23" y="0" width="108" height="108"/>
+      <g>
+        <g fill="#35618e"><rect x="23" y="0" width="9" height="108"/><rect x="59" y="0" width="9" height="108"/><rect x="95" y="0" width="9" height="108"/></g>
+        <g fill="#9b5d54"><rect x="32" y="0" width="9" height="108"/><rect x="68" y="0" width="9" height="108"/><rect x="104" y="0" width="9" height="108"/></g>
+        <g fill="#698263"><rect x="41" y="0" width="9" height="108"/><rect x="77" y="0" width="9" height="108"/><rect x="113" y="0" width="9" height="108"/></g>
+        <g fill="#202428"><rect x="50" y="0" width="9" height="108"/><rect x="86" y="0" width="9" height="108"/><rect x="122" y="0" width="9" height="108"/></g>
+      </g>
+      <g stroke="#ffffff" stroke-opacity="0.72" stroke-width="0.8">
+        <path d="M32 0 V108 M41 0 V108 M50 0 V108 M59 0 V108 M68 0 V108 M77 0 V108 M86 0 V108 M95 0 V108 M104 0 V108 M113 0 V108 M122 0 V108"/>
+        <path d="M23 18 H131 M23 36 H131 M23 54 H131 M23 72 H131 M23 90 H131"/>
+      </g>
+      <g class="tiny"><text x="0" y="13">S1</text><text x="0" y="31">S2</text><text x="0" y="49">S3</text><text x="0" y="67">S4</text><text x="0" y="85">S5</text><text x="0" y="103">S6</text></g>
+    </g>
+  </g>
+  <text class="tiny" x="222" y="282" text-anchor="middle">sample</text>
+  <text class="tiny" x="222" y="294" text-anchor="middle">site subsets</text>
+  <path class="arrow" d="M198 303 H246"/>
+  <g transform="translate(256 224)">
+    <rect class="bluebox" x="0" y="0" width="860" height="36" rx="2"/>
+    <rect class="rosebox" x="0" y="44" width="860" height="36" rx="2"/>
+    <rect class="greenbox" x="0" y="88" width="860" height="36" rx="2"/>
+    <rect class="soft" x="0" y="153" width="860" height="36" rx="2"/>
+    <g class="label"><text x="14" y="23">View 1</text><text x="14" y="67">View 2</text><text x="14" y="111">View 3</text><text x="14" y="176">View K</text></g>
+    <g stroke="#b8bdc1" stroke-width="2"><path d="M102 18 H248"/><path d="M102 62 H248"/><path d="M102 106 H248"/><path d="M102 171 H248"/></g>
+    <g stroke="#35618e" stroke-width="4"><path d="M108 9 V27 M156 9 V27 M204 9 V27"/></g>
+    <g stroke="#9b5d54" stroke-width="4"><path d="M120 53 V71 M168 53 V71 M216 53 V71"/></g>
+    <g stroke="#698263" stroke-width="4"><path d="M132 97 V115 M180 97 V115 M228 97 V115"/></g>
+    <g stroke="#202428" stroke-width="4"><path d="M144 162 V180 M192 162 V180 M240 162 V180"/></g>
+    <g fill="#687077"><circle cx="430" cy="134" r="1.8"/><circle cx="430" cy="141" r="1.8"/><circle cx="430" cy="148" r="1.8"/></g>
+    <g><path class="arrow" d="M264 18 H315"/><path class="arrow" d="M264 62 H315"/><path class="arrow" d="M264 106 H315"/><path class="arrow" d="M264 171 H315"/></g>
+    <g>
+      <rect class="soft" x="326" y="3" width="92" height="30" rx="2"/><text class="label" x="372" y="23" text-anchor="middle">AP-NJ</text>
+      <rect class="soft" x="326" y="47" width="92" height="30" rx="2"/><text class="label" x="372" y="67" text-anchor="middle">AP-NJ</text>
+      <rect class="soft" x="326" y="91" width="92" height="30" rx="2"/><text class="label" x="372" y="111" text-anchor="middle">AP-NJ</text>
+      <rect class="soft" x="326" y="156" width="92" height="30" rx="2"/><text class="label" x="372" y="176" text-anchor="middle">AP-NJ</text>
+    </g>
+    <g><path class="arrow" d="M430 18 H486"/><path class="arrow" d="M430 62 H486"/><path class="arrow" d="M430 106 H486"/><path class="arrow" d="M430 171 H486"/></g>
+    <g>
+      <rect class="soft" x="497" y="3" width="92" height="30" rx="2"/><text class="label" x="543" y="23" text-anchor="middle">View NNI</text>
+      <rect class="soft" x="497" y="47" width="92" height="30" rx="2"/><text class="label" x="543" y="67" text-anchor="middle">View NNI</text>
+      <rect class="soft" x="497" y="91" width="92" height="30" rx="2"/><text class="label" x="543" y="111" text-anchor="middle">View NNI</text>
+      <rect class="soft" x="497" y="156" width="92" height="30" rx="2"/><text class="label" x="543" y="176" text-anchor="middle">View NNI</text>
+    </g>
+    <g><path class="arrow" d="M601 18 H676"/><path class="arrow" d="M601 62 H676"/><path class="arrow" d="M601 106 H676"/><path class="arrow" d="M601 171 H676"/></g>
+    <g transform="translate(690 1)"><path class="tree2" d="M18 17 H38 M18 17 L2 5 M18 17 L2 30 M38 17 L52 9 M38 17 L52 25 M52 9 L66 3 M52 9 L68 14 M52 25 L66 20 M52 25 L68 32"/><text class="math" x="83" y="21">T₁</text></g>
+    <g transform="translate(690 45)"><path class="tree3" d="M18 17 H38 M18 17 L2 5 M18 17 L2 30 M38 17 L52 9 M38 17 L52 25 M52 9 L66 3 M52 9 L68 14 M52 25 L66 20 M52 25 L68 32"/><text class="math" x="83" y="21">T₂</text></g>
+    <g transform="translate(690 89)"><path class="tree4" d="M18 17 H38 M18 17 L2 5 M18 17 L2 30 M38 17 L52 9 M38 17 L52 25 M52 9 L66 3 M52 9 L68 14 M52 25 L66 20 M52 25 L68 32"/><text class="math" x="83" y="21">T₃</text></g>
+    <g transform="translate(690 154)"><path class="tree" d="M18 17 H38 M18 17 L2 5 M18 17 L2 30 M38 17 L52 9 M38 17 L52 25 M52 9 L66 3 M52 9 L68 14 M52 25 L66 20 M52 25 L68 32"/><text class="math" x="83" y="21">Tₖ</text></g>
+  </g>
+
+  <!-- c. Split projection -->
+  <rect class="panel" x="18" y="448" width="568" height="294"/>
+  <text class="panelletter" x="32" y="474">c</text>
+  <text class="title" x="62" y="474">Merge View trees</text>
+  <g transform="translate(48 505)">
+    <text class="label" x="42" y="0" text-anchor="middle">View trees</text>
+    <g transform="translate(4 17)"><path class="tree2" d="M16 17 H32 M16 17 L0 5 M16 17 L0 30 M32 17 L44 9 M32 17 L44 25 M44 9 L57 3 M44 9 L59 14 M44 25 L57 20 M44 25 L59 32"/><text class="math" x="29" y="49" text-anchor="middle">T₁</text></g>
+    <g transform="translate(4 82)"><path class="tree3" d="M16 17 H32 M16 17 L0 5 M16 17 L0 30 M32 17 L44 9 M32 17 L44 25 M44 9 L57 3 M44 9 L59 14 M44 25 L57 20 M44 25 L59 32"/><text class="math" x="29" y="49" text-anchor="middle">T₂</text></g>
+    <g fill="#687077"><circle cx="33" cy="146" r="1.8"/><circle cx="33" cy="154" r="1.8"/><circle cx="33" cy="162" r="1.8"/></g>
+    <g transform="translate(4 174)"><path class="tree4" d="M16 17 H32 M16 17 L0 5 M16 17 L0 30 M32 17 L44 9 M32 17 L44 25 M44 9 L57 3 M44 9 L59 14 M44 25 L57 20 M44 25 L59 32"/><text class="math" x="29" y="49" text-anchor="middle">Tₖ</text></g>
+
+    <path class="arrow" d="M80 112 H117"/>
+    <rect class="soft" x="127" y="88" width="103" height="48" rx="2"/>
+    <text class="label" x="178.5" y="117" text-anchor="middle">Collect splits</text>
+
+    <path class="arrow" d="M240 112 H277"/>
+    <rect class="bluebox" x="287" y="88" width="122" height="48" rx="2"/>
+    <text class="label" x="348" y="117" text-anchor="middle">Compatible merge</text>
+
+    <path class="arrow" d="M419 112 H425"/>
+    <g transform="translate(430 31)">
+      <text class="label" x="39" y="0" text-anchor="middle">Consensus tree</text>
+      <path class="tree" d="M20 70 H50 M20 70 L0 45 M20 70 L0 95 M50 70 L72 48 M50 70 L72 92 M72 48 L94 33 M72 48 L96 59 M72 92 L95 81 M72 92 L96 106"/>
+      <text class="math" x="47" y="137" text-anchor="middle">T₀</text>
+    </g>
+  </g>
+
+  <!-- d. Local continuation -->
+  <rect class="panel" x="604" y="448" width="578" height="294"/>
+  <text class="panelletter" x="618" y="474">d</text>
+  <text class="title" x="648" y="474">Two-stage NNI refinement</text>
+  <g transform="translate(626 500)">
+    <rect class="bluebox" x="187" y="0" width="160" height="42" rx="2"/>
+    <text class="label" x="267" y="26" text-anchor="middle">Quartet scorer</text>
+    <path class="rule" d="M267 42 V64 M175 64 H365"/>
+    <path class="arrow" d="M175 64 V89"/>
+    <path class="arrow" d="M365 64 V89"/>
+
+    <g transform="translate(0 91)">
+      <text class="label" x="34" y="0" text-anchor="middle">Consensus tree</text>
+      <path class="tree" d="M18 52 H38 M18 52 L2 40 M18 52 L2 65 M38 52 L52 44 M38 52 L52 60 M52 44 L66 38 M52 44 L68 49 M52 60 L66 55 M52 60 L68 67"/>
+      <text class="math" x="35" y="88" text-anchor="middle">T₀</text>
+    </g>
+
+    <path class="arrow" d="M78 143 H105"/>
+    <rect class="soft" x="110" y="94" width="130" height="98" rx="2"/>
+    <text class="label" x="175" y="132" text-anchor="middle">Coordinate NNI</text>
+    <text class="small" x="175" y="157" text-anchor="middle">shared panels</text>
+    <text class="title accent" x="175" y="182" text-anchor="middle">↻</text>
+
+    <path class="arrow" d="M245 143 H295"/>
+    <rect class="soft" x="300" y="94" width="130" height="98" rx="2"/>
+    <text class="label" x="365" y="132" text-anchor="middle">Saturation NNI</text>
+    <text class="small" x="365" y="157" text-anchor="middle">dedicated panels</text>
+    <text class="title accent" x="365" y="182" text-anchor="middle">↻</text>
+
+    <path class="arrow" d="M435 143 H460"/>
+    <g transform="translate(466 91)">
+      <text class="label" x="34" y="0" text-anchor="middle">Final tree</text>
+      <path class="tree" d="M18 52 H38 M18 52 L2 40 M18 52 L2 65 M38 52 L52 44 M38 52 L52 60 M52 44 L66 38 M52 44 L68 49 M52 60 L66 55 M52 60 L68 67"/>
+      <text class="math" x="35" y="88" text-anchor="middle">T*</text>
+    </g>
+  </g>
+</svg>
+'''
+
+
+def main() -> None:
+    OUT.parent.mkdir(parents=True, exist_ok=True)
+    OUT.write_text(SVG, encoding="utf-8")
+    print(OUT)
+
+
+if __name__ == "__main__":
+    main()

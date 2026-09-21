@@ -1,0 +1,8 @@
+*.pt binary
+*.pth binary
+*.so binary
+*.phy text eol=lf
+*.nwk text eol=lf
+*.py text eol=lf
+*.md text eol=lf
+*.sh text eol=lf
