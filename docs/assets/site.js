@@ -250,13 +250,15 @@ function setLanguage(language) {
     if (value !== undefined) node.innerHTML = value;
   });
   document.querySelectorAll("[data-lang]").forEach((button) => button.classList.toggle("active", button.dataset.lang === lang));
-  document.getElementById("readme-link").href = lang === "zh" ? "../README.zh-CN.md" : "../README.md";
-  localStorage.setItem("concordtree-language", lang);
+  document.getElementById("readme-link").href = lang === "zh"
+    ? "https://github.com/PullMyBoots/ConcordTree/blob/main/README.zh-CN.md"
+    : "https://github.com/PullMyBoots/ConcordTree/blob/main/README.md";
+  localStorage.setItem("concordtree-language-v2", lang);
 }
 
 document.querySelectorAll("[data-lang]").forEach((button) => button.addEventListener("click", () => setLanguage(button.dataset.lang)));
-const savedLanguage = localStorage.getItem("concordtree-language");
-setLanguage(savedLanguage || "zh");
+const savedLanguage = localStorage.getItem("concordtree-language-v2");
+setLanguage(savedLanguage || "en");
 
 window.addEventListener("load", () => {
   const anchor = decodeURIComponent(window.location.hash.slice(1));
