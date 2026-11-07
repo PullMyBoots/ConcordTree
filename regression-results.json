@@ -1204,5 +1204,17 @@
       "reason": "The shell file was edited during execution. This invalidated that attempt; fixed-snapshot rerun passed."
     },
     "public_download_tested": false
+  },
+  "modern_diagnostic": {
+    "run": "modern-diagnostic-48-v1",
+    "state": "complete",
+    "completed_cases": 48,
+    "cases": 48,
+    "topology_identical_cases": 48,
+    "reference_identical_cases": 48,
+    "byte_identical_cases": 14,
+    "stable_admission": "not_admitted",
+    "blackwell_hardware_executed": false,
+    "details": "modern-regression-results.json"
   }
 }

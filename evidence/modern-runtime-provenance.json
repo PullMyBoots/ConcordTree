@@ -1,0 +1,49 @@
+{
+  "status": "experimental_not_admitted",
+  "torch": "2.11.0+cu128",
+  "torch_cuda": "12.8",
+  "triton": "3.6.0",
+  "numpy": "2.2.6",
+  "scipy": "1.15.3",
+  "source_checkpoint_files_compared": 181,
+  "changed_files": [
+    {
+      "file": "runtime/gene/runtime/depth_downward_cuda.py",
+      "stable_sha256": "ba04d6fa671a75eb3375b336f88b0d94fb7dbad5ba1677057f348f0abe0396b0",
+      "modern_sha256": "9b547cfa6955c87d337af6dffb4e4f823ecadb47fc8043a5eea91a7b5b387212"
+    },
+    {
+      "file": "runtime/gene/src/concordtree/assets.py",
+      "stable_sha256": "2e01a31a5851468dd01526b5efd45a5999c266b38d624cd1a2c276afbea82ce6",
+      "modern_sha256": "f146cafeebcba20780e5dffeffa99eb2e8bcd0f68d3626d60110ec121215dc15"
+    },
+    {
+      "file": "runtime_config.py",
+      "stable_sha256": "8d639fb657c744cdae4514d87c48837659cef1c498482171f4cefcd1dd0da5cf",
+      "modern_sha256": "d3f8f0a0503ac0ce209856b969a94908ed4f29f7815fb9590933d785b45bad91"
+    }
+  ],
+  "weights_identical": true,
+  "adaptations": {
+    "runtime/gene/runtime/depth_downward_cuda.py": "Pointer-type constexpr encoded as boolean; reconstruct identical int32/int64 pointer inside JIT kernel for Triton 3.6 API.",
+    "runtime/gene/src/concordtree/assets.py": "Hash for identical-source Torch C++ ABI extension rebuild.",
+    "runtime_config.py": "Candidate predates the whitespace-safe temporary alias adaptation; diagnostic roots contain no spaces."
+  },
+  "ptxas_blackwell_version": "ptxas-blackwell: NVIDIA (R) Ptx optimizing assembler\nCopyright (c) 2005-2025 NVIDIA Corporation\nBuilt on Tue_May_27_02:18:05_PDT_2025\nCuda compilation tools, release 12.9, V12.9.86\nBuild cuda_12.9.r12.9/compiler.36037853_0\n",
+  "compile_evidence": "evidence/modern-architecture-compilation.json",
+  "hardware_executed": [
+    "NVIDIA L40S"
+  ],
+  "blackwell_hardware_executed": false,
+  "weight_sha256": {
+    "assets/mlp/homogeneous.pth": "8554764e33885992cc31e4d044a82a4ae8e876f119197e72b07ae3a1dcbc533b",
+    "assets/mlp/heterogeneous.pth": "a74e89e7b6091938f0b413a5c1446864bc18a8db7176f5c77a204018bc8e2edb",
+    "assets/msc/observed_loci.npz": "c2925749b22eebc5e9525a9415cb5101d655abcf69c2d57172e81c4dae80a23f",
+    "assets/msc/msa_only.npz": "861d790d0f6c9510c182367342c7473fb49ef21449ccd4897ed9579df8318491"
+  },
+  "torch_compiled_arch_flags": "sm_75 sm_80 sm_86 sm_90 sm_100 sm_120",
+  "changed_native_binaries": [
+    "runtime/gene/src/concordtree/assets/backends/pattern_freq_cuda_backend.cpython-310-x86_64-linux-gnu.so"
+  ],
+  "dispatch_compile_evidence": "evidence/modern-dispatch-compilation.json"
+}

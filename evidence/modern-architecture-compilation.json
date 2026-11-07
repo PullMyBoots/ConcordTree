@@ -1,0 +1,118 @@
+{
+  "hardware_execution": false,
+  "scope": "four representative active likelihood/count/species kernels, not exhaustive kernel/input coverage",
+  "results": [
+    {
+      "arch": 100,
+      "kernel": "gene_up_fp32",
+      "status": "compiled",
+      "shared_bytes": 0,
+      "ptx_sha256": "82c8f987ec8c381095c961f19ec4c3216a4e29718843dba4dd53dd1490b0f9a0"
+    },
+    {
+      "arch": 100,
+      "kernel": "gene_up_fp64",
+      "status": "compiled",
+      "shared_bytes": 0,
+      "ptx_sha256": "02477dadc2b9954c4c013463111cdd58ec3c574c633a6400365561401b1fd6b6"
+    },
+    {
+      "arch": 100,
+      "kernel": "gene_counts",
+      "status": "compiled",
+      "shared_bytes": 512,
+      "ptx_sha256": "e5363b2ead684ac1d53ff71852b140800c0ced56affdbdf75de2454f123268b2"
+    },
+    {
+      "arch": 100,
+      "kernel": "species_score",
+      "status": "compiled",
+      "shared_bytes": 256,
+      "ptx_sha256": "e77075b07f42947c32dbb515f30628c579a0320e9f7c4e4234d79db0fefff615"
+    },
+    {
+      "arch": 103,
+      "kernel": "gene_up_fp32",
+      "status": "compiled",
+      "shared_bytes": 0,
+      "ptx_sha256": "aa1af21e30c077dc3349377bab6884197ba6eba760076d6d5979a9f7729be766"
+    },
+    {
+      "arch": 103,
+      "kernel": "gene_up_fp64",
+      "status": "compiled",
+      "shared_bytes": 0,
+      "ptx_sha256": "c77d2d3253684ec30076ef50d54a9eafc909eb7901c3b87c6ed7be454706c7c2"
+    },
+    {
+      "arch": 103,
+      "kernel": "gene_counts",
+      "status": "compiled",
+      "shared_bytes": 512,
+      "ptx_sha256": "56d47ab84550d1266190c1184e79a26a9f6e4ec2485dc7cc95093d81e19e8ed3"
+    },
+    {
+      "arch": 103,
+      "kernel": "species_score",
+      "status": "compiled",
+      "shared_bytes": 256,
+      "ptx_sha256": "9296304c61be275e85ace81383392a6f4e913b5c56453a3da9e1b9d95ba2cbc5"
+    },
+    {
+      "arch": 120,
+      "kernel": "gene_up_fp32",
+      "status": "compiled",
+      "shared_bytes": 0,
+      "ptx_sha256": "4d6696474a7735a433fcf1bcad9f6b2ea20249f86acc4872cab9bcfcea35423e"
+    },
+    {
+      "arch": 120,
+      "kernel": "gene_up_fp64",
+      "status": "compiled",
+      "shared_bytes": 0,
+      "ptx_sha256": "6ae255506a24293159aa8a0fc15d9891d7154ebd4764633c3ba3c9a16b86e9ca"
+    },
+    {
+      "arch": 120,
+      "kernel": "gene_counts",
+      "status": "compiled",
+      "shared_bytes": 512,
+      "ptx_sha256": "b398102478714037703b4573b649eb670eac4c5b2b2d85eee0722a5a75ccf32f"
+    },
+    {
+      "arch": 120,
+      "kernel": "species_score",
+      "status": "compiled",
+      "shared_bytes": 256,
+      "ptx_sha256": "ff76bd17dc730270417de1ce1c1e4bf01c3e41e524522f8b0d96667e3ffe29d6"
+    },
+    {
+      "arch": 121,
+      "kernel": "gene_up_fp32",
+      "status": "compiled",
+      "shared_bytes": 0,
+      "ptx_sha256": "9fb7821e6df25eca91aee7b0b5a66b8da7078c8262d3fec3ddd3353ae18c0c88"
+    },
+    {
+      "arch": 121,
+      "kernel": "gene_up_fp64",
+      "status": "compiled",
+      "shared_bytes": 0,
+      "ptx_sha256": "c1f3ad3fb186d52749ae7fbe31effc0a97f757d970ccf97b0cc5da9f529b3a1b"
+    },
+    {
+      "arch": 121,
+      "kernel": "gene_counts",
+      "status": "compiled",
+      "shared_bytes": 512,
+      "ptx_sha256": "81d180bf8d9599cb31741f742a81cc5ea730ff67a463b9d138729d9d24a8b5dd"
+    },
+    {
+      "arch": 121,
+      "kernel": "species_score",
+      "status": "compiled",
+      "shared_bytes": 256,
+      "ptx_sha256": "760c2dacf7d230c4555d71434b16130bbda60375c0040caa290d375c2a2df76a"
+    }
+  ]
+}

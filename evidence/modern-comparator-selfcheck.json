@@ -1,0 +1,77 @@
+{
+  "status": "passed",
+  "checks": {
+    "base": {
+      "file_sets_identical": true,
+      "all_bytes_identical": true,
+      "all_topologies_identical": true,
+      "reference_accuracy_identical": true,
+      "trees": {
+        "prediction.nwk": {
+          "byte_identical": true,
+          "taxa_identical": true,
+          "topology_identical": true,
+          "tree_to_tree_rf": 0,
+          "branch_keys_identical": true,
+          "max_branch_absolute_delta": 0.0,
+          "support_identical": true,
+          "max_shared_support_absolute_delta": 0.0
+        }
+      }
+    },
+    "reorder": {
+      "file_sets_identical": true,
+      "all_bytes_identical": false,
+      "all_topologies_identical": true,
+      "reference_accuracy_identical": true,
+      "trees": {
+        "prediction.nwk": {
+          "byte_identical": false,
+          "taxa_identical": true,
+          "topology_identical": true,
+          "tree_to_tree_rf": 0,
+          "branch_keys_identical": true,
+          "max_branch_absolute_delta": 0.0,
+          "support_identical": true,
+          "max_shared_support_absolute_delta": 0.0
+        }
+      }
+    },
+    "numeric": {
+      "file_sets_identical": true,
+      "all_bytes_identical": false,
+      "all_topologies_identical": true,
+      "reference_accuracy_identical": true,
+      "trees": {
+        "prediction.nwk": {
+          "byte_identical": false,
+          "taxa_identical": true,
+          "topology_identical": true,
+          "tree_to_tree_rf": 0,
+          "branch_keys_identical": true,
+          "max_branch_absolute_delta": 1.000000000139778e-06,
+          "support_identical": false,
+          "max_shared_support_absolute_delta": 0.5
+        }
+      }
+    },
+    "topology": {
+      "file_sets_identical": true,
+      "all_bytes_identical": false,
+      "all_topologies_identical": false,
+      "reference_accuracy_identical": true,
+      "trees": {
+        "prediction.nwk": {
+          "byte_identical": false,
+          "taxa_identical": true,
+          "topology_identical": false,
+          "tree_to_tree_rf": 2,
+          "branch_keys_identical": false,
+          "max_branch_absolute_delta": 0.0,
+          "support_identical": false,
+          "max_shared_support_absolute_delta": 0.0
+        }
+      }
+    }
+  }
+}

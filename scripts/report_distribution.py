@@ -37,7 +37,34 @@ summary=dict(primary=primary,followup=followup,aligned_followup=aligned,
 # RESULT fields can include server-local input paths. Release the summary rows,
 # input hashes and full accuracy measurements without embedding local paths.
 summary['cross_device']=[{k:v for k,v in row.items() if k!='result'} for row in summary['cross_device']]
+modern_diagnostic=None
+if (ROOT/'dist/modern-regression-results.json').exists():
+    modern_diagnostic=read('dist/modern-regression-results.json')
+    assert modern_diagnostic['stable_admission']=='not_admitted'
+    diagnostic_status=modern_diagnostic['status']
+    summary['modern_diagnostic']=dict(
+        run=modern_diagnostic['run'],state=diagnostic_status['state'],
+        completed_cases=diagnostic_status['completed_cases'],cases=diagnostic_status['cases'],
+        topology_identical_cases=sum(x['all_topologies_identical'] for x in diagnostic_status['results']),
+        reference_identical_cases=sum(x['reference_accuracy_identical'] for x in diagnostic_status['results']),
+        byte_identical_cases=sum(x['all_bytes_identical'] for x in diagnostic_status['results']),
+        stable_admission='not_admitted',blackwell_hardware_executed=False,
+        details='modern-regression-results.json')
 (ROOT/'dist/regression-results.json').write_text(json.dumps(summary,indent=2)+'\n')
+trial_runs={}
+for run in ['paired-48-v2','speed-followup-v1','speed-isolation-v1',
+            'speed-core-aligned-v1','speed-followup-aligned-v1']:
+    protocol=read('output/'+run+'/protocol.json')
+    run_records=read('output/'+run+'/records.json')
+    trial_runs[run]=dict(
+        protocol={k:v for k,v in protocol.items() if k!='cases'},
+        inputs=[{k:v for k,v in case.items() if k not in ['source','truth','loci']}
+                for case in protocol['cases']],
+        trials=[{k:v for k,v in record.items() if k in {
+            'artifact','repeat','case','artifacts','accuracy','file_to_tree_seconds',
+            'wall_seconds','main_cpu_start','main_cpu_end','artifacts_match_first_run'}}
+            for record in run_records])
+(ROOT/'dist/regression-trials.json').write_text(json.dumps(trial_runs,indent=2,allow_nan=False)+'\n')
 lines=['# ConcordTree 1.0.2 Linux distribution validation','',
     '## Artifacts','',f"Portable archive: `{artifact['file']}` ({artifact['bytes']:,} bytes).",
     f"SHA256: `{artifact['sha256']}`.",'',
@@ -70,8 +97,12 @@ lines += ['',f"Follow-up investigation gate (no case >5% slower): **{'passed' if
     'Portable: Linux x86_64, glibc >=2.34, driver >=525.60.13, compute capability 7.x–9.x; GCC/Clang and C headers are needed for first-run Triton helpers. Docker includes compiler prerequisites and requires Docker plus NVIDIA Container Toolkit on the host. No host CUDA Toolkit or Conda setup is needed. Available RAM/VRAM limits input sizes. Web uploads are limited to 100 MiB; larger alignments use CLI. ARM, CPU-only, pre-Volta and Blackwell are not admitted by this stable runtime.','',
     'The experimental Torch 2.11/CUDA 12.8/Triton 3.6 candidate required a type-specialization API adaptation. Its first Gene case retained topology and RF but changed branch values (max 2.041e-8), failing the strict artifact gate. It is not shipped as stable Blackwell support; no Blackwell hardware was available.','',
     '## Provenance','',
-    'Scientific source and checkpoints remain frozen. Changes are limited to startup/configuration, Web GPU/CPU/bind selection, integrity/documentation, identical-source sequence-parser rebuild for glibc 2.34, and AP-NJ fatbinary architecture coverage. The original and expanded AP-NJ SM89 builds have 5960 identical SASS instructions. Scientific versions remain Torch 2.5.1+cu121, Triton 3.1.0, NumPy 2.1.2 and SciPy 1.15.3. Full hashes and raw per-trial records are retained in the Main-owned distribution workspace.','',
+    'Scientific source and checkpoints remain frozen. Changes are limited to startup/configuration, Web GPU/CPU/bind selection, integrity/documentation, identical-source sequence-parser rebuild for glibc 2.34, and AP-NJ fatbinary architecture coverage. The original and expanded AP-NJ SM89 builds have 5960 identical SASS instructions. Scientific versions remain Torch 2.5.1+cu121, Triton 3.1.0, NumPy 2.1.2 and SciPy 1.15.3. `regression-trials.json` exports input hashes, measured/warm-up timings, RF measurements and output hashes for the primary and follow-up runs without embedding server-local input/output paths. Full outputs and original records remain in the Main-owned distribution workspace.','',
     'Official compatibility references: [NVIDIA Blackwell guide](https://docs.nvidia.com/cuda/blackwell-compatibility-guide/index.html), [NVIDIA Container Toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html), [PyTorch version matrix](https://pytorch.org/get-started/previous-versions/).','']
+if modern_diagnostic is not None:
+    d=summary['modern_diagnostic']
+    lines += ['## Expanded modern-runtime diagnostic','',
+        f"A subsequent diagnostic completed {d['completed_cases']}/{d['cases']} cases (state: {d['state']}). Among completed cases, {d['topology_identical_cases']} have identical initial/final topology sets, {d['reference_identical_cases']} have identical reference accuracy measurements, and {d['byte_identical_cases']} have byte-identical artifacts. This diagnostic continues after differences to measure their extent; the stable byte-identity gate is unchanged. See [MODERN_VALIDATION.md](MODERN_VALIDATION.md) and `modern-regression-results.json` for timings, numerical changes and source/weight provenance. The adapted dispatch and representative kernels also compile in 32 variant/architecture combinations for SM100/103/120/121. These are compilation checks; no Blackwell hardware execution or stable admission is claimed.",'']
 (ROOT/'dist/VALIDATION.md').write_text('\n'.join(lines))
 ready=dict(stable_runtime_ready=speed_ok and installer_ok,public_repo='PullMyBoots/ConcordTree',
            public_release_published=False,modern_runtime_admitted=False,
