@@ -1,0 +1,30 @@
+{
+  "records": [
+    {
+      "id": "gene256",
+      "source": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/data/test/simulation/alisim-homogeneous-v3/n256/000/alignment.phy",
+      "predictor": "homogeneous"
+    },
+    {
+      "id": "gene1024",
+      "source": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/data/test/simulation/alisim-homogeneous-v3/n1024/000/alignment.phy",
+      "predictor": "homogeneous"
+    },
+    {
+      "id": "gene4096",
+      "source": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/data/test/simulation/alisim-homogeneous-v3/n4096/000/alignment.phy",
+      "predictor": "homogeneous"
+    },
+    {
+      "id": "species-weights1024",
+      "source": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/data/test/simulation/alisim-homogeneous-v3/n1024/000/alignment.phy",
+      "predictor": "heterogeneous"
+    },
+    {
+      "id": "species-weights4096",
+      "source": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/data/test/simulation/alisim-homogeneous-v3/n4096/000/alignment.phy",
+      "predictor": "heterogeneous"
+    }
+  ],
+  "scope": "Execution comparison, not an accuracy/generalization test. Species-weight cases use homogeneous simulated observations to isolate execution under identical inputs."
+}

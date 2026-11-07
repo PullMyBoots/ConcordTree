@@ -1,17 +1,8 @@
-# Local environment and generated packaging products
-.conda/
-build/
 dist/
-*.egg-info/
-__pycache__/
-*.py[cod]
-native_src/*.so
-
-# User runs must never enter the source repository
+*.tar.gz
+.runtime/
 runs/
-work/
-output/
-native_src/artifacts/
-docs/assets/*.png
-docs/assets/*.pdf
-*.log
+.conda/
+.web-python/
+__pycache__/
+*.pyc

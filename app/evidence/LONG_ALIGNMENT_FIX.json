@@ -1,0 +1,39 @@
+{
+  "status": "passed",
+  "recorded_at": "2026-11-05T15:30:29.646276+00:00",
+  "baseline_release": "V1.0.1",
+  "failure": "CSR posterior row expanded to 2097152 elements, exceeding Triton limit 1048576; CPU ptxas compile of preceding shapes took minutes",
+  "kernel": {
+    "cases": 72,
+    "seconds": 3.374574755784124,
+    "max_degree": 1048579
+  },
+  "full_plant": {
+    "taxa": 1178,
+    "sites": 311148,
+    "file_to_tree_seconds": 202.21072372188792,
+    "rounds": 23,
+    "all_sites_used_for_parameter_fitting": true,
+    "all_sites_used_for_topology_scoring": true,
+    "internal_supports": 1175,
+    "status": "complete"
+  },
+  "paired_4096": {
+    "taxa": 4096,
+    "sites": 2048,
+    "nrf": 0.0,
+    "log_likelihood_delta_per_site": 3.0127512218314223e-07,
+    "algorithm_seconds": [
+      7.661247878801078,
+      7.722401659935713
+    ]
+  },
+  "release_tests": 17,
+  "evidence_directory": "output/gene-long-alignment-fix-20261105",
+  "limits": [
+    "Large-row reduction order changes; full bitwise floating-point equivalence is not claimed",
+    "Small 128-element tile path preserved exactly in component tests",
+    "One exposed 4096 regression and one empirical plant execution check, not new accuracy or universal runtime evidence",
+    "Inherited evidence files describe V1.0.1; this record describes the patch validation"
+  ]
+}

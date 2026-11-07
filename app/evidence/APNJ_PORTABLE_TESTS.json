@@ -1,0 +1,7 @@
+{
+  "status": "passed",
+  "tests": 7,
+  "test_source_sha256": "ab2c5c30fd9bae2f97fa8d3e3d50c3e9a756d4cb8dde49d07b6a33132801824f",
+  "evidence": "final-portable.log",
+  "scope": "standalone release test; scalar corrected-distance, raw-row and projection references, missing/padding/layout/labels/thread/lifecycle checks; no dependency on experiment backend"
+}

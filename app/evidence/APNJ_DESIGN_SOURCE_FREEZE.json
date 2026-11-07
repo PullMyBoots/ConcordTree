@@ -1,0 +1,29 @@
+{
+  "created_at": "2026-11-07T08:32:22.688707+00:00",
+  "version": "1.0.2",
+  "code": {
+    "_ct_apnj_graph.cpython-310-x86_64-linux-gnu.so": "f36d953ef5a8e676eb4cfc3145d94b86e8e0c4f7de8d777cd6311688a8522331",
+    "_ct_apnj_local.cpython-310-x86_64-linux-gnu.so": "482210b4af4d31d2be8d8ca28d895e4cbe927a75692f4c268dcd0d20d01d44d9",
+    "_ct_apnj_packed.cpython-310-x86_64-linux-gnu.so": "98ce7ccb5d6978593dffacd467ad7c5c9675bf1e97a33e3ec44322c4bcfa6726",
+    "_ct_apnj_terminal.cpython-310-x86_64-linux-gnu.so": "c47acf1e2d0860fa288729827d0698ff25cbe25e7980278c224166276d056340",
+    "_ct_apnj_topology.cpython-310-x86_64-linux-gnu.so": "7b4f94daf85142bbe8021ac29666f49120308d3909adb11687c0b348fe2b63eb",
+    "native/apnj/packed.cu": "4ca042324100467ad78ec55a20b98d33e27e2d6639d44c534e823eb2b2320565",
+    "native/apnj/graph.cpp": "3a47f6b253ceac68edbd41a5d70acb9b048c9e59a421ae331e881515f6d6c3e4",
+    "native/apnj/gamma_shape.cuh": "dddac4f33327075d3c06d842245c58bb32f6e18c8ed133338237863590ba68b7",
+    "native/apnj/BUILD_COMMANDS.json": "00127fcdda6574618b398c75bfcb28502944e01d4121533c99952c01a4e8d3c8",
+    "native/apnj/FINAL_GRAPH_BUILD.json": "8219d63b1c247eb381d7383bd24560023701a4d3cfb6bdf444b7da11a7c5c07a",
+    "native/apnj/build-graph.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "native/apnj/build-packed.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "native/apnj/build-local.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "native/apnj/build-terminal.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "native/apnj/build-topology.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "engine.py": "ffea349b05bf4b138c4c654d574200a0073afce09a952b8e9b7ab64e363a31e1",
+    "apnj_core.py": "52fc56654e64b35c61d047d3e70b312f3d7890d7a158f971a125012b220dc1a0",
+    "tests/test_apnj_design.py": "ad6a320680c926df62482dad93bb66157d95b9743d364ae668e2ff31e22967ab",
+    "tests/test_apnj_ties.py": "9df91f5d637fe995c0a4156e7ea9eacee56eea90fbe2d22914594039bfe29431"
+  },
+  "equivalence": "64 graph operator cases and24 initializer tree hashes equal measured tie runtime",
+  "initial_run": "900 completed;220 sparse reruns,680 verified code-path reuse",
+  "full_run": "42 measured full pipelines, unchanged-initial-tree reuse for remaining records",
+  "scope": "current delivered code; previous APNJ_SOURCE_FREEZE.json is a historical freeze"
+}

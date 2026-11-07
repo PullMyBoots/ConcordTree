@@ -1,0 +1,18 @@
+{
+  "python": "3.10.18",
+  "platform": "Linux-6.8.0-139-generic-x86_64-with-glibc2.39",
+  "packages": {
+    "torch": "2.5.1+cu121",
+    "triton": "3.1.0",
+    "numpy": "2.1.2",
+    "scipy": "1.15.3",
+    "ete3": "3.1.3",
+    "pybind11": "3.0.1"
+  },
+  "python_executable": "release/V1.0.2/.conda/env/bin/python",
+  "gpu_validation": "Standalone migration: six complete before/after pipeline cases on physical GPU1; real HTTP gene and observed-locus species jobs on GPU0; NVIDIA L40S.",
+  "nvidia_smi": "index, name, driver_version, memory.total [MiB]\n0, NVIDIA L40S, 580.178.04, 46068 MiB\n1, NVIDIA L40S, 580.178.04, 46068 MiB\n2, NVIDIA L40S, 580.178.04, 46068 MiB",
+  "scope": "Measured imports/installed payload of the original service and the local copy. Historical Triton3.5.1/NumPy2.2.6 documentation did not match the actual source payload; retained actual3.1.0/2.1.2. Current-server/current-prefix independence is validated; arbitrary relocation, other hosts/ABIs and CPU-only inference are not certified.",
+  "environment_relocated_at": "2026-11-07",
+  "source_environment": "release/v-0.1.3/.conda/env (copied; no longer required)"
+}

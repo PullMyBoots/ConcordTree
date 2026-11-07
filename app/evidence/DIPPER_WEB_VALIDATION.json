@@ -1,0 +1,35 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "id": "1020c4d6aa0640d6909fdf5b968eedd5",
+      "task": "gene",
+      "status": "succeeded",
+      "version": "1.0.2",
+      "taxa": 32,
+      "loci": 1,
+      "elapsed_seconds": 2.346811845432967,
+      "pipeline": "DIPPER -> MLP-NNI -> V11 full-site likelihood",
+      "all_sites": 257,
+      "native_sha256": "f3f15f94275cb80a3b68fd7bffce2f0f001c507bcdbb403aafdd943097426718",
+      "support_enabled": true,
+      "download_sha256": "b3ed934a8937f93a05146f20870db86f2bda8e351da96ae8e5bc81d8ca8f8b77",
+      "content_type": "text/plain; charset=utf-8"
+    },
+    {
+      "id": "b40c8665f8314eda800cab7678fa7b48",
+      "task": "species",
+      "status": "succeeded",
+      "version": "1.0.2",
+      "taxa": 32,
+      "loci": 2,
+      "elapsed_seconds": 1.5235293288715184,
+      "pipeline": "DIPPER -> MLP-NNI -> MSC compact statistical refinement",
+      "all_sites": 257,
+      "native_sha256": "f3f15f94275cb80a3b68fd7bffce2f0f001c507bcdbb403aafdd943097426718",
+      "support_enabled": true,
+      "download_sha256": "75a23f2877b00d36be8998932e7826f272da2b680c3812b7714f0a84a60293ef",
+      "content_type": "text/plain; charset=utf-8"
+    }
+  ]
+}

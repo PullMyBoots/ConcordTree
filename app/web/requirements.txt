@@ -1,0 +1,5 @@
+fastapi==0.136.3
+uvicorn==0.47.0
+python-multipart==0.0.29
+# TestClient only; not needed to serve the interface.
+httpx==0.28.1

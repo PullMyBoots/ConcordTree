@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "id": "species-n4096-complex-000",
+  "taxa": 4096,
+  "branches": 4093,
+  "checks": [
+    {
+      "quartets": 1523067,
+      "edges": 4093,
+      "exact_prototype_margins": true
+    }
+  ],
+  "exact_saved_prototype_margins": true,
+  "exact_original_topology": true,
+  "input_unchanged": true
+}

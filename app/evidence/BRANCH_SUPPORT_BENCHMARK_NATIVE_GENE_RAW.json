@@ -1,0 +1,186 @@
+[
+  {
+    "task": "gene",
+    "repeat": 0,
+    "warmup": true,
+    "enabled": false,
+    "seconds": 7.087846371810883,
+    "file_to_tree_seconds": 7.0835879519581795,
+    "prediction_sha256": "5a6351167db5390cb9673c3a65eb82480ee1be0ff6772cadb82734a4283c9fd2",
+    "history_sha256": "2d0e61edc7c5d72a4f9b1fbf51161cf8c023d8b332cec253dc89242836c00d10",
+    "support": {
+      "enabled": false
+    },
+    "fit_sha256": "797506f96159905a8ca1a021a72e3157f0092f426f7bf87be077b2f2e1643580"
+  },
+  {
+    "task": "gene",
+    "repeat": 0,
+    "warmup": true,
+    "enabled": true,
+    "seconds": 6.116440942045301,
+    "file_to_tree_seconds": 6.114496081136167,
+    "prediction_sha256": "5a6351167db5390cb9673c3a65eb82480ee1be0ff6772cadb82734a4283c9fd2",
+    "history_sha256": "2d0e61edc7c5d72a4f9b1fbf51161cf8c023d8b332cec253dc89242836c00d10",
+    "support": {
+      "enabled": true,
+      "method": "gene_local_likelihood_weight",
+      "label": "Local likelihood weight",
+      "path": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/output/branch-support-validation-20261105/bench-native-gene-0-1/branch-support.json",
+      "annotated_tree": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/output/branch-support-validation-20261105/bench-native-gene-0-1/prediction.nwk",
+      "unannotated_tree": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/output/branch-support-validation-20261105/bench-native-gene-0-1/prediction.unannotated.nwk",
+      "calibrated": false,
+      "internal_branches": 4093,
+      "available": 4093,
+      "unavailable": 0,
+      "computation": {
+        "source": "last_search_scan",
+        "additional_inference_runs": 0,
+        "additional_parameter_fits": 0,
+        "additional_nni_evaluations": 0,
+        "final_state_verified": true,
+        "final_verification_and_summary_seconds": 0.03794214595109224,
+        "export_seconds": 0.043240105267614126
+      }
+    },
+    "fit_sha256": "797506f96159905a8ca1a021a72e3157f0092f426f7bf87be077b2f2e1643580"
+  },
+  {
+    "task": "gene",
+    "repeat": 1,
+    "warmup": false,
+    "enabled": true,
+    "seconds": 6.083738489076495,
+    "file_to_tree_seconds": 6.081846062093973,
+    "prediction_sha256": "5a6351167db5390cb9673c3a65eb82480ee1be0ff6772cadb82734a4283c9fd2",
+    "history_sha256": "2d0e61edc7c5d72a4f9b1fbf51161cf8c023d8b332cec253dc89242836c00d10",
+    "support": {
+      "enabled": true,
+      "method": "gene_local_likelihood_weight",
+      "label": "Local likelihood weight",
+      "path": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/output/branch-support-validation-20261105/bench-native-gene-1-1/branch-support.json",
+      "annotated_tree": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/output/branch-support-validation-20261105/bench-native-gene-1-1/prediction.nwk",
+      "unannotated_tree": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/output/branch-support-validation-20261105/bench-native-gene-1-1/prediction.unannotated.nwk",
+      "calibrated": false,
+      "internal_branches": 4093,
+      "available": 4093,
+      "unavailable": 0,
+      "computation": {
+        "source": "last_search_scan",
+        "additional_inference_runs": 0,
+        "additional_parameter_fits": 0,
+        "additional_nni_evaluations": 0,
+        "final_state_verified": true,
+        "final_verification_and_summary_seconds": 0.03591916710138321,
+        "export_seconds": 0.043158498127013445
+      }
+    },
+    "fit_sha256": "797506f96159905a8ca1a021a72e3157f0092f426f7bf87be077b2f2e1643580"
+  },
+  {
+    "task": "gene",
+    "repeat": 1,
+    "warmup": false,
+    "enabled": false,
+    "seconds": 6.002155249938369,
+    "file_to_tree_seconds": 6.000598611310124,
+    "prediction_sha256": "5a6351167db5390cb9673c3a65eb82480ee1be0ff6772cadb82734a4283c9fd2",
+    "history_sha256": "2d0e61edc7c5d72a4f9b1fbf51161cf8c023d8b332cec253dc89242836c00d10",
+    "support": {
+      "enabled": false
+    },
+    "fit_sha256": "797506f96159905a8ca1a021a72e3157f0092f426f7bf87be077b2f2e1643580"
+  },
+  {
+    "task": "gene",
+    "repeat": 2,
+    "warmup": false,
+    "enabled": false,
+    "seconds": 6.006184115074575,
+    "file_to_tree_seconds": 6.004560176283121,
+    "prediction_sha256": "5a6351167db5390cb9673c3a65eb82480ee1be0ff6772cadb82734a4283c9fd2",
+    "history_sha256": "2d0e61edc7c5d72a4f9b1fbf51161cf8c023d8b332cec253dc89242836c00d10",
+    "support": {
+      "enabled": false
+    },
+    "fit_sha256": "797506f96159905a8ca1a021a72e3157f0092f426f7bf87be077b2f2e1643580"
+  },
+  {
+    "task": "gene",
+    "repeat": 2,
+    "warmup": false,
+    "enabled": true,
+    "seconds": 6.062398384790868,
+    "file_to_tree_seconds": 6.060456250794232,
+    "prediction_sha256": "5a6351167db5390cb9673c3a65eb82480ee1be0ff6772cadb82734a4283c9fd2",
+    "history_sha256": "2d0e61edc7c5d72a4f9b1fbf51161cf8c023d8b332cec253dc89242836c00d10",
+    "support": {
+      "enabled": true,
+      "method": "gene_local_likelihood_weight",
+      "label": "Local likelihood weight",
+      "path": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/output/branch-support-validation-20261105/bench-native-gene-2-1/branch-support.json",
+      "annotated_tree": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/output/branch-support-validation-20261105/bench-native-gene-2-1/prediction.nwk",
+      "unannotated_tree": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/output/branch-support-validation-20261105/bench-native-gene-2-1/prediction.unannotated.nwk",
+      "calibrated": false,
+      "internal_branches": 4093,
+      "available": 4093,
+      "unavailable": 0,
+      "computation": {
+        "source": "last_search_scan",
+        "additional_inference_runs": 0,
+        "additional_parameter_fits": 0,
+        "additional_nni_evaluations": 0,
+        "final_state_verified": true,
+        "final_verification_and_summary_seconds": 0.03611040487885475,
+        "export_seconds": 0.04359708307310939
+      }
+    },
+    "fit_sha256": "797506f96159905a8ca1a021a72e3157f0092f426f7bf87be077b2f2e1643580"
+  },
+  {
+    "task": "gene",
+    "repeat": 3,
+    "warmup": false,
+    "enabled": true,
+    "seconds": 6.101224972866476,
+    "file_to_tree_seconds": 6.0993322459980845,
+    "prediction_sha256": "5a6351167db5390cb9673c3a65eb82480ee1be0ff6772cadb82734a4283c9fd2",
+    "history_sha256": "2d0e61edc7c5d72a4f9b1fbf51161cf8c023d8b332cec253dc89242836c00d10",
+    "support": {
+      "enabled": true,
+      "method": "gene_local_likelihood_weight",
+      "label": "Local likelihood weight",
+      "path": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/output/branch-support-validation-20261105/bench-native-gene-3-1/branch-support.json",
+      "annotated_tree": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/output/branch-support-validation-20261105/bench-native-gene-3-1/prediction.nwk",
+      "unannotated_tree": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/output/branch-support-validation-20261105/bench-native-gene-3-1/prediction.unannotated.nwk",
+      "calibrated": false,
+      "internal_branches": 4093,
+      "available": 4093,
+      "unavailable": 0,
+      "computation": {
+        "source": "last_search_scan",
+        "additional_inference_runs": 0,
+        "additional_parameter_fits": 0,
+        "additional_nni_evaluations": 0,
+        "final_state_verified": true,
+        "final_verification_and_summary_seconds": 0.036226298194378614,
+        "export_seconds": 0.043769639916718006
+      }
+    },
+    "fit_sha256": "797506f96159905a8ca1a021a72e3157f0092f426f7bf87be077b2f2e1643580"
+  },
+  {
+    "task": "gene",
+    "repeat": 3,
+    "warmup": false,
+    "enabled": false,
+    "seconds": 5.997146551962942,
+    "file_to_tree_seconds": 5.995563559699804,
+    "prediction_sha256": "5a6351167db5390cb9673c3a65eb82480ee1be0ff6772cadb82734a4283c9fd2",
+    "history_sha256": "2d0e61edc7c5d72a4f9b1fbf51161cf8c023d8b332cec253dc89242836c00d10",
+    "support": {
+      "enabled": false
+    },
+    "fit_sha256": "797506f96159905a8ca1a021a72e3157f0092f426f7bf87be077b2f2e1643580"
+  }
+]

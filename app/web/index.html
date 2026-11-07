@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark light">
+  <meta name="description" content="Infer gene trees and species trees from sequence alignments.">
+  <title>ConcordTree</title>
+  <link rel="icon" type="image/svg+xml" href="/mark.svg">
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/app.js" defer></script>
+</head>
+<body data-theme="geometry">
+  <div class="cinema" aria-hidden="true">
+    <canvas id="evolutionCanvas"></canvas>
+    <picture class="scene"><source media="(max-width: 600px)"><img alt="" decoding="async"></picture>
+    <picture class="scene"><source media="(max-width: 600px)"><img alt="" decoding="async"></picture>
+    <div class="cinema-shade"></div>
+    <div class="light-rays"></div>
+    <div class="motes"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    <div class="cinema-grain"></div>
+  </div>
+  <main>
+    <section id="submitPage" class="submit-page" aria-label="Submit alignment">
+      <form id="taskForm">
+        <div class="task-tabs" role="group" aria-label="Tree type">
+          <button type="button" data-task="gene" class="active" aria-pressed="true">Gene Tree</button>
+          <button type="button" data-task="species" aria-pressed="false">Species Tree</button>
+        </div>
+        <div class="inference-options" aria-label="Inference options">
+          <label id="modelOption" class="model-option"><span>Model</span>
+            <select id="evolutionModel" aria-label="Evolutionary model">
+              <option>GTR+FO+I+G4</option><option>GTR+I+G4</option><option>GTR+G4</option>
+              <option>HKY+G4</option><option>GTR</option><option>SYM</option><option>TN93</option>
+              <option>HKY</option><option>K80</option><option>F81</option><option>JC</option>
+            </select>
+          </label>
+          <label class="support-option"><input id="showSupport" type="checkbox" checked><span>Branch support</span></label>
+        </div>
+        <input type="file" id="alignmentFile" accept=".phy,.phylip,.txt" hidden>
+        <button class="dropzone" id="uploadTrigger" type="button" aria-label="Upload alignment and join queue">
+          <span class="upload-mark" aria-hidden="true"><svg viewBox="0 0 40 40"><path d="M20 27V10m-6 6 6-6 6 6M10 25v5a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3v-5"/></svg></span>
+          <strong id="uploadTitle">Upload</strong>
+          <span id="formatHint" class="format-hint">PHYLIP · one alignment</span>
+        </button>
+        <button id="exampleButton" class="text-button example-button" type="button">Try example</button>
+        <div class="file-card" id="fileCard" hidden>
+          <div><strong id="fileName"></strong><span id="fileMeta"></span></div>
+          <button id="removeFile" class="text-button" type="button" aria-label="Choose another file">Change</button>
+        </div>
+        <p class="error" id="formError" role="alert" hidden></p>
+        <details id="serverQueue" class="server-queue" data-status="loading" aria-label="Server task queue">
+          <summary class="queue-header">
+            <span class="queue-service"><span class="connection-mark" aria-hidden="true"><svg viewBox="0 0 20 20"><path d="M3 7a11 11 0 0 1 14 0M6 10a6 6 0 0 1 8 0m-5 3a2 2 0 0 1 2 0"/><circle cx="10" cy="16" r=".7"/><path class="connection-slash" d="m3 3 14 14"/></svg></span><span id="queueState" role="status" aria-live="polite">Connecting</span></span>
+            <span id="queueHint">Checking server</span>
+          </summary>
+          <div class="queue-lanes" role="status" aria-live="polite" aria-atomic="true">
+            <div class="queue-lane"><div class="queue-lane-heading">Running <strong id="runningCount">—</strong></div><div id="runningSlots" class="running-slots" aria-hidden="true"><i class="job-slot"></i></div></div>
+            <div class="queue-lane"><div class="queue-lane-heading">Queued <strong id="queuedCount">—</strong></div><div id="queuedSlots" class="queue-slots" aria-hidden="true"></div></div>
+          </div>
+        </details>
+      </form>
+    </section>
+
+    <section id="resultPage" class="result-page" aria-labelledby="resultTitle" hidden>
+      <header class="result-header">
+        <div><h1 id="resultTitle" tabindex="-1">Inferring</h1><p id="resultDetail"></p><p id="resultTiming" class="result-timing" hidden></p></div>
+        <button id="backButton" class="text-button" type="button">Back</button>
+      </header>
+      <p id="jobStatus" role="status" aria-live="polite"></p>
+      <div id="inferenceProgress" class="inference-progress" hidden>
+        <div id="progressBar" class="progress-bar" role="progressbar" aria-label="Inference stages">
+          <span id="progressFill" class="progress-fill" aria-hidden="true"></span>
+          <div class="progress-copy" role="status" aria-live="polite"><span id="progressMessage">Connecting</span><span id="progressDetail"></span></div>
+          <span id="progressStage" class="progress-stage"></span>
+        </div>
+        <details id="progressActivity" class="progress-activity" hidden>
+          <summary>Activity</summary>
+          <ol id="progressLog" aria-label="Observed task activity"></ol>
+        </details>
+      </div>
+      <div id="resultActions" class="result-actions" hidden>
+        <button id="previewButton" class="text-button" type="button" aria-expanded="false" aria-controls="treeCanvas" hidden>Preview</button>
+        <a id="downloadTree" class="primary-button" download="tree.nwk">Download</a>
+      </div>
+      <div id="treeCanvas" class="tree-canvas" hidden>
+        <div id="treeScroll" class="tree-scroll" tabindex="0" aria-label="Tree preview. Scroll to explore; Ctrl-scroll to zoom.">
+          <svg id="treeSvg" viewBox="0 0 760 500" role="img" aria-label="Tree preview"></svg>
+        </div>
+        <p id="canvasEmpty" class="canvas-empty" hidden></p>
+        <span class="tree-scroll-hint">Scroll to explore</span>
+        <button id="resetView" class="text-button reset-view" type="button">Reset View</button>
+      </div>
+      <p id="supportLegend" class="support-legend" hidden></p>
+      <button id="cancelButton" class="text-button" type="button" hidden>Cancel</button>
+    </section>
+  </main>
+
+  <div class="background-controls">
+    <div id="themeMenu" class="theme-menu" role="group" aria-label="Background themes" hidden>
+      <button type="button" data-theme="geometry" aria-pressed="true"><span aria-hidden="true" class="theme-dot geometry-dot"></span>Geometry</button>
+      <button type="button" data-theme="nature" aria-pressed="false"><span aria-hidden="true" class="theme-dot forest-dot"></span>Nature</button>
+    </div>
+    <button id="themeToggle" class="theme-toggle" type="button" aria-label="Choose background theme" aria-expanded="false" aria-controls="themeMenu"><svg viewBox="0 0 20 20" aria-hidden="true"><rect x="2" y="3" width="16" height="14" rx="3"/><circle cx="7" cy="8" r="1.5"/><path d="m3 15 4-4 3 3 3-5 4 6"/></svg><span id="themeName">Geometry</span><span class="theme-chevron" aria-hidden="true">⌃</span></button>
+    <button id="nextBackground" class="background-toggle" type="button" aria-label="Next image" title="Next image" hidden><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 5h2c4 0 6 10 10 10h2m-3-3 3 3-3 3M3 15h2c1.5 0 2.7-1.3 3.7-3M11.3 8c1-1.7 2.2-3 3.7-3h2m-3-3 3 3-3 3"/></svg></button>
+  <button id="backgroundToggle" class="background-toggle" type="button" aria-label="Pause background" title="Pause background" aria-pressed="false">
+    <svg class="pause-icon" viewBox="0 0 20 20" aria-hidden="true"><path d="M7 5v10M13 5v10"/></svg>
+    <svg class="play-icon" viewBox="0 0 20 20" aria-hidden="true"><path d="m7 5 8 5-8 5Z"/></svg>
+  </button>
+  </div>
+  <div id="photoCredit" class="photo-credit" hidden><a id="photoInfo" href="/credits.html" target="_blank" rel="noopener noreferrer" aria-label="Image details and credits">Image</a><span aria-hidden="true"> · </span><a id="photoLicense" target="_blank" rel="noopener noreferrer"></a></div>
+  <span id="themeStatus" class="sr-only" role="status"></span>
+  <footer class="site-footer">
+    <nav aria-label="Resources">
+      <a href="https://yinpingping111.github.io/XiyunJiao/" target="_blank" rel="noopener noreferrer">About Us</a>
+      <a href="/report/" target="_blank" rel="noopener noreferrer">Technical Report</a>
+      <a href="https://github.com/PullMyBoots/ConcordTree" target="_blank" rel="noopener noreferrer">Code</a>
+    </nav>
+  </footer>
+</body>
+</html>

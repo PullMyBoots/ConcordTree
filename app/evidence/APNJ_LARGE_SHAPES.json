@@ -1,0 +1,698 @@
+{
+  "status": "passed",
+  "planned": 3,
+  "rows": [
+    {
+      "id": "scaling/n1024/906",
+      "status": "passed",
+      "taxa": 1024,
+      "sites": 1048576,
+      "exact_tree": true,
+      "constructor_seconds": 0.7285927105695009,
+      "metadata": {
+        "upload_seconds": 0.26903476286679506,
+        "export_seconds": 0.0021772747859358788,
+        "canonical": true,
+        "local_cleanup": {
+          "method": "four-point mean corrected distance over four nearest component representatives; fixed four sweeps; central-edge closed-neighborhood exclusion",
+          "passes": [
+            {
+              "pass_": 1,
+              "edges": 1021,
+              "component_pairs": 6126,
+              "moves": 15,
+              "maximum_proposal_gain": 0.02516302504688782
+            },
+            {
+              "pass_": 2,
+              "edges": 1021,
+              "component_pairs": 6126,
+              "moves": 3,
+              "maximum_proposal_gain": 0.01231963436292334
+            },
+            {
+              "pass_": 3,
+              "edges": 1021,
+              "component_pairs": 6126,
+              "moves": 0,
+              "maximum_proposal_gain": 0.0
+            }
+          ],
+          "times": {
+            "plan": 0.001146824099123478,
+            "distance": 0.036366076208651066,
+            "apply": 3.413204103708267e-05
+          },
+          "seconds": 0.037991139106452465,
+          "maximum_passes": 4,
+          "component_width": 4
+        },
+        "method": "sparse Q-aware AP-NJ with bounded exact NJ terminal and fixed distance cleanup",
+        "constructor_seconds": 0.7285927105695009,
+        "projection_seconds": 0.010988043621182442,
+        "times": {
+          "candidate": 0.009030762128531933,
+          "statistics": 0.2934999605640769,
+          "selection": 0.0033408785238862038,
+          "merge": 0.0010218219831585884
+        },
+        "history": [
+          {
+            "active": 1024,
+            "pool": 11124,
+            "retained": 11124,
+            "merges": 335,
+            "remaining": 689,
+            "distance_queries": 217723,
+            "reciprocal": 335
+          },
+          {
+            "active": 689,
+            "pool": 7420,
+            "retained": 7420,
+            "merges": 213,
+            "remaining": 476,
+            "distance_queries": 133690,
+            "reciprocal": 213
+          }
+        ],
+        "sequence_bytes": 536870912,
+        "taxa": 1024,
+        "all_sites": 1048576,
+        "full_site_input": true,
+        "seed": 20260934,
+        "projections": 16,
+        "window": 8,
+        "cap": 32,
+        "representatives": 2,
+        "landmarks": 32,
+        "ann_k": 16,
+        "model": 3,
+        "common_sites": true,
+        "gamma_shape": 0.7728611091178954,
+        "minimum_divisor": 514,
+        "real_ann": true,
+        "row_control": true,
+        "q_candidates": true,
+        "terminal": {
+          "active": 476,
+          "pairs": 113050,
+          "matrix_bytes": 1812608,
+          "query_seconds": 0.06261525023728609,
+          "solve_seconds": 0.02208248246461153,
+          "limit": 512,
+          "solver": "standard global-minimum NJ; signed reduced distances retained"
+        },
+        "active_work": 1713,
+        "candidate_work": 18544,
+        "canonicalization_seconds": 0.0021772747859358788,
+        "constructor": "sparse Q-aware AP-NJ with bounded exact NJ terminal and fixed distance cleanup",
+        "backend": "native packed AP-NJ",
+        "execution": "compact integer keys and exact owner-local walk deduplication",
+        "sampled_sites": 1048576,
+        "requested_cpu_threads": 16,
+        "cpu_threads": 16
+      }
+    },
+    {
+      "id": "scaling/n65536/800",
+      "status": "passed",
+      "taxa": 65536,
+      "sites": 2048,
+      "exact_tree": true,
+      "constructor_seconds": 6.362942355684936,
+      "metadata": {
+        "upload_seconds": 0.005924814380705357,
+        "export_seconds": 0.2164279967546463,
+        "canonical": true,
+        "local_cleanup": {
+          "method": "four-point mean corrected distance over four nearest component representatives; fixed four sweeps; central-edge closed-neighborhood exclusion",
+          "passes": [
+            {
+              "pass_": 1,
+              "edges": 65533,
+              "component_pairs": 393198,
+              "moves": 5875,
+              "maximum_proposal_gain": 0.13821525990556943
+            },
+            {
+              "pass_": 2,
+              "edges": 65533,
+              "component_pairs": 393198,
+              "moves": 2828,
+              "maximum_proposal_gain": 0.08216877641654916
+            },
+            {
+              "pass_": 3,
+              "edges": 65533,
+              "component_pairs": 393198,
+              "moves": 1380,
+              "maximum_proposal_gain": 0.06979028993582037
+            },
+            {
+              "pass_": 4,
+              "edges": 65533,
+              "component_pairs": 393198,
+              "moves": 752,
+              "maximum_proposal_gain": 0.06289553740823078
+            }
+          ],
+          "times": {
+            "plan": 0.20464125741273165,
+            "distance": 0.13585305120795965,
+            "apply": 0.005145419389009476
+          },
+          "seconds": 0.35782093461602926,
+          "maximum_passes": 4,
+          "component_width": 4
+        },
+        "method": "sparse Q-aware AP-NJ with bounded exact NJ terminal and fixed distance cleanup",
+        "constructor_seconds": 6.362942355684936,
+        "projection_seconds": 0.013891024515032768,
+        "times": {
+          "candidate": 0.44846891704946756,
+          "statistics": 4.637385359965265,
+          "selection": 0.5641098320484161,
+          "merge": 0.055619978345930576
+        },
+        "history": [
+          {
+            "active": 65536,
+            "pool": 704260,
+            "retained": 704260,
+            "merges": 21269,
+            "remaining": 44267,
+            "distance_queries": 12981101,
+            "reciprocal": 21269
+          },
+          {
+            "active": 44267,
+            "pool": 480516,
+            "retained": 480516,
+            "merges": 12817,
+            "remaining": 31450,
+            "distance_queries": 9919139,
+            "reciprocal": 12817
+          },
+          {
+            "active": 31450,
+            "pool": 344258,
+            "retained": 344258,
+            "merges": 8437,
+            "remaining": 23013,
+            "distance_queries": 8045588,
+            "reciprocal": 8437
+          },
+          {
+            "active": 23013,
+            "pool": 253901,
+            "retained": 253901,
+            "merges": 5821,
+            "remaining": 17192,
+            "distance_queries": 6626768,
+            "reciprocal": 5821
+          },
+          {
+            "active": 17192,
+            "pool": 190804,
+            "retained": 190804,
+            "merges": 4196,
+            "remaining": 12996,
+            "distance_queries": 5458692,
+            "reciprocal": 4196
+          },
+          {
+            "active": 12996,
+            "pool": 144776,
+            "retained": 144776,
+            "merges": 3020,
+            "remaining": 9976,
+            "distance_queries": 4350333,
+            "reciprocal": 3020
+          },
+          {
+            "active": 9976,
+            "pool": 111520,
+            "retained": 111520,
+            "merges": 2278,
+            "remaining": 7698,
+            "distance_queries": 3391415,
+            "reciprocal": 2278
+          },
+          {
+            "active": 7698,
+            "pool": 86061,
+            "retained": 86061,
+            "merges": 1714,
+            "remaining": 5984,
+            "distance_queries": 2601643,
+            "reciprocal": 1714
+          },
+          {
+            "active": 5984,
+            "pool": 66983,
+            "retained": 66983,
+            "merges": 1311,
+            "remaining": 4673,
+            "distance_queries": 1985331,
+            "reciprocal": 1311
+          },
+          {
+            "active": 4673,
+            "pool": 52270,
+            "retained": 52270,
+            "merges": 999,
+            "remaining": 3674,
+            "distance_queries": 1503415,
+            "reciprocal": 999
+          },
+          {
+            "active": 3674,
+            "pool": 41153,
+            "retained": 41153,
+            "merges": 787,
+            "remaining": 2887,
+            "distance_queries": 1137515,
+            "reciprocal": 787
+          },
+          {
+            "active": 2887,
+            "pool": 32094,
+            "retained": 32094,
+            "merges": 616,
+            "remaining": 2271,
+            "distance_queries": 852323,
+            "reciprocal": 616
+          },
+          {
+            "active": 2271,
+            "pool": 24962,
+            "retained": 24962,
+            "merges": 485,
+            "remaining": 1786,
+            "distance_queries": 639637,
+            "reciprocal": 485
+          },
+          {
+            "active": 1786,
+            "pool": 19520,
+            "retained": 19520,
+            "merges": 369,
+            "remaining": 1417,
+            "distance_queries": 476474,
+            "reciprocal": 369
+          },
+          {
+            "active": 1417,
+            "pool": 15356,
+            "retained": 15356,
+            "merges": 278,
+            "remaining": 1139,
+            "distance_queries": 360083,
+            "reciprocal": 278
+          },
+          {
+            "active": 1139,
+            "pool": 12239,
+            "retained": 12239,
+            "merges": 229,
+            "remaining": 910,
+            "distance_queries": 275859,
+            "reciprocal": 229
+          },
+          {
+            "active": 910,
+            "pool": 9751,
+            "retained": 9751,
+            "merges": 173,
+            "remaining": 737,
+            "distance_queries": 209237,
+            "reciprocal": 173
+          },
+          {
+            "active": 737,
+            "pool": 7870,
+            "retained": 7870,
+            "merges": 142,
+            "remaining": 595,
+            "distance_queries": 161116,
+            "reciprocal": 142
+          },
+          {
+            "active": 595,
+            "pool": 6512,
+            "retained": 6512,
+            "merges": 122,
+            "remaining": 473,
+            "distance_queries": 125772,
+            "reciprocal": 122
+          }
+        ],
+        "sequence_bytes": 67108864,
+        "taxa": 65536,
+        "all_sites": 2048,
+        "full_site_input": true,
+        "seed": 20260934,
+        "projections": 16,
+        "window": 8,
+        "cap": 32,
+        "representatives": 2,
+        "landmarks": 32,
+        "ann_k": 16,
+        "model": 3,
+        "common_sites": true,
+        "gamma_shape": 0.9816049731748138,
+        "minimum_divisor": 514,
+        "real_ann": true,
+        "row_control": true,
+        "q_candidates": true,
+        "terminal": {
+          "active": 473,
+          "pairs": 111628,
+          "matrix_bytes": 1789832,
+          "query_seconds": 0.008693533018231392,
+          "solve_seconds": 0.020298258401453495,
+          "limit": 512,
+          "solver": "standard global-minimum NJ; signed reduced distances retained"
+        },
+        "active_work": 238201,
+        "candidate_work": 2604806,
+        "canonicalization_seconds": 0.2164279967546463,
+        "constructor": "sparse Q-aware AP-NJ with bounded exact NJ terminal and fixed distance cleanup",
+        "backend": "native packed AP-NJ",
+        "execution": "compact integer keys and exact owner-local walk deduplication",
+        "sampled_sites": 2048,
+        "requested_cpu_threads": 16,
+        "cpu_threads": 16
+      }
+    },
+    {
+      "id": "scaling/n100000/800",
+      "status": "passed",
+      "taxa": 100000,
+      "sites": 2048,
+      "exact_tree": true,
+      "constructor_seconds": 10.843906225636601,
+      "metadata": {
+        "upload_seconds": 0.007481476292014122,
+        "export_seconds": 0.39892206341028214,
+        "canonical": true,
+        "local_cleanup": {
+          "method": "four-point mean corrected distance over four nearest component representatives; fixed four sweeps; central-edge closed-neighborhood exclusion",
+          "passes": [
+            {
+              "pass_": 1,
+              "edges": 99997,
+              "component_pairs": 599982,
+              "moves": 8746,
+              "maximum_proposal_gain": 0.10968228262563617
+            },
+            {
+              "pass_": 2,
+              "edges": 99997,
+              "component_pairs": 599982,
+              "moves": 4064,
+              "maximum_proposal_gain": 0.11481076632317155
+            },
+            {
+              "pass_": 3,
+              "edges": 99997,
+              "component_pairs": 599982,
+              "moves": 2054,
+              "maximum_proposal_gain": 0.095343118613823
+            },
+            {
+              "pass_": 4,
+              "edges": 99997,
+              "component_pairs": 599982,
+              "moves": 1149,
+              "maximum_proposal_gain": 0.08573088820282204
+            }
+          ],
+          "times": {
+            "plan": 0.3199072564020753,
+            "distance": 0.20804242696613073,
+            "apply": 0.008379879407584667
+          },
+          "seconds": 0.5534186260774732,
+          "maximum_passes": 4,
+          "component_width": 4
+        },
+        "method": "sparse Q-aware AP-NJ with bounded exact NJ terminal and fixed distance cleanup",
+        "constructor_seconds": 10.843906225636601,
+        "projection_seconds": 0.006057034246623516,
+        "times": {
+          "candidate": 0.9432087307795882,
+          "statistics": 7.7974811820313334,
+          "selection": 0.9841906996443868,
+          "merge": 0.08279294054955244
+        },
+        "history": [
+          {
+            "active": 100000,
+            "pool": 1088071,
+            "retained": 1088071,
+            "merges": 30345,
+            "remaining": 69655,
+            "distance_queries": 20135149,
+            "reciprocal": 30345
+          },
+          {
+            "active": 69655,
+            "pool": 764924,
+            "retained": 764924,
+            "merges": 18859,
+            "remaining": 50796,
+            "distance_queries": 15637781,
+            "reciprocal": 18859
+          },
+          {
+            "active": 50796,
+            "pool": 562450,
+            "retained": 562450,
+            "merges": 12768,
+            "remaining": 38028,
+            "distance_queries": 12852169,
+            "reciprocal": 12768
+          },
+          {
+            "active": 38028,
+            "pool": 423815,
+            "retained": 423815,
+            "merges": 8986,
+            "remaining": 29042,
+            "distance_queries": 10761002,
+            "reciprocal": 8986
+          },
+          {
+            "active": 29042,
+            "pool": 326478,
+            "retained": 326478,
+            "merges": 6554,
+            "remaining": 22488,
+            "distance_queries": 9066269,
+            "reciprocal": 6554
+          },
+          {
+            "active": 22488,
+            "pool": 254777,
+            "retained": 254777,
+            "merges": 4928,
+            "remaining": 17560,
+            "distance_queries": 7490691,
+            "reciprocal": 4928
+          },
+          {
+            "active": 17560,
+            "pool": 199746,
+            "retained": 199746,
+            "merges": 3768,
+            "remaining": 13792,
+            "distance_queries": 6072597,
+            "reciprocal": 3768
+          },
+          {
+            "active": 13792,
+            "pool": 156593,
+            "retained": 156593,
+            "merges": 2883,
+            "remaining": 10909,
+            "distance_queries": 4811954,
+            "reciprocal": 2883
+          },
+          {
+            "active": 10909,
+            "pool": 123919,
+            "retained": 123919,
+            "merges": 2252,
+            "remaining": 8657,
+            "distance_queries": 3794899,
+            "reciprocal": 2252
+          },
+          {
+            "active": 8657,
+            "pool": 97973,
+            "retained": 97973,
+            "merges": 1762,
+            "remaining": 6895,
+            "distance_queries": 2965681,
+            "reciprocal": 1762
+          },
+          {
+            "active": 6895,
+            "pool": 77865,
+            "retained": 77865,
+            "merges": 1382,
+            "remaining": 5513,
+            "distance_queries": 2318697,
+            "reciprocal": 1382
+          },
+          {
+            "active": 5513,
+            "pool": 61953,
+            "retained": 61953,
+            "merges": 1082,
+            "remaining": 4431,
+            "distance_queries": 1799975,
+            "reciprocal": 1082
+          },
+          {
+            "active": 4431,
+            "pool": 49635,
+            "retained": 49635,
+            "merges": 855,
+            "remaining": 3576,
+            "distance_queries": 1391999,
+            "reciprocal": 855
+          },
+          {
+            "active": 3576,
+            "pool": 40105,
+            "retained": 40105,
+            "merges": 675,
+            "remaining": 2901,
+            "distance_queries": 1081265,
+            "reciprocal": 675
+          },
+          {
+            "active": 2901,
+            "pool": 32448,
+            "retained": 32448,
+            "merges": 526,
+            "remaining": 2375,
+            "distance_queries": 842376,
+            "reciprocal": 526
+          },
+          {
+            "active": 2375,
+            "pool": 26334,
+            "retained": 26334,
+            "merges": 434,
+            "remaining": 1941,
+            "distance_queries": 660737,
+            "reciprocal": 434
+          },
+          {
+            "active": 1941,
+            "pool": 21492,
+            "retained": 21492,
+            "merges": 355,
+            "remaining": 1586,
+            "distance_queries": 516945,
+            "reciprocal": 355
+          },
+          {
+            "active": 1586,
+            "pool": 17559,
+            "retained": 17559,
+            "merges": 297,
+            "remaining": 1289,
+            "distance_queries": 404477,
+            "reciprocal": 297
+          },
+          {
+            "active": 1289,
+            "pool": 14286,
+            "retained": 14286,
+            "merges": 247,
+            "remaining": 1042,
+            "distance_queries": 315483,
+            "reciprocal": 247
+          },
+          {
+            "active": 1042,
+            "pool": 11658,
+            "retained": 11658,
+            "merges": 200,
+            "remaining": 842,
+            "distance_queries": 243260,
+            "reciprocal": 200
+          },
+          {
+            "active": 842,
+            "pool": 9385,
+            "retained": 9385,
+            "merges": 159,
+            "remaining": 683,
+            "distance_queries": 187408,
+            "reciprocal": 159
+          },
+          {
+            "active": 683,
+            "pool": 7495,
+            "retained": 7495,
+            "merges": 120,
+            "remaining": 563,
+            "distance_queries": 144404,
+            "reciprocal": 120
+          },
+          {
+            "active": 563,
+            "pool": 6091,
+            "retained": 6091,
+            "merges": 100,
+            "remaining": 463,
+            "distance_queries": 113587,
+            "reciprocal": 100
+          }
+        ],
+        "sequence_bytes": 102400000,
+        "taxa": 100000,
+        "all_sites": 2048,
+        "full_site_input": true,
+        "seed": 20260934,
+        "projections": 16,
+        "window": 8,
+        "cap": 32,
+        "representatives": 2,
+        "landmarks": 32,
+        "ann_k": 16,
+        "model": 3,
+        "common_sites": true,
+        "gamma_shape": 0.6217634847414977,
+        "minimum_divisor": 514,
+        "real_ann": true,
+        "row_control": true,
+        "q_candidates": true,
+        "terminal": {
+          "active": 463,
+          "pairs": 106953,
+          "matrix_bytes": 1714952,
+          "query_seconds": 0.007199005223810673,
+          "solve_seconds": 0.018990597687661648,
+          "limit": 512,
+          "solver": "standard global-minimum NJ; signed reduced distances retained"
+        },
+        "active_work": 394564,
+        "candidate_work": 4375052,
+        "canonicalization_seconds": 0.39892206341028214,
+        "constructor": "sparse Q-aware AP-NJ with bounded exact NJ terminal and fixed distance cleanup",
+        "backend": "native packed AP-NJ",
+        "execution": "compact integer keys and exact owner-local walk deduplication",
+        "sampled_sites": 2048,
+        "requested_cpu_threads": 16,
+        "cpu_threads": 16
+      }
+    }
+  ]
+}

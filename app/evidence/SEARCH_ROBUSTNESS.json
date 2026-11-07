@@ -1,0 +1,440 @@
+{
+  "date": "2026-11-07T04:27:47.763129+00:00",
+  "version": "1.0.2",
+  "scope": "Same-version production search robustness; no new release version",
+  "ordinary_behavior": "Task checkpoints, distance models, objectives, support formulas and normal move thresholds retained",
+  "safeguards": {
+    "mlp": "exact complete neighbor-array recurrence, with downstream task refinement",
+    "gene": "eight low-gain rounds; every topology repeats; total LL span <= .01+1e-6*L; retain best verified state; convergence unconfirmed",
+    "msc": "compiled complete tree state plus append-only evidence epoch; finite objective/gains; accumulated objective verification",
+    "parameter_fit": "exact seed recurrence and at most64 rate-mode continuations; report nonconvergence on intervention",
+    "emergency": "10000 posterior sweeps, explicit failure rather than false convergence; existing web subprocess900s deadline",
+    "graph": "reject cycles, disconnected/dangling/asymmetric/empty graphs in reachable traversal/serialization paths",
+    "no_signal": "skip zero-variable-site warmstart with notice; uniform quartet probability for zero jointly observed evidence"
+  },
+  "regression": {
+    "gene": {
+      "records": 200,
+      "completed": 200,
+      "identical_final_tree_bytes": 200,
+      "mean_nrf": 0.033447813357711915,
+      "guard_interventions": 0,
+      "evidence": "output/production-robustness-20261107/BATCH_gene.json"
+    },
+    "species": {
+      "records": 700,
+      "completed": 700,
+      "identical_final_tree_bytes": 700,
+      "mean_nrf": 0.06683464039136765,
+      "guard_interventions": 0,
+      "evidence": "output/production-robustness-20261107/BATCH_species.json"
+    }
+  },
+  "regression_scope": "The 900-record sweep loaded an earlier equivalent state encoding and an exact optional constructor cache. No guard fired. The cache was subsequently rejected and the original constructor restored. Final source additionally checked on the 24-case warm subset, default-model stress, native tests and live web submissions. This is exposed development/regression evidence, not a fresh accuracy holdout.",
+  "historical_failures": [
+    {
+      "id": "gene/n256/032",
+      "task": "gene",
+      "saved_initial": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/output/report-data-20261106/runs/gene/n256/032/initial/apnj.nwk",
+      "old_search_witness": {
+        "passes": 10,
+        "outcome": "exact_recurrence",
+        "message": "byte-identical deterministic MLP state recurred",
+        "seconds": 0.5846351943910122
+      },
+      "new_seconds": 1.8797376854345202,
+      "status": "complete",
+      "quality": {
+        "search_converged": true,
+        "guard_interventions": [
+          {
+            "stage": "mlp",
+            "reason": "repeated_full_search_state"
+          }
+        ],
+        "parameter_converged": true,
+        "warnings": [
+          "mlp: repeated_full_search_state"
+        ]
+      },
+      "mlp_stop": "repeated_full_search_state",
+      "new_nrf": 0.08695652173913043,
+      "limit": "Saved topology replay; serialized internal node IDs need not equal the original failing in-memory IDs",
+      "new_mlp_passes": 17
+    },
+    {
+      "id": "species/small/n256/complex/34",
+      "task": "species",
+      "saved_initial": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/output/report-data-20261106/runs/species/small/n256/complex/34/initial/apnj.nwk",
+      "old_search_witness": {
+        "passes": 34,
+        "outcome": "exact_recurrence",
+        "message": "byte-identical deterministic MLP state recurred",
+        "seconds": 0.10420630406588316
+      },
+      "new_seconds": 0.9828155944123864,
+      "status": "complete",
+      "quality": {
+        "search_converged": true,
+        "guard_interventions": [
+          {
+            "stage": "mlp",
+            "reason": "repeated_full_search_state"
+          }
+        ],
+        "parameter_converged": null,
+        "warnings": [
+          "mlp: repeated_full_search_state"
+        ]
+      },
+      "mlp_stop": "repeated_full_search_state",
+      "new_nrf": 0.05533596837944664,
+      "limit": "Saved topology replay; serialized internal node IDs need not equal the original failing in-memory IDs",
+      "new_mlp_passes": 33
+    }
+  ],
+  "warm_runtime": {
+    "gene": {
+      "phase": "verified",
+      "cases": 10,
+      "repetitions": 30,
+      "all_tree_hashes_identical": true,
+      "median_paired_ratio": 1.0153208155166045,
+      "pooled_time_ratio": 1.0290748114061619,
+      "pairs": [
+        {
+          "id": "gene/n1024/000",
+          "before": 0.7408341774716973,
+          "after": 0.7568675456568599,
+          "ratio": 1.0216423170970337
+        },
+        {
+          "id": "gene/n1024/001",
+          "before": 1.0912352772429585,
+          "after": 1.1059745689854026,
+          "ratio": 1.0135069787880056
+        },
+        {
+          "id": "gene/n2048/000",
+          "before": 2.134462068323046,
+          "after": 2.167104301042855,
+          "ratio": 1.015292955168538
+        },
+        {
+          "id": "gene/n2048/001",
+          "before": 4.383335329126567,
+          "after": 4.456384819466621,
+          "ratio": 1.0166652753793788
+        },
+        {
+          "id": "gene/n256/000",
+          "before": 0.3216307987459004,
+          "after": 0.32234966522082686,
+          "ratio": 1.0022350672812723
+        },
+        {
+          "id": "gene/n256/001",
+          "before": 0.5056915828026831,
+          "after": 0.5099538532085717,
+          "ratio": 1.0084285966997233
+        },
+        {
+          "id": "gene/n4096/000",
+          "before": 3.578641727566719,
+          "after": 3.7060931944288313,
+          "ratio": 1.0356144807345027
+        },
+        {
+          "id": "gene/n4096/001",
+          "before": 10.156057546846569,
+          "after": 10.594602946657687,
+          "ratio": 1.0431806729912914
+        },
+        {
+          "id": "gene/n512/000",
+          "before": 0.6789301093667746,
+          "after": 0.689350787550211,
+          "ratio": 1.0153486758646713
+        },
+        {
+          "id": "gene/n512/001",
+          "before": 1.6709096189588308,
+          "after": 1.687526538502425,
+          "ratio": 1.0099448344512783
+        }
+      ]
+    },
+    "species": {
+      "phase": "deployed",
+      "cases": 14,
+      "repetitions": 42,
+      "all_tree_hashes_identical": true,
+      "median_paired_ratio": 0.9994783766464148,
+      "pooled_time_ratio": 0.9869316740380365,
+      "pairs": [
+        {
+          "id": "species/large/n1024/ILS/0",
+          "before": 3.0583676528185606,
+          "after": 3.034584105014801,
+          "ratio": 0.9922234503814998
+        },
+        {
+          "id": "species/large/n1024/complex/0",
+          "before": 2.8148082555271685,
+          "after": 2.817719095852226,
+          "ratio": 1.001034116735782
+        },
+        {
+          "id": "species/large/n512/ILS/0",
+          "before": 1.7502813208848238,
+          "after": 1.4923466499894857,
+          "ratio": 0.8526324495282028
+        },
+        {
+          "id": "species/large/n512/complex/0",
+          "before": 1.4186385525390506,
+          "after": 1.3973009991459548,
+          "ratio": 0.984959133279646
+        },
+        {
+          "id": "species/small/n128/ILS/0",
+          "before": 0.5470416750758886,
+          "after": 0.6242871293798089,
+          "ratio": 1.1412057944089988
+        },
+        {
+          "id": "species/small/n128/complex/0",
+          "before": 0.4180025989189744,
+          "after": 0.4355752943083644,
+          "ratio": 1.042039679740834
+        },
+        {
+          "id": "species/small/n192/ILS/0",
+          "before": 0.9022711454890668,
+          "after": 0.901785590685904,
+          "ratio": 0.9994618526752292
+        },
+        {
+          "id": "species/small/n192/complex/0",
+          "before": 0.5822460865601897,
+          "after": 0.5958035392686725,
+          "ratio": 1.0232847468131179
+        },
+        {
+          "id": "species/small/n256/ILS/0",
+          "before": 1.5728584290482104,
+          "after": 1.5720639792270958,
+          "ratio": 0.9994949006176003
+        },
+        {
+          "id": "species/small/n256/complex/0",
+          "before": 0.7639280259609222,
+          "after": 0.7715608007274568,
+          "ratio": 1.0099914841544575
+        },
+        {
+          "id": "species/small/n32/ILS/0",
+          "before": 0.12237789900973439,
+          "after": 0.12076920084655285,
+          "ratio": 0.9868546675813287
+        },
+        {
+          "id": "species/small/n32/complex/0",
+          "before": 0.1064891298301518,
+          "after": 0.10358497966080904,
+          "ratio": 0.9727282007658921
+        },
+        {
+          "id": "species/small/n64/ILS/0",
+          "before": 0.23515062406659126,
+          "after": 0.2348664626479149,
+          "ratio": 0.9987915770166278
+        },
+        {
+          "id": "species/small/n64/complex/0",
+          "before": 0.19551682192832232,
+          "after": 0.1963967690244317,
+          "ratio": 1.004500620905305
+        }
+      ]
+    }
+  },
+  "tests": {
+    "search": {
+      "passed": 19,
+      "log": "output/production-robustness-20261107/search-tests-final.log"
+    },
+    "contracts": {
+      "passed": 8,
+      "log": "output/production-robustness-20261107/contract-tests-final.log"
+    },
+    "support": {
+      "passed": 9,
+      "log": "output/production-robustness-20261107/support-tests-final.log"
+    },
+    "apnj": {
+      "passed": 7,
+      "log": "output/production-robustness-20261107/apnj-tests-restored.log"
+    },
+    "kernel_boundaries": {
+      "passed": 7,
+      "log": "output/production-robustness-20261107/boundary-tests.log"
+    },
+    "large_degree": {
+      "passed": 1,
+      "log": "output/production-robustness-20261107/large-degree-tests.log"
+    },
+    "web_api": {
+      "passed": 26,
+      "log": "output/production-robustness-20261107/api-tests-final.log"
+    }
+  },
+  "synthetic_stress": {
+    "completed": 23,
+    "total": 23,
+    "evidence": "output/production-robustness-20261107/STRESS.json"
+  },
+  "default_model_stress": {
+    "completed": 6,
+    "total": 6,
+    "model": "GTR+FO+I+G4",
+    "evidence": "output/production-robustness-20261107/DEFAULT_MODEL_STRESS.json"
+  },
+  "live_api": {
+    "completed": 3,
+    "total": 3,
+    "all_downloads_match": true,
+    "rows": [
+      {
+        "case": "5-variable",
+        "task": "gene",
+        "id": "40d5a536dd0042689c4bd895939a3cc5",
+        "status": "succeeded",
+        "quality": {
+          "search_converged": true,
+          "guard_interventions": [],
+          "parameter_converged": false,
+          "warnings": []
+        },
+        "download_matches_tree": true
+      },
+      {
+        "case": "4-constant",
+        "task": "gene",
+        "id": "fac6555a57434718b36f4c4c38ddcf81",
+        "status": "succeeded",
+        "quality": {
+          "search_converged": true,
+          "guard_interventions": [
+            {
+              "stage": "mlp",
+              "reason": "no_variable_sites"
+            }
+          ],
+          "parameter_converged": true,
+          "warnings": [
+            "mlp: no_variable_sites"
+          ]
+        },
+        "download_matches_tree": true
+      },
+      {
+        "case": "32-duplicate",
+        "task": "species",
+        "id": "574c21163393470b9defdd19be4c9e0b",
+        "status": "succeeded",
+        "quality": {
+          "search_converged": true,
+          "guard_interventions": [
+            {
+              "stage": "mlp",
+              "reason": "repeated_full_search_state"
+            }
+          ],
+          "parameter_converged": null,
+          "warnings": [
+            "mlp: repeated_full_search_state"
+          ]
+        },
+        "download_matches_tree": true
+      }
+    ],
+    "restart": {
+      "old_pid": 2690724,
+      "new_pid": 385687,
+      "queue": {
+        "running": 0,
+        "queued": 0,
+        "capacity": 16,
+        "compute_enabled": true,
+        "accepting_jobs": true
+      }
+    }
+  },
+  "parameter_history_audit": {
+    "parameter_fits": 943,
+    "maximum_continuations": 2,
+    "distribution": {
+      "1": 873,
+      "2": 70
+    }
+  },
+  "rejected_performance_trial": {
+    "decision": "reject_optional_distance_cache",
+    "reason": "Both NumPy and native lookup pilots added wall time despite reducing exact distance queries. Production restores original distance evaluation.",
+    "native_completed": [
+      {
+        "mode": "uncached",
+        "seconds": 80.86423849035054,
+        "queries": 945308724,
+        "reused": 0,
+        "sha256": "70da5cb638b5fb18b7cce52c91011cecb1c105f1d16ca4ea9caac47ed3e3da50"
+      },
+      {
+        "mode": "cached",
+        "seconds": 89.7584994584322,
+        "queries": 806426788,
+        "reused": 138881936,
+        "sha256": "70da5cb638b5fb18b7cce52c91011cecb1c105f1d16ca4ea9caac47ed3e3da50"
+      }
+    ],
+    "unfinished_runs": "Further repetitions terminated; excluded from numerical claims.",
+    "normal_warm_trial": "warm/final used rejected native cache; excluded from final production timing.",
+    "restored": {
+      "apnj_core.py": "9d4fc0a99310df89403132facfd1c4381311ba581d228bfcd3823da20dabf4db",
+      "native/apnj/graph.cpp": "e9a9e40b4c8cb4b28dc8e7cc8b608754a69e877a89246391b8b66a7adfcd99d7",
+      "_ct_apnj_graph.cpython-310-x86_64-linux-gnu.so": "4232ac88e7b25356a75183be8a02efab3eb450d9745a7137eb6936c52e5e7441",
+      "tests/test_apnj.py": "ab2c5c30fd9bae2f97fa8d3e3d50c3e9a756d4cb8dde49d07b6a33132801824f"
+    }
+  },
+  "input_integrity": {
+    "files": 2500,
+    "unchanged": true
+  },
+  "native_tree_build": {
+    "command": [
+      "c++",
+      "-O3",
+      "-std=c++17",
+      "-shared",
+      "-fPIC",
+      "-I/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/release/v-0.1.3/.conda/env/include/python3.10",
+      "-I/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/release/v-0.1.3/.conda/env/lib/python3.10/site-packages/torch/include",
+      "release/V1.0.2/runtime/gene/runtime/tree_plan_native.cpp",
+      "-o",
+      "release/V1.0.2/runtime/gene/runtime/_tree_plan_native.cpython-310-x86_64-linux-gnu.so.new"
+    ],
+    "source_sha256": "8705643984e7666a7517c313b6196b80551d942765651b7757228621c8a6d8a4",
+    "binary_sha256": "afcc5b6ebed5e61d3bac3c429e2340cc3346cb77b9c7ff903507cd0e9ac83c3f"
+  },
+  "limits": [
+    "Finite regression cannot guarantee every arbitrary input or hardware/driver behavior.",
+    "Repeated topology with changed parameters/evidence is not an exact recurrence.",
+    "Plateau diagnosis is separate from mathematical convergence and may change pathological trajectories.",
+    "Real posterior gains remain eligible; normal slow meaningful searches were not shortened.",
+    "The A50 slow-contraction case remains a slow constructor; it was not an infinite loop and was not repaired by changing scientific merge rules.",
+    "Kernel hangs require the existing external process deadline; in-process native work cannot be safely forcibly interrupted.",
+    "Warm timing ratios describe24 exposed records on the local L40S server, not universal equivalence or speedup.",
+    "Saved initial-tree failure replay reproduces exact cycles but may renumber internal nodes relative to the original in-memory failure."
+  ]
+}

@@ -1,0 +1,1137 @@
+{
+  "primary": {
+    "state": "complete",
+    "run": "paired-48-v2",
+    "cases": 48,
+    "completed_cases": 48,
+    "current_case": "empirical-concatenated/butterfly",
+    "results": [
+      {
+        "case": "gene/n256/000",
+        "group": "gene",
+        "baseline_median_seconds": 0.7037659520283341,
+        "package_median_seconds": 0.8569754250347614,
+        "package_over_baseline": 1.217699467507429,
+        "accuracy": {
+          "taxa": 256,
+          "splits": 253,
+          "rf": 34,
+          "max_rf": 506,
+          "normalized_rf": 0.06719367588932806
+        },
+        "repeats": 3,
+        "artifacts_match": true
+      },
+      {
+        "case": "gene/n256/001",
+        "group": "gene",
+        "baseline_median_seconds": 1.171344630420208,
+        "package_median_seconds": 1.1832165708765388,
+        "package_over_baseline": 1.0101353095818366,
+        "accuracy": {
+          "taxa": 256,
+          "splits": 253,
+          "rf": 0,
+          "max_rf": 506,
+          "normalized_rf": 0.0
+        },
+        "repeats": 3,
+        "artifacts_match": true
+      },
+      {
+        "case": "gene/n512/000",
+        "group": "gene",
+        "baseline_median_seconds": 1.1395627837628126,
+        "package_median_seconds": 1.2834277311339974,
+        "package_over_baseline": 1.126245740402425,
+        "accuracy": {
+          "taxa": 512,
+          "splits": 509,
+          "rf": 6,
+          "max_rf": 1018,
+          "normalized_rf": 0.005893909626719057
+        },
+        "repeats": 3,
+        "artifacts_match": true
+      },
+      {
+        "case": "gene/n512/001",
+        "group": "gene",
+        "baseline_median_seconds": 2.256782190874219,
+        "package_median_seconds": 2.22552121989429,
+        "package_over_baseline": 0.9861479893335123,
+        "accuracy": {
+          "taxa": 512,
+          "splits": 509,
+          "rf": 8,
+          "max_rf": 1018,
+          "normalized_rf": 0.007858546168958742
+        },
+        "repeats": 3,
+        "artifacts_match": true
+      },
+      {
+        "case": "gene/n1024/000",
+        "group": "gene",
+        "baseline_median_seconds": 1.1083523444831371,
+        "package_median_seconds": 1.1203388320282102,
+        "package_over_baseline": 1.0108146904770277,
+        "accuracy": {
+          "taxa": 1024,
+          "splits": 1021,
+          "rf": 56,
+          "max_rf": 2042,
+          "normalized_rf": 0.02742409402546523
+        },
+        "repeats": 3,
+        "artifacts_match": true
+      },
+      {
+        "case": "gene/n1024/001",
+        "group": "gene",
+        "baseline_median_seconds": 1.7349295420572162,
+        "package_median_seconds": 1.8032069373875856,
+        "package_over_baseline": 1.0393545637878807,
+        "accuracy": {
+          "taxa": 1024,
+          "splits": 1021,
+          "rf": 52,
+          "max_rf": 2042,
+          "normalized_rf": 0.025465230166503428
+        },
+        "repeats": 3,
+        "artifacts_match": true
+      },
+      {
+        "case": "gene/n2048/000",
+        "group": "gene",
+        "baseline_median_seconds": 3.1166608883067966,
+        "package_median_seconds": 3.196232382208109,
+        "package_over_baseline": 1.025531007945026,
+        "accuracy": {
+          "taxa": 2048,
+          "splits": 2045,
+          "rf": 48,
+          "max_rf": 4090,
+          "normalized_rf": 0.0117359413202934
+        },
+        "repeats": 3,
+        "artifacts_match": true
+      },
+      {
+        "case": "gene/n2048/001",
+        "group": "gene",
+        "baseline_median_seconds": 5.903400846756995,
+        "package_median_seconds": 5.869733963161707,
+        "package_over_baseline": 0.9942970358155871,
+        "accuracy": {
+          "taxa": 2048,
+          "splits": 2045,
+          "rf": 30,
+          "max_rf": 4090,
+          "normalized_rf": 0.007334963325183374
+        },
+        "repeats": 3,
+        "artifacts_match": true
+      },
+      {
+        "case": "gene/n4096/000",
+        "group": "gene",
+        "baseline_median_seconds": 5.820246120914817,
+        "package_median_seconds": 6.062573303468525,
+        "package_over_baseline": 1.0416352122435022,
+        "accuracy": {
+          "taxa": 4096,
+          "splits": 4093,
+          "rf": 234,
+          "max_rf": 8186,
+          "normalized_rf": 0.028585389689714146
+        },
+        "repeats": 3,
+        "artifacts_match": true
+      },
+      {
+        "case": "gene/n4096/001",
+        "group": "gene",
+        "baseline_median_seconds": 15.15571067109704,
+        "package_median_seconds": 14.708246910944581,
+        "package_over_baseline": 0.9704755672720908,
+        "accuracy": {
+          "taxa": 4096,
+          "splits": 4093,
+          "rf": 152,
+          "max_rf": 8186,
+          "normalized_rf": 0.018568287319814317
+        },
+        "repeats": 3,
+        "artifacts_match": true
+      },
+      {
+        "case": "species/small/n32/ILS/0/observed_loci",
+        "group": "species-observed_loci",
+        "baseline_median_seconds": 0.16168374102562666,
+        "package_median_seconds": 0.16350879706442356,
+        "package_over_baseline": 1.011287814267655,
+        "accuracy": {
+          "taxa": 32,
+          "splits": 29,
+          "rf": 14,
+          "max_rf": 58,
+          "normalized_rf": 0.2413793103448276
+        },
+        "repeats": 3,
+        "artifacts_match": true
+      },
+      {
+        "case": "species/small/n32/ILS/0/msa_only",
+        "group": "species-msa_only",
+        "baseline_median_seconds": 0.1486256094649434,
+        "package_median_seconds": 0.16438567638397217,
+        "package_over_baseline": 1.1060387033955015,
+        "accuracy": {
+          "taxa": 32,
+          "splits": 29,
+          "rf": 28,
+          "max_rf": 58,
+          "normalized_rf": 0.4827586206896552
+        },
+        "repeats": 3,
+        "artifacts_match": true
+      },
+      {
+        "case": "species/small/n32/complex/0/observed_loci",
+        "group": "species-observed_loci",
+        "baseline_median_seconds": 0.15925368387252092,
+        "package_median_seconds": 0.1721557155251503,
+        "package_over_baseline": 1.0810155931021173,
+        "accuracy": {
+          "taxa": 32,
+          "splits": 29,
+          "rf": 6,
+          "max_rf": 58,
+          "normalized_rf": 0.10344827586206896
+        },
+        "repeats": 3,
+        "artifacts_match": true
+      },
+      {
+        "case": "species/small/n32/complex/0/msa_only",
+        "group": "species-msa_only",
+        "baseline_median_seconds": 0.15879763290286064,
+        "package_median_seconds": 0.1687972592189908,
+        "package_over_baseline": 1.0629708776720062,
+        "accuracy": {
+          "taxa": 32,
+          "splits": 29,
+          "rf": 6,
+          "max_rf": 58,
+          "normalized_rf": 0.10344827586206896
+        },
+        "repeats": 3,
+        "artifacts_match": true
+      },
+      {
+        "case": "species/small/n64/ILS/0/observed_loci",
+        "group": "species-observed_loci",
+        "baseline_median_seconds": 0.3359492104500532,
+        "package_median_seconds": 0.3299899846315384,
+        "package_over_baseline": 0.9822615275370596,
+        "accuracy": {
+          "taxa": 64,
+          "splits": 61,
+          "rf": 34,
+          "max_rf": 122,
+          "normalized_rf": 0.2786885245901639
+        },
+        "repeats": 3,
+        "artifacts_match": true
+      },
+      {
+        "case": "species/small/n64/ILS/0/msa_only",
+        "group": "species-msa_only",
+        "baseline_median_seconds": 0.2801402220502496,
+        "package_median_seconds": 0.26823717448860407,
+        "package_over_baseline": 0.9575103943499037,
+        "accuracy": {
+          "taxa": 64,
+          "splits": 61,
+          "rf": 54,
+          "max_rf": 122,
+          "normalized_rf": 0.4426229508196721
+        },
+        "repeats": 3,
+        "artifacts_match": true
+      },
+      {
+        "case": "species/small/n64/complex/0/observed_loci",
+        "group": "species-observed_loci",
+        "baseline_median_seconds": 0.2709594927728176,
+        "package_median_seconds": 0.2763404743745923,
+        "package_over_baseline": 1.0198589890566643,
+        "accuracy": {
+          "taxa": 64,
+          "splits": 61,
+          "rf": 6,
+          "max_rf": 122,
+          "normalized_rf": 0.04918032786885246
+        },
+        "repeats": 3,
+        "artifacts_match": true
+      },
+      {
+        "case": "species/small/n64/complex/0/msa_only",
+        "group": "species-msa_only",
+        "baseline_median_seconds": 0.27123668510466814,
+        "package_median_seconds": 0.31113726552575827,
+        "package_over_baseline": 1.1471061350189147,
+        "accuracy": {
+          "taxa": 64,
+          "splits": 61,
+          "rf": 6,
+          "max_rf": 122,
+          "normalized_rf": 0.04918032786885246
+        },
+        "repeats": 3,
+        "artifacts_match": true
+      },
+      {
+        "case": "species/small/n128/ILS/0/observed_loci",
+        "group": "species-observed_loci",
+        "baseline_median_seconds": 0.7420524777844548,
+        "package_median_seconds": 0.7232373040169477,
+        "package_over_baseline": 0.9746444162228478,
+        "accuracy": {
+          "taxa": 128,
+          "splits": 125,
+          "rf": 92,
+          "max_rf": 250,
+          "normalized_rf": 0.368
+        },
+        "repeats": 3,
+        "artifacts_match": true
+      },
+      {
+        "case": "species/small/n128/ILS/0/msa_only",
+        "group": "species-msa_only",
+        "baseline_median_seconds": 0.520113829523325,
+        "package_median_seconds": 0.4784221453592181,
+        "package_over_baseline": 0.9198412312890881,
+        "accuracy": {
+          "taxa": 128,
+          "splits": 125,
+          "rf": 132,
+          "max_rf": 250,
+          "normalized_rf": 0.528
+        },
+        "repeats": 3,
+        "artifacts_match": true
+      },
+      {
+        "case": "species/small/n128/complex/0/observed_loci",
+        "group": "species-observed_loci",
+        "baseline_median_seconds": 0.54708849824965,
+        "package_median_seconds": 0.5579429836943746,
+        "package_over_baseline": 1.0198404563054282,
+        "accuracy": {
+          "taxa": 128,
+          "splits": 125,
+          "rf": 24,
+          "max_rf": 250,
+          "normalized_rf": 0.096
+        },
+        "repeats": 3,
+        "artifacts_match": true
+      },
+      {
+        "case": "species/small/n128/complex/0/msa_only",
+        "group": "species-msa_only",
+        "baseline_median_seconds": 0.5540902493521571,
+        "package_median_seconds": 0.5529129551723599,
+        "package_over_baseline": 0.9978752663827352,
+        "accuracy": {
+          "taxa": 128,
+          "splits": 125,
+          "rf": 26,
+          "max_rf": 250,
+          "normalized_rf": 0.104
+        },
+        "repeats": 3,
+        "artifacts_match": true
+      },
+      {
+        "case": "species/small/n192/ILS/0/observed_loci",
+        "group": "species-observed_loci",
+        "baseline_median_seconds": 1.1517691807821393,
+        "package_median_seconds": 1.172294994816184,
+        "package_over_baseline": 1.0178211176132583,
+        "accuracy": {
+          "taxa": 192,
+          "splits": 189,
+          "rf": 136,
+          "max_rf": 378,
+          "normalized_rf": 0.35978835978835977
+        },
+        "repeats": 3,
+        "artifacts_match": true
+      },
+      {
+        "case": "species/small/n192/ILS/0/msa_only",
+        "group": "species-msa_only",
+        "baseline_median_seconds": 0.7508534966036677,
+        "package_median_seconds": 0.7687494913116097,
+        "package_over_baseline": 1.0238342030621033,
+        "accuracy": {
+          "taxa": 192,
+          "splits": 189,
+          "rf": 182,
+          "max_rf": 378,
+          "normalized_rf": 0.48148148148148145
+        },
+        "repeats": 3,
+        "artifacts_match": true
+      },
+      {
+        "case": "species/small/n192/complex/0/observed_loci",
+        "group": "species-observed_loci",
+        "baseline_median_seconds": 0.7804267117753625,
+        "package_median_seconds": 0.7702249521389604,
+        "package_over_baseline": 0.9869279722458569,
+        "accuracy": {
+          "taxa": 192,
+          "splits": 189,
+          "rf": 20,
+          "max_rf": 378,
+          "normalized_rf": 0.05291005291005291
+        },
+        "repeats": 3,
+        "artifacts_match": true
+      },
+      {
+        "case": "species/small/n192/complex/0/msa_only",
+        "group": "species-msa_only",
+        "baseline_median_seconds": 0.7228607824072242,
+        "package_median_seconds": 0.7199909500777721,
+        "package_over_baseline": 0.996029896213355,
+        "accuracy": {
+          "taxa": 192,
+          "splits": 189,
+          "rf": 30,
+          "max_rf": 378,
+          "normalized_rf": 0.07936507936507936
+        },
+        "repeats": 3,
+        "artifacts_match": true
+      },
+      {
+        "case": "species/small/n256/ILS/0/observed_loci",
+        "group": "species-observed_loci",
+        "baseline_median_seconds": 1.9543977295979857,
+        "package_median_seconds": 1.9522419795393944,
+        "package_over_baseline": 0.9988969747426821,
+        "accuracy": {
+          "taxa": 256,
+          "splits": 253,
+          "rf": 212,
+          "max_rf": 506,
+          "normalized_rf": 0.4189723320158103
+        },
+        "repeats": 3,
+        "artifacts_match": true
+      },
+      {
+        "case": "species/small/n256/ILS/0/msa_only",
+        "group": "species-msa_only",
+        "baseline_median_seconds": 0.9706504419445992,
+        "package_median_seconds": 0.9595510279759765,
+        "package_over_baseline": 0.9885649730438631,
+        "accuracy": {
+          "taxa": 256,
+          "splits": 253,
+          "rf": 288,
+          "max_rf": 506,
+          "normalized_rf": 0.5691699604743083
+        },
+        "repeats": 3,
+        "artifacts_match": true
+      },
+      {
+        "case": "species/small/n256/complex/0/observed_loci",
+        "group": "species-observed_loci",
+        "baseline_median_seconds": 0.9881663331761956,
+        "package_median_seconds": 1.0094488179311156,
+        "package_over_baseline": 1.0215373505860226,
+        "accuracy": {
+          "taxa": 256,
+          "splits": 253,
+          "rf": 28,
+          "max_rf": 506,
+          "normalized_rf": 0.05533596837944664
+        },
+        "repeats": 3,
+        "artifacts_match": true
+      },
+      {
+        "case": "species/small/n256/complex/0/msa_only",
+        "group": "species-msa_only",
+        "baseline_median_seconds": 0.9179369071498513,
+        "package_median_seconds": 0.9184591853991151,
+        "package_over_baseline": 1.0005689696592388,
+        "accuracy": {
+          "taxa": 256,
+          "splits": 253,
+          "rf": 34,
+          "max_rf": 506,
+          "normalized_rf": 0.06719367588932806
+        },
+        "repeats": 3,
+        "artifacts_match": true
+      },
+      {
+        "case": "species/large/n512/ILS/0/observed_loci",
+        "group": "species-observed_loci",
+        "baseline_median_seconds": 1.9441195018589497,
+        "package_median_seconds": 1.9492870848625898,
+        "package_over_baseline": 1.002658058313133,
+        "accuracy": {
+          "taxa": 512,
+          "splits": 509,
+          "rf": 96,
+          "max_rf": 1018,
+          "normalized_rf": 0.09430255402750491
+        },
+        "repeats": 3,
+        "artifacts_match": true
+      },
+      {
+        "case": "species/large/n512/ILS/0/msa_only",
+        "group": "species-msa_only",
+        "baseline_median_seconds": 1.8215394029393792,
+        "package_median_seconds": 1.7897935612127185,
+        "package_over_baseline": 0.9825719708970154,
+        "accuracy": {
+          "taxa": 512,
+          "splits": 509,
+          "rf": 168,
+          "max_rf": 1018,
+          "normalized_rf": 0.1650294695481336
+        },
+        "repeats": 3,
+        "artifacts_match": true
+      },
+      {
+        "case": "species/large/n512/complex/0/observed_loci",
+        "group": "species-observed_loci",
+        "baseline_median_seconds": 1.8725578505545855,
+        "package_median_seconds": 1.9111926797777414,
+        "package_over_baseline": 1.0206321151636055,
+        "accuracy": {
+          "taxa": 512,
+          "splits": 509,
+          "rf": 20,
+          "max_rf": 1018,
+          "normalized_rf": 0.019646365422396856
+        },
+        "repeats": 3,
+        "artifacts_match": true
+      },
+      {
+        "case": "species/large/n512/complex/0/msa_only",
+        "group": "species-msa_only",
+        "baseline_median_seconds": 1.7296863878145814,
+        "package_median_seconds": 1.806420418433845,
+        "package_over_baseline": 1.0443629730567605,
+        "accuracy": {
+          "taxa": 512,
+          "splits": 509,
+          "rf": 28,
+          "max_rf": 1018,
+          "normalized_rf": 0.0275049115913556
+        },
+        "repeats": 3,
+        "artifacts_match": true
+      },
+      {
+        "case": "species/large/n1024/ILS/0/observed_loci",
+        "group": "species-observed_loci",
+        "baseline_median_seconds": 4.008160688914359,
+        "package_median_seconds": 4.052417946048081,
+        "package_over_baseline": 1.0110417871359618,
+        "accuracy": {
+          "taxa": 1024,
+          "splits": 1021,
+          "rf": 220,
+          "max_rf": 2042,
+          "normalized_rf": 0.10773751224289912
+        },
+        "repeats": 3,
+        "artifacts_match": true
+      },
+      {
+        "case": "species/large/n1024/ILS/0/msa_only",
+        "group": "species-msa_only",
+        "baseline_median_seconds": 3.7584700835868716,
+        "package_median_seconds": 3.7112104864791036,
+        "package_over_baseline": 0.9874258418833373,
+        "accuracy": {
+          "taxa": 1024,
+          "splits": 1021,
+          "rf": 340,
+          "max_rf": 2042,
+          "normalized_rf": 0.1665034280117532
+        },
+        "repeats": 3,
+        "artifacts_match": true
+      },
+      {
+        "case": "species/large/n1024/complex/0/observed_loci",
+        "group": "species-observed_loci",
+        "baseline_median_seconds": 3.834607875905931,
+        "package_median_seconds": 3.7989732455462217,
+        "package_over_baseline": 0.9907070992620619,
+        "accuracy": {
+          "taxa": 1024,
+          "splits": 1021,
+          "rf": 54,
+          "max_rf": 2042,
+          "normalized_rf": 0.02644466209598433
+        },
+        "repeats": 3,
+        "artifacts_match": true
+      },
+      {
+        "case": "species/large/n1024/complex/0/msa_only",
+        "group": "species-msa_only",
+        "baseline_median_seconds": 3.6060530580580235,
+        "package_median_seconds": 3.546277024783194,
+        "package_over_baseline": 0.9834234182602347,
+        "accuracy": {
+          "taxa": 1024,
+          "splits": 1021,
+          "rf": 62,
+          "max_rf": 2042,
+          "normalized_rf": 0.030362389813907934
+        },
+        "repeats": 3,
+        "artifacts_match": true
+      },
+      {
+        "case": "empirical-concatenated/Bacteria",
+        "group": "empirical",
+        "baseline_median_seconds": 0.20230623241513968,
+        "package_median_seconds": 0.20570948719978333,
+        "package_over_baseline": 1.0168222933323183,
+        "accuracy": {
+          "taxa": 33,
+          "splits": 30,
+          "rf": 2,
+          "max_rf": 60,
+          "normalized_rf": 0.03333333333333333
+        },
+        "repeats": 1,
+        "artifacts_match": true
+      },
+      {
+        "case": "empirical-concatenated/fish",
+        "group": "empirical",
+        "baseline_median_seconds": 0.13902074377983809,
+        "package_median_seconds": 0.13988566491752863,
+        "package_over_baseline": 1.0062215257534537,
+        "accuracy": {
+          "taxa": 35,
+          "splits": 32,
+          "rf": 6,
+          "max_rf": 64,
+          "normalized_rf": 0.09375
+        },
+        "repeats": 1,
+        "artifacts_match": true
+      },
+      {
+        "case": "empirical-concatenated/mammal2",
+        "group": "empirical",
+        "baseline_median_seconds": 1.3181703221052885,
+        "package_median_seconds": 1.3103185631334782,
+        "package_over_baseline": 0.9940434412456881,
+        "accuracy": {
+          "taxa": 60,
+          "splits": 57,
+          "rf": 14,
+          "max_rf": 114,
+          "normalized_rf": 0.12280701754385964
+        },
+        "repeats": 1,
+        "artifacts_match": true
+      },
+      {
+        "case": "empirical-concatenated/plant1",
+        "group": "empirical",
+        "baseline_median_seconds": 0.6509580705314875,
+        "package_median_seconds": 0.6116827400401235,
+        "package_over_baseline": 0.9396653451745411,
+        "accuracy": {
+          "taxa": 244,
+          "splits": 241,
+          "rf": 22,
+          "max_rf": 482,
+          "normalized_rf": 0.04564315352697095
+        },
+        "repeats": 1,
+        "artifacts_match": true
+      },
+      {
+        "case": "empirical-concatenated/mammal82",
+        "group": "empirical",
+        "baseline_median_seconds": 5.431813586503267,
+        "package_median_seconds": 5.424285069108009,
+        "package_over_baseline": 0.9986139956249669,
+        "accuracy": {
+          "taxa": 82,
+          "splits": 79,
+          "rf": 24,
+          "max_rf": 158,
+          "normalized_rf": 0.1518987341772152
+        },
+        "repeats": 1,
+        "artifacts_match": true
+      },
+      {
+        "case": "empirical-concatenated/plant",
+        "group": "empirical",
+        "baseline_median_seconds": 9.618382351472974,
+        "package_median_seconds": 9.669005784206092,
+        "package_over_baseline": 1.0052631961262557,
+        "accuracy": {
+          "taxa": 1178,
+          "splits": 1175,
+          "rf": 286,
+          "max_rf": 2350,
+          "normalized_rf": 0.12170212765957447
+        },
+        "repeats": 1,
+        "artifacts_match": true
+      },
+      {
+        "case": "empirical-concatenated/ruminant44",
+        "group": "empirical",
+        "baseline_median_seconds": 13.76921858265996,
+        "package_median_seconds": 13.962813596241176,
+        "package_over_baseline": 1.01405998549729,
+        "accuracy": {
+          "taxa": 52,
+          "splits": 49,
+          "rf": 4,
+          "max_rf": 98,
+          "normalized_rf": 0.04081632653061224
+        },
+        "repeats": 1,
+        "artifacts_match": true
+      },
+      {
+        "case": "empirical-concatenated/Insecta",
+        "group": "empirical",
+        "baseline_median_seconds": 1.8083422621712089,
+        "package_median_seconds": 1.7944914605468512,
+        "package_over_baseline": 0.9923406083493688,
+        "accuracy": {
+          "taxa": 46,
+          "splits": 43,
+          "rf": 10,
+          "max_rf": 86,
+          "normalized_rf": 0.11627906976744186
+        },
+        "repeats": 1,
+        "artifacts_match": true
+      },
+      {
+        "case": "empirical-concatenated/mammal241",
+        "group": "empirical",
+        "baseline_median_seconds": 2.7217041850090027,
+        "package_median_seconds": 2.5776808466762304,
+        "package_over_baseline": 0.947083397554354,
+        "accuracy": {
+          "taxa": 241,
+          "splits": 238,
+          "rf": 8,
+          "max_rf": 476,
+          "normalized_rf": 0.01680672268907563
+        },
+        "repeats": 1,
+        "artifacts_match": true
+      },
+      {
+        "case": "empirical-concatenated/butterfly",
+        "group": "empirical",
+        "baseline_median_seconds": 82.8001861628145,
+        "package_median_seconds": 83.38245102204382,
+        "package_over_baseline": 1.0070321684794812,
+        "accuracy": {
+          "taxa": 38,
+          "splits": 35,
+          "rf": 4,
+          "max_rf": 70,
+          "normalized_rf": 0.05714285714285714
+        },
+        "repeats": 1,
+        "artifacts_match": true
+      }
+    ],
+    "median_paired_runtime_ratio": 1.0057423609398546,
+    "aggregate_median_runtime_ratio": 1.0044811723316234,
+    "all_artifacts_match": true
+  },
+  "followup": {
+    "state": "complete",
+    "run": "speed-followup-v1",
+    "cases": 7,
+    "completed_cases": 7,
+    "current_case": "species/small/n128/ILS/0/msa_only",
+    "results": [
+      {
+        "case": "gene/n256/000",
+        "group": "gene",
+        "baseline_median_seconds": 0.49843084160238504,
+        "package_median_seconds": 0.49555726256221533,
+        "package_over_baseline": 0.9942347487347862,
+        "accuracy": {
+          "taxa": 256,
+          "splits": 253,
+          "rf": 34,
+          "max_rf": 506,
+          "normalized_rf": 0.06719367588932806
+        },
+        "repeats": 9,
+        "artifacts_match": true
+      },
+      {
+        "case": "gene/n512/000",
+        "group": "gene",
+        "baseline_median_seconds": 1.0070043746381998,
+        "package_median_seconds": 0.9603313431143761,
+        "package_over_baseline": 0.9536516099638668,
+        "accuracy": {
+          "taxa": 512,
+          "splits": 509,
+          "rf": 6,
+          "max_rf": 1018,
+          "normalized_rf": 0.005893909626719057
+        },
+        "repeats": 9,
+        "artifacts_match": true
+      },
+      {
+        "case": "species/small/n32/ILS/0/msa_only",
+        "group": "species-msa_only",
+        "baseline_median_seconds": 0.16828718315809965,
+        "package_median_seconds": 0.15658990386873484,
+        "package_over_baseline": 0.9304921559096058,
+        "accuracy": {
+          "taxa": 32,
+          "splits": 29,
+          "rf": 28,
+          "max_rf": 58,
+          "normalized_rf": 0.4827586206896552
+        },
+        "repeats": 9,
+        "artifacts_match": true
+      },
+      {
+        "case": "species/small/n32/complex/0/observed_loci",
+        "group": "species-observed_loci",
+        "baseline_median_seconds": 0.1565123125910759,
+        "package_median_seconds": 0.16930581629276276,
+        "package_over_baseline": 1.0817411965224282,
+        "accuracy": {
+          "taxa": 32,
+          "splits": 29,
+          "rf": 6,
+          "max_rf": 58,
+          "normalized_rf": 0.10344827586206896
+        },
+        "repeats": 9,
+        "artifacts_match": true
+      },
+      {
+        "case": "species/small/n32/complex/0/msa_only",
+        "group": "species-msa_only",
+        "baseline_median_seconds": 0.16580281034111977,
+        "package_median_seconds": 0.15790329780429602,
+        "package_over_baseline": 0.9523559792468449,
+        "accuracy": {
+          "taxa": 32,
+          "splits": 29,
+          "rf": 6,
+          "max_rf": 58,
+          "normalized_rf": 0.10344827586206896
+        },
+        "repeats": 9,
+        "artifacts_match": true
+      },
+      {
+        "case": "species/small/n64/complex/0/msa_only",
+        "group": "species-msa_only",
+        "baseline_median_seconds": 0.28068777173757553,
+        "package_median_seconds": 0.27039976604282856,
+        "package_over_baseline": 0.9633471539174654,
+        "accuracy": {
+          "taxa": 64,
+          "splits": 61,
+          "rf": 6,
+          "max_rf": 122,
+          "normalized_rf": 0.04918032786885246
+        },
+        "repeats": 9,
+        "artifacts_match": true
+      },
+      {
+        "case": "species/small/n128/ILS/0/msa_only",
+        "group": "species-msa_only",
+        "baseline_median_seconds": 0.4760286882519722,
+        "package_median_seconds": 0.47526515554636717,
+        "package_over_baseline": 0.9983960363640922,
+        "accuracy": {
+          "taxa": 128,
+          "splits": 125,
+          "rf": 132,
+          "max_rf": 250,
+          "normalized_rf": 0.528
+        },
+        "repeats": 9,
+        "artifacts_match": true
+      }
+    ],
+    "median_paired_runtime_ratio": 0.9633471539174654,
+    "aggregate_median_runtime_ratio": 0.9755149070633506,
+    "all_artifacts_match": true
+  },
+  "aligned_followup": {
+    "state": "complete",
+    "run": "speed-followup-aligned-v1",
+    "cases": 7,
+    "completed_cases": 7,
+    "current_case": "species/small/n128/ILS/0/msa_only",
+    "results": [
+      {
+        "case": "gene/n256/000",
+        "group": "gene",
+        "baseline_median_seconds": 0.49210940208286047,
+        "package_median_seconds": 0.4865266550332308,
+        "package_over_baseline": 0.9886554757417748,
+        "accuracy": {
+          "taxa": 256,
+          "splits": 253,
+          "rf": 34,
+          "max_rf": 506,
+          "normalized_rf": 0.06719367588932806
+        },
+        "repeats": 17,
+        "artifacts_match": true
+      },
+      {
+        "case": "gene/n512/000",
+        "group": "gene",
+        "baseline_median_seconds": 0.9998955018818378,
+        "package_median_seconds": 0.9904863657429814,
+        "package_over_baseline": 0.9905898805213664,
+        "accuracy": {
+          "taxa": 512,
+          "splits": 509,
+          "rf": 6,
+          "max_rf": 1018,
+          "normalized_rf": 0.005893909626719057
+        },
+        "repeats": 17,
+        "artifacts_match": true
+      },
+      {
+        "case": "species/small/n32/ILS/0/msa_only",
+        "group": "species-msa_only",
+        "baseline_median_seconds": 0.14864290412515402,
+        "package_median_seconds": 0.14857798255980015,
+        "package_over_baseline": 0.9995632380453277,
+        "accuracy": {
+          "taxa": 32,
+          "splits": 29,
+          "rf": 28,
+          "max_rf": 58,
+          "normalized_rf": 0.4827586206896552
+        },
+        "repeats": 17,
+        "artifacts_match": true
+      },
+      {
+        "case": "species/small/n32/complex/0/observed_loci",
+        "group": "species-observed_loci",
+        "baseline_median_seconds": 0.14639158081263304,
+        "package_median_seconds": 0.14766785595566034,
+        "package_over_baseline": 1.008718227755603,
+        "accuracy": {
+          "taxa": 32,
+          "splits": 29,
+          "rf": 6,
+          "max_rf": 58,
+          "normalized_rf": 0.10344827586206896
+        },
+        "repeats": 17,
+        "artifacts_match": true
+      },
+      {
+        "case": "species/small/n32/complex/0/msa_only",
+        "group": "species-msa_only",
+        "baseline_median_seconds": 0.15969174914062023,
+        "package_median_seconds": 0.16135213244706392,
+        "package_over_baseline": 1.0103974270141007,
+        "accuracy": {
+          "taxa": 32,
+          "splits": 29,
+          "rf": 6,
+          "max_rf": 58,
+          "normalized_rf": 0.10344827586206896
+        },
+        "repeats": 17,
+        "artifacts_match": true
+      },
+      {
+        "case": "species/small/n64/complex/0/msa_only",
+        "group": "species-msa_only",
+        "baseline_median_seconds": 0.2675382224842906,
+        "package_median_seconds": 0.26801428757607937,
+        "package_over_baseline": 1.0017794283275419,
+        "accuracy": {
+          "taxa": 64,
+          "splits": 61,
+          "rf": 6,
+          "max_rf": 122,
+          "normalized_rf": 0.04918032786885246
+        },
+        "repeats": 17,
+        "artifacts_match": true
+      },
+      {
+        "case": "species/small/n128/ILS/0/msa_only",
+        "group": "species-msa_only",
+        "baseline_median_seconds": 0.48149644024670124,
+        "package_median_seconds": 0.47616480104625225,
+        "package_over_baseline": 0.988926939526869,
+        "accuracy": {
+          "taxa": 128,
+          "splits": 125,
+          "rf": 132,
+          "max_rf": 250,
+          "normalized_rf": 0.528
+        },
+        "repeats": 17,
+        "artifacts_match": true
+      }
+    ],
+    "median_paired_runtime_ratio": 0.9995632380453277,
+    "aggregate_median_runtime_ratio": 0.9937028207687202,
+    "all_artifacts_match": true
+  },
+  "isolated_49": {
+    "state": "complete",
+    "run": "speed-isolation-v1",
+    "cases": 1,
+    "completed_cases": 1,
+    "current_case": "species/small/n32/complex/0/observed_loci",
+    "results": [
+      {
+        "case": "species/small/n32/complex/0/observed_loci",
+        "group": "species-observed_loci",
+        "baseline_median_seconds": 0.1473855348303914,
+        "package_median_seconds": 0.15640993881970644,
+        "package_over_baseline": 1.0612299164887529,
+        "accuracy": {
+          "taxa": 32,
+          "splits": 29,
+          "rf": 6,
+          "max_rf": 58,
+          "normalized_rf": 0.10344827586206896
+        },
+        "repeats": 49,
+        "artifacts_match": true
+      }
+    ],
+    "median_paired_runtime_ratio": 1.0612299164887529,
+    "aggregate_median_runtime_ratio": 1.0612299164887529,
+    "all_artifacts_match": true
+  },
+  "main_cpu_aligned_49": {
+    "state": "complete",
+    "run": "speed-core-aligned-v1",
+    "cases": 1,
+    "completed_cases": 1,
+    "current_case": "species/small/n32/complex/0/observed_loci",
+    "results": [
+      {
+        "case": "species/small/n32/complex/0/observed_loci",
+        "group": "species-observed_loci",
+        "baseline_median_seconds": 0.14580675028264523,
+        "package_median_seconds": 0.14832402486354113,
+        "package_over_baseline": 1.0172644584425357,
+        "accuracy": {
+          "taxa": 32,
+          "splits": 29,
+          "rf": 6,
+          "max_rf": 58,
+          "normalized_rf": 0.10344827586206896
+        },
+        "repeats": 49,
+        "artifacts_match": true
+      }
+    ],
+    "median_paired_runtime_ratio": 1.0172644584425357,
+    "aggregate_median_runtime_ratio": 1.0172644584425357,
+    "all_artifacts_match": true
+  },
+  "artifact": {
+    "file": "concordtree-1.0.2-linux-x86_64-cuda121.tar.gz",
+    "bytes": 4732982106,
+    "sha256": "97cce5a23f61e94f85a5cb46088a6b8862b284b35721edd2908324eda024f75c",
+    "excludes": [
+      "runs",
+      ".runtime",
+      "__pycache__",
+      "*.pyc",
+      ".standalone-migration"
+    ]
+  },
+  "cross_device": [
+    {
+      "case": "validation-gene",
+      "topology_identical": true,
+      "tree_to_tree_rf": 0,
+      "byte_identical": {
+        "prediction.nwk": false,
+        "prediction.unannotated.nwk": false,
+        "initial/apnj.nwk": true,
+        "initial/mlp.nwk": true
+      },
+      "max_branch_absolute_delta": 1.4250000001173047e-08
+    },
+    {
+      "case": "validation-species",
+      "topology_identical": true,
+      "tree_to_tree_rf": 0,
+      "byte_identical": {
+        "prediction.nwk": true,
+        "prediction.unannotated.nwk": true,
+        "initial/apnj.nwk": true,
+        "initial/mlp.nwk": true
+      },
+      "max_branch_absolute_delta": 0.0
+    }
+  ],
+  "modern_candidate": {
+    "status": "not_admitted",
+    "runtime": "torch 2.11.0+cu128 / Triton 3.6.0",
+    "hardware": "L40S",
+    "case": "gene/n256/000",
+    "initial_trees_byte_identical": true,
+    "final_topology_equal": true,
+    "rf_equal": true,
+    "max_branch_absolute_delta": 2.0409999999110306e-08,
+    "final_newick_byte_identical": false,
+    "blackwell_hardware_tested": false,
+    "reason": "Strict unchanged-artifact gate failed; no stable Blackwell support claim."
+  }
+}

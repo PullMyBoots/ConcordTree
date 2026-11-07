@@ -1,0 +1,97 @@
+{
+  "status": "passed",
+  "planned": 10,
+  "rows": [
+    {
+      "id": "gene-JC",
+      "status": "complete",
+      "taxa": 4,
+      "sites": 257,
+      "full_sites": true,
+      "support": true,
+      "tree_sha256": "c079cdebaa17ea8248cb541eb7f04054a5925ad16936a97f377dce7806dabdca"
+    },
+    {
+      "id": "gene-F81",
+      "status": "complete",
+      "taxa": 4,
+      "sites": 257,
+      "full_sites": true,
+      "support": true,
+      "tree_sha256": "af783c9e8480b8a0839cdfd4564ebcd278847f3a8012c9d091a660f8c5deedd5"
+    },
+    {
+      "id": "gene-K80",
+      "status": "complete",
+      "taxa": 4,
+      "sites": 257,
+      "full_sites": true,
+      "support": true,
+      "tree_sha256": "0678f48a2400f9e1409ed79ce27450bff921cbf3ff1bd930cbb13d3571234e72"
+    },
+    {
+      "id": "gene-HKY",
+      "status": "complete",
+      "taxa": 4,
+      "sites": 257,
+      "full_sites": true,
+      "support": true,
+      "tree_sha256": "9ec324460e06bb8b2a3137d39e6a56443642b123ff5aa58a4c96ddb47888f8dc"
+    },
+    {
+      "id": "gene-TN93",
+      "status": "complete",
+      "taxa": 4,
+      "sites": 257,
+      "full_sites": true,
+      "support": true,
+      "tree_sha256": "35de9ceb43abf6101a53e333958f6964d21a691014608d495e9e02cc0813d58c"
+    },
+    {
+      "id": "gene-SYM",
+      "status": "complete",
+      "taxa": 4,
+      "sites": 257,
+      "full_sites": true,
+      "support": true,
+      "tree_sha256": "3c0a88d8840cd3d6043a63b4be387376d8117582c6442f8a625720866d9dca3c"
+    },
+    {
+      "id": "gene-GTR",
+      "status": "complete",
+      "taxa": 4,
+      "sites": 257,
+      "full_sites": true,
+      "support": true,
+      "tree_sha256": "6264689ab727651ada82e597f6543437ab6c98c0785668c243920ae784696ffe"
+    },
+    {
+      "id": "gene-multiview-no-support",
+      "status": "complete",
+      "taxa": 32,
+      "sites": 257,
+      "full_sites": true,
+      "support": false,
+      "tree_sha256": "068683c0c8d7eb7587e7fff20dc0218dbbadef875a2aa7d1018b908c2bf43b88"
+    },
+    {
+      "id": "species-observed-minimum",
+      "status": "complete",
+      "taxa": 24,
+      "sites": 257,
+      "full_sites": true,
+      "support": true,
+      "tree_sha256": "d5b3049adea9918c051bbbfb5521612b0d3626c40afc2055644c8ca4484603cf"
+    },
+    {
+      "id": "species-msa-only-fasta",
+      "status": "complete",
+      "taxa": 32,
+      "sites": 257,
+      "full_sites": true,
+      "support": false,
+      "tree_sha256": "03f922b837464c4ecf956d2ff2cdf649395c0767c19c849447370b63419bda6e"
+    }
+  ],
+  "original_input_unchanged": true
+}

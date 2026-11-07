@@ -1,0 +1,38 @@
+{
+  "created_at": "2026-11-06T21:17:32.523114+00:00",
+  "selected_graph": "owner",
+  "science_freeze_sha256": "f24e414419ea443d6e3753cd26196c42c80d8a370676336c58622ef15df70c9a",
+  "build_command": [
+    "g++",
+    "-O3",
+    "-std=c++17",
+    "-shared",
+    "-fPIC",
+    "-fopenmp",
+    "-I/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/release/v-0.1.3/.conda/env/include/python3.10",
+    "-I/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/release/v-0.1.3/.conda/env/lib/python3.10/site-packages/pybind11/include",
+    "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/output/apnj-ninehour-20261107/final-closure-owner/native/apnj/graph.cpp",
+    "-o",
+    "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/output/apnj-ninehour-20261107/final-closure-owner/_ct_apnj_graph.cpython-310-x86_64-linux-gnu.so"
+  ],
+  "closure_sha256": {
+    "_ct_apnj_local.cpython-310-x86_64-linux-gnu.so": "482210b4af4d31d2be8d8ca28d895e4cbe927a75692f4c268dcd0d20d01d44d9",
+    "_ct_apnj_topology.cpython-310-x86_64-linux-gnu.so": "7b4f94daf85142bbe8021ac29666f49120308d3909adb11687c0b348fe2b63eb",
+    "apnj_cleanup.py": "5897f8b8abc7fb32a41c1ca18d4c2341bb128d86ccae4fa8b375a388abd0d28f",
+    "_ct_apnj_terminal.cpython-310-x86_64-linux-gnu.so": "c47acf1e2d0860fa288729827d0698ff25cbe25e7980278c224166276d056340",
+    "apnj_frontend.py": "e6782f13a119dc7e50320a4da29371a54ff3efb6f7657c7af4eb8b436bc57dcd",
+    "apnj_core.py": "9d4fc0a99310df89403132facfd1c4381311ba581d228bfcd3823da20dabf4db",
+    "_ct_apnj_packed.cpython-310-x86_64-linux-gnu.so": "c4d002412f85fabf3bbbac96a8699754e0c3068609bdad2b7b6936cd173a5527",
+    "_ct_apnj_graph.cpython-310-x86_64-linux-gnu.so": "4232ac88e7b25356a75183be8a02efab3eb450d9745a7137eb6936c52e5e7441",
+    "native/apnj/terminal.cpp": "5359b50815e43f87f8eb044d3f63e7c3770a4ac570859de75c763ee39c9a7e5b",
+    "native/apnj/packed.cu": "399f8474dc49b5ded924d14c0acbf655e39bf457c082e480895050a54f3a0e46",
+    "native/apnj/local.cpp": "fe7ccbfcdc5ee88c26ba04249e48cd28bbe6bff9033e8aef9412c0243fea399b",
+    "native/apnj/topology.cpp": "b98957791bc1f0d8810979e25f623dd65b37cd69ef8f9766bf35be72e581197c",
+    "native/apnj/build.py": "207f46d93115a010b20a4de7ef105d26f91dd47ac0718b8efb9521ae0e958e4c",
+    "native/apnj/gamma_shape.cuh": "c3c1a6daacc22a935f2f025641f7d073e556a308728241c5566c5f16453ad61a",
+    "native/apnj/graph.cpp": "e9a9e40b4c8cb4b28dc8e7cc8b608754a69e877a89246391b8b66a7adfcd99d7"
+  },
+  "stage": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/output/apnj-ninehour-20261107/final-engine-owner",
+  "status": "prepared_not_integrated",
+  "scope": "same900 frozen initial trees and unchanged downstream; new exact execution only"
+}

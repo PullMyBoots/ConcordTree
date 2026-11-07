@@ -1,0 +1,777 @@
+[
+  {
+    "id": "gene256",
+    "arms": {
+      "reference": {
+        "contract": {
+          "variant": "reference",
+          "predictor": "homogeneous",
+          "input": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/data/test/simulation/alisim-homogeneous-v3/n256/000/alignment.phy",
+          "input_sha256": "471a54b232dc3132914671c0b40eb2d7df7a16ec14db21a6c82f7f29fdb2228d",
+          "measured_repeats": 3,
+          "warmup_discarded": 1,
+          "includes": "read/sample + AP-NJ + MLP; excludes first model load, serialization, and posterior",
+          "cpu_threads": 16,
+          "gpu": 0,
+          "numa": 0,
+          "sample_seed": 20261022,
+          "apnj_seed": 20260934,
+          "stop_ratio": 0.005
+        },
+        "rows": [
+          {
+            "repeat": 0,
+            "warmup": true,
+            "taxa": 256,
+            "sites": 2048,
+            "seconds": 0.9941938617266715,
+            "read_sample_seconds": 0.003572703804820776,
+            "apnj_seconds": 0.9282593689858913,
+            "mlp_seconds": 0.05976816965267062,
+            "apnj_sha256": "a5e9dccf170b591813340c1f511fe928bd1c50f0a5e38f4b364d77b8051aaf28",
+            "tree_sha256": "6dec73725fae2ca930b0d49aed177ba3dd941c0f3ae623629d62d83e4fc34579",
+            "history_sha256": "d6c9e680bc25c008a45960b862d45a7af36ee54d87f6bf7213f5238d3d2a0d96",
+            "checkpoint_sha256": "8554764e33885992cc31e4d044a82a4ae8e876f119197e72b07ae3a1dcbc533b"
+          },
+          {
+            "repeat": 1,
+            "warmup": false,
+            "taxa": 256,
+            "sites": 2048,
+            "seconds": 0.07535412395372987,
+            "read_sample_seconds": 0.002056906931102276,
+            "apnj_seconds": 0.060408253222703934,
+            "mlp_seconds": 0.010369547177106142,
+            "apnj_sha256": "a5e9dccf170b591813340c1f511fe928bd1c50f0a5e38f4b364d77b8051aaf28",
+            "tree_sha256": "6dec73725fae2ca930b0d49aed177ba3dd941c0f3ae623629d62d83e4fc34579",
+            "history_sha256": "d6c9e680bc25c008a45960b862d45a7af36ee54d87f6bf7213f5238d3d2a0d96",
+            "checkpoint_sha256": "8554764e33885992cc31e4d044a82a4ae8e876f119197e72b07ae3a1dcbc533b"
+          },
+          {
+            "repeat": 2,
+            "warmup": false,
+            "taxa": 256,
+            "sites": 2048,
+            "seconds": 0.07724332064390182,
+            "read_sample_seconds": 0.0021252278238534927,
+            "apnj_seconds": 0.06100625777617097,
+            "mlp_seconds": 0.011578526813536882,
+            "apnj_sha256": "a5e9dccf170b591813340c1f511fe928bd1c50f0a5e38f4b364d77b8051aaf28",
+            "tree_sha256": "6dec73725fae2ca930b0d49aed177ba3dd941c0f3ae623629d62d83e4fc34579",
+            "history_sha256": "d6c9e680bc25c008a45960b862d45a7af36ee54d87f6bf7213f5238d3d2a0d96",
+            "checkpoint_sha256": "8554764e33885992cc31e4d044a82a4ae8e876f119197e72b07ae3a1dcbc533b"
+          },
+          {
+            "repeat": 3,
+            "warmup": false,
+            "taxa": 256,
+            "sites": 2048,
+            "seconds": 0.07756202388554811,
+            "read_sample_seconds": 0.0020727338269352913,
+            "apnj_seconds": 0.062076042871922255,
+            "mlp_seconds": 0.010840946808457375,
+            "apnj_sha256": "a5e9dccf170b591813340c1f511fe928bd1c50f0a5e38f4b364d77b8051aaf28",
+            "tree_sha256": "6dec73725fae2ca930b0d49aed177ba3dd941c0f3ae623629d62d83e4fc34579",
+            "history_sha256": "d6c9e680bc25c008a45960b862d45a7af36ee54d87f6bf7213f5238d3d2a0d96",
+            "checkpoint_sha256": "8554764e33885992cc31e4d044a82a4ae8e876f119197e72b07ae3a1dcbc533b"
+          }
+        ]
+      },
+      "optimized": {
+        "contract": {
+          "variant": "optimized",
+          "predictor": "homogeneous",
+          "input": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/data/test/simulation/alisim-homogeneous-v3/n256/000/alignment.phy",
+          "input_sha256": "471a54b232dc3132914671c0b40eb2d7df7a16ec14db21a6c82f7f29fdb2228d",
+          "measured_repeats": 3,
+          "warmup_discarded": 1,
+          "includes": "read/sample + AP-NJ + MLP; excludes first model load, serialization, and posterior",
+          "cpu_threads": 16,
+          "gpu": 0,
+          "numa": 0,
+          "sample_seed": 20261022,
+          "apnj_seed": 20260934,
+          "stop_ratio": 0.005
+        },
+        "rows": [
+          {
+            "repeat": 0,
+            "warmup": true,
+            "taxa": 256,
+            "sites": 2048,
+            "seconds": 0.17009574780240655,
+            "read_sample_seconds": 0.004413142800331116,
+            "apnj_seconds": 0.10309411399066448,
+            "mlp_seconds": 0.05997162777930498,
+            "apnj_sha256": "a5e9dccf170b591813340c1f511fe928bd1c50f0a5e38f4b364d77b8051aaf28",
+            "tree_sha256": "6dec73725fae2ca930b0d49aed177ba3dd941c0f3ae623629d62d83e4fc34579",
+            "history_sha256": "d6c9e680bc25c008a45960b862d45a7af36ee54d87f6bf7213f5238d3d2a0d96",
+            "checkpoint_sha256": "8554764e33885992cc31e4d044a82a4ae8e876f119197e72b07ae3a1dcbc533b"
+          },
+          {
+            "repeat": 1,
+            "warmup": false,
+            "taxa": 256,
+            "sites": 2048,
+            "seconds": 0.06489066081121564,
+            "read_sample_seconds": 0.002105340827256441,
+            "apnj_seconds": 0.0501072583720088,
+            "mlp_seconds": 0.010094866156578064,
+            "apnj_sha256": "a5e9dccf170b591813340c1f511fe928bd1c50f0a5e38f4b364d77b8051aaf28",
+            "tree_sha256": "6dec73725fae2ca930b0d49aed177ba3dd941c0f3ae623629d62d83e4fc34579",
+            "history_sha256": "d6c9e680bc25c008a45960b862d45a7af36ee54d87f6bf7213f5238d3d2a0d96",
+            "checkpoint_sha256": "8554764e33885992cc31e4d044a82a4ae8e876f119197e72b07ae3a1dcbc533b"
+          },
+          {
+            "repeat": 2,
+            "warmup": false,
+            "taxa": 256,
+            "sites": 2048,
+            "seconds": 0.06213690806180239,
+            "read_sample_seconds": 0.002101933117955923,
+            "apnj_seconds": 0.04763012984767556,
+            "mlp_seconds": 0.009889056906104088,
+            "apnj_sha256": "a5e9dccf170b591813340c1f511fe928bd1c50f0a5e38f4b364d77b8051aaf28",
+            "tree_sha256": "6dec73725fae2ca930b0d49aed177ba3dd941c0f3ae623629d62d83e4fc34579",
+            "history_sha256": "d6c9e680bc25c008a45960b862d45a7af36ee54d87f6bf7213f5238d3d2a0d96",
+            "checkpoint_sha256": "8554764e33885992cc31e4d044a82a4ae8e876f119197e72b07ae3a1dcbc533b"
+          },
+          {
+            "repeat": 3,
+            "warmup": false,
+            "taxa": 256,
+            "sites": 2048,
+            "seconds": 0.05781769286841154,
+            "read_sample_seconds": 0.002104087732732296,
+            "apnj_seconds": 0.043821176048368216,
+            "mlp_seconds": 0.00937643088400364,
+            "apnj_sha256": "a5e9dccf170b591813340c1f511fe928bd1c50f0a5e38f4b364d77b8051aaf28",
+            "tree_sha256": "6dec73725fae2ca930b0d49aed177ba3dd941c0f3ae623629d62d83e4fc34579",
+            "history_sha256": "d6c9e680bc25c008a45960b862d45a7af36ee54d87f6bf7213f5238d3d2a0d96",
+            "checkpoint_sha256": "8554764e33885992cc31e4d044a82a4ae8e876f119197e72b07ae3a1dcbc533b"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "gene1024",
+    "arms": {
+      "reference": {
+        "contract": {
+          "variant": "reference",
+          "predictor": "homogeneous",
+          "input": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/data/test/simulation/alisim-homogeneous-v3/n1024/000/alignment.phy",
+          "input_sha256": "86dd68d444e3d5364a91240767ce5441df760f12818147eb6e9fcf1ef6c7d26e",
+          "measured_repeats": 3,
+          "warmup_discarded": 1,
+          "includes": "read/sample + AP-NJ + MLP; excludes first model load, serialization, and posterior",
+          "cpu_threads": 16,
+          "gpu": 0,
+          "numa": 0,
+          "sample_seed": 20261022,
+          "apnj_seed": 20260934,
+          "stop_ratio": 0.005
+        },
+        "rows": [
+          {
+            "repeat": 0,
+            "warmup": true,
+            "taxa": 1024,
+            "sites": 2048,
+            "seconds": 1.2058225800283253,
+            "read_sample_seconds": 0.010300717782229185,
+            "apnj_seconds": 1.0597872287034988,
+            "mlp_seconds": 0.12555973790585995,
+            "apnj_sha256": "20182de558da8f36404f11da068855e70958d247735dbcec7caab6a57609296b",
+            "tree_sha256": "bd4290660b921338e3452a378d3316a68c7bed89aa40082b8f0362ebef40780b",
+            "history_sha256": "a606b6d7c6359d8145b6f24bdadab676546b9e6246995e4dc26e58c23987be50",
+            "checkpoint_sha256": "8554764e33885992cc31e4d044a82a4ae8e876f119197e72b07ae3a1dcbc533b"
+          },
+          {
+            "repeat": 1,
+            "warmup": false,
+            "taxa": 1024,
+            "sites": 2048,
+            "seconds": 0.3211232200264931,
+            "read_sample_seconds": 0.006626367103308439,
+            "apnj_seconds": 0.21750220702961087,
+            "mlp_seconds": 0.0868386747315526,
+            "apnj_sha256": "20182de558da8f36404f11da068855e70958d247735dbcec7caab6a57609296b",
+            "tree_sha256": "bd4290660b921338e3452a378d3316a68c7bed89aa40082b8f0362ebef40780b",
+            "history_sha256": "a606b6d7c6359d8145b6f24bdadab676546b9e6246995e4dc26e58c23987be50",
+            "checkpoint_sha256": "8554764e33885992cc31e4d044a82a4ae8e876f119197e72b07ae3a1dcbc533b"
+          },
+          {
+            "repeat": 2,
+            "warmup": false,
+            "taxa": 1024,
+            "sites": 2048,
+            "seconds": 0.3159225289709866,
+            "read_sample_seconds": 0.006871908903121948,
+            "apnj_seconds": 0.21405916707590222,
+            "mlp_seconds": 0.0848808977752924,
+            "apnj_sha256": "20182de558da8f36404f11da068855e70958d247735dbcec7caab6a57609296b",
+            "tree_sha256": "bd4290660b921338e3452a378d3316a68c7bed89aa40082b8f0362ebef40780b",
+            "history_sha256": "a606b6d7c6359d8145b6f24bdadab676546b9e6246995e4dc26e58c23987be50",
+            "checkpoint_sha256": "8554764e33885992cc31e4d044a82a4ae8e876f119197e72b07ae3a1dcbc533b"
+          },
+          {
+            "repeat": 3,
+            "warmup": false,
+            "taxa": 1024,
+            "sites": 2048,
+            "seconds": 0.31346438685432076,
+            "read_sample_seconds": 0.006624753121286631,
+            "apnj_seconds": 0.2095153289847076,
+            "mlp_seconds": 0.08724378002807498,
+            "apnj_sha256": "20182de558da8f36404f11da068855e70958d247735dbcec7caab6a57609296b",
+            "tree_sha256": "bd4290660b921338e3452a378d3316a68c7bed89aa40082b8f0362ebef40780b",
+            "history_sha256": "a606b6d7c6359d8145b6f24bdadab676546b9e6246995e4dc26e58c23987be50",
+            "checkpoint_sha256": "8554764e33885992cc31e4d044a82a4ae8e876f119197e72b07ae3a1dcbc533b"
+          }
+        ]
+      },
+      "optimized": {
+        "contract": {
+          "variant": "optimized",
+          "predictor": "homogeneous",
+          "input": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/data/test/simulation/alisim-homogeneous-v3/n1024/000/alignment.phy",
+          "input_sha256": "86dd68d444e3d5364a91240767ce5441df760f12818147eb6e9fcf1ef6c7d26e",
+          "measured_repeats": 3,
+          "warmup_discarded": 1,
+          "includes": "read/sample + AP-NJ + MLP; excludes first model load, serialization, and posterior",
+          "cpu_threads": 16,
+          "gpu": 0,
+          "numa": 0,
+          "sample_seed": 20261022,
+          "apnj_seed": 20260934,
+          "stop_ratio": 0.005
+        },
+        "rows": [
+          {
+            "repeat": 0,
+            "warmup": true,
+            "taxa": 1024,
+            "sites": 2048,
+            "seconds": 0.34475240390747786,
+            "read_sample_seconds": 0.01038351096212864,
+            "apnj_seconds": 0.21306007588282228,
+            "mlp_seconds": 0.1113581657409668,
+            "apnj_sha256": "20182de558da8f36404f11da068855e70958d247735dbcec7caab6a57609296b",
+            "tree_sha256": "bd4290660b921338e3452a378d3316a68c7bed89aa40082b8f0362ebef40780b",
+            "history_sha256": "a606b6d7c6359d8145b6f24bdadab676546b9e6246995e4dc26e58c23987be50",
+            "checkpoint_sha256": "8554764e33885992cc31e4d044a82a4ae8e876f119197e72b07ae3a1dcbc533b"
+          },
+          {
+            "repeat": 1,
+            "warmup": false,
+            "taxa": 1024,
+            "sites": 2048,
+            "seconds": 0.24962719436734915,
+            "read_sample_seconds": 0.006546762306243181,
+            "apnj_seconds": 0.16827194392681122,
+            "mlp_seconds": 0.0644389409571886,
+            "apnj_sha256": "20182de558da8f36404f11da068855e70958d247735dbcec7caab6a57609296b",
+            "tree_sha256": "bd4290660b921338e3452a378d3316a68c7bed89aa40082b8f0362ebef40780b",
+            "history_sha256": "a606b6d7c6359d8145b6f24bdadab676546b9e6246995e4dc26e58c23987be50",
+            "checkpoint_sha256": "8554764e33885992cc31e4d044a82a4ae8e876f119197e72b07ae3a1dcbc533b"
+          },
+          {
+            "repeat": 2,
+            "warmup": false,
+            "taxa": 1024,
+            "sites": 2048,
+            "seconds": 0.23889497015625238,
+            "read_sample_seconds": 0.0068048532120883465,
+            "apnj_seconds": 0.15809790091589093,
+            "mlp_seconds": 0.06391437817364931,
+            "apnj_sha256": "20182de558da8f36404f11da068855e70958d247735dbcec7caab6a57609296b",
+            "tree_sha256": "bd4290660b921338e3452a378d3316a68c7bed89aa40082b8f0362ebef40780b",
+            "history_sha256": "a606b6d7c6359d8145b6f24bdadab676546b9e6246995e4dc26e58c23987be50",
+            "checkpoint_sha256": "8554764e33885992cc31e4d044a82a4ae8e876f119197e72b07ae3a1dcbc533b"
+          },
+          {
+            "repeat": 3,
+            "warmup": false,
+            "taxa": 1024,
+            "sites": 2048,
+            "seconds": 0.24218405270949006,
+            "read_sample_seconds": 0.0069656576961278915,
+            "apnj_seconds": 0.16176778310909867,
+            "mlp_seconds": 0.06328063877299428,
+            "apnj_sha256": "20182de558da8f36404f11da068855e70958d247735dbcec7caab6a57609296b",
+            "tree_sha256": "bd4290660b921338e3452a378d3316a68c7bed89aa40082b8f0362ebef40780b",
+            "history_sha256": "a606b6d7c6359d8145b6f24bdadab676546b9e6246995e4dc26e58c23987be50",
+            "checkpoint_sha256": "8554764e33885992cc31e4d044a82a4ae8e876f119197e72b07ae3a1dcbc533b"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "gene4096",
+    "arms": {
+      "reference": {
+        "contract": {
+          "variant": "reference",
+          "predictor": "homogeneous",
+          "input": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/data/test/simulation/alisim-homogeneous-v3/n4096/000/alignment.phy",
+          "input_sha256": "dad492f7bc0e65e6c514d40f3decc4c3b3464360bda3fab02735df0cc1409e35",
+          "measured_repeats": 3,
+          "warmup_discarded": 1,
+          "includes": "read/sample + AP-NJ + MLP; excludes first model load, serialization, and posterior",
+          "cpu_threads": 16,
+          "gpu": 0,
+          "numa": 0,
+          "sample_seed": 20261022,
+          "apnj_seed": 20260934,
+          "stop_ratio": 0.005
+        },
+        "rows": [
+          {
+            "repeat": 0,
+            "warmup": true,
+            "taxa": 4096,
+            "sites": 2048,
+            "seconds": 2.7944768741726875,
+            "read_sample_seconds": 0.03650698019191623,
+            "apnj_seconds": 1.9922691988758743,
+            "mlp_seconds": 0.72412891080603,
+            "apnj_sha256": "7b96987c51a97d63a7d2ec2aeb766a5a5543b7b4c5711516031e2b38e35f2a29",
+            "tree_sha256": "ff9459840fe403da13ae58cf29bd4b07c710a5e87175abbadb77f6122de2fb97",
+            "history_sha256": "f647fcea43b742e50df67547ad9e0e9d41661a12673f6f76774926efce6ce38e",
+            "checkpoint_sha256": "8554764e33885992cc31e4d044a82a4ae8e876f119197e72b07ae3a1dcbc533b"
+          },
+          {
+            "repeat": 1,
+            "warmup": false,
+            "taxa": 4096,
+            "sites": 2048,
+            "seconds": 1.9221691922284663,
+            "read_sample_seconds": 0.026226218324154615,
+            "apnj_seconds": 1.1334601920098066,
+            "mlp_seconds": 0.7171528697945178,
+            "apnj_sha256": "7b96987c51a97d63a7d2ec2aeb766a5a5543b7b4c5711516031e2b38e35f2a29",
+            "tree_sha256": "ff9459840fe403da13ae58cf29bd4b07c710a5e87175abbadb77f6122de2fb97",
+            "history_sha256": "f647fcea43b742e50df67547ad9e0e9d41661a12673f6f76774926efce6ce38e",
+            "checkpoint_sha256": "8554764e33885992cc31e4d044a82a4ae8e876f119197e72b07ae3a1dcbc533b"
+          },
+          {
+            "repeat": 2,
+            "warmup": false,
+            "taxa": 4096,
+            "sites": 2048,
+            "seconds": 1.8936474891379476,
+            "read_sample_seconds": 0.025680003687739372,
+            "apnj_seconds": 1.110513140913099,
+            "mlp_seconds": 0.7128424872644246,
+            "apnj_sha256": "7b96987c51a97d63a7d2ec2aeb766a5a5543b7b4c5711516031e2b38e35f2a29",
+            "tree_sha256": "ff9459840fe403da13ae58cf29bd4b07c710a5e87175abbadb77f6122de2fb97",
+            "history_sha256": "f647fcea43b742e50df67547ad9e0e9d41661a12673f6f76774926efce6ce38e",
+            "checkpoint_sha256": "8554764e33885992cc31e4d044a82a4ae8e876f119197e72b07ae3a1dcbc533b"
+          },
+          {
+            "repeat": 3,
+            "warmup": false,
+            "taxa": 4096,
+            "sites": 2048,
+            "seconds": 1.9027395998127759,
+            "read_sample_seconds": 0.02584953000769019,
+            "apnj_seconds": 1.1329310038127005,
+            "mlp_seconds": 0.7005265587940812,
+            "apnj_sha256": "7b96987c51a97d63a7d2ec2aeb766a5a5543b7b4c5711516031e2b38e35f2a29",
+            "tree_sha256": "ff9459840fe403da13ae58cf29bd4b07c710a5e87175abbadb77f6122de2fb97",
+            "history_sha256": "f647fcea43b742e50df67547ad9e0e9d41661a12673f6f76774926efce6ce38e",
+            "checkpoint_sha256": "8554764e33885992cc31e4d044a82a4ae8e876f119197e72b07ae3a1dcbc533b"
+          }
+        ]
+      },
+      "optimized": {
+        "contract": {
+          "variant": "optimized",
+          "predictor": "homogeneous",
+          "input": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/data/test/simulation/alisim-homogeneous-v3/n4096/000/alignment.phy",
+          "input_sha256": "dad492f7bc0e65e6c514d40f3decc4c3b3464360bda3fab02735df0cc1409e35",
+          "measured_repeats": 3,
+          "warmup_discarded": 1,
+          "includes": "read/sample + AP-NJ + MLP; excludes first model load, serialization, and posterior",
+          "cpu_threads": 16,
+          "gpu": 0,
+          "numa": 0,
+          "sample_seed": 20261022,
+          "apnj_seed": 20260934,
+          "stop_ratio": 0.005
+        },
+        "rows": [
+          {
+            "repeat": 0,
+            "warmup": true,
+            "taxa": 4096,
+            "sites": 2048,
+            "seconds": 1.2482182825915515,
+            "read_sample_seconds": 0.03747958177700639,
+            "apnj_seconds": 0.7398870941251516,
+            "mlp_seconds": 0.4313784036785364,
+            "apnj_sha256": "7b96987c51a97d63a7d2ec2aeb766a5a5543b7b4c5711516031e2b38e35f2a29",
+            "tree_sha256": "ff9459840fe403da13ae58cf29bd4b07c710a5e87175abbadb77f6122de2fb97",
+            "history_sha256": "f647fcea43b742e50df67547ad9e0e9d41661a12673f6f76774926efce6ce38e",
+            "checkpoint_sha256": "8554764e33885992cc31e4d044a82a4ae8e876f119197e72b07ae3a1dcbc533b"
+          },
+          {
+            "repeat": 1,
+            "warmup": false,
+            "taxa": 4096,
+            "sites": 2048,
+            "seconds": 1.077231083996594,
+            "read_sample_seconds": 0.025728819891810417,
+            "apnj_seconds": 0.6000255788676441,
+            "mlp_seconds": 0.40992086194455624,
+            "apnj_sha256": "7b96987c51a97d63a7d2ec2aeb766a5a5543b7b4c5711516031e2b38e35f2a29",
+            "tree_sha256": "ff9459840fe403da13ae58cf29bd4b07c710a5e87175abbadb77f6122de2fb97",
+            "history_sha256": "f647fcea43b742e50df67547ad9e0e9d41661a12673f6f76774926efce6ce38e",
+            "checkpoint_sha256": "8554764e33885992cc31e4d044a82a4ae8e876f119197e72b07ae3a1dcbc533b"
+          },
+          {
+            "repeat": 2,
+            "warmup": false,
+            "taxa": 4096,
+            "sites": 2048,
+            "seconds": 1.0803129728883505,
+            "read_sample_seconds": 0.025024727918207645,
+            "apnj_seconds": 0.6011092429980636,
+            "mlp_seconds": 0.41123398020863533,
+            "apnj_sha256": "7b96987c51a97d63a7d2ec2aeb766a5a5543b7b4c5711516031e2b38e35f2a29",
+            "tree_sha256": "ff9459840fe403da13ae58cf29bd4b07c710a5e87175abbadb77f6122de2fb97",
+            "history_sha256": "f647fcea43b742e50df67547ad9e0e9d41661a12673f6f76774926efce6ce38e",
+            "checkpoint_sha256": "8554764e33885992cc31e4d044a82a4ae8e876f119197e72b07ae3a1dcbc533b"
+          },
+          {
+            "repeat": 3,
+            "warmup": false,
+            "taxa": 4096,
+            "sites": 2048,
+            "seconds": 1.0795987877063453,
+            "read_sample_seconds": 0.025865007657557726,
+            "apnj_seconds": 0.5987662430852652,
+            "mlp_seconds": 0.4129359032958746,
+            "apnj_sha256": "7b96987c51a97d63a7d2ec2aeb766a5a5543b7b4c5711516031e2b38e35f2a29",
+            "tree_sha256": "ff9459840fe403da13ae58cf29bd4b07c710a5e87175abbadb77f6122de2fb97",
+            "history_sha256": "f647fcea43b742e50df67547ad9e0e9d41661a12673f6f76774926efce6ce38e",
+            "checkpoint_sha256": "8554764e33885992cc31e4d044a82a4ae8e876f119197e72b07ae3a1dcbc533b"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "species-weights1024",
+    "arms": {
+      "reference": {
+        "contract": {
+          "variant": "reference",
+          "predictor": "heterogeneous",
+          "input": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/data/test/simulation/alisim-homogeneous-v3/n1024/000/alignment.phy",
+          "input_sha256": "86dd68d444e3d5364a91240767ce5441df760f12818147eb6e9fcf1ef6c7d26e",
+          "measured_repeats": 3,
+          "warmup_discarded": 1,
+          "includes": "read/sample + AP-NJ + MLP; excludes first model load, serialization, and posterior",
+          "cpu_threads": 16,
+          "gpu": 0,
+          "numa": 0,
+          "sample_seed": 20261022,
+          "apnj_seed": 20260934,
+          "stop_ratio": 0.005
+        },
+        "rows": [
+          {
+            "repeat": 0,
+            "warmup": true,
+            "taxa": 1024,
+            "sites": 2048,
+            "seconds": 1.2153945467434824,
+            "read_sample_seconds": 0.011384748853743076,
+            "apnj_seconds": 1.0552567290142179,
+            "mlp_seconds": 0.1387243438512087,
+            "apnj_sha256": "20182de558da8f36404f11da068855e70958d247735dbcec7caab6a57609296b",
+            "tree_sha256": "32f43c2dc44557c24b83888f7c9e99ac35a95135c15676f1593656cac62dbee8",
+            "history_sha256": "8b08a2547cd7c42efc4ee446bf20f40fb1b1eabe7d3eb61f0d5d39114706d105",
+            "checkpoint_sha256": "a74e89e7b6091938f0b413a5c1446864bc18a8db7176f5c77a204018bc8e2edb"
+          },
+          {
+            "repeat": 1,
+            "warmup": false,
+            "taxa": 1024,
+            "sites": 2048,
+            "seconds": 0.32628020690754056,
+            "read_sample_seconds": 0.007016749121248722,
+            "apnj_seconds": 0.21131050074473023,
+            "mlp_seconds": 0.09765755804255605,
+            "apnj_sha256": "20182de558da8f36404f11da068855e70958d247735dbcec7caab6a57609296b",
+            "tree_sha256": "32f43c2dc44557c24b83888f7c9e99ac35a95135c15676f1593656cac62dbee8",
+            "history_sha256": "8b08a2547cd7c42efc4ee446bf20f40fb1b1eabe7d3eb61f0d5d39114706d105",
+            "checkpoint_sha256": "a74e89e7b6091938f0b413a5c1446864bc18a8db7176f5c77a204018bc8e2edb"
+          },
+          {
+            "repeat": 2,
+            "warmup": false,
+            "taxa": 1024,
+            "sites": 2048,
+            "seconds": 0.3179518091492355,
+            "read_sample_seconds": 0.0066526299342513084,
+            "apnj_seconds": 0.20275214593857527,
+            "mlp_seconds": 0.09823411330580711,
+            "apnj_sha256": "20182de558da8f36404f11da068855e70958d247735dbcec7caab6a57609296b",
+            "tree_sha256": "32f43c2dc44557c24b83888f7c9e99ac35a95135c15676f1593656cac62dbee8",
+            "history_sha256": "8b08a2547cd7c42efc4ee446bf20f40fb1b1eabe7d3eb61f0d5d39114706d105",
+            "checkpoint_sha256": "a74e89e7b6091938f0b413a5c1446864bc18a8db7176f5c77a204018bc8e2edb"
+          },
+          {
+            "repeat": 3,
+            "warmup": false,
+            "taxa": 1024,
+            "sites": 2048,
+            "seconds": 0.31505147414281964,
+            "read_sample_seconds": 0.006655095145106316,
+            "apnj_seconds": 0.1996917170472443,
+            "mlp_seconds": 0.09837069176137447,
+            "apnj_sha256": "20182de558da8f36404f11da068855e70958d247735dbcec7caab6a57609296b",
+            "tree_sha256": "32f43c2dc44557c24b83888f7c9e99ac35a95135c15676f1593656cac62dbee8",
+            "history_sha256": "8b08a2547cd7c42efc4ee446bf20f40fb1b1eabe7d3eb61f0d5d39114706d105",
+            "checkpoint_sha256": "a74e89e7b6091938f0b413a5c1446864bc18a8db7176f5c77a204018bc8e2edb"
+          }
+        ]
+      },
+      "optimized": {
+        "contract": {
+          "variant": "optimized",
+          "predictor": "heterogeneous",
+          "input": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/data/test/simulation/alisim-homogeneous-v3/n1024/000/alignment.phy",
+          "input_sha256": "86dd68d444e3d5364a91240767ce5441df760f12818147eb6e9fcf1ef6c7d26e",
+          "measured_repeats": 3,
+          "warmup_discarded": 1,
+          "includes": "read/sample + AP-NJ + MLP; excludes first model load, serialization, and posterior",
+          "cpu_threads": 16,
+          "gpu": 0,
+          "numa": 0,
+          "sample_seed": 20261022,
+          "apnj_seed": 20260934,
+          "stop_ratio": 0.005
+        },
+        "rows": [
+          {
+            "repeat": 0,
+            "warmup": true,
+            "taxa": 1024,
+            "sites": 2048,
+            "seconds": 0.3519740952178836,
+            "read_sample_seconds": 0.01047173934057355,
+            "apnj_seconds": 0.21122492384165525,
+            "mlp_seconds": 0.12081716302782297,
+            "apnj_sha256": "20182de558da8f36404f11da068855e70958d247735dbcec7caab6a57609296b",
+            "tree_sha256": "32f43c2dc44557c24b83888f7c9e99ac35a95135c15676f1593656cac62dbee8",
+            "history_sha256": "8b08a2547cd7c42efc4ee446bf20f40fb1b1eabe7d3eb61f0d5d39114706d105",
+            "checkpoint_sha256": "a74e89e7b6091938f0b413a5c1446864bc18a8db7176f5c77a204018bc8e2edb"
+          },
+          {
+            "repeat": 1,
+            "warmup": false,
+            "taxa": 1024,
+            "sites": 2048,
+            "seconds": 0.2658463390544057,
+            "read_sample_seconds": 0.0070865522138774395,
+            "apnj_seconds": 0.17241972498595715,
+            "mlp_seconds": 0.07667424296960235,
+            "apnj_sha256": "20182de558da8f36404f11da068855e70958d247735dbcec7caab6a57609296b",
+            "tree_sha256": "32f43c2dc44557c24b83888f7c9e99ac35a95135c15676f1593656cac62dbee8",
+            "history_sha256": "8b08a2547cd7c42efc4ee446bf20f40fb1b1eabe7d3eb61f0d5d39114706d105",
+            "checkpoint_sha256": "a74e89e7b6091938f0b413a5c1446864bc18a8db7176f5c77a204018bc8e2edb"
+          },
+          {
+            "repeat": 2,
+            "warmup": false,
+            "taxa": 1024,
+            "sites": 2048,
+            "seconds": 0.26324345730245113,
+            "read_sample_seconds": 0.006579560227692127,
+            "apnj_seconds": 0.168869914021343,
+            "mlp_seconds": 0.0775070651434362,
+            "apnj_sha256": "20182de558da8f36404f11da068855e70958d247735dbcec7caab6a57609296b",
+            "tree_sha256": "32f43c2dc44557c24b83888f7c9e99ac35a95135c15676f1593656cac62dbee8",
+            "history_sha256": "8b08a2547cd7c42efc4ee446bf20f40fb1b1eabe7d3eb61f0d5d39114706d105",
+            "checkpoint_sha256": "a74e89e7b6091938f0b413a5c1446864bc18a8db7176f5c77a204018bc8e2edb"
+          },
+          {
+            "repeat": 3,
+            "warmup": false,
+            "taxa": 1024,
+            "sites": 2048,
+            "seconds": 0.25511221028864384,
+            "read_sample_seconds": 0.006824381183832884,
+            "apnj_seconds": 0.16532409377396107,
+            "mlp_seconds": 0.07315270695835352,
+            "apnj_sha256": "20182de558da8f36404f11da068855e70958d247735dbcec7caab6a57609296b",
+            "tree_sha256": "32f43c2dc44557c24b83888f7c9e99ac35a95135c15676f1593656cac62dbee8",
+            "history_sha256": "8b08a2547cd7c42efc4ee446bf20f40fb1b1eabe7d3eb61f0d5d39114706d105",
+            "checkpoint_sha256": "a74e89e7b6091938f0b413a5c1446864bc18a8db7176f5c77a204018bc8e2edb"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "species-weights4096",
+    "arms": {
+      "reference": {
+        "contract": {
+          "variant": "reference",
+          "predictor": "heterogeneous",
+          "input": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/data/test/simulation/alisim-homogeneous-v3/n4096/000/alignment.phy",
+          "input_sha256": "dad492f7bc0e65e6c514d40f3decc4c3b3464360bda3fab02735df0cc1409e35",
+          "measured_repeats": 3,
+          "warmup_discarded": 1,
+          "includes": "read/sample + AP-NJ + MLP; excludes first model load, serialization, and posterior",
+          "cpu_threads": 16,
+          "gpu": 0,
+          "numa": 0,
+          "sample_seed": 20261022,
+          "apnj_seed": 20260934,
+          "stop_ratio": 0.005
+        },
+        "rows": [
+          {
+            "repeat": 0,
+            "warmup": true,
+            "taxa": 4096,
+            "sites": 2048,
+            "seconds": 2.818411002866924,
+            "read_sample_seconds": 0.0374703467823565,
+            "apnj_seconds": 1.9925899431109428,
+            "mlp_seconds": 0.7454816503450274,
+            "apnj_sha256": "7b96987c51a97d63a7d2ec2aeb766a5a5543b7b4c5711516031e2b38e35f2a29",
+            "tree_sha256": "fbb2f7ccff293c4c558d223c747bf18649dc9a19504397b649936348c5ca445a",
+            "history_sha256": "eaafd08e412993f0035249544ff1ccb3810e61dc7f2eb300ac00c3ac9fd3ad18",
+            "checkpoint_sha256": "a74e89e7b6091938f0b413a5c1446864bc18a8db7176f5c77a204018bc8e2edb"
+          },
+          {
+            "repeat": 1,
+            "warmup": false,
+            "taxa": 4096,
+            "sites": 2048,
+            "seconds": 1.9403332727961242,
+            "read_sample_seconds": 0.02548707090318203,
+            "apnj_seconds": 1.12759193405509,
+            "mlp_seconds": 0.7405924866907299,
+            "apnj_sha256": "7b96987c51a97d63a7d2ec2aeb766a5a5543b7b4c5711516031e2b38e35f2a29",
+            "tree_sha256": "fbb2f7ccff293c4c558d223c747bf18649dc9a19504397b649936348c5ca445a",
+            "history_sha256": "eaafd08e412993f0035249544ff1ccb3810e61dc7f2eb300ac00c3ac9fd3ad18",
+            "checkpoint_sha256": "a74e89e7b6091938f0b413a5c1446864bc18a8db7176f5c77a204018bc8e2edb"
+          },
+          {
+            "repeat": 2,
+            "warmup": false,
+            "taxa": 4096,
+            "sites": 2048,
+            "seconds": 1.943885089829564,
+            "read_sample_seconds": 0.02556666685268283,
+            "apnj_seconds": 1.139261465985328,
+            "mlp_seconds": 0.7347666770219803,
+            "apnj_sha256": "7b96987c51a97d63a7d2ec2aeb766a5a5543b7b4c5711516031e2b38e35f2a29",
+            "tree_sha256": "fbb2f7ccff293c4c558d223c747bf18649dc9a19504397b649936348c5ca445a",
+            "history_sha256": "eaafd08e412993f0035249544ff1ccb3810e61dc7f2eb300ac00c3ac9fd3ad18",
+            "checkpoint_sha256": "a74e89e7b6091938f0b413a5c1446864bc18a8db7176f5c77a204018bc8e2edb"
+          },
+          {
+            "repeat": 3,
+            "warmup": false,
+            "taxa": 4096,
+            "sites": 2048,
+            "seconds": 1.921808775048703,
+            "read_sample_seconds": 0.02572821406647563,
+            "apnj_seconds": 1.109359032008797,
+            "mlp_seconds": 0.7406149222515523,
+            "apnj_sha256": "7b96987c51a97d63a7d2ec2aeb766a5a5543b7b4c5711516031e2b38e35f2a29",
+            "tree_sha256": "fbb2f7ccff293c4c558d223c747bf18649dc9a19504397b649936348c5ca445a",
+            "history_sha256": "eaafd08e412993f0035249544ff1ccb3810e61dc7f2eb300ac00c3ac9fd3ad18",
+            "checkpoint_sha256": "a74e89e7b6091938f0b413a5c1446864bc18a8db7176f5c77a204018bc8e2edb"
+          }
+        ]
+      },
+      "optimized": {
+        "contract": {
+          "variant": "optimized",
+          "predictor": "heterogeneous",
+          "input": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/data/test/simulation/alisim-homogeneous-v3/n4096/000/alignment.phy",
+          "input_sha256": "dad492f7bc0e65e6c514d40f3decc4c3b3464360bda3fab02735df0cc1409e35",
+          "measured_repeats": 3,
+          "warmup_discarded": 1,
+          "includes": "read/sample + AP-NJ + MLP; excludes first model load, serialization, and posterior",
+          "cpu_threads": 16,
+          "gpu": 0,
+          "numa": 0,
+          "sample_seed": 20261022,
+          "apnj_seed": 20260934,
+          "stop_ratio": 0.005
+        },
+        "rows": [
+          {
+            "repeat": 0,
+            "warmup": true,
+            "taxa": 4096,
+            "sites": 2048,
+            "seconds": 1.2578979269601405,
+            "read_sample_seconds": 0.03726996295154095,
+            "apnj_seconds": 0.7369807278737426,
+            "mlp_seconds": 0.4430845803581178,
+            "apnj_sha256": "7b96987c51a97d63a7d2ec2aeb766a5a5543b7b4c5711516031e2b38e35f2a29",
+            "tree_sha256": "fbb2f7ccff293c4c558d223c747bf18649dc9a19504397b649936348c5ca445a",
+            "history_sha256": "eaafd08e412993f0035249544ff1ccb3810e61dc7f2eb300ac00c3ac9fd3ad18",
+            "checkpoint_sha256": "a74e89e7b6091938f0b413a5c1446864bc18a8db7176f5c77a204018bc8e2edb"
+          },
+          {
+            "repeat": 1,
+            "warmup": false,
+            "taxa": 4096,
+            "sites": 2048,
+            "seconds": 1.0919200889766216,
+            "read_sample_seconds": 0.026260167360305786,
+            "apnj_seconds": 0.5986332688480616,
+            "mlp_seconds": 0.42470133397728205,
+            "apnj_sha256": "7b96987c51a97d63a7d2ec2aeb766a5a5543b7b4c5711516031e2b38e35f2a29",
+            "tree_sha256": "fbb2f7ccff293c4c558d223c747bf18649dc9a19504397b649936348c5ca445a",
+            "history_sha256": "eaafd08e412993f0035249544ff1ccb3810e61dc7f2eb300ac00c3ac9fd3ad18",
+            "checkpoint_sha256": "a74e89e7b6091938f0b413a5c1446864bc18a8db7176f5c77a204018bc8e2edb"
+          },
+          {
+            "repeat": 2,
+            "warmup": false,
+            "taxa": 4096,
+            "sites": 2048,
+            "seconds": 1.0886823339387774,
+            "read_sample_seconds": 0.02564729703590274,
+            "apnj_seconds": 0.5963554913178086,
+            "mlp_seconds": 0.42445200495421886,
+            "apnj_sha256": "7b96987c51a97d63a7d2ec2aeb766a5a5543b7b4c5711516031e2b38e35f2a29",
+            "tree_sha256": "fbb2f7ccff293c4c558d223c747bf18649dc9a19504397b649936348c5ca445a",
+            "history_sha256": "eaafd08e412993f0035249544ff1ccb3810e61dc7f2eb300ac00c3ac9fd3ad18",
+            "checkpoint_sha256": "a74e89e7b6091938f0b413a5c1446864bc18a8db7176f5c77a204018bc8e2edb"
+          },
+          {
+            "repeat": 3,
+            "warmup": false,
+            "taxa": 4096,
+            "sites": 2048,
+            "seconds": 1.0886842189356685,
+            "read_sample_seconds": 0.025569114834070206,
+            "apnj_seconds": 0.5979027459397912,
+            "mlp_seconds": 0.42371188290417194,
+            "apnj_sha256": "7b96987c51a97d63a7d2ec2aeb766a5a5543b7b4c5711516031e2b38e35f2a29",
+            "tree_sha256": "fbb2f7ccff293c4c558d223c747bf18649dc9a19504397b649936348c5ca445a",
+            "history_sha256": "eaafd08e412993f0035249544ff1ccb3810e61dc7f2eb300ac00c3ac9fd3ad18",
+            "checkpoint_sha256": "a74e89e7b6091938f0b413a5c1446864bc18a8db7176f5c77a204018bc8e2edb"
+          }
+        ]
+      }
+    }
+  }
+]

@@ -1,0 +1,10 @@
+{
+  "binary": "runtime/gene/src/concordtree/assets/backends/sequence_processor_backend.cpython-310-x86_64-linux-gnu.so",
+  "old_sha256": "1fdb899cce75ff834ff9d4e11ee2339a4565c6ba5cfb9bd26eded5af8fd00ff5",
+  "new_sha256": "148cdb73b8eb1eeb6c28d213d4395408e490a873ecee168e5f77be384c94d54d",
+  "source_sha256": "1fbe0fbf3ae5778bee137af6687079350efb3d261284e4394d41c4d5ce4216d2",
+  "source_unchanged": true,
+  "build_host": "Ubuntu 22.04 x86_64; g++ 11.4",
+  "glibc_max": "2.34",
+  "command": "g++ -O3 -std=c++17 -shared -fPIC -pthread -Iinclude/python3.10 -Iinclude source/sequence_processor_backend.cpp -o out/sequence_processor_backend.cpython-310-x86_64-linux-gnu.so"
+}

@@ -1,0 +1,41 @@
+{
+  "command": [
+    "/usr/local/cuda-12.5/bin/nvcc",
+    "-O3",
+    "--shared",
+    "-std=c++17",
+    "-Xcompiler=-fPIC,-fopenmp",
+    "-I/home/student_su/publish_code/research-workbench/subprojects-main/concordtree-linux-distribution/app/.conda/env/include/python3.10",
+    "-I/home/student_su/publish_code/research-workbench/subprojects-main/concordtree-linux-distribution/app/.conda/env/lib/python3.10/site-packages/pybind11/include",
+    "-gencode",
+    "arch=compute_70,code=sm_70",
+    "-gencode",
+    "arch=compute_75,code=sm_75",
+    "-gencode",
+    "arch=compute_80,code=sm_80",
+    "-gencode",
+    "arch=compute_86,code=sm_86",
+    "-gencode",
+    "arch=compute_89,code=sm_89",
+    "-gencode",
+    "arch=compute_90,code=sm_90",
+    "-gencode",
+    "arch=compute_70,code=compute_70",
+    "/home/student_su/publish_code/research-workbench/subprojects-main/concordtree-linux-distribution/app/native/apnj/packed.cu",
+    "-o",
+    "/home/student_su/publish_code/research-workbench/subprojects-main/concordtree-linux-distribution/app/_ct_apnj_packed.cpython-310-x86_64-linux-gnu.so.new"
+  ],
+  "cubin_architectures": [
+    "70",
+    "75",
+    "80",
+    "86",
+    "89",
+    "90"
+  ],
+  "forward_ptx": "compute_70",
+  "source_sha256": "4ca042324100467ad78ec55a20b98d33e27e2d6639d44c534e823eb2b2320565",
+  "before_sha256": "98ce7ccb5d6978593dffacd467ad7c5c9675bf1e97a33e3ec44322c4bcfa6726",
+  "after_sha256": "584517128c24b5aa1da719a39472ae1752da34011b027bb7f2d1444b0f9319b0",
+  "numerical_source_changed": false
+}

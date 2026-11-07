@@ -1,0 +1,38 @@
+{
+  "status": "resolved",
+  "failures": [
+    {
+      "stage": "first native build",
+      "error": "Unused MASH sources required relocatable device linking.",
+      "resolution": "Link only aligned MSA, k-closest placement, tree and adapter. Unreachable MASH/matrix paths throw explicitly.",
+      "evidence": "build.log",
+      "final_evidence": "build-final-copy.log"
+    },
+    {
+      "stage": "first native comparison harness",
+      "error": "Duplicate taxa keyword in validation report assembly.",
+      "resolution": "Corrected harness; scientific inference was not the failing component.",
+      "evidence": "native-validation.log",
+      "final_evidence": "native-validation-final-copy.log"
+    },
+    {
+      "stage": "first complete gene pipeline and first web gene upload",
+      "error": "Metadata attempted len(None) after unused AP-NJ sample removal.",
+      "resolution": "Record all original sites for all-site initialization. Repeated full gene pipeline and actual upload succeeded.",
+      "failed_web_job": "374106fe11fb496d85a3adefde983e92",
+      "evidence": "pipeline.log",
+      "final_evidence": [
+        "pipeline-fixed.log",
+        "web-final.log"
+      ]
+    },
+    {
+      "stage": "initial web unit suite",
+      "error": "Old report asset assertions referenced already removed site.js and former plots.",
+      "resolution": "Updated report asset assertions to current charts; input, path, queue, download and security checks retained.",
+      "evidence": "web-tests.log",
+      "final_evidence": "web-tests-fixed.log"
+    }
+  ],
+  "note": "Failed runs/logs retained; no failure included as a completed inference. Original logs are in project output/dipper-integration-20261106/."
+}

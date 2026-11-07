@@ -1,0 +1,24 @@
+{
+  "original_file_count": 452,
+  "distribution_file_count": 1121,
+  "changed_original_files": [
+    "README.md",
+    "_ct_apnj_packed.cpython-310-x86_64-linux-gnu.so",
+    "runtime/gene/src/concordtree/assets/backends/sequence_processor_backend.cpython-310-x86_64-linux-gnu.so",
+    "runtime/gene/src/concordtree/assets.py",
+    "runtime_config.py",
+    "scripts/run_local.sh",
+    "scripts/start_web.sh",
+    "verify_release.py",
+    "web/server.py"
+  ],
+  "algorithm_sources_unchanged": true,
+  "weights_unchanged": true,
+  "weights": {
+    "assets/mlp/homogeneous.pth": "8554764e33885992cc31e4d044a82a4ae8e876f119197e72b07ae3a1dcbc533b",
+    "assets/mlp/heterogeneous.pth": "a74e89e7b6091938f0b413a5c1446864bc18a8db7176f5c77a204018bc8e2edb",
+    "assets/msc/observed_loci.npz": "c2925749b22eebc5e9525a9415cb5101d655abcf69c2d57172e81c4dae80a23f",
+    "assets/msc/msa_only.npz": "861d790d0f6c9510c182367342c7473fb49ef21449ccd4897ed9579df8318491"
+  },
+  "change_scope": "launch paths, Web CPU/GPU selection and container binding, integrity manifest, AP-NJ GPU architecture coverage, identical-source sequence parser rebuild for glibc 2.34, distribution documentation"
+}

@@ -1,0 +1,530 @@
+{
+  "created_at": "2026-11-06T19:25:58.386607+00:00",
+  "status": "complete",
+  "completion": {
+    "gene": {
+      "state": "complete",
+      "planned": 200,
+      "finished": 200
+    },
+    "species": {
+      "state": "complete",
+      "planned": 700,
+      "finished": 700
+    }
+  },
+  "by_task": {
+    "gene": {
+      "records": 200,
+      "complete": 200,
+      "failed": 0,
+      "candidate_nrf": 0.1134043659036231,
+      "dipper_nrf": 0.24151630970659035,
+      "delta": -0.12811194380296725,
+      "paired_stratified_bootstrap95": [
+        -0.1428140858261342,
+        -0.11398049123320943
+      ],
+      "win": 198,
+      "tie": 1,
+      "loss": 1,
+      "delta_p05_p50_p95": [
+        -0.2951085206090037,
+        -0.10575929202169462,
+        -0.017679131172682123
+      ],
+      "worst_delta": 0.003911980440097801,
+      "best_delta": -0.7233201581027667,
+      "baseline_reused": 200,
+      "main_seconds": "descriptive single executions; fresh warm comparisons are separate"
+    },
+    "species": {
+      "records": 700,
+      "complete": 700,
+      "failed": 0,
+      "candidate_nrf": 0.1372886482530778,
+      "dipper_nrf": 0.18858251234147255,
+      "delta": -0.051293864088394765,
+      "paired_stratified_bootstrap95": [
+        -0.05660766710316819,
+        -0.04616395764172774
+      ],
+      "win": 564,
+      "tie": 55,
+      "loss": 81,
+      "delta_p05_p50_p95": [
+        -0.20434115403635636,
+        -0.033398821218074665,
+        0.023999999999999994
+      ],
+      "worst_delta": 0.13793103448275862,
+      "best_delta": -0.5517241379310345,
+      "baseline_reused": 700,
+      "main_seconds": "descriptive single executions; fresh warm comparisons are separate"
+    }
+  },
+  "by_task_role": {
+    "gene/search": {
+      "records": 10,
+      "complete": 10,
+      "failed": 0,
+      "candidate_nrf": 0.21776680909253915,
+      "dipper_nrf": 0.3664462862647215,
+      "delta": -0.14867947717218236,
+      "paired_stratified_bootstrap95": [
+        -0.1639122295822217,
+        -0.13344672476214298
+      ],
+      "win": 10,
+      "tie": 0,
+      "loss": 0,
+      "delta_p05_p50_p95": [
+        -0.2102236034988784,
+        -0.14593535749265427,
+        -0.0903162055335969
+      ],
+      "worst_delta": -0.06719367588932806,
+      "best_delta": -0.23379174852652262,
+      "baseline_reused": 10,
+      "main_seconds": "descriptive single executions; fresh warm comparisons are separate"
+    },
+    "gene/confirmation": {
+      "records": 190,
+      "complete": 190,
+      "failed": 0,
+      "candidate_nrf": 0.10791160573578543,
+      "dipper_nrf": 0.2349410477824782,
+      "delta": -0.12702944204669278,
+      "paired_stratified_bootstrap95": [
+        -0.14274256190344436,
+        -0.11237379522043993
+      ],
+      "win": 188,
+      "tie": 1,
+      "loss": 1,
+      "delta_p05_p50_p95": [
+        -0.2992389133395125,
+        -0.10165470108772608,
+        -0.01765315409793165
+      ],
+      "worst_delta": 0.003911980440097801,
+      "best_delta": -0.7233201581027667,
+      "baseline_reused": 190,
+      "main_seconds": "descriptive single executions; fresh warm comparisons are separate"
+    },
+    "species/search": {
+      "records": 28,
+      "complete": 28,
+      "failed": 0,
+      "candidate_nrf": 0.13473065396063397,
+      "dipper_nrf": 0.19056489903501175,
+      "delta": -0.0558342450743778,
+      "paired_stratified_bootstrap95": [
+        -0.07256478848610703,
+        -0.039574114999438664
+      ],
+      "win": 25,
+      "tie": 2,
+      "loss": 1,
+      "delta_p05_p50_p95": [
+        -0.15726915520628684,
+        -0.04183154324477105,
+        0.0
+      ],
+      "worst_delta": 0.024,
+      "best_delta": -0.19672131147540983,
+      "baseline_reused": 28,
+      "main_seconds": "descriptive single executions; fresh warm comparisons are separate"
+    },
+    "species/confirmation": {
+      "records": 672,
+      "complete": 672,
+      "failed": 0,
+      "candidate_nrf": 0.13739523134859627,
+      "dipper_nrf": 0.18849991289590842,
+      "delta": -0.05110468154731214,
+      "paired_stratified_bootstrap95": [
+        -0.056559288561060496,
+        -0.0460240086903258
+      ],
+      "win": 539,
+      "tie": 53,
+      "loss": 80,
+      "delta_p05_p50_p95": [
+        -0.20544284315097242,
+        -0.03339882121807465,
+        0.023999999999999994
+      ],
+      "worst_delta": 0.13793103448275862,
+      "best_delta": -0.5517241379310345,
+      "baseline_reused": 672,
+      "main_seconds": "descriptive single executions; fresh warm comparisons are separate"
+    }
+  },
+  "by_task_scale": {
+    "gene/256": {
+      "records": 40,
+      "complete": 40,
+      "failed": 0,
+      "candidate_nrf": 0.10642292490118577,
+      "dipper_nrf": 0.27055335968379446,
+      "delta": -0.16413043478260866,
+      "paired_stratified_bootstrap95": [
+        -0.2150197628458498,
+        -0.12025444664031623
+      ],
+      "win": 39,
+      "tie": 1,
+      "loss": 0,
+      "delta_p05_p50_p95": [
+        -0.37885375494071144,
+        -0.13438735177865613,
+        -0.003952569169960479
+      ],
+      "worst_delta": 0.0,
+      "best_delta": -0.7233201581027667,
+      "baseline_reused": 40,
+      "main_seconds": "descriptive single executions; fresh warm comparisons are separate"
+    },
+    "gene/512": {
+      "records": 40,
+      "complete": 40,
+      "failed": 0,
+      "candidate_nrf": 0.1531434184675835,
+      "dipper_nrf": 0.2821709233791749,
+      "delta": -0.12902750491159135,
+      "paired_stratified_bootstrap95": [
+        -0.16463899803536344,
+        -0.09700392927308447
+      ],
+      "win": 40,
+      "tie": 0,
+      "loss": 0,
+      "delta_p05_p50_p95": [
+        -0.2958742632612967,
+        -0.10707269155206285,
+        -0.017485265225933213
+      ],
+      "worst_delta": -0.011787819253438109,
+      "best_delta": -0.5599214145383105,
+      "baseline_reused": 40,
+      "main_seconds": "descriptive single executions; fresh warm comparisons are separate"
+    },
+    "gene/1024": {
+      "records": 40,
+      "complete": 40,
+      "failed": 0,
+      "candidate_nrf": 0.10734573947110677,
+      "dipper_nrf": 0.22539177277179237,
+      "delta": -0.11804603330068561,
+      "paired_stratified_bootstrap95": [
+        -0.14436949069539667,
+        -0.09272771792360432
+      ],
+      "win": 40,
+      "tie": 0,
+      "loss": 0,
+      "delta_p05_p50_p95": [
+        -0.27335945151811947,
+        -0.09353574926542606,
+        -0.025073457394711094
+      ],
+      "worst_delta": -0.015670910871694418,
+      "best_delta": -0.3202742409402547,
+      "baseline_reused": 40,
+      "main_seconds": "descriptive single executions; fresh warm comparisons are separate"
+    },
+    "gene/2048": {
+      "records": 40,
+      "complete": 40,
+      "failed": 0,
+      "candidate_nrf": 0.09973105134474328,
+      "dipper_nrf": 0.2174205378973105,
+      "delta": -0.11768948655256724,
+      "paired_stratified_bootstrap95": [
+        -0.1442921760391198,
+        -0.09354462102689488
+      ],
+      "win": 39,
+      "tie": 0,
+      "loss": 1,
+      "delta_p05_p50_p95": [
+        -0.27092909535452325,
+        -0.0863080684596577,
+        -0.024278728606356978
+      ],
+      "worst_delta": 0.003911980440097801,
+      "best_delta": -0.3354523227383863,
+      "baseline_reused": 40,
+      "main_seconds": "descriptive single executions; fresh warm comparisons are separate"
+    },
+    "gene/4096": {
+      "records": 40,
+      "complete": 40,
+      "failed": 0,
+      "candidate_nrf": 0.10037869533349622,
+      "dipper_nrf": 0.21204495480087954,
+      "delta": -0.11166625946738336,
+      "paired_stratified_bootstrap95": [
+        -0.13372831663816273,
+        -0.0911495235768385
+      ],
+      "win": 40,
+      "tie": 0,
+      "loss": 0,
+      "delta_p05_p50_p95": [
+        -0.24899828976301003,
+        -0.10249205961397506,
+        -0.018372831663816296
+      ],
+      "worst_delta": -0.004642071829953576,
+      "best_delta": -0.3029562667969704,
+      "baseline_reused": 40,
+      "main_seconds": "descriptive single executions; fresh warm comparisons are separate"
+    },
+    "species/32": {
+      "records": 100,
+      "complete": 100,
+      "failed": 0,
+      "candidate_nrf": 0.1375862068965517,
+      "dipper_nrf": 0.1820689655172414,
+      "delta": -0.04448275862068965,
+      "paired_stratified_bootstrap95": [
+        -0.06413793103448276,
+        -0.026551724137931037
+      ],
+      "win": 56,
+      "tie": 27,
+      "loss": 17,
+      "delta_p05_p50_p95": [
+        -0.24482758620689654,
+        -0.034482758620689655,
+        0.06896551724137931
+      ],
+      "worst_delta": 0.13793103448275862,
+      "best_delta": -0.5517241379310345,
+      "baseline_reused": 100,
+      "main_seconds": "descriptive single executions; fresh warm comparisons are separate"
+    },
+    "species/64": {
+      "records": 100,
+      "complete": 100,
+      "failed": 0,
+      "candidate_nrf": 0.13721311475409834,
+      "dipper_nrf": 0.17885245901639343,
+      "delta": -0.041639344262295076,
+      "paired_stratified_bootstrap95": [
+        -0.05622950819672132,
+        -0.02786885245901639
+      ],
+      "win": 68,
+      "tie": 13,
+      "loss": 19,
+      "delta_p05_p50_p95": [
+        -0.18114754098360655,
+        -0.03278688524590162,
+        0.03278688524590165
+      ],
+      "worst_delta": 0.13114754098360654,
+      "best_delta": -0.34426229508196726,
+      "baseline_reused": 100,
+      "main_seconds": "descriptive single executions; fresh warm comparisons are separate"
+    },
+    "species/128": {
+      "records": 100,
+      "complete": 100,
+      "failed": 0,
+      "candidate_nrf": 0.13856000000000002,
+      "dipper_nrf": 0.18344000000000002,
+      "delta": -0.04488,
+      "paired_stratified_bootstrap95": [
+        -0.05896,
+        -0.03215800000000003
+      ],
+      "win": 68,
+      "tie": 8,
+      "loss": 24,
+      "delta_p05_p50_p95": [
+        -0.1932,
+        -0.024,
+        0.023999999999999994
+      ],
+      "worst_delta": 0.039999999999999994,
+      "best_delta": -0.32000000000000006,
+      "baseline_reused": 100,
+      "main_seconds": "descriptive single executions; fresh warm comparisons are separate"
+    },
+    "species/192": {
+      "records": 100,
+      "complete": 100,
+      "failed": 0,
+      "candidate_nrf": 0.1426984126984127,
+      "dipper_nrf": 0.1912169312169312,
+      "delta": -0.04851851851851852,
+      "paired_stratified_bootstrap95": [
+        -0.06100529100529101,
+        -0.037037037037037035
+      ],
+      "win": 85,
+      "tie": 3,
+      "loss": 12,
+      "delta_p05_p50_p95": [
+        -0.2066137566137566,
+        -0.026455026455026454,
+        0.010582010582010581
+      ],
+      "worst_delta": 0.026455026455026454,
+      "best_delta": -0.3227513227513228,
+      "baseline_reused": 100,
+      "main_seconds": "descriptive single executions; fresh warm comparisons are separate"
+    },
+    "species/256": {
+      "records": 100,
+      "complete": 100,
+      "failed": 0,
+      "candidate_nrf": 0.13608695652173913,
+      "dipper_nrf": 0.1903952569169961,
+      "delta": -0.054308300395256914,
+      "paired_stratified_bootstrap95": [
+        -0.06762845849802372,
+        -0.042371541501976286
+      ],
+      "win": 90,
+      "tie": 4,
+      "loss": 6,
+      "delta_p05_p50_p95": [
+        -0.18636363636363634,
+        -0.03557312252964427,
+        0.00790513833992093
+      ],
+      "worst_delta": 0.01976284584980234,
+      "best_delta": -0.3399209486166008,
+      "baseline_reused": 100,
+      "main_seconds": "descriptive single executions; fresh warm comparisons are separate"
+    },
+    "species/512": {
+      "records": 100,
+      "complete": 100,
+      "failed": 0,
+      "candidate_nrf": 0.14074656188605109,
+      "dipper_nrf": 0.20671905697445972,
+      "delta": -0.06597249508840865,
+      "paired_stratified_bootstrap95": [
+        -0.07978388998035361,
+        -0.05341846758349705
+      ],
+      "win": 97,
+      "tie": 0,
+      "loss": 3,
+      "delta_p05_p50_p95": [
+        -0.2005893909626719,
+        -0.041257367387033395,
+        -0.0038310412573673933
+      ],
+      "worst_delta": 0.00785854616895873,
+      "best_delta": -0.387033398821218,
+      "baseline_reused": 100,
+      "main_seconds": "descriptive single executions; fresh warm comparisons are separate"
+    },
+    "species/1024": {
+      "records": 100,
+      "complete": 100,
+      "failed": 0,
+      "candidate_nrf": 0.12812928501469148,
+      "dipper_nrf": 0.18738491674828597,
+      "delta": -0.05925563173359451,
+      "paired_stratified_bootstrap95": [
+        -0.07137144955925565,
+        -0.048374142997061706
+      ],
+      "win": 100,
+      "tie": 0,
+      "loss": 0,
+      "delta_p05_p50_p95": [
+        -0.20548481880509303,
+        -0.040156709108716944,
+        -0.010724779627815876
+      ],
+      "worst_delta": -0.000979431929480884,
+      "best_delta": -0.3379040156709109,
+      "baseline_reused": 100,
+      "main_seconds": "descriptive single executions; fresh warm comparisons are separate"
+    }
+  },
+  "by_task_family": {
+    "gene/single_history": {
+      "records": 200,
+      "complete": 200,
+      "failed": 0,
+      "candidate_nrf": 0.1134043659036231,
+      "dipper_nrf": 0.24151630970659035,
+      "delta": -0.12811194380296725,
+      "paired_stratified_bootstrap95": [
+        -0.1428140858261342,
+        -0.11398049123320943
+      ],
+      "win": 198,
+      "tie": 1,
+      "loss": 1,
+      "delta_p05_p50_p95": [
+        -0.2951085206090037,
+        -0.10575929202169462,
+        -0.017679131172682123
+      ],
+      "worst_delta": 0.003911980440097801,
+      "best_delta": -0.7233201581027667,
+      "baseline_reused": 200,
+      "main_seconds": "descriptive single executions; fresh warm comparisons are separate"
+    },
+    "species/ILS": {
+      "records": 350,
+      "complete": 350,
+      "failed": 0,
+      "candidate_nrf": 0.13875544647691773,
+      "dipper_nrf": 0.1712793146621427,
+      "delta": -0.03252386818522496,
+      "paired_stratified_bootstrap95": [
+        -0.03669923910305139,
+        -0.028575833055208468
+      ],
+      "win": 274,
+      "tie": 32,
+      "loss": 44,
+      "delta_p05_p50_p95": [
+        -0.10344827586206896,
+        -0.02942625300901116,
+        0.018246614397719203
+      ],
+      "worst_delta": 0.10344827586206895,
+      "best_delta": -0.21311475409836064,
+      "baseline_reused": 350,
+      "main_seconds": "descriptive single executions; fresh warm comparisons are separate"
+    },
+    "species/complex": {
+      "records": 350,
+      "complete": 350,
+      "failed": 0,
+      "candidate_nrf": 0.1358218500292378,
+      "dipper_nrf": 0.20588571002080236,
+      "delta": -0.07006385999156457,
+      "paired_stratified_bootstrap95": [
+        -0.0800392800324171,
+        -0.06052521887225273
+      ],
+      "win": 290,
+      "tie": 23,
+      "loss": 37,
+      "delta_p05_p50_p95": [
+        -0.2985507246376812,
+        -0.03874528804727442,
+        0.02400000000000001
+      ],
+      "worst_delta": 0.13793103448275862,
+      "best_delta": -0.5517241379310345,
+      "baseline_reused": 350,
+      "main_seconds": "descriptive single executions; fresh warm comparisons are separate"
+    }
+  },
+  "failures": [],
+  "data_role": "exposed development pools; confirmation means candidate was frozen before these current-run results, not independent novel-source holdout"
+}

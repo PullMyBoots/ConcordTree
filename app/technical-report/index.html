@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="ConcordTree input formats, accuracy, runtime and inference methods."><title>ConcordTree · Input formats</title><link rel="icon" href="assets/concordtree-mark.svg" type="image/svg+xml"><link rel="stylesheet" href="assets/site.css"></head>
+<body data-page="formats"><a class="skip-link" href="#content">Skip to content</a><header class="site-header"><div class="page masthead"><a class="brand" href="index.html"><img src="assets/concordtree-mark.svg" alt=""><span>ConcordTree</span></a><div class="header-tools"><a href="/"><span>Open app</span></a></div></div><nav class="page top-nav" aria-label="Report sections"><a href="index.html" aria-current="page"><span>Input formats</span></a><a href="accuracy.html"><span>Accuracy</span></a><a href="performance.html"><span>Runtime</span></a><a href="method.html"><span>Methods</span></a></nav></header>
+<main id="content" class="page paper"><header class="paper-header"><p class="series"><span>Technical report</span><span class="report-version">V1.0.2</span></p><h1>Input formats</h1></header><p class="lead">Upload an aligned DNA matrix. Choose a tree type; the number of alignment blocks determines locus handling.</p><section class="report-section"><div class="section-title"><span>01</span><h2>Gene trees</h2></div><div class="section-body"><p>One PHYLIP alignment containing at least 4 taxa. The first line gives the number of sequences and aligned sites. Each row then gives a taxon name and its sequence.</p><pre><code>4 12
+Taxon_A  ACGTACGTACGT
+Taxon_B  ACGTACGTTCGT
+Taxon_C  ACGTTCGTACGA
+Taxon_D  ACGTTCGTTCGA</code></pre><a class="download-link" href="examples/gene.phy" download><span>Download gene-tree example</span></a></div></section><section class="report-section"><div class="section-title"><span>02</span><h2>Species trees</h2></div><div class="section-body"><p>Use PHYLIP/PAML multi-locus input: concatenate alignment blocks in one file, each with its own sequence/site header. Species-tree jobs require at least 24 distinct taxa across the input.</p><pre class="locus-example"><code>24 8
+Taxon_01  ACGTTCGT
+Taxon_02  ACGTACGT
+Taxon_03  ACGTTCGT
+Taxon_04  ACGTACGT
+Taxon_05  ACGTTCGT
+Taxon_06  ACGTACGT
+Taxon_07  ACGTTCGT
+Taxon_08  ACGTACGT
+Taxon_09  ACGTTCGT
+Taxon_10  ACGTACGT
+Taxon_11  ACGTTCGT
+Taxon_12  ACGTACGT
+Taxon_13  ACGTTCGT
+Taxon_14  ACGTACGT
+Taxon_15  ACGTTCGT
+Taxon_16  ACGTACGT
+Taxon_17  ACGTTCGT
+Taxon_18  ACGTACGT
+Taxon_19  ACGTTCGT
+Taxon_20  ACGTACGT
+Taxon_21  ACGTTCGT
+Taxon_22  ACGTACGT
+Taxon_23  ACGTTCGT
+Taxon_24  ACGTACGT
+
+24 6
+Taxon_01  AATGCC
+Taxon_02  AAGGCC
+Taxon_03  AAGGCC
+Taxon_04  AATGCC
+Taxon_05  AAGGCC
+Taxon_06  AAGGCC
+Taxon_07  AATGCC
+Taxon_08  AAGGCC
+Taxon_09  AAGGCC
+Taxon_10  AATGCC
+Taxon_11  AAGGCC
+Taxon_12  AAGGCC
+Taxon_13  AATGCC
+Taxon_14  AAGGCC
+Taxon_15  AAGGCC
+Taxon_16  AATGCC
+Taxon_17  AAGGCC
+Taxon_18  AAGGCC
+Taxon_19  AATGCC
+Taxon_20  AAGGCC
+Taxon_21  AAGGCC
+Taxon_22  AATGCC
+Taxon_23  AAGGCC
+Taxon_24  AAGGCC</code></pre><div class="table-wrap"><table class="result-table "><thead><tr><th scope="col"><span>Alignment blocks</span></th><th scope="col"><span>Handling</span></th></tr></thead><tbody><tr><td>1</td><td><span>Unpartitioned input (MSA-only)</span></td></tr><tr><td>2+</td><td><span>Observed loci; boundaries inferred from block lengths</span></td></tr></tbody></table></div><p>Taxon names identify the same species across loci. Locus taxon sets may differ; absent sequences are padded with ?. Each species must have at least one observed A/C/G/T in the combined matrix.</p><a class="download-link" href="examples/species.paml" download><span>Download multi-locus example</span></a></div></section><section class="report-section"><div class="section-title"><span>03</span><h2>Format requirements</h2></div><div class="section-body"><p>Relaxed sequential, wrapped sequential, PAML name-only rows and interleaved PHYLIP are accepted. Names must be unique within a locus and separated from sequence text by whitespace. DNA IUPAC symbols and N, ?, -, . are accepted; FASTA and unaligned sequences are not accepted by the website.</p></div></section></main><footer class="site-footer"><div class="page footer-inner"><span>ConcordTree · Technical report</span><a href="/"><span>Open app</span></a></div></footer></body></html>

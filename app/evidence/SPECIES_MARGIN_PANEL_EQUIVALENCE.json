@@ -1,0 +1,18 @@
+[
+  {
+    "split": "development",
+    "trees": 40,
+    "branches": 48008,
+    "raw_auc": 0.9204170749516029,
+    "display_roundtrip_auc": 0.9204170749516029,
+    "exact_rank_preservation": true
+  },
+  {
+    "split": "confirmation",
+    "trees": 40,
+    "branches": 48008,
+    "raw_auc": 0.9228206744656474,
+    "display_roundtrip_auc": 0.9228206744656474,
+    "exact_rank_preservation": true
+  }
+]

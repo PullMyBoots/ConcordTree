@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "imported_source_count": 251,
+  "original_inference_binaries": 27,
+  "baseline_files": 197,
+  "benchmark_input_unchanged": true,
+  "baseline_manifest_sha256": "2189d5c3d1c69868ea665e5efa9bfb6dd26bf7f581e3bcb043fafd3138e8da7f",
+  "benchmark_input_sha256": "dad492f7bc0e65e6c514d40f3decc4c3b3464360bda3fab02735df0cc1409e35",
+  "regression_inputs_unchanged": 4,
+  "original_release_validation_inputs_unchanged": 6
+}

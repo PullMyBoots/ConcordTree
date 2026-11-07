@@ -1,0 +1,443 @@
+[
+  {
+    "id": "gene32",
+    "checks": {
+      "tree": true,
+      "history": true,
+      "no_extra_fits": true,
+      "no_extra_quartet_scoring": true,
+      "original_v101_tree": true,
+      "model": true
+    },
+    "counts": {
+      "False": {
+        "fits": 2,
+        "nni": 6,
+        "quartet_calls": 0,
+        "quartets": 0,
+        "classifications": 0
+      },
+      "True": {
+        "fits": 2,
+        "nni": 6,
+        "quartet_calls": 0,
+        "quartets": 0,
+        "classifications": 0
+      }
+    },
+    "support": {
+      "enabled": true,
+      "method": "gene_local_likelihood_weight",
+      "label": "Local likelihood weight",
+      "path": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/output/branch-support-validation-20261105/reg-gene32-1/branch-support.json",
+      "annotated_tree": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/output/branch-support-validation-20261105/reg-gene32-1/prediction.nwk",
+      "unannotated_tree": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/output/branch-support-validation-20261105/reg-gene32-1/prediction.unannotated.nwk",
+      "calibrated": false,
+      "internal_branches": 29,
+      "available": 29,
+      "unavailable": 0,
+      "computation": {
+        "source": "last_search_scan",
+        "additional_inference_runs": 0,
+        "additional_parameter_fits": 0,
+        "additional_nni_evaluations": 0,
+        "final_state_verified": true,
+        "final_verification_and_summary_seconds": 0.0037507470697164536,
+        "export_seconds": 0.0005208160728216171
+      }
+    },
+    "status": "passed"
+  },
+  {
+    "id": "gene-budget",
+    "checks": {
+      "tree": true,
+      "history": true,
+      "no_extra_fits": true,
+      "no_extra_quartet_scoring": true,
+      "model": true
+    },
+    "counts": {
+      "False": {
+        "fits": 1,
+        "nni": 1,
+        "quartet_calls": 0,
+        "quartets": 0,
+        "classifications": 0
+      },
+      "True": {
+        "fits": 1,
+        "nni": 2,
+        "quartet_calls": 0,
+        "quartets": 0,
+        "classifications": 0
+      }
+    },
+    "support": {
+      "enabled": true,
+      "method": "gene_local_likelihood_weight",
+      "label": "Local likelihood weight",
+      "path": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/output/branch-support-validation-20261105/reg-gene-budget-1/branch-support.json",
+      "annotated_tree": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/output/branch-support-validation-20261105/reg-gene-budget-1/prediction.nwk",
+      "unannotated_tree": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/output/branch-support-validation-20261105/reg-gene-budget-1/prediction.unannotated.nwk",
+      "calibrated": false,
+      "internal_branches": 29,
+      "available": 29,
+      "unavailable": 0,
+      "computation": {
+        "source": "upgraded_final_verification",
+        "additional_inference_runs": 0,
+        "additional_parameter_fits": 0,
+        "additional_nni_evaluations": 1,
+        "final_state_verified": true,
+        "final_verification_and_summary_seconds": 0.004063459113240242,
+        "export_seconds": 0.0005095698870718479
+      }
+    },
+    "status": "passed"
+  },
+  {
+    "id": "gene-jc",
+    "checks": {
+      "tree": true,
+      "history": true,
+      "no_extra_fits": true,
+      "no_extra_quartet_scoring": true,
+      "model": true
+    },
+    "counts": {
+      "False": {
+        "fits": 1,
+        "nni": 1,
+        "quartet_calls": 0,
+        "quartets": 0,
+        "classifications": 0
+      },
+      "True": {
+        "fits": 1,
+        "nni": 2,
+        "quartet_calls": 0,
+        "quartets": 0,
+        "classifications": 0
+      }
+    },
+    "support": {
+      "enabled": true,
+      "method": "gene_local_likelihood_weight",
+      "label": "Local likelihood weight",
+      "path": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/output/branch-support-validation-20261105/reg-gene-jc-1/branch-support.json",
+      "annotated_tree": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/output/branch-support-validation-20261105/reg-gene-jc-1/prediction.nwk",
+      "unannotated_tree": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/output/branch-support-validation-20261105/reg-gene-jc-1/prediction.unannotated.nwk",
+      "calibrated": false,
+      "internal_branches": 29,
+      "available": 29,
+      "unavailable": 0,
+      "computation": {
+        "source": "upgraded_final_verification",
+        "additional_inference_runs": 0,
+        "additional_parameter_fits": 0,
+        "additional_nni_evaluations": 1,
+        "final_state_verified": true,
+        "final_verification_and_summary_seconds": 0.006256466265767813,
+        "export_seconds": 0.0005432800389826298
+      }
+    },
+    "status": "passed"
+  },
+  {
+    "id": "gene-hky",
+    "checks": {
+      "tree": true,
+      "history": true,
+      "no_extra_fits": true,
+      "no_extra_quartet_scoring": true,
+      "model": true
+    },
+    "counts": {
+      "False": {
+        "fits": 1,
+        "nni": 2,
+        "quartet_calls": 0,
+        "quartets": 0,
+        "classifications": 0
+      },
+      "True": {
+        "fits": 1,
+        "nni": 3,
+        "quartet_calls": 0,
+        "quartets": 0,
+        "classifications": 0
+      }
+    },
+    "support": {
+      "enabled": true,
+      "method": "gene_local_likelihood_weight",
+      "label": "Local likelihood weight",
+      "path": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/output/branch-support-validation-20261105/reg-gene-hky-1/branch-support.json",
+      "annotated_tree": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/output/branch-support-validation-20261105/reg-gene-hky-1/prediction.nwk",
+      "unannotated_tree": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/output/branch-support-validation-20261105/reg-gene-hky-1/prediction.unannotated.nwk",
+      "calibrated": false,
+      "internal_branches": 29,
+      "available": 29,
+      "unavailable": 0,
+      "computation": {
+        "source": "upgraded_final_verification",
+        "additional_inference_runs": 0,
+        "additional_parameter_fits": 0,
+        "additional_nni_evaluations": 1,
+        "final_state_verified": true,
+        "final_verification_and_summary_seconds": 0.004005562048405409,
+        "export_seconds": 0.0005343090742826462
+      }
+    },
+    "status": "passed"
+  },
+  {
+    "id": "gene256",
+    "checks": {
+      "tree": true,
+      "history": true,
+      "no_extra_fits": true,
+      "no_extra_quartet_scoring": true,
+      "original_v101_tree": true,
+      "model": true
+    },
+    "counts": {
+      "False": {
+        "fits": 2,
+        "nni": 4,
+        "quartet_calls": 0,
+        "quartets": 0,
+        "classifications": 0
+      },
+      "True": {
+        "fits": 2,
+        "nni": 4,
+        "quartet_calls": 0,
+        "quartets": 0,
+        "classifications": 0
+      }
+    },
+    "support": {
+      "enabled": true,
+      "method": "gene_local_likelihood_weight",
+      "label": "Local likelihood weight",
+      "path": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/output/branch-support-validation-20261105/reg-gene256-1/branch-support.json",
+      "annotated_tree": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/output/branch-support-validation-20261105/reg-gene256-1/prediction.nwk",
+      "unannotated_tree": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/output/branch-support-validation-20261105/reg-gene256-1/prediction.unannotated.nwk",
+      "calibrated": false,
+      "internal_branches": 253,
+      "available": 253,
+      "unavailable": 0,
+      "computation": {
+        "source": "last_search_scan",
+        "additional_inference_runs": 0,
+        "additional_parameter_fits": 0,
+        "additional_nni_evaluations": 0,
+        "final_state_verified": true,
+        "final_verification_and_summary_seconds": 0.004439702257514,
+        "export_seconds": 0.0027052131481468678
+      }
+    },
+    "status": "passed"
+  },
+  {
+    "id": "species32",
+    "checks": {
+      "tree": true,
+      "history": true,
+      "no_extra_fits": true,
+      "no_extra_quartet_scoring": true,
+      "original_v101_tree": true
+    },
+    "counts": {
+      "False": {
+        "fits": 0,
+        "nni": 0,
+        "quartet_calls": 4,
+        "quartets": 11301,
+        "classifications": 4
+      },
+      "True": {
+        "fits": 0,
+        "nni": 0,
+        "quartet_calls": 4,
+        "quartets": 11301,
+        "classifications": 4
+      }
+    },
+    "support": {
+      "enabled": true,
+      "method": "sampled_quartet_agreement",
+      "label": "Sampled quartet agreement",
+      "path": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/output/branch-support-validation-20261105/reg-species32-1/branch-support.json",
+      "annotated_tree": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/output/branch-support-validation-20261105/reg-species32-1/prediction.nwk",
+      "unannotated_tree": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/output/branch-support-validation-20261105/reg-species32-1/prediction.unannotated.nwk",
+      "calibrated": false,
+      "internal_branches": 29,
+      "available": 29,
+      "unavailable": 0,
+      "computation": {
+        "source": "last_search_scan",
+        "additional_inference_runs": 0,
+        "additional_quartet_scores": 0,
+        "additional_classification_passes": 0,
+        "cached_unique_quartets": 11301,
+        "retained_classification_bytes": 45204,
+        "final_state_verified": true,
+        "summary_seconds": 0.0008846200071275234,
+        "export_seconds": 0.0005790549330413342
+      }
+    },
+    "status": "passed"
+  },
+  {
+    "id": "species-stop-early",
+    "checks": {
+      "tree": true,
+      "history": true,
+      "no_extra_fits": true,
+      "no_extra_quartet_scoring": true
+    },
+    "counts": {
+      "False": {
+        "fits": 0,
+        "nni": 0,
+        "quartet_calls": 1,
+        "quartets": 7040,
+        "classifications": 1
+      },
+      "True": {
+        "fits": 0,
+        "nni": 0,
+        "quartet_calls": 1,
+        "quartets": 7040,
+        "classifications": 2
+      }
+    },
+    "support": {
+      "enabled": true,
+      "method": "sampled_quartet_agreement",
+      "label": "Sampled quartet agreement",
+      "path": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/output/branch-support-validation-20261105/reg-species-stop-early-1/branch-support.json",
+      "annotated_tree": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/output/branch-support-validation-20261105/reg-species-stop-early-1/prediction.nwk",
+      "unannotated_tree": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/output/branch-support-validation-20261105/reg-species-stop-early-1/prediction.unannotated.nwk",
+      "calibrated": false,
+      "internal_branches": 29,
+      "available": 29,
+      "unavailable": 0,
+      "computation": {
+        "source": "remapped_cached_quartets",
+        "additional_inference_runs": 0,
+        "additional_quartet_scores": 0,
+        "additional_classification_passes": 1,
+        "cached_unique_quartets": 7040,
+        "retained_classification_bytes": 28160,
+        "final_state_verified": true,
+        "summary_seconds": 0.0005342490039765835,
+        "export_seconds": 0.000577741302549839
+      }
+    },
+    "status": "passed"
+  },
+  {
+    "id": "species-ils",
+    "checks": {
+      "tree": true,
+      "history": true,
+      "no_extra_fits": true,
+      "no_extra_quartet_scoring": true,
+      "original_v101_tree": true
+    },
+    "counts": {
+      "False": {
+        "fits": 0,
+        "nni": 0,
+        "quartet_calls": 1,
+        "quartets": 5449,
+        "classifications": 1
+      },
+      "True": {
+        "fits": 0,
+        "nni": 0,
+        "quartet_calls": 1,
+        "quartets": 5449,
+        "classifications": 1
+      }
+    },
+    "support": {
+      "enabled": true,
+      "method": "sampled_quartet_agreement",
+      "label": "Sampled quartet agreement",
+      "path": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/output/branch-support-validation-20261105/reg-species-ils-1/branch-support.json",
+      "annotated_tree": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/output/branch-support-validation-20261105/reg-species-ils-1/prediction.nwk",
+      "unannotated_tree": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/output/branch-support-validation-20261105/reg-species-ils-1/prediction.unannotated.nwk",
+      "calibrated": false,
+      "internal_branches": 29,
+      "available": 29,
+      "unavailable": 0,
+      "computation": {
+        "source": "last_search_scan",
+        "additional_inference_runs": 0,
+        "additional_quartet_scores": 0,
+        "additional_classification_passes": 0,
+        "cached_unique_quartets": 5449,
+        "retained_classification_bytes": 21796,
+        "final_state_verified": true,
+        "summary_seconds": 0.0002460647374391556,
+        "export_seconds": 0.0005837460048496723
+      }
+    },
+    "status": "passed"
+  },
+  {
+    "id": "species-ils-loci",
+    "checks": {
+      "tree": true,
+      "history": true,
+      "no_extra_fits": true,
+      "no_extra_quartet_scoring": true,
+      "original_v101_tree": true
+    },
+    "counts": {
+      "False": {
+        "fits": 0,
+        "nni": 0,
+        "quartet_calls": 1,
+        "quartets": 5449,
+        "classifications": 1
+      },
+      "True": {
+        "fits": 0,
+        "nni": 0,
+        "quartet_calls": 1,
+        "quartets": 5449,
+        "classifications": 1
+      }
+    },
+    "support": {
+      "enabled": true,
+      "method": "sampled_quartet_agreement",
+      "label": "Sampled quartet agreement",
+      "path": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/output/branch-support-validation-20261105/reg-species-ils-loci-1/branch-support.json",
+      "annotated_tree": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/output/branch-support-validation-20261105/reg-species-ils-loci-1/prediction.nwk",
+      "unannotated_tree": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/output/branch-support-validation-20261105/reg-species-ils-loci-1/prediction.unannotated.nwk",
+      "calibrated": false,
+      "internal_branches": 29,
+      "available": 29,
+      "unavailable": 0,
+      "computation": {
+        "source": "last_search_scan",
+        "additional_inference_runs": 0,
+        "additional_quartet_scores": 0,
+        "additional_classification_passes": 0,
+        "cached_unique_quartets": 5449,
+        "retained_classification_bytes": 21796,
+        "final_state_verified": true,
+        "summary_seconds": 0.0002490812912583351,
+        "export_seconds": 0.0005545769818127155
+      }
+    },
+    "status": "passed"
+  }
+]

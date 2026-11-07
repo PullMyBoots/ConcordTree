@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "sha256": {
+    "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/output/v1.0.1-validation/input32.phy": "96846c8b380c4b1a56bff3be8c99f10c2db44af56a90960220733ed80abf0900",
+    "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/data/test/simulation/alisim-homogeneous-v3/n256/000/alignment.phy": "471a54b232dc3132914671c0b40eb2d7df7a16ec14db21a6c82f7f29fdb2228d",
+    "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/output/v1.0.1-validation/input32.fa.zst": "efef1c975d935a02a9e84b7c687ff09d3383e3ff7b6f165b2ad2bc0cbc2efe62",
+    "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/output/v1.0.1-validation/loci.jsonl": "4005dd4d120358e05f51c9980e0b46ea0aba5ceccd10a018cbbe12856cd41f01",
+    "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/data/test/simulation/small/n32/ILS/6/supermatrix.phy": "9e70bdbb03b376412a37dab7fd66c30bab2031ec5cda9446f577c83490f5e142",
+    "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/data/test/simulation/small/n32/ILS/6/locus_manifest.jsonl": "e4df7208c7902513d73b9f2298e9e61bbe94c79257f0ac38307da7d14509c9a3"
+  }
+}

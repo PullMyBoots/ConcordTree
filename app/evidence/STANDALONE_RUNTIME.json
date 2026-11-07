@@ -1,0 +1,259 @@
+{
+  "version": "1.0.2",
+  "updated_at": "2026-11-07T12:40:12.118405+00:00",
+  "status": "passed",
+  "purpose": "Current-server independence from sibling release/experiment code and environments; no algorithm change or new version.",
+  "layout": {
+    "scientific_environment": ".conda/env",
+    "web_environment": ".venv-web",
+    "web_source": "web",
+    "report": "technical-report",
+    "caches": ".runtime/cache",
+    "jobs": "runs/web",
+    "launch_cli": "bash scripts/run_local.sh",
+    "launch_web": "bash scripts/start_web.sh --port 8765"
+  },
+  "environment_source": {
+    "scientific": "release/v-0.1.3/.conda/env (offline copy, source no longer required)",
+    "web": "output/web-runtime-v101/env (copied packages, source no longer required)",
+    "installed_versions_file": "environment-tested.json",
+    "raw_distribution_metadata": [
+      "environment-scientific-packages.json",
+      "environment-web-packages.json"
+    ],
+    "note": "Source contains duplicate/stale distribution metadata; actual imports separately measured. Conda rewrites interpreter/library prefixes while preserving the scientific site-packages payload. No scientific binary was recompiled."
+  },
+  "environment_ownership": {
+    "conda_package_copy_types": {
+      "3": 125
+    },
+    "file_copy_examples": [
+      {
+        "file": "bin/python",
+        "local_nlink": 1,
+        "different_source_inode": true,
+        "sha256_equal": false
+      },
+      {
+        "file": "lib/libpython3.10.so.1.0",
+        "local_nlink": 1,
+        "different_source_inode": true,
+        "sha256_equal": false
+      },
+      {
+        "file": "lib/python3.10/site-packages/torch/__init__.py",
+        "local_nlink": 1,
+        "different_source_inode": true,
+        "sha256_equal": true
+      },
+      {
+        "file": "lib/python3.10/site-packages/torch/lib/libtorch_cuda.so",
+        "local_nlink": 1,
+        "different_source_inode": true,
+        "sha256_equal": true
+      },
+      {
+        "file": "lib/python3.10/site-packages/numpy/__init__.py",
+        "local_nlink": 1,
+        "different_source_inode": true,
+        "sha256_equal": true
+      }
+    ],
+    "note": "Conda relocates interpreter/library prefix fields; scientific site-packages payload retained. No hardlinks or symlinks to the source environment."
+  },
+  "loaded_paths": {
+    "scientific_external_home_modules": 0,
+    "scientific_external_home_libraries": 0,
+    "external_symlinks": 0,
+    "model_feature_checks": {
+      "gene": {
+        "status": "passed",
+        "rows": 16,
+        "maximum_absolute_error": 3.944425022717191e-09,
+        "checkpoint_sha256": "8554764e33885992cc31e4d044a82a4ae8e876f119197e72b07ae3a1dcbc533b"
+      },
+      "species": {
+        "status": "passed",
+        "rows": 16,
+        "maximum_absolute_error": 3.944425022717191e-09,
+        "checkpoint_sha256": "a74e89e7b6091938f0b413a5c1446864bc18a8db7176f5c77a204018bc8e2edb"
+      }
+    },
+    "web_external_home_modules": 0,
+    "doctor_report": ".standalone-migration/20261107/doctor-final.json"
+  },
+  "full_pipeline_file_access": [
+    {
+      "task": "gene",
+      "external_home_file_opens_or_execs": 0,
+      "old_environment_mentions": 0,
+      "read_only_input_policy_directory_scans": 1270,
+      "note": "Ancestor/project marker and immutable input target metadata checks are retained; no external-home regular file or program was opened in these self-contained-input tests."
+    },
+    {
+      "task": "species",
+      "external_home_file_opens_or_execs": 0,
+      "old_environment_mentions": 0,
+      "read_only_input_policy_directory_scans": 1270,
+      "note": "Ancestor/project marker and immutable input target metadata checks are retained; no external-home regular file or program was opened in these self-contained-input tests."
+    }
+  ],
+  "code_integrity": {
+    "original_files_in_snapshot": 398,
+    "allowed_runtime_launch_or_document_changes": [
+      "MANIFEST.json",
+      "README.md",
+      "environment-tested.json",
+      "run.py",
+      "runtime_config.py",
+      "verify_release.py"
+    ],
+    "changed_before_manifest_refresh": [
+      "environment-tested.json",
+      "runtime_config.py",
+      "run.py",
+      "README.md",
+      "verify_release.py"
+    ],
+    "unchanged_original_scientific_files": 241,
+    "scientific_sources_weights_and_native_binaries_unchanged": true,
+    "before_snapshot": ".standalone-migration/20261107/before-files.json"
+  },
+  "paired_full_pipeline_regression": {
+    "case_count": 6,
+    "cases": [
+      "gene-default24",
+      "gene-jc128",
+      "gene-no-support24",
+      "species-loci128",
+      "species-single128",
+      "species-single24"
+    ],
+    "all_stage_and_final_newicks_byte_identical": true,
+    "all_support_values_identical": true,
+    "support_json_differences": "Only annotated/unannotated output paths and computation timing fields.",
+    "evidence": ".standalone-migration/20261107/paired-results.json",
+    "scope": "Synthetic execution regression, not a new accuracy or runtime benchmark."
+  },
+  "tests": {
+    "scientific_unittest": {
+      "passed": 52,
+      "log": ".standalone-migration/20261107/scientific-unittest-clean.log"
+    },
+    "apnj_unittest": {
+      "passed": 7,
+      "log": ".standalone-migration/20261107/scientific-script-tests.log"
+    },
+    "apnj_design": {
+      "checks_passed": 40
+    },
+    "apnj_tie_matching": {
+      "passed": true
+    },
+    "web_unittest": {
+      "passed": 26,
+      "log": ".standalone-migration/20261107/web-tests-final.log"
+    },
+    "harness_note": "Initial discovery attempted three argparse-driven standalone scripts and produced loader errors; these scripts were then run with their required arguments. The corrected unittest harness and all standalone scripts passed."
+  },
+  "service_migration": {
+    "status": "ok",
+    "old_pid": 385687,
+    "new_pid": 1046395,
+    "source": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/output/web-jobs-v101",
+    "destination": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/release/V1.0.2/runs/web",
+    "jobs_preserved": 76,
+    "status_counts": {
+      "succeeded": 73,
+      "failed": 2,
+      "cancelled": 1
+    },
+    "successful_downloads_verified": 73,
+    "before_after_job_metadata_equal": true,
+    "queue": {
+      "running": 0,
+      "queued": 0,
+      "capacity": 16,
+      "compute_enabled": true,
+      "accepting_jobs": true
+    }
+  },
+  "http_integration": {
+    "status": "ok",
+    "jobs": [
+      {
+        "task": "gene",
+        "id": "87b77560078345a0a02d33f687bbbdb2",
+        "status": "succeeded",
+        "input_mode": null,
+        "download_bytes": 1791
+      },
+      {
+        "task": "species",
+        "id": "edaacb9024634734ac6ad3c3f781b279",
+        "status": "succeeded",
+        "input_mode": "observed_loci",
+        "download_bytes": 1350
+      }
+    ],
+    "scientific_child_interpreters": [
+      "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/release/V1.0.2/.conda/env/bin/python3.10"
+    ],
+    "static_routes_checked": {
+      "/": {
+        "status": 200,
+        "bytes": 8598
+      },
+      "/api/config": {
+        "status": 200,
+        "bytes": 200
+      },
+      "/api/queue": {
+        "status": 200,
+        "bytes": 83
+      },
+      "/report/": {
+        "status": 200,
+        "bytes": 4409
+      },
+      "/report/accuracy.html": {
+        "status": 200,
+        "bytes": 6149
+      },
+      "/report/performance.html": {
+        "status": 200,
+        "bytes": 3052
+      },
+      "/report/method.html": {
+        "status": 200,
+        "bytes": 14090
+      },
+      "/examples/gene.phy": {
+        "status": 200,
+        "bytes": 8423
+      },
+      "/examples/species.paml": {
+        "status": 200,
+        "bytes": 8551
+      },
+      "/app.js": {
+        "status": 200,
+        "bytes": 43083
+      },
+      "/assets/tiger.webp": {
+        "status": 200,
+        "bytes": 595218
+      }
+    },
+    "evidence": ".standalone-migration/20261107/http-integration.json"
+  },
+  "scope_and_limits": [
+    "Keep the entire V1.0.2 directory, including hidden .conda and .venv-web directories.",
+    "Current server and absolute prefix verified; arbitrary relocation and other host/ABI portability not certified.",
+    "Linux/glibc, NVIDIA driver, numactl and the web interpreter system Python3.12 standard library remain system dependencies.",
+    "Inputs are supplied by the caller; project data links and targets were not modified.",
+    "No other experiment or version directories deleted. Historical jobs were moved into this release, retaining IDs and output bytes.",
+    "Long-term research memory was not edited."
+  ],
+  "local_work_evidence": ".standalone-migration/20261107/"
+}

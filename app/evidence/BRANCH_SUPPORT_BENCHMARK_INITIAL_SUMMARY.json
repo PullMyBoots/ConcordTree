@@ -1,0 +1,30 @@
+[
+  {
+    "task": "gene",
+    "taxa": 4096,
+    "sites": 2048,
+    "medians": {
+      "False": 6.1733722616918385,
+      "True": 6.324492637068033
+    },
+    "overhead_seconds": 0.15112037537619472,
+    "overhead_ratio": 0.024479388083228804,
+    "exact_tree_history_and_gene_fit": true,
+    "measured_repeats": 3,
+    "warmup_per_arm": 1
+  },
+  {
+    "task": "species",
+    "taxa": 4096,
+    "sites": 2048,
+    "medians": {
+      "False": 2.476766584906727,
+      "True": 2.9732505292631686
+    },
+    "overhead_seconds": 0.4964839443564415,
+    "overhead_ratio": 0.2004564933094568,
+    "exact_tree_history_and_gene_fit": true,
+    "measured_repeats": 3,
+    "warmup_per_arm": 1
+  }
+]

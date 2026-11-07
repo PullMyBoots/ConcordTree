@@ -1,0 +1,197 @@
+{
+  "status": "passed",
+  "version": "1.0.2",
+  "scope": "Engineering repair; unchanged scientific algorithm and assets",
+  "environment": {
+    "gpu": "GPU0 NVIDIA L40S",
+    "threads": 16,
+    "numa": 0
+  },
+  "checks": {
+    "scientific_contract_unchanged": true,
+    "gene_search_source_unchanged": true,
+    "assets_unchanged": true,
+    "unit_tests": 25,
+    "api_tests": 25,
+    "input_matrix_cases": 18,
+    "paired_full_runs": 9
+  },
+  "paired_outputs": [
+    {
+      "case": "gene4096",
+      "repeat": 0,
+      "newick_identical": true,
+      "unannotated_newick_identical": true,
+      "support_evidence_identical": true
+    },
+    {
+      "case": "gene4096",
+      "repeat": 1,
+      "newick_identical": true,
+      "unannotated_newick_identical": true,
+      "support_evidence_identical": true
+    },
+    {
+      "case": "gene4096",
+      "repeat": 2,
+      "newick_identical": true,
+      "unannotated_newick_identical": true,
+      "support_evidence_identical": true
+    },
+    {
+      "case": "geneJC",
+      "repeat": 0,
+      "newick_identical": true,
+      "unannotated_newick_identical": true,
+      "support_evidence_identical": true
+    },
+    {
+      "case": "geneJC",
+      "repeat": 1,
+      "newick_identical": true,
+      "unannotated_newick_identical": true,
+      "support_evidence_identical": true
+    },
+    {
+      "case": "geneJC",
+      "repeat": 2,
+      "newick_identical": true,
+      "unannotated_newick_identical": true,
+      "support_evidence_identical": true
+    },
+    {
+      "case": "species4096",
+      "repeat": 0,
+      "newick_identical": true,
+      "unannotated_newick_identical": true,
+      "support_evidence_identical": true
+    },
+    {
+      "case": "species4096",
+      "repeat": 1,
+      "newick_identical": true,
+      "unannotated_newick_identical": true,
+      "support_evidence_identical": true
+    },
+    {
+      "case": "species4096",
+      "repeat": 2,
+      "newick_identical": true,
+      "unannotated_newick_identical": true,
+      "support_evidence_identical": true
+    }
+  ],
+  "paired_warm_speed": [
+    {
+      "case": "gene4096",
+      "before_warm_mean_seconds": 6.206238900544122,
+      "after_warm_mean_seconds": 6.264720063423738,
+      "ratio": 1.0094229635398806,
+      "warm_repeats_per_implementation": 2
+    },
+    {
+      "case": "geneJC",
+      "before_warm_mean_seconds": 0.10882619954645634,
+      "after_warm_mean_seconds": 0.10889182914979756,
+      "ratio": 1.0006030680444116,
+      "warm_repeats_per_implementation": 2
+    },
+    {
+      "case": "species4096",
+      "before_warm_mean_seconds": 2.6416512420400977,
+      "after_warm_mean_seconds": 2.615539429942146,
+      "ratio": 0.9901153446441378,
+      "warm_repeats_per_implementation": 2
+    }
+  ],
+  "plant": {
+    "taxa": 1178,
+    "sites": 311148,
+    "status": "complete",
+    "seconds": 194.95321027282625,
+    "rounds": 23,
+    "support_branches": 1175,
+    "prior_run_seconds": 202.21072372188792,
+    "prior_newick_identical": true,
+    "nrf_vs_prior": 0.0
+  },
+  "end_to_end": [
+    {
+      "case": "full-long4",
+      "status": "complete",
+      "seconds": 10.761097782291472
+    },
+    {
+      "case": "full-many-loci",
+      "status": "complete",
+      "seconds": 15.549006388988346
+    }
+  ],
+  "native_overflow": {
+    "status": "passed",
+    "taxa": 36,
+    "sites": 3000001,
+    "root_tuple_space": 20730592059740340960,
+    "uint64_max": 18446744073709551615,
+    "wide_tuple_nodes": 1,
+    "exact_root_patterns": 3000001,
+    "decoded_columns": 128,
+    "seconds": 1.912710587028414,
+    "max_rss_gib": 0.7845573425292969
+  },
+  "native_build": {
+    "command": [
+      "c++",
+      "-O3",
+      "-std=c++17",
+      "-shared",
+      "-fPIC",
+      "-fopenmp",
+      "-I/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/release/v-0.1.3/.conda/env/include/python3.10",
+      "-I/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/release/v-0.1.3/.conda/env/lib/python3.10/site-packages/torch/include",
+      "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/release/V1.0.2/runtime/gene/runtime/repeat_builder_schedule.cpp",
+      "-o",
+      "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/release/V1.0.2/runtime/gene/runtime/_repeat_builder_schedule.cpython-310-x86_64-linux-gnu.so.tmp"
+    ],
+    "seconds": 7.1460589417256415,
+    "source_sha256": "a18717c50a224dc2847f0d833ce2b7c947038bff61513086b1b5d5532ae14710",
+    "header_sha256": "c49449b04dd4ade197874c621a641dcd7d3336cb384b820e90e29829e27d5547",
+    "binary_sha256": "1190d2c8336165768b470e0380a44d8cd96fecc591c62c2d81482b95cb7366a3"
+  },
+  "changed_files": [
+    "runtime_config.py",
+    "engine.py",
+    "NATIVE.md",
+    "PATCH_NOTES.md",
+    "SOURCE_PROVENANCE.json",
+    "README.md",
+    "MANIFEST.json",
+    "tests/test_contract.py",
+    "runtime/gene/runtime/repeats_fused_counts.py",
+    "runtime/gene/runtime/repeats_binary64_cuda.py",
+    "runtime/gene/runtime/repeat_builder_schedule.cpp",
+    "runtime/gene/runtime/_repeat_builder_schedule.cpython-310-x86_64-linux-gnu.so",
+    "runtime/gene/runtime/frontier_repeats.py",
+    "runtime/gene/runtime/repeats_factorized_cuda.py",
+    "runtime/gene/runtime/repeats_generic_cuda.py",
+    "runtime/msc_refine/barycenter_tile_features.py",
+    "runtime/msc_refine/bit_orbits.py",
+    "runtime/msc_refine/barycenter_tree_tiled.py"
+  ],
+  "added_files": [
+    "tests/test_kernel_boundaries.py",
+    "evidence/KERNEL_ROBUSTNESS.json",
+    "runtime/gene/runtime/build_repeat_schedule.py",
+    "runtime/gene/runtime/repeat_tuple_keys.h",
+    "runtime/msc_refine/barycenter_streamed.py"
+  ],
+  "boundaries": [
+    "All sites retained; models, search, stopping and support strategy unchanged.",
+    "Normal endpoint sums (capacity <=4096) retain the original reduction; larger sums are bounded FP64 reductions with a different floating-point association.",
+    "Species streaming keeps exact int64 tile counts and the original 64-gene FP64 accumulation order.",
+    "Per-node pattern IDs remain int32 (sites <=INT32_MAX); available host/device memory still bounds realizable inputs.",
+    "Default 16 workers unchanged; requests above64 use64 effective workers to match inherited extensions.",
+    "Speed is a small paired hot-cache regression, not a universal performance guarantee. First-time G16 JIT in the model matrix took about104 seconds and completed.",
+    "Native 36x3000001 stress validates metadata, not a full inference at that size."
+  ]
+}

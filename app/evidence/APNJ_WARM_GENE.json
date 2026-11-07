@@ -1,0 +1,250 @@
+{
+  "status": "complete",
+  "planned": 200,
+  "complete": 200,
+  "failed": 0,
+  "methods": {
+    "candidate": {
+      "by_task": {
+        "gene": {
+          "records": 200,
+          "candidate_nrf": 0.1134043659036231,
+          "dipper_nrf": 0.24151630970659035,
+          "delta": -0.12811194380296725,
+          "paired_stratified_bootstrap95": [
+            -0.143270140462796,
+            -0.11421984367094652
+          ],
+          "win": 198,
+          "tie": 1,
+          "loss": 1,
+          "worst_delta": 0.003911980440097801,
+          "best_delta": -0.7233201581027667,
+          "warm_timing": {
+            "candidate_mean_record_median": 0.13917106284294278,
+            "dipper_mean_record_median": 0.22294247653800994,
+            "dipper_over_candidate": 1.6019312634667797,
+            "paired_ratio_of_means_bootstrap95": [
+              1.3586013516957087,
+              1.8436991464944132
+            ],
+            "case_ratio_p05_p50_p95": [
+              1.3404711894889685,
+              1.8592524432694464,
+              3.92616243039918
+            ],
+            "case_ratio_geomean": 2.084105989032169,
+            "slower_cases": [
+              "gene/n4096/001",
+              "gene/n4096/005",
+              "gene/n4096/021",
+              "gene/n4096/033"
+            ]
+          }
+        }
+      },
+      "by_scale": {
+        "gene/256": {
+          "records": 40,
+          "candidate_nrf": 0.10642292490118577,
+          "dipper_nrf": 0.27055335968379446,
+          "delta": -0.16413043478260866,
+          "paired_stratified_bootstrap95": [
+            -0.21679841897233204,
+            -0.12015810276679843
+          ],
+          "win": 39,
+          "tie": 1,
+          "loss": 0,
+          "worst_delta": 0.0,
+          "best_delta": -0.7233201581027667,
+          "warm_timing": {
+            "candidate_mean_record_median": 0.008248574030585588,
+            "dipper_mean_record_median": 0.031936174014117566,
+            "dipper_over_candidate": 3.871720602336685,
+            "paired_ratio_of_means_bootstrap95": [
+              3.8346512742677246,
+              3.9096576254157096
+            ],
+            "case_ratio_p05_p50_p95": [
+              3.6908546462158975,
+              3.8732302097152687,
+              4.100015996358132
+            ],
+            "case_ratio_geomean": 3.8740351755351883,
+            "slower_cases": []
+          }
+        },
+        "gene/512": {
+          "records": 40,
+          "candidate_nrf": 0.1531434184675835,
+          "dipper_nrf": 0.2821709233791749,
+          "delta": -0.12902750491159135,
+          "paired_stratified_bootstrap95": [
+            -0.16537328094302553,
+            -0.0970027013752456
+          ],
+          "win": 40,
+          "tie": 0,
+          "loss": 0,
+          "worst_delta": -0.011787819253438109,
+          "best_delta": -0.5599214145383105,
+          "warm_timing": {
+            "candidate_mean_record_median": 0.0357710977899842,
+            "dipper_mean_record_median": 0.06454217395512388,
+            "dipper_over_candidate": 1.8043106849573818,
+            "paired_ratio_of_means_bootstrap95": [
+              1.7932347318992636,
+              1.8159601384493966
+            ],
+            "case_ratio_p05_p50_p95": [
+              1.7639769467209592,
+              1.7934252758164866,
+              1.8743021672200073
+            ],
+            "case_ratio_geomean": 1.8038258974822545,
+            "slower_cases": []
+          }
+        },
+        "gene/1024": {
+          "records": 40,
+          "candidate_nrf": 0.10734573947110677,
+          "dipper_nrf": 0.22539177277179237,
+          "delta": -0.11804603330068561,
+          "paired_stratified_bootstrap95": [
+            -0.1448341087169442,
+            -0.0936085945151812
+          ],
+          "win": 40,
+          "tie": 0,
+          "loss": 0,
+          "worst_delta": -0.015670910871694418,
+          "best_delta": -0.3202742409402547,
+          "warm_timing": {
+            "candidate_mean_record_median": 0.07176761962473392,
+            "dipper_mean_record_median": 0.13188650929369033,
+            "dipper_over_candidate": 1.8376882218375417,
+            "paired_ratio_of_means_bootstrap95": [
+              1.7428213586203452,
+              1.947197705048875
+            ],
+            "case_ratio_p05_p50_p95": [
+              1.4590477810746378,
+              1.7673164431926036,
+              2.6156023103620076
+            ],
+            "case_ratio_geomean": 1.8670427420679991,
+            "slower_cases": []
+          }
+        },
+        "gene/2048": {
+          "records": 40,
+          "candidate_nrf": 0.09973105134474328,
+          "dipper_nrf": 0.2174205378973105,
+          "delta": -0.11768948655256724,
+          "paired_stratified_bootstrap95": [
+            -0.14412011002444988,
+            -0.09350825183374085
+          ],
+          "win": 39,
+          "tie": 0,
+          "loss": 1,
+          "worst_delta": 0.003911980440097801,
+          "best_delta": -0.3354523227383863,
+          "warm_timing": {
+            "candidate_mean_record_median": 0.15461871288716794,
+            "dipper_mean_record_median": 0.2775775281246752,
+            "dipper_over_candidate": 1.7952389005283964,
+            "paired_ratio_of_means_bootstrap95": [
+              1.7068099941279715,
+              1.8914397588500826
+            ],
+            "case_ratio_p05_p50_p95": [
+              1.4267459842113466,
+              1.8393713491535677,
+              2.3718321616366227
+            ],
+            "case_ratio_geomean": 1.8329309425910973,
+            "slower_cases": []
+          }
+        },
+        "gene/4096": {
+          "records": 40,
+          "candidate_nrf": 0.10037869533349622,
+          "dipper_nrf": 0.21204495480087954,
+          "delta": -0.11166625946738336,
+          "paired_stratified_bootstrap95": [
+            -0.1342171084778891,
+            -0.09108798558514536
+          ],
+          "win": 40,
+          "tie": 0,
+          "loss": 0,
+          "worst_delta": -0.004642071829953576,
+          "best_delta": -0.3029562667969704,
+          "warm_timing": {
+            "candidate_mean_record_median": 0.4254493098822422,
+            "dipper_mean_record_median": 0.6087699973024427,
+            "dipper_over_candidate": 1.4308872600379605,
+            "paired_ratio_of_means_bootstrap95": [
+              1.1080533389186562,
+              1.8163067210990216
+            ],
+            "case_ratio_p05_p50_p95": [
+              0.7707317366754332,
+              1.7908578237032675,
+              2.8964427622238875
+            ],
+            "case_ratio_geomean": 1.6441463301098997,
+            "slower_cases": [
+              "gene/n4096/001",
+              "gene/n4096/005",
+              "gene/n4096/021",
+              "gene/n4096/033"
+            ]
+          }
+        }
+      },
+      "by_family": {
+        "gene/single_history": {
+          "records": 200,
+          "candidate_nrf": 0.1134043659036231,
+          "dipper_nrf": 0.24151630970659035,
+          "delta": -0.12811194380296725,
+          "paired_stratified_bootstrap95": [
+            -0.143270140462796,
+            -0.11421984367094652
+          ],
+          "win": 198,
+          "tie": 1,
+          "loss": 1,
+          "worst_delta": 0.003911980440097801,
+          "best_delta": -0.7233201581027667,
+          "warm_timing": {
+            "candidate_mean_record_median": 0.13917106284294278,
+            "dipper_mean_record_median": 0.22294247653800994,
+            "dipper_over_candidate": 1.6019312634667797,
+            "paired_ratio_of_means_bootstrap95": [
+              1.3586013516957087,
+              1.8436991464944132
+            ],
+            "case_ratio_p05_p50_p95": [
+              1.3404711894889685,
+              1.8592524432694464,
+              3.92616243039918
+            ],
+            "case_ratio_geomean": 2.084105989032169,
+            "slower_cases": [
+              "gene/n4096/001",
+              "gene/n4096/005",
+              "gene/n4096/021",
+              "gene/n4096/033"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "failures": [],
+  "scope": "paired record-level descriptive evidence; maintain source-role caveats in source manifest"
+}

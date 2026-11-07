@@ -1,0 +1,334 @@
+{
+  "status": "complete",
+  "planned": 700,
+  "complete": 700,
+  "failed": 0,
+  "methods": {
+    "candidate": {
+      "by_task": {
+        "species": {
+          "records": 700,
+          "candidate_nrf": 0.1372886482530778,
+          "dipper_nrf": 0.18858251234147255,
+          "delta": -0.051293864088394765,
+          "paired_stratified_bootstrap95": [
+            -0.05651920102063305,
+            -0.04622112906984661
+          ],
+          "win": 564,
+          "tie": 55,
+          "loss": 81,
+          "worst_delta": 0.13793103448275862,
+          "best_delta": -0.5517241379310345,
+          "warm_timing": {
+            "candidate_mean_record_median": 0.02578235697533403,
+            "dipper_mean_record_median": 0.05238289581212614,
+            "dipper_over_candidate": 2.031734176291207,
+            "paired_ratio_of_means_bootstrap95": [
+              2.0003505402468127,
+              2.058105231221915
+            ],
+            "case_ratio_p05_p50_p95": [
+              1.6787654878925466,
+              3.2052648023449395,
+              4.263014173104944
+            ],
+            "case_ratio_geomean": 2.845546697369449,
+            "slower_cases": [
+              "species/large/n1024/complex/38"
+            ]
+          }
+        }
+      },
+      "by_scale": {
+        "species/32": {
+          "records": 100,
+          "candidate_nrf": 0.1375862068965517,
+          "dipper_nrf": 0.1820689655172414,
+          "delta": -0.04448275862068965,
+          "paired_stratified_bootstrap95": [
+            -0.06344827586206897,
+            -0.026887931034482882
+          ],
+          "win": 56,
+          "tie": 27,
+          "loss": 17,
+          "worst_delta": 0.13793103448275862,
+          "best_delta": -0.5517241379310345,
+          "warm_timing": {
+            "candidate_mean_record_median": 0.002361886645667255,
+            "dipper_mean_record_median": 0.005551296379417181,
+            "dipper_over_candidate": 2.3503652851421615,
+            "paired_ratio_of_means_bootstrap95": [
+              2.302101897085089,
+              2.3984365097818054
+            ],
+            "case_ratio_p05_p50_p95": [
+              1.9803553649278895,
+              2.3836089329481425,
+              2.7680925164057433
+            ],
+            "case_ratio_geomean": 2.364997057610314,
+            "slower_cases": []
+          }
+        },
+        "species/64": {
+          "records": 100,
+          "candidate_nrf": 0.13721311475409834,
+          "dipper_nrf": 0.17885245901639343,
+          "delta": -0.041639344262295076,
+          "paired_stratified_bootstrap95": [
+            -0.056069672131147545,
+            -0.028196721311475405
+          ],
+          "win": 68,
+          "tie": 13,
+          "loss": 19,
+          "worst_delta": 0.13114754098360654,
+          "best_delta": -0.34426229508196726,
+          "warm_timing": {
+            "candidate_mean_record_median": 0.0027596841752529143,
+            "dipper_mean_record_median": 0.00888725217897445,
+            "dipper_over_candidate": 3.2203874119617213,
+            "paired_ratio_of_means_bootstrap95": [
+              3.163685884347294,
+              3.2795215295985303
+            ],
+            "case_ratio_p05_p50_p95": [
+              2.8589045284744534,
+              3.2052648023449395,
+              3.801482078035975
+            ],
+            "case_ratio_geomean": 3.234013720602015,
+            "slower_cases": []
+          }
+        },
+        "species/128": {
+          "records": 100,
+          "candidate_nrf": 0.13856000000000002,
+          "dipper_nrf": 0.18344000000000002,
+          "delta": -0.04488,
+          "paired_stratified_bootstrap95": [
+            -0.05864,
+            -0.03168000000000001
+          ],
+          "win": 68,
+          "tie": 8,
+          "loss": 24,
+          "worst_delta": 0.039999999999999994,
+          "best_delta": -0.32000000000000006,
+          "warm_timing": {
+            "candidate_mean_record_median": 0.0042866697255522015,
+            "dipper_mean_record_median": 0.017121753059327602,
+            "dipper_over_candidate": 3.9941852663076363,
+            "paired_ratio_of_means_bootstrap95": [
+              3.9488091353087293,
+              4.0431719618036075
+            ],
+            "case_ratio_p05_p50_p95": [
+              3.7179493496772733,
+              3.903000363069085,
+              4.511961913189169
+            ],
+            "case_ratio_geomean": 4.002337504374897,
+            "slower_cases": []
+          }
+        },
+        "species/192": {
+          "records": 100,
+          "candidate_nrf": 0.1426984126984127,
+          "dipper_nrf": 0.1912169312169312,
+          "delta": -0.04851851851851852,
+          "paired_stratified_bootstrap95": [
+            -0.06105820105820105,
+            -0.037037037037037035
+          ],
+          "win": 85,
+          "tie": 3,
+          "loss": 12,
+          "worst_delta": 0.026455026455026454,
+          "best_delta": -0.3227513227513228,
+          "warm_timing": {
+            "candidate_mean_record_median": 0.006599040175788104,
+            "dipper_mean_record_median": 0.026888883910141884,
+            "dipper_over_candidate": 4.074665889866419,
+            "paired_ratio_of_means_bootstrap95": [
+              4.041989671416118,
+              4.109493257335089
+            ],
+            "case_ratio_p05_p50_p95": [
+              3.884877222839417,
+              4.017554289080355,
+              4.5433085042113674
+            ],
+            "case_ratio_geomean": 4.078834955533391,
+            "slower_cases": []
+          }
+        },
+        "species/256": {
+          "records": 100,
+          "candidate_nrf": 0.13608695652173913,
+          "dipper_nrf": 0.1903952569169961,
+          "delta": -0.054308300395256914,
+          "paired_stratified_bootstrap95": [
+            -0.06743181818181819,
+            -0.04241106719367589
+          ],
+          "win": 90,
+          "tie": 4,
+          "loss": 6,
+          "worst_delta": 0.01976284584980234,
+          "best_delta": -0.3399209486166008,
+          "warm_timing": {
+            "candidate_mean_record_median": 0.010080864517949522,
+            "dipper_mean_record_median": 0.03635656427592039,
+            "dipper_over_candidate": 3.6064926982388834,
+            "paired_ratio_of_means_bootstrap95": [
+              3.584651729195767,
+              3.6299656351353096
+            ],
+            "case_ratio_p05_p50_p95": [
+              3.468802074796193,
+              3.5775782846524797,
+              3.845671904983977
+            ],
+            "case_ratio_geomean": 3.6087795663706883,
+            "slower_cases": []
+          }
+        },
+        "species/512": {
+          "records": 100,
+          "candidate_nrf": 0.14074656188605109,
+          "dipper_nrf": 0.20671905697445972,
+          "delta": -0.06597249508840865,
+          "paired_stratified_bootstrap95": [
+            -0.079725442043222,
+            -0.05367337917485266
+          ],
+          "win": 97,
+          "tie": 0,
+          "loss": 3,
+          "worst_delta": 0.00785854616895873,
+          "best_delta": -0.387033398821218,
+          "warm_timing": {
+            "candidate_mean_record_median": 0.04084491886664182,
+            "dipper_mean_record_median": 0.0812009701365605,
+            "dipper_over_candidate": 1.9880311282213758,
+            "paired_ratio_of_means_bootstrap95": [
+              1.9740206315572884,
+              2.0025073745895545
+            ],
+            "case_ratio_p05_p50_p95": [
+              1.9006473577601595,
+              1.952502542788716,
+              2.099939296610991
+            ],
+            "case_ratio_geomean": 1.9854452674273244,
+            "slower_cases": []
+          }
+        },
+        "species/1024": {
+          "records": 100,
+          "candidate_nrf": 0.12812928501469148,
+          "dipper_nrf": 0.18738491674828597,
+          "delta": -0.05925563173359451,
+          "paired_stratified_bootstrap95": [
+            -0.07142066601371207,
+            -0.04838271302644468
+          ],
+          "win": 100,
+          "tie": 0,
+          "loss": 0,
+          "worst_delta": -0.000979431929480884,
+          "best_delta": -0.3379040156709109,
+          "warm_timing": {
+            "candidate_mean_record_median": 0.1135434347204864,
+            "dipper_mean_record_median": 0.19067355074454098,
+            "dipper_over_candidate": 1.6793005356402007,
+            "paired_ratio_of_means_bootstrap95": [
+              1.6381442718182848,
+              1.713397153724759
+            ],
+            "case_ratio_p05_p50_p95": [
+              1.4347434545119386,
+              1.726572060160207,
+              1.8386713755308826
+            ],
+            "case_ratio_geomean": 1.6885714465135677,
+            "slower_cases": [
+              "species/large/n1024/complex/38"
+            ]
+          }
+        }
+      },
+      "by_family": {
+        "species/ILS": {
+          "records": 350,
+          "candidate_nrf": 0.13875544647691773,
+          "dipper_nrf": 0.1712793146621427,
+          "delta": -0.03252386818522496,
+          "paired_stratified_bootstrap95": [
+            -0.0365653650620502,
+            -0.028416036113061694
+          ],
+          "win": 274,
+          "tie": 32,
+          "loss": 44,
+          "worst_delta": 0.10344827586206895,
+          "best_delta": -0.21311475409836064,
+          "warm_timing": {
+            "candidate_mean_record_median": 0.025267848397738168,
+            "dipper_mean_record_median": 0.05223663921867098,
+            "dipper_over_candidate": 2.067316472555174,
+            "paired_ratio_of_means_bootstrap95": [
+              2.046272719121154,
+              2.087289829849597
+            ],
+            "case_ratio_p05_p50_p95": [
+              1.7219823529914602,
+              3.1429773162714687,
+              4.34420033649578
+            ],
+            "case_ratio_geomean": 2.856333810940081,
+            "slower_cases": []
+          }
+        },
+        "species/complex": {
+          "records": 350,
+          "candidate_nrf": 0.1358218500292378,
+          "dipper_nrf": 0.20588571002080236,
+          "delta": -0.07006385999156457,
+          "paired_stratified_bootstrap95": [
+            -0.07985006304070111,
+            -0.060778427469747404
+          ],
+          "win": 290,
+          "tie": 23,
+          "loss": 37,
+          "worst_delta": 0.13793103448275862,
+          "best_delta": -0.5517241379310345,
+          "warm_timing": {
+            "candidate_mean_record_median": 0.026296865552929895,
+            "dipper_mean_record_median": 0.05252915240558131,
+            "dipper_over_candidate": 1.9975442434327961,
+            "paired_ratio_of_means_bootstrap95": [
+              1.9376904739879761,
+              2.0436232847999842
+            ],
+            "case_ratio_p05_p50_p95": [
+              1.6685506725275214,
+              3.3227309917853223,
+              4.1831320402989025
+            ],
+            "case_ratio_geomean": 2.8348003219712035,
+            "slower_cases": [
+              "species/large/n1024/complex/38"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "failures": [],
+  "scope": "paired record-level descriptive evidence; maintain source-role caveats in source manifest"
+}

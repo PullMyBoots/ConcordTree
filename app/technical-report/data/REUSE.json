@@ -1,0 +1,8 @@
+{
+  "gene_reused": 40,
+  "gene_missing": 160,
+  "species_missing": 700,
+  "iq_fast_reused": 200,
+  "rule": "Reuse compatible homogeneous scientific outputs across V1.0.1 engineering revision; report original version and runtime, do not claim universal bytewise equivalence.",
+  "excluded_species": "Historical view0/saved AP-NJ initializer differs from current sampled AP-NJ + MLP; MSA-only support panel excluded."
+}

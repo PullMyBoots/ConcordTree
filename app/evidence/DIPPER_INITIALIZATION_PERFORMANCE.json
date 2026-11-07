@@ -1,0 +1,148 @@
+{
+  "status": "passed",
+  "device": "physical GPU0 L40S; NUMA0 CPU16",
+  "scope": "initial construction only, all sites, parsing separately recorded; not full inference",
+  "rows": [
+    {
+      "case": "A10",
+      "taxa": 10000,
+      "sites": 16092,
+      "parse_seconds": 0.7750993897207081,
+      "repeats": [
+        {
+          "preparation_seconds": 0.023600289,
+          "placement_seconds": 2.394498024,
+          "download_seconds": 0.000283295,
+          "sequence_bytes": 80480000,
+          "topology_workspace_bytes": 4480000,
+          "constructor": "DIPPER GPU k-closest placement",
+          "backend": "in-process packed native",
+          "upstream_commit": "d80df351107f05ea2ac01076709defc4ab9d702e",
+          "seed": 20261106,
+          "all_sites": 16092,
+          "native_sha256": "f3f15f94275cb80a3b68fd7bffce2f0f001c507bcdbb403aafdd943097426718",
+          "taxa": 10000,
+          "distance": "upstream JC; union of usable sites",
+          "sampled_sites": 16092,
+          "full_site_input": true,
+          "host_encoding": "existing packed nibbles; row padding and deterministic shuffle only",
+          "constructor_seconds": 2.6960292351432145
+        },
+        {
+          "preparation_seconds": 0.026361024,
+          "placement_seconds": 2.399763588,
+          "download_seconds": 0.000169378,
+          "sequence_bytes": 80480000,
+          "topology_workspace_bytes": 4480000,
+          "constructor": "DIPPER GPU k-closest placement",
+          "backend": "in-process packed native",
+          "upstream_commit": "d80df351107f05ea2ac01076709defc4ab9d702e",
+          "seed": 20261106,
+          "all_sites": 16092,
+          "native_sha256": "f3f15f94275cb80a3b68fd7bffce2f0f001c507bcdbb403aafdd943097426718",
+          "taxa": 10000,
+          "distance": "upstream JC; union of usable sites",
+          "sampled_sites": 16092,
+          "full_site_input": true,
+          "host_encoding": "existing packed nibbles; row padding and deterministic shuffle only",
+          "constructor_seconds": 2.7150528742931783
+        }
+      ],
+      "topology_nrf_vs_archived_official": 0.0
+    },
+    {
+      "case": "R10",
+      "taxa": 10000,
+      "sites": 8835,
+      "parse_seconds": 0.3708026078529656,
+      "repeats": [
+        {
+          "preparation_seconds": 0.016135732,
+          "placement_seconds": 2.241034589,
+          "download_seconds": 0.00017514,
+          "sequence_bytes": 44240000,
+          "topology_workspace_bytes": 4480000,
+          "constructor": "DIPPER GPU k-closest placement",
+          "backend": "in-process packed native",
+          "upstream_commit": "d80df351107f05ea2ac01076709defc4ab9d702e",
+          "seed": 20261106,
+          "all_sites": 8835,
+          "native_sha256": "f3f15f94275cb80a3b68fd7bffce2f0f001c507bcdbb403aafdd943097426718",
+          "taxa": 10000,
+          "distance": "upstream JC; union of usable sites",
+          "sampled_sites": 8835,
+          "full_site_input": true,
+          "host_encoding": "existing packed nibbles; row padding and deterministic shuffle only",
+          "constructor_seconds": 2.391965691000223
+        },
+        {
+          "preparation_seconds": 0.016015991,
+          "placement_seconds": 2.243536113,
+          "download_seconds": 0.000220187,
+          "sequence_bytes": 44240000,
+          "topology_workspace_bytes": 4480000,
+          "constructor": "DIPPER GPU k-closest placement",
+          "backend": "in-process packed native",
+          "upstream_commit": "d80df351107f05ea2ac01076709defc4ab9d702e",
+          "seed": 20261106,
+          "all_sites": 8835,
+          "native_sha256": "f3f15f94275cb80a3b68fd7bffce2f0f001c507bcdbb403aafdd943097426718",
+          "taxa": 10000,
+          "distance": "upstream JC; union of usable sites",
+          "sampled_sites": 8835,
+          "full_site_input": true,
+          "host_encoding": "existing packed nibbles; row padding and deterministic shuffle only",
+          "constructor_seconds": 2.5289989239536226
+        }
+      ],
+      "topology_nrf_vs_archived_official": 0.0
+    },
+    {
+      "case": "butterfly-full",
+      "taxa": 38,
+      "sites": 82883893,
+      "parse_seconds": 13.171123875770718,
+      "repeats": [
+        {
+          "preparation_seconds": 0.46329581,
+          "placement_seconds": 0.235227218,
+          "download_seconds": 2.9149e-05,
+          "sequence_bytes": 1574794176,
+          "topology_workspace_bytes": 17024,
+          "constructor": "DIPPER GPU k-closest placement",
+          "backend": "in-process packed native",
+          "upstream_commit": "d80df351107f05ea2ac01076709defc4ab9d702e",
+          "seed": 20261106,
+          "all_sites": 82883893,
+          "native_sha256": "f3f15f94275cb80a3b68fd7bffce2f0f001c507bcdbb403aafdd943097426718",
+          "taxa": 38,
+          "distance": "upstream JC; union of usable sites",
+          "sampled_sites": 82883893,
+          "full_site_input": true,
+          "host_encoding": "existing packed nibbles; row padding and deterministic shuffle only",
+          "constructor_seconds": 0.7005536998622119
+        },
+        {
+          "preparation_seconds": 0.457068994,
+          "placement_seconds": 0.235248448,
+          "download_seconds": 2.8897e-05,
+          "sequence_bytes": 1574794176,
+          "topology_workspace_bytes": 17024,
+          "constructor": "DIPPER GPU k-closest placement",
+          "backend": "in-process packed native",
+          "upstream_commit": "d80df351107f05ea2ac01076709defc4ab9d702e",
+          "seed": 20261106,
+          "all_sites": 82883893,
+          "native_sha256": "f3f15f94275cb80a3b68fd7bffce2f0f001c507bcdbb403aafdd943097426718",
+          "taxa": 38,
+          "distance": "upstream JC; union of usable sites",
+          "sampled_sites": 82883893,
+          "full_site_input": true,
+          "host_encoding": "existing packed nibbles; row padding and deterministic shuffle only",
+          "constructor_seconds": 0.694177555385977
+        }
+      ],
+      "topology_nrf_vs_archived_official": 0.0
+    }
+  ]
+}

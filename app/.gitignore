@@ -1,0 +1,7 @@
+.conda/
+.venv-web/
+.runtime/
+.standalone-migration/
+runs/
+__pycache__/
+*.pyc

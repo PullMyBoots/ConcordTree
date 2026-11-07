@@ -1,0 +1,236 @@
+{
+  "status": "complete",
+  "planned": 64,
+  "complete": 64,
+  "failed": 0,
+  "methods": {
+    "common": {
+      "by_task": {
+        "species": {
+          "records": 64,
+          "candidate_nrf": 0.2473661734819952,
+          "dipper_nrf": 0.31441592834267096,
+          "delta": -0.06704975486067577,
+          "paired_stratified_bootstrap95": [
+            -0.08138934539255377,
+            -0.05346735428036067
+          ],
+          "win": 61,
+          "tie": 1,
+          "loss": 2,
+          "worst_delta": 0.00982318271119842,
+          "best_delta": -0.2987267384916748
+        }
+      },
+      "by_scale": {
+        "species/128": {
+          "records": 16,
+          "candidate_nrf": 0.26,
+          "dipper_nrf": 0.3055,
+          "delta": -0.04549999999999999,
+          "paired_stratified_bootstrap95": [
+            -0.064,
+            -0.03200000000000001
+          ],
+          "win": 15,
+          "tie": 1,
+          "loss": 0,
+          "worst_delta": 0.0,
+          "best_delta": -0.18400000000000005
+        },
+        "species/512": {
+          "records": 16,
+          "candidate_nrf": 0.2929764243614931,
+          "dipper_nrf": 0.37831532416502944,
+          "delta": -0.08533889980353634,
+          "paired_stratified_bootstrap95": [
+            -0.12156188605108054,
+            -0.05083497053045186
+          ],
+          "win": 15,
+          "tie": 0,
+          "loss": 1,
+          "worst_delta": 0.00982318271119842,
+          "best_delta": -0.2730844793713163
+        },
+        "species/1024": {
+          "records": 16,
+          "candidate_nrf": 0.20617042115572967,
+          "dipper_nrf": 0.2774853085210578,
+          "delta": -0.07131488736532811,
+          "paired_stratified_bootstrap95": [
+            -0.10779872673849167,
+            -0.04199161361410384
+          ],
+          "win": 16,
+          "tie": 0,
+          "loss": 0,
+          "worst_delta": -0.018609206660137115,
+          "best_delta": -0.2987267384916748
+        },
+        "species/2048": {
+          "records": 16,
+          "candidate_nrf": 0.23031784841075795,
+          "dipper_nrf": 0.2963630806845966,
+          "delta": -0.06604523227383863,
+          "paired_stratified_bootstrap95": [
+            -0.08820293398533006,
+            -0.04596577017114915
+          ],
+          "win": 15,
+          "tie": 0,
+          "loss": 1,
+          "worst_delta": 0.00586797066014666,
+          "best_delta": -0.2004889975550122
+        }
+      },
+      "by_family": {
+        "species/ILS": {
+          "records": 32,
+          "candidate_nrf": 0.19872824869642625,
+          "dipper_nrf": 0.22980337405433673,
+          "delta": -0.03107512535791048,
+          "paired_stratified_bootstrap95": [
+            -0.03752361254883557,
+            -0.024497698267070833
+          ],
+          "win": 29,
+          "tie": 1,
+          "loss": 2,
+          "worst_delta": 0.00982318271119842,
+          "best_delta": -0.09010773751224291
+        },
+        "species/complex": {
+          "records": 32,
+          "candidate_nrf": 0.29600409826756413,
+          "dipper_nrf": 0.3990284826310052,
+          "delta": -0.10302438436344105,
+          "paired_stratified_bootstrap95": [
+            -0.13099280628293153,
+            -0.07654795622115208
+          ],
+          "win": 32,
+          "tie": 0,
+          "loss": 0,
+          "worst_delta": -0.02400000000000002,
+          "best_delta": -0.2987267384916748
+        }
+      }
+    },
+    "union": {
+      "by_task": {
+        "species": {
+          "records": 64,
+          "candidate_nrf": 0.2778155526188526,
+          "dipper_nrf": 0.31441592834267096,
+          "delta": -0.036600375723818385,
+          "paired_stratified_bootstrap95": [
+            -0.04253648725915577,
+            -0.03073212921241978
+          ],
+          "win": 59,
+          "tie": 1,
+          "loss": 4,
+          "worst_delta": 0.016000000000000014,
+          "best_delta": -0.12
+        }
+      },
+      "by_scale": {
+        "species/128": {
+          "records": 16,
+          "candidate_nrf": 0.2695,
+          "dipper_nrf": 0.3055,
+          "delta": -0.036,
+          "paired_stratified_bootstrap95": [
+            -0.049499999999999995,
+            -0.022499999999999996
+          ],
+          "win": 14,
+          "tie": 1,
+          "loss": 1,
+          "worst_delta": 0.016000000000000014,
+          "best_delta": -0.12
+        },
+        "species/512": {
+          "records": 16,
+          "candidate_nrf": 0.33374263261296655,
+          "dipper_nrf": 0.37831532416502944,
+          "delta": -0.044572691552062865,
+          "paired_stratified_bootstrap95": [
+            -0.05967583497053044,
+            -0.028732809430255406
+          ],
+          "win": 14,
+          "tie": 0,
+          "loss": 2,
+          "worst_delta": 0.00982318271119842,
+          "best_delta": -0.10805500982318261
+        },
+        "species/1024": {
+          "records": 16,
+          "candidate_nrf": 0.23751224289911851,
+          "dipper_nrf": 0.2774853085210578,
+          "delta": -0.03997306562193928,
+          "paired_stratified_bootstrap95": [
+            -0.05062438785504407,
+            -0.02999510284035261
+          ],
+          "win": 16,
+          "tie": 0,
+          "loss": 0,
+          "worst_delta": -0.005876591576885359,
+          "best_delta": -0.09010773751224291
+        },
+        "species/2048": {
+          "records": 16,
+          "candidate_nrf": 0.2705073349633252,
+          "dipper_nrf": 0.2963630806845966,
+          "delta": -0.025855745721271396,
+          "paired_stratified_bootstrap95": [
+            -0.03297677261613692,
+            -0.018643031784841085
+          ],
+          "win": 15,
+          "tie": 0,
+          "loss": 1,
+          "worst_delta": 0.00586797066014666,
+          "best_delta": -0.04987775061124694
+        }
+      },
+      "by_family": {
+        "species/ILS": {
+          "records": 32,
+          "candidate_nrf": 0.19872824869642625,
+          "dipper_nrf": 0.22980337405433673,
+          "delta": -0.03107512535791048,
+          "paired_stratified_bootstrap95": [
+            -0.03752361254883557,
+            -0.024497698267070833
+          ],
+          "win": 29,
+          "tie": 1,
+          "loss": 2,
+          "worst_delta": 0.00982318271119842,
+          "best_delta": -0.09010773751224291
+        },
+        "species/complex": {
+          "records": 32,
+          "candidate_nrf": 0.35690285654127885,
+          "dipper_nrf": 0.3990284826310052,
+          "delta": -0.04212562608972628,
+          "paired_stratified_bootstrap95": [
+            -0.05192920420562346,
+            -0.03229102069201854
+          ],
+          "win": 30,
+          "tie": 0,
+          "loss": 2,
+          "worst_delta": 0.016000000000000014,
+          "best_delta": -0.12
+        }
+      }
+    }
+  },
+  "failures": [],
+  "scope": "paired record-level descriptive evidence; maintain source-role caveats in source manifest"
+}

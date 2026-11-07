@@ -1,0 +1,48 @@
+{
+  "definition": "Pair groups fixed by original support >=99; ties count half",
+  "total_correct_incorrect_pairs": 206668287,
+  "old_auc": 0.9170828468714215,
+  "new_auc": 0.9228206744656474,
+  "parts": [
+    {
+      "correct_group": "old_high",
+      "incorrect_group": "old_high",
+      "correct_branches": 34909,
+      "incorrect_branches": 355,
+      "old_correct_pair_credit": 6555794.0,
+      "new_correct_pair_credit": 9099770.0,
+      "delta_correct_pair_credit": 2543976.0,
+      "auc_delta_contribution": 0.012309464780147909
+    },
+    {
+      "correct_group": "old_high",
+      "incorrect_group": "old_low",
+      "correct_branches": 34909,
+      "incorrect_branches": 4426,
+      "old_correct_pair_credit": 154507234.0,
+      "new_correct_pair_credit": 153164029.0,
+      "delta_correct_pair_credit": -1343205.0,
+      "auc_delta_contribution": -0.006499328075429396
+    },
+    {
+      "correct_group": "old_low",
+      "incorrect_group": "old_high",
+      "correct_branches": 8318,
+      "incorrect_branches": 355,
+      "old_correct_pair_credit": 0.0,
+      "new_correct_pair_credit": 498036.0,
+      "delta_correct_pair_credit": 498036.0,
+      "auc_delta_contribution": 0.0024098327190373433
+    },
+    {
+      "correct_group": "old_low",
+      "incorrect_group": "old_low",
+      "correct_branches": 8318,
+      "incorrect_branches": 4426,
+      "old_correct_pair_credit": 28468913.0,
+      "new_correct_pair_credit": 27955933.0,
+      "delta_correct_pair_credit": -512980.0,
+      "auc_delta_contribution": -0.0024821418295299462
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "status": "passed",
+  "created_at": "2026-11-06T21:52:07.576705+00:00",
+  "checks": [
+    {
+      "task": "gene",
+      "job_id": "20501bc3227e4063b90cda21af886a88",
+      "status": "passed",
+      "taxa": 32,
+      "sites": 257,
+      "loci": 1,
+      "pipeline": "Bounded AP-NJ -> MLP-NNI -> V11 full-site likelihood",
+      "seconds": 1.8154071075841784,
+      "download_sha256": "cab8ddeae2dd682eba7bbd7af3c9044f31b261b06f2bcddf52d0aecfb1b43767"
+    },
+    {
+      "task": "species",
+      "job_id": "aebc3a8d320d4791b9929142d8bdb27d",
+      "status": "passed",
+      "taxa": 32,
+      "sites": 257,
+      "loci": 2,
+      "pipeline": "Bounded AP-NJ -> MLP-NNI -> MSC compact statistical refinement",
+      "seconds": 1.303031194023788,
+      "download_sha256": "87f2d4d0be807bb91bdc5c4e25d35a99d2484bbd428fb0d67e1ec787970bbe27"
+    }
+  ],
+  "current_method_and_progress_assets": true,
+  "service_restarted": false
+}

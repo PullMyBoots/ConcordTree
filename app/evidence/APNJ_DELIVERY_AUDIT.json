@@ -1,0 +1,248 @@
+{
+  "status": "passed",
+  "created_at": "2026-11-06T21:52:07.704317+00:00",
+  "version": "1.0.2",
+  "new_release_created": false,
+  "initializer": "bounded full-site AP-NJ with fixed512 NJ terminal and four distance-NNI cleanup passes",
+  "primary_gate": "Both task means pass paired initial-accuracy and strict warm-speed intervals; numeric worst-case NlogN bound established with L and bounded terminal constants exposed.",
+  "metrics": {
+    "gene": {
+      "records": 200,
+      "candidate_nrf": 0.1134043659036231,
+      "dipper_nrf": 0.24151630970659035,
+      "delta": -0.12811194380296725,
+      "paired_stratified_bootstrap95": [
+        -0.143270140462796,
+        -0.11421984367094652
+      ],
+      "win": 198,
+      "tie": 1,
+      "loss": 1,
+      "worst_delta": 0.003911980440097801,
+      "best_delta": -0.7233201581027667,
+      "warm_timing": {
+        "candidate_mean_record_median": 0.13917106284294278,
+        "dipper_mean_record_median": 0.22294247653800994,
+        "dipper_over_candidate": 1.6019312634667797,
+        "paired_ratio_of_means_bootstrap95": [
+          1.3586013516957087,
+          1.8436991464944132
+        ],
+        "case_ratio_p05_p50_p95": [
+          1.3404711894889685,
+          1.8592524432694464,
+          3.92616243039918
+        ],
+        "case_ratio_geomean": 2.084105989032169,
+        "slower_cases": [
+          "gene/n4096/001",
+          "gene/n4096/005",
+          "gene/n4096/021",
+          "gene/n4096/033"
+        ]
+      }
+    },
+    "species": {
+      "records": 700,
+      "candidate_nrf": 0.1372886482530778,
+      "dipper_nrf": 0.18858251234147255,
+      "delta": -0.051293864088394765,
+      "paired_stratified_bootstrap95": [
+        -0.05651920102063305,
+        -0.04622112906984661
+      ],
+      "win": 564,
+      "tie": 55,
+      "loss": 81,
+      "worst_delta": 0.13793103448275862,
+      "best_delta": -0.5517241379310345,
+      "warm_timing": {
+        "candidate_mean_record_median": 0.02578235697533403,
+        "dipper_mean_record_median": 0.05238289581212614,
+        "dipper_over_candidate": 2.031734176291207,
+        "paired_ratio_of_means_bootstrap95": [
+          2.0003505402468127,
+          2.058105231221915
+        ],
+        "case_ratio_p05_p50_p95": [
+          1.6787654878925466,
+          3.2052648023449395,
+          4.263014173104944
+        ],
+        "case_ratio_geomean": 2.845546697369449,
+        "slower_cases": [
+          "species/large/n1024/complex/38"
+        ]
+      }
+    }
+  },
+  "complete_pipeline": {
+    "gene": {
+      "records": 200,
+      "arm_status": {
+        "candidate": {
+          "complete": 200
+        },
+        "dipper": {
+          "complete": 200
+        }
+      },
+      "pairs": 200,
+      "candidate_nrf": 0.03344781335771189,
+      "dipper_nrf": 0.03702138082623878,
+      "delta": -0.0035735674685268854,
+      "paired_stratified_bootstrap95": [
+        -0.008784653366774803,
+        0.0009633423583646605
+      ],
+      "win": 63,
+      "tie": 75,
+      "loss": 62,
+      "worst_delta": 0.23379174852652257,
+      "best_delta": -0.3794466403162055,
+      "baseline_reused": 40,
+      "descriptive_fresh_runtime": {
+        "records": 160,
+        "candidate_mean": 4.770433259935817,
+        "dipper_mean": 7.762626562226797,
+        "dipper_over_candidate": 1.6272372212856905,
+        "scope": "single fresh full runs, alternating arm order; includes common parser and downstream; first-use/context differences not a strict warm benchmark"
+      }
+    },
+    "species": {
+      "records": 700,
+      "arm_status": {
+        "candidate": {
+          "complete": 700
+        },
+        "dipper": {
+          "complete": 700
+        }
+      },
+      "pairs": 700,
+      "candidate_nrf": 0.0668346403913677,
+      "dipper_nrf": 0.07065310584179069,
+      "delta": -0.003818465450422986,
+      "paired_stratified_bootstrap95": [
+        -0.005074884669058716,
+        -0.0026001555556246993
+      ],
+      "win": 196,
+      "tie": 395,
+      "loss": 109,
+      "worst_delta": 0.09430255402750493,
+      "best_delta": -0.13227513227513227,
+      "baseline_reused": 56,
+      "descriptive_fresh_runtime": {
+        "records": 644,
+        "candidate_mean": 1.0072088032203108,
+        "dipper_mean": 1.1208316012826511,
+        "dipper_over_candidate": 1.1128095760273922,
+        "scope": "single fresh full runs, alternating arm order; includes common parser and downstream; first-use/context differences not a strict warm benchmark"
+      }
+    }
+  },
+  "release_files_unchanged": 334,
+  "unchanged_downstream_files": 181,
+  "memory_unchanged": true,
+  "data_policy": "All sources read-only; every derived output under project output/; no writes to data or symlink targets.",
+  "historical_report_numbers_unchanged": true,
+  "installed_checks": {
+    "status": "passed",
+    "rows": [
+      {
+        "label": "installed-cpu-contract",
+        "command": [
+          "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/release/v-0.1.3/.conda/env/bin/python",
+          "-B",
+          "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/release/V1.0.2/tests/test_contract.py"
+        ],
+        "exit_code": 0,
+        "started_at": "2026-11-06T21:50:59.056899+00:00",
+        "finished_at": "2026-11-06T21:51:03.724897+00:00",
+        "log": "installed-cpu-contract.log"
+      },
+      {
+        "label": "installed-web-adapter",
+        "command": [
+          "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/output/web-runtime-v101/env/bin/python",
+          "-B",
+          "-m",
+          "unittest",
+          "web.test_server",
+          "-v"
+        ],
+        "exit_code": 0,
+        "started_at": "2026-11-06T21:51:03.726201+00:00",
+        "finished_at": "2026-11-06T21:51:53.101785+00:00",
+        "log": "installed-web-adapter.log"
+      },
+      {
+        "label": "installed-js-syntax",
+        "command": [
+          "node",
+          "--check",
+          "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/web/app.js"
+        ],
+        "exit_code": 0,
+        "started_at": "2026-11-06T21:51:53.102634+00:00",
+        "finished_at": "2026-11-06T21:51:53.206622+00:00",
+        "log": "installed-js-syntax.log"
+      },
+      {
+        "label": "installed-web-inference",
+        "command": [
+          "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/release/v-0.1.3/.conda/env/bin/python",
+          "-B",
+          "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/output/apnj-ninehour-20261107/verify_installed_web.py"
+        ],
+        "exit_code": 0,
+        "started_at": "2026-11-06T21:51:53.207309+00:00",
+        "finished_at": "2026-11-06T21:52:07.597682+00:00",
+        "log": "installed-web-inference.log"
+      }
+    ]
+  },
+  "installed_web": {
+    "status": "passed",
+    "created_at": "2026-11-06T21:52:07.576705+00:00",
+    "checks": [
+      {
+        "task": "gene",
+        "job_id": "20501bc3227e4063b90cda21af886a88",
+        "status": "passed",
+        "taxa": 32,
+        "sites": 257,
+        "loci": 1,
+        "pipeline": "Bounded AP-NJ -> MLP-NNI -> V11 full-site likelihood",
+        "seconds": 1.8154071075841784,
+        "download_sha256": "cab8ddeae2dd682eba7bbd7af3c9044f31b261b06f2bcddf52d0aecfb1b43767"
+      },
+      {
+        "task": "species",
+        "job_id": "aebc3a8d320d4791b9929142d8bdb27d",
+        "status": "passed",
+        "taxa": 32,
+        "sites": 257,
+        "loci": 2,
+        "pipeline": "Bounded AP-NJ -> MLP-NNI -> MSC compact statistical refinement",
+        "seconds": 1.303031194023788,
+        "download_sha256": "87f2d4d0be807bb91bdc5c4e25d35a99d2484bbd428fb0d67e1ec787970bbe27"
+      }
+    ],
+    "current_method_and_progress_assets": true,
+    "service_restarted": false
+  },
+  "proof": "release/V1.0.2/evidence/APNJ_COMPLEXITY.md",
+  "selected_large_shape_checks": "FINAL_SCALE_VALIDATION.json",
+  "boundaries": [
+    "Primary900 records have previously influenced development.",
+    "Gene final-tree improvement unresolved: paired95% interval crosses zero.",
+    "Some records lose speed or accuracy; no per-record universal dominance.",
+    "A10 DIPPER-paper10K loses initial accuracy and some10K gene final trees regress; kept separate.",
+    "New-seed confirmation uses the same simulator family.",
+    "Order sensitivity remains; the bound does not prove all-shape statistical consistency.",
+    "NlogN refers to the fixed-budget numeric initializer; downstream convergence is not bounded by this theorem.",
+    "SM89/CPython3.10 on this server only; native memory samples for the pitched parent are not relabeled as final execution peaks."
+  ]
+}

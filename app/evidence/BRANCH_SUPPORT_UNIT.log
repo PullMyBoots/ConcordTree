@@ -1,0 +1,18 @@
+test_gene_weights_have_defined_local_meaning (test_branch_support.SupportContracts) ... ok
+test_invalid_evidence (test_branch_support.SupportContracts) ... ok
+test_large_skew_tree_identifiers_are_iterative (test_branch_support.SupportContracts) ... ok
+test_species_fractional_votes_and_missing_evidence (test_branch_support.SupportContracts) ... ok
+test_split_ids_and_annotated_newick_preserve_tree (test_branch_support.SupportContracts) ... ok
+test_uninformative_and_roundoff_ties (test_branch_support.SupportContracts) ... ok
+test_api_options_and_fresh_output (test_contract.Contracts) ... ok
+test_bad_alignment_rejected (test_contract.Contracts) ... ok
+test_checkpoints_and_task_routing (test_contract.Contracts) ... ok
+test_fasta_conversion_and_input_unchanged (test_contract.Contracts) ... ok
+test_foreign_runtime_rejected (test_contract.Contracts) ... ok
+test_immutable_paths (test_contract.Contracts) ... ok
+test_roundtrip_parameter_bounds (test_contract.Contracts) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.178s
+
+OK

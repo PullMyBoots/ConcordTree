@@ -1,0 +1,267 @@
+{
+  "recorded_at": "2026-11-05T14:37:02.336406+00:00",
+  "scope": "Local V1.0.1 integration, actual inference on GPU0; public deployment outside this delivery",
+  "backend": {
+    "release": "release/V1.0.2",
+    "manifest_files_verified": 250,
+    "scientific_python": "release/v-0.1.3/.conda/env/bin/python",
+    "gpu": 0,
+    "cpu_threads": 16,
+    "numa_node": 0,
+    "job_directory": "output/web-jobs-v101",
+    "workers": 1
+  },
+  "input": {
+    "gene": "One PHYLIP MSA; minimum 4 taxa",
+    "species": "PHYLIP/PAML locus blocks; minimum 24 taxa total",
+    "routing": "one block: msa_only; multiple blocks: observed_loci",
+    "supported_layouts": [
+      "relaxed sequential",
+      "wrapped sequential",
+      "PAML name-only rows",
+      "interleaved"
+    ],
+    "missing_locus_taxa": "pad with ?",
+    "fasta": false
+  },
+  "controls": {
+    "gene": [
+      "evolutionary model",
+      "branch support"
+    ],
+    "species": [
+      "branch support"
+    ],
+    "default_model": "GTR+FO+I+G4",
+    "default_support": true,
+    "submission": "automatic on upload"
+  },
+  "api_input_tests": {
+    "passed": 23,
+    "scientific_runner": "mocked scheduling boundary",
+    "log": "output/web-v101-integration-20261105/unit-server-files.log",
+    "final_path_boundary_log": "output/web-v101-integration-20261105/unit-server-paths-final.log"
+  },
+  "real_http": {
+    "status": "passed",
+    "cases": 4,
+    "queue_observed": {
+      "running": 1,
+      "queued": 3,
+      "capacity": 16,
+      "compute_enabled": true,
+      "accepting_jobs": true
+    },
+    "inputs_unchanged": true,
+    "evidence": "output/web-v101-integration-20261105/HTTP_REAL_INFERENCE.json"
+  },
+  "real_browser": {
+    "status": "passed",
+    "checks": [
+      "default model matches V1.0.1",
+      "support enabled by default",
+      "upload still submits without Infer",
+      "FASTA rejected before upload",
+      "upload/inference locks controls",
+      "real inference completed: gene",
+      "browser passes gene model and disabled support",
+      "disabled support has no branch labels",
+      "real tree download succeeds",
+      "species exposes no model selector",
+      "species file chooser accepts PAML",
+      "real inference completed: species",
+      "two loci automatically use observed partitions",
+      "detected locus count shown",
+      "support rendered on every real internal branch",
+      "species support method named",
+      "reload restores annotated result without new submission",
+      "Back preserves species task after reload",
+      "real inference completed: species",
+      "one locus automatically uses unpartitioned mode",
+      "species support switch reaches backend",
+      "each file selection submits exactly one task",
+      "no horizontal overflow at 390",
+      "parameter controls fit card at 390",
+      "no horizontal overflow at 320",
+      "parameter controls fit card at 320",
+      "Nature keeps task card in viewport",
+      "offline server has explicit visual state",
+      "no browser exceptions"
+    ],
+    "errors": [],
+    "real_browser_jobs": [
+      "ec8a980d7a5f4405a86e463e6b86f92e",
+      "25e00c9177474903a6aa377c57b6215d",
+      "447c368b69c6473a8bb6d77a9044cf83"
+    ],
+    "submission_count": 3,
+    "check_count": 29,
+    "log": "output/web-v101-integration-20261105/browser-final.log",
+    "script": "output/playwright/v101-integration-final.js"
+  },
+  "syntax_checks": [
+    "Python AST: server.py, alignments.py, test_server.py",
+    "node --check web/app.js"
+  ],
+  "screenshots": [
+    "output/playwright/v101-gene-upload-desktop.png",
+    "output/playwright/v101-species-upload-desktop.png",
+    "output/playwright/v101-species-result-desktop.png",
+    "output/playwright/v101-gene-mobile-390.png",
+    "output/playwright/v101-gene-mobile-320.png",
+    "output/playwright/v101-species-nature-mobile.png"
+  ],
+  "limitations": [
+    "Local loopback service, no public deployment",
+    "Traditional fixed-width names without whitespace are not accepted; use relaxed PHYLIP",
+    "Preview limited to 400 taxa; full Newick remains downloadable",
+    "100 MiB upload/matrix character limits, 16 active jobs, 15-minute task timeout",
+    "Small integration fixtures do not establish large dataset performance or scientific accuracy",
+    "Support is an uncalibrated index, not a correctness probability"
+  ],
+  "previous_validation": "output/web-v101-integration-20261105/baseline/VALIDATION.json",
+  "all_gene_models": {
+    "status": "passed",
+    "models_verified": 11,
+    "new_real_jobs": 9,
+    "fixture": "32 taxa x 257 sites",
+    "evidence": "output/web-v101-integration-20261105/ALL_MODELS_REAL_INFERENCE.json",
+    "fitted_constraints_verified": [
+      "base frequencies",
+      "exchangeability groups",
+      "Gamma categories",
+      "invariant class"
+    ],
+    "release": "V1.0.1, before long-alignment patch"
+  },
+  "server_file_debug": {
+    "enabled_in_current_service": true,
+    "default_enabled": false,
+    "flag": "--allow-server-files",
+    "scope": "project and known linked datasets, read-only",
+    "limit_bytes": 536870912,
+    "browser": {
+      "status": "passed",
+      "checks": [
+        "temporary server file import enabled",
+        "parse ResourceURLs",
+        "parse CodeFiles",
+        "parse CodeEditors",
+        "parse application/vnd.code.uri-list",
+        "parse text/plain",
+        "complete editor resource list rejects multiple files despite truncated uri-list",
+        "server path accepted: Gene Tree",
+        "real tree preview with support: Gene Tree",
+        "server path accepted: Species Tree",
+        "real tree preview with support: Species Tree"
+      ],
+      "real_jobs": [
+        {
+          "id": "ff56e8ff920a4ebf8ca0842496d378fd",
+          "task": "gene"
+        },
+        {
+          "id": "34091af9f09b4ce2ac4c9a86182da73d",
+          "task": "species"
+        }
+      ]
+    },
+    "evidence": "output/web-v101-integration-20261105/BROWSER_VSCODE.json",
+    "native_vscode_drag_verified": false,
+    "large_input_check": "output/web-v101-integration-20261105/mammal241-input-check.json"
+  },
+  "built_in_examples": [
+    "web/examples/gene.phy",
+    "web/examples/species.paml"
+  ],
+  "fish_tree_preview_fix": {
+    "status": "passed",
+    "binary_topology_evidence": "output/web-v101-integration-20261105/FISH_TOPOLOGY_AUDIT.json",
+    "browser_checks": 33,
+    "browser_evidence": "output/web-v101-integration-20261105/BROWSER_FISH_LAYOUT.json",
+    "new_inference_runs": 0,
+    "screenshots": [
+      "output/playwright/v101-fish-gene-1029.png",
+      "output/playwright/v101-fish-gene-390.png",
+      "output/playwright/v101-fish-species-1029.png",
+      "output/playwright/v101-fish-species-390.png"
+    ]
+  },
+  "long_alignment_patch": {
+    "release": "V1.0.2",
+    "kernel_cases": 72,
+    "release_tests": 17,
+    "web_api_tests": 23,
+    "browser_checks": 10,
+    "plant_taxa": 1178,
+    "plant_sites": 311148,
+    "plant_seconds": 202.21072372188792,
+    "plant_binary": true,
+    "supports": 1175,
+    "recovered_web_job": "dbe3063c35244d708996b1ab64211adb",
+    "evidence": "output/gene-long-alignment-fix-20261105/REPORT.md",
+    "browser_evidence": "output/gene-long-alignment-fix-20261105/BROWSER_RECOVERY.json"
+  },
+  "result_timing": {
+    "status": "passed",
+    "source": "job.elapsed_seconds (RESULT.json.file_to_tree_seconds)",
+    "scope": "excludes upload, queueing and process startup",
+    "browser_checks": 13,
+    "evidence": "output/gene-long-alignment-fix-20261105/BROWSER_TIMING.json",
+    "new_inference_runs": 0
+  },
+  "on_demand_preview_and_progress": {
+    "status": "passed",
+    "preview_limit_taxa": 400,
+    "preview_default": "collapsed; lazy render",
+    "browser_checks": 48,
+    "evidence": "output/web-preview-progress-20261106/BROWSER.json",
+    "progress": "observed milestones, not time percentage; live detail and collapsible recent activity",
+    "running_states": "browser API fixtures",
+    "new_inference_runs": 0
+  },
+  "local_report": {
+    "status": "passed",
+    "route": "/report/",
+    "directory": "release/V1.0.2/technical-report",
+    "source": "https://pullmyboots.github.io/ConcordTree/",
+    "snapshot": "release/V1.0.2/technical-report/SNAPSHOT.json",
+    "api_tests": 25,
+    "browser_checks": 101,
+    "external_requests": [],
+    "browser_evidence": "output/report-layout-20261106/BROWSER.json",
+    "api_log": "output/report-layout-20261106/api-tests.log",
+    "pages": [
+      "index.html",
+      "accuracy.html",
+      "performance.html",
+      "method.html"
+    ],
+    "layout_source": "report.TXT",
+    "content": "locally edited; excludes paper datasets; preserves other software baselines",
+    "new_inference_runs": 0
+  },
+  "kernel_robustness": {
+    "release": "V1.0.2",
+    "status": "passed",
+    "algorithm_boundary_tests": 25,
+    "api_tests": 25,
+    "real_http": [
+      {
+        "task": "gene",
+        "id": "9a4e24dd2ca648e39d87f60cfe8cc738",
+        "status": "succeeded",
+        "inference_seconds": 1.7845822246745229,
+        "tree_download_identical": true
+      },
+      {
+        "task": "species",
+        "id": "413f8771437042f49eeac0e1620100d7",
+        "status": "succeeded",
+        "inference_seconds": 1.8686342719011009,
+        "tree_download_identical": true
+      }
+    ],
+    "evidence": "output/kernel-robustness-20261106/AUDIT.json"
+  }
+}

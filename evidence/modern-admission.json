@@ -1,0 +1,13 @@
+{
+  "status": "not_admitted",
+  "runtime": "torch 2.11.0+cu128 / Triton 3.6.0",
+  "hardware": "L40S",
+  "case": "gene/n256/000",
+  "initial_trees_byte_identical": true,
+  "final_topology_equal": true,
+  "rf_equal": true,
+  "max_branch_absolute_delta": 2.0409999999110306e-08,
+  "final_newick_byte_identical": false,
+  "blackwell_hardware_tested": false,
+  "reason": "Strict unchanged-artifact gate failed; no stable Blackwell support claim."
+}

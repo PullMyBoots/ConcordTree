@@ -1,0 +1,59 @@
+{
+  "status": "complete",
+  "rows": [
+    {
+      "task": "gene",
+      "seconds": 2.8627030374482274,
+      "status": "complete",
+      "quality": {
+        "search_converged": true,
+        "guard_interventions": [
+          {
+            "stage": "mlp",
+            "reason": "no_variable_sites"
+          },
+          {
+            "stage": "parameter_fit",
+            "fit": 1,
+            "reason": "local_solver_regressed"
+          }
+        ],
+        "parameter_converged": false,
+        "initialization_informative": false,
+        "initialization_warnings": [
+          "No variable observed site: topology is unidentifiable; a deterministic balanced binary completion was returned."
+        ],
+        "warnings": [
+          "mlp: no_variable_sites",
+          "parameter_fit: local_solver_regressed",
+          "No variable observed site: topology is unidentifiable; a deterministic balanced binary completion was returned."
+        ]
+      },
+      "events": 8
+    },
+    {
+      "task": "species",
+      "seconds": 0.29013108741492033,
+      "status": "complete",
+      "quality": {
+        "search_converged": true,
+        "guard_interventions": [
+          {
+            "stage": "mlp",
+            "reason": "no_variable_sites"
+          }
+        ],
+        "parameter_converged": null,
+        "initialization_informative": false,
+        "initialization_warnings": [
+          "No variable observed site: topology is unidentifiable; a deterministic balanced binary completion was returned."
+        ],
+        "warnings": [
+          "mlp: no_variable_sites",
+          "No variable observed site: topology is unidentifiable; a deterministic balanced binary completion was returned."
+        ]
+      },
+      "events": 6
+    }
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "release_manifest_sha256": "5832476a2e3f69645d1a36206ef2fbf11519fe0caf7b9f5d283b338c34af2993",
+  "method_contract": {
+    "version": "1.0.2",
+    "tasks": {
+      "gene": {
+        "mlp": "homogeneous",
+        "posterior": "gene-likelihood-v0.5.9-hybrid V11 full-site likelihood",
+        "default_model": "GTR+FO+I+G4",
+        "minimum_taxa": 4,
+        "branch_lengths": true
+      },
+      "species": {
+        "mlp": "heterogeneous",
+        "posterior": "species-msc-compact-20261105 TiledBarycenterScorer + StreamSumActiveScorer + refine_active",
+        "minimum_taxa": 24,
+        "branch_lengths": false,
+        "observed_loci_optional": true
+      }
+    },
+    "shared_frontend": {
+      "source": "optimized v0.5.9",
+      "algorithm": "AP-NJ -> MLP-NNI",
+      "splitbank": false,
+      "default_views": 1,
+      "apnj": {
+        "seed": 20260934,
+        "sample_seed": 20261022,
+        "default_site_cap": 16384,
+        "projections": 16,
+        "window": 8,
+        "candidate_cap": 32,
+        "missing_default": "standard",
+        "automatic_missing_route": false
+      },
+      "mlp": {
+        "architecture": [
+          256,
+          1024,
+          128,
+          3
+        ],
+        "representatives": 4,
+        "min_margin": 0.1,
+        "stop_ratio": 0.005,
+        "emergency_pass_guard": 10000
+      }
+    },
+    "posterior_stop_ratio": 0.005,
+    "all_sites_used_in_posterior": true,
+    "numerical_repair": "alpha lower/upper and pinv upper: normalize only values <=4 ULP outside original boundaries",
+    "changed_scientific_configuration": "gene MLP is homogeneous as requested; prior v0.5.9 default was heterogeneous",
+    "scientific_limits": [
+      "local search, no global ML optimum certificate",
+      "no general MSC consistency guarantee",
+      "no new accuracy/generalization evaluation",
+      "historical species frontend sampling/tree compatibility is not claimed"
+    ],
+    "outputs": {
+      "tree": "prediction.nwk",
+      "result": "RESULT.json",
+      "progress": "progress.json",
+      "initial": "initial/",
+      "gene": "gene/",
+      "species": "species.json",
+      "branch_support": "branch-support.json",
+      "unannotated_tree": "prediction.unannotated.nwk (support enabled only)"
+    },
+    "provenance": "SOURCE_PROVENANCE.json",
+    "branch_support": {
+      "enabled_by_default": true,
+      "scale": [
+        0,
+        100
+      ],
+      "calibrated": false,
+      "bootstrap": false,
+      "correctness_probability": false,
+      "gene": {
+        "method": "gene_local_likelihood_weight",
+        "evidence": "three final-state approximate local profile likelihoods",
+        "additional_inference_runs": 0,
+        "additional_parameter_fits": 0,
+        "final_nni_verification_evaluations_when_stale": 1
+      },
+      "species": {
+        "method": "mean_worst_quartet_margin",
+        "evidence": "mean(current_score - max(alternative_scores)) over informative cached unique quartets",
+        "additional_inference_runs": 0,
+        "additional_quartet_scores": 0,
+        "final_integer_remapping_passes_when_stale": 1,
+        "missing_evidence": null,
+        "ranking_field": "mean_worst_margin",
+        "display_transform": "50 + 50*m/(1+abs(m)); fixed unit scale, not fitted",
+        "legacy_diagnostic": "sampled_quartet_agreement (0..100)",
+        "selection": "User-authorized pooled-AUC priority; original stricter confirmation gate failed",
+        "numeric_newick_precision": 17
+      },
+      "documentation": "BRANCH_SUPPORT.md"
+    },
+    "revision": "2026-11-05 user-authorized AUC-prioritized species margin support"
+  },
+  "inputs_sha256": "deb99709ec1a7ccf4bd32ff6e64f2796ee610b1ca3e0c122ece875b842284627"
+}

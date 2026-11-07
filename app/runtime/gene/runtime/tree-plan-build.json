@@ -1,0 +1,16 @@
+{
+  "command": [
+    "c++",
+    "-O3",
+    "-std=c++17",
+    "-shared",
+    "-fPIC",
+    "-I/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/release/v-0.1.3/.conda/env/include/python3.10",
+    "-I/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/release/v-0.1.3/.conda/env/lib/python3.10/site-packages/torch/include",
+    "release/V1.0.2/runtime/gene/runtime/tree_plan_native.cpp",
+    "-o",
+    "release/V1.0.2/runtime/gene/runtime/_tree_plan_native.cpython-310-x86_64-linux-gnu.so.new"
+  ],
+  "source_sha256": "8705643984e7666a7517c313b6196b80551d942765651b7757228621c8a6d8a4",
+  "binary_sha256": "afcc5b6ebed5e61d3bac3c429e2340cc3346cb77b9c7ff903507cd0e9ac83c3f"
+}

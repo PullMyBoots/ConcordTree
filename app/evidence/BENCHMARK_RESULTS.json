@@ -1,0 +1,57 @@
+[
+  {
+    "id": "gene256",
+    "source": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/data/test/simulation/alisim-homogeneous-v3/n256/000/alignment.phy",
+    "predictor": "homogeneous",
+    "exact": true,
+    "medians": {
+      "reference": 0.07724332064390182,
+      "optimized": 0.06213690806180239
+    },
+    "speedup": 1.2431149706881834
+  },
+  {
+    "id": "gene1024",
+    "source": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/data/test/simulation/alisim-homogeneous-v3/n1024/000/alignment.phy",
+    "predictor": "homogeneous",
+    "exact": true,
+    "medians": {
+      "optimized": 0.24218405270949006,
+      "reference": 0.3159225289709866
+    },
+    "speedup": 1.30447288100323
+  },
+  {
+    "id": "gene4096",
+    "source": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/data/test/simulation/alisim-homogeneous-v3/n4096/000/alignment.phy",
+    "predictor": "homogeneous",
+    "exact": true,
+    "medians": {
+      "reference": 1.9027395998127759,
+      "optimized": 1.0795987877063453
+    },
+    "speedup": 1.7624506635981216
+  },
+  {
+    "id": "species-weights1024",
+    "source": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/data/test/simulation/alisim-homogeneous-v3/n1024/000/alignment.phy",
+    "predictor": "heterogeneous",
+    "exact": true,
+    "medians": {
+      "optimized": 0.26324345730245113,
+      "reference": 0.3179518091492355
+    },
+    "speedup": 1.2078241655363449
+  },
+  {
+    "id": "species-weights4096",
+    "source": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/data/test/simulation/alisim-homogeneous-v3/n4096/000/alignment.phy",
+    "predictor": "heterogeneous",
+    "exact": true,
+    "medians": {
+      "reference": 1.9403332727961242,
+      "optimized": 1.0886842189356685
+    },
+    "speedup": 1.7822737200076753
+  }
+]

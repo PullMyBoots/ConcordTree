@@ -1,0 +1,13 @@
+{
+  "stable_runtime_ready": true,
+  "public_repo": "PullMyBoots/ConcordTree",
+  "public_release_published": false,
+  "modern_runtime_admitted": false,
+  "accuracy_cases_passed": 48,
+  "speed_followup_passed": true,
+  "remaining": [
+    "GitHub Release API login and publication",
+    "Blackwell/ARM require separate validated artifacts"
+  ],
+  "portable_sha256": "97cce5a23f61e94f85a5cb46088a6b8862b284b35721edd2908324eda024f75c"
+}

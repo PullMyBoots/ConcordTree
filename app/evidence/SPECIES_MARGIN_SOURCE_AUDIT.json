@@ -1,0 +1,131 @@
+{
+  "status": "passed",
+  "original_source_hashes_verified": 251,
+  "imported_unchanged_verified": true,
+  "preexisting_inference_binaries_unchanged": true,
+  "binaries": [
+    {
+      "path": "runtime/msc_refine/_msc_spr.cpython-310-x86_64-linux-gnu.so",
+      "unchanged": true
+    },
+    {
+      "path": "runtime/msc_refine/_msc_active_plan.cpython-310-x86_64-linux-gnu.so",
+      "unchanged": true
+    },
+    {
+      "path": "runtime/msc_refine/_msc_sparse.cpython-310-x86_64-linux-gnu.so",
+      "unchanged": true
+    },
+    {
+      "path": "runtime/msc_refine/_msc_active_gpu.cpython-310-x86_64-linux-gnu.so",
+      "unchanged": true
+    },
+    {
+      "path": "runtime/msc_refine/_msc_incremental_plan.cpython-310-x86_64-linux-gnu.so",
+      "unchanged": true
+    },
+    {
+      "path": "runtime/msc_refine/_uniform_plan.cpython-310-x86_64-linux-gnu.so",
+      "unchanged": true
+    },
+    {
+      "path": "runtime/msc_refine/_pair_features.cpython-310-x86_64-linux-gnu.so",
+      "unchanged": true
+    },
+    {
+      "path": "runtime/msc_refine/_msc_active.cpython-310-x86_64-linux-gnu.so",
+      "unchanged": true
+    },
+    {
+      "path": "runtime/msc_refine/_msc_active_streamsum.cpython-310-x86_64-linux-gnu.so",
+      "unchanged": true
+    },
+    {
+      "path": "runtime/msc_refine/_msc_slim_index.cpython-310-x86_64-linux-gnu.so",
+      "unchanged": true
+    },
+    {
+      "path": "runtime/msc_refine/_msc_rate_objective.cpython-310-x86_64-linux-gnu.so",
+      "unchanged": true
+    },
+    {
+      "path": "runtime/msc_refine/_msc_plan.cpython-310-x86_64-linux-gnu.so",
+      "unchanged": true
+    },
+    {
+      "path": "runtime/msc_refine/_msc_active_rmq.cpython-310-x86_64-linux-gnu.so",
+      "unchanged": true
+    },
+    {
+      "path": "runtime/msc_refine/_msc_active_fast.cpython-310-x86_64-linux-gnu.so",
+      "unchanged": true
+    },
+    {
+      "path": "runtime/msc_refine/_msc_rate_pair.cpython-310-x86_64-linux-gnu.so",
+      "unchanged": true
+    },
+    {
+      "path": "runtime/msc_refine/_msc_active_norm.cpython-310-x86_64-linux-gnu.so",
+      "unchanged": true
+    },
+    {
+      "path": "runtime/gene/runtime/_packed_extract.cpython-310-x86_64-linux-gnu.so",
+      "unchanged": true
+    },
+    {
+      "path": "runtime/gene/runtime/_repeat_builder_invariant.cpython-310-x86_64-linux-gnu.so",
+      "unchanged": true
+    },
+    {
+      "path": "runtime/gene/runtime/_repeat_builder_frontier.cpython-310-x86_64-linux-gnu.so",
+      "unchanged": true
+    },
+    {
+      "path": "runtime/gene/runtime/_tree_plan_native.cpython-310-x86_64-linux-gnu.so",
+      "unchanged": true
+    },
+    {
+      "path": "runtime/gene/runtime/_global_patterns.cpython-310-x86_64-linux-gnu.so",
+      "unchanged": true
+    },
+    {
+      "path": "runtime/gene/runtime/_repeat_builder_schedule.cpython-310-x86_64-linux-gnu.so",
+      "unchanged": true
+    },
+    {
+      "path": "runtime/gene/runtime/_branch_support_reduce.cpython-310-x86_64-linux-gnu.so",
+      "unchanged": false
+    },
+    {
+      "path": "runtime/gene/src/concordtree/assets/backends/candidate_graph_backend.cpython-310-x86_64-linux-gnu.so",
+      "unchanged": true
+    },
+    {
+      "path": "runtime/gene/src/concordtree/assets/backends/pattern_freq_cuda_backend.cpython-310-x86_64-linux-gnu.so",
+      "unchanged": true
+    },
+    {
+      "path": "runtime/gene/src/concordtree/assets/backends/sequence_processor_backend.cpython-310-x86_64-linux-gnu.so",
+      "unchanged": true
+    },
+    {
+      "path": "runtime/gene/src/concordtree/assets/backends/learned_nni_plan_backend.cpython-310-x86_64-linux-gnu.so",
+      "unchanged": true
+    },
+    {
+      "path": "runtime/gene/src/concordtree/assets/backends/panel_score_backend.cpython-310-x86_64-linux-gnu.so",
+      "unchanged": true
+    }
+  ],
+  "changed_since_snapshot": [
+    "NATIVE.md",
+    "BRANCH_SUPPORT.md",
+    "branch_support.py",
+    "README.md",
+    "METHOD_CONTRACT.json",
+    "tests/test_branch_support.py",
+    "evidence/BRANCH_SUPPORT_VALIDATION.md",
+    "runtime/gene/runtime/branch_support_reduce.cpp",
+    "runtime/gene/runtime/_branch_support_reduce.cpython-310-x86_64-linux-gnu.so"
+  ]
+}

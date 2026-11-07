@@ -1,0 +1,159 @@
+{
+  "version": "1.0.2",
+  "tasks": {
+    "gene": {
+      "mlp": "homogeneous",
+      "posterior": "gene-likelihood-v0.5.9-hybrid V11 full-site likelihood",
+      "default_model": "GTR+FO+I+G4",
+      "minimum_taxa": 4,
+      "branch_lengths": true
+    },
+    "species": {
+      "mlp": "heterogeneous",
+      "posterior": "species-msc-compact-20261105 TiledBarycenterScorer + StreamSumActiveScorer + refine_active",
+      "minimum_taxa": 24,
+      "branch_lengths": false,
+      "observed_loci_optional": true
+    }
+  },
+  "shared_frontend": {
+    "source": "bundled bounded AP-NJ + original optimized v0.5.9 MLP",
+    "algorithm": "bounded full-site Q-aware AP-NJ -> MLP-NNI",
+    "splitbank": false,
+    "default_views": 1,
+    "mlp": {
+      "architecture": [
+        256,
+        1024,
+        128,
+        3
+      ],
+      "representatives": 4,
+      "min_margin": 0.1,
+      "stop_ratio": 0.005,
+      "emergency_pass_guard": 10000,
+      "recurrence": "exact full neighbor-array state; downstream refinement continues after intervention"
+    },
+    "previous_apnj_configuration": {
+      "seed": 20260934,
+      "sample_seed": 20261022,
+      "default_site_cap": 16384,
+      "projections": 16,
+      "window": 8,
+      "candidate_cap": 32,
+      "missing_default": "standard",
+      "automatic_missing_route": false
+    },
+    "dipper": {
+      "upstream_commit": "d80df351107f05ea2ac01076709defc4ab9d702e",
+      "mode": "GPU k-closest placement (official -m 1 -K 10 path)",
+      "distance": "upstream aligned JC",
+      "missing": "union of usable sites as in upstream; no AP-NJ distance route",
+      "sites": "all original sites",
+      "seed": 20260934,
+      "view_seed": "seed + view",
+      "backend": "in-process native; reuses packed observations",
+      "topology_numbering": "canonical in original input taxon order",
+      "new_processes": 0,
+      "fasta_intermediates": 0,
+      "dense_pairwise_matrix": false,
+      "current_use": "historical baseline adapter only; not selected by public engine"
+    },
+    "legacy_options": "sample_fraction and missing_data_model retain validation and call compatibility; initializer uses all columns and observed-intersection distances",
+    "apnj": {
+      "projections": 16,
+      "window": 8,
+      "directed_neighbors": 16,
+      "expansion_passes": 2,
+      "representatives": 2,
+      "row_landmarks": 32,
+      "minimum_merge_divisor": 514,
+      "terminal_limit": 512,
+      "terminal": "standard global-minimum NJ with signed reductions",
+      "distance_cleanup_passes": 4,
+      "cleanup_component_representatives": 4,
+      "gene_distance": "K2P-gamma",
+      "species_distance": "JC",
+      "missing": "observed intersection",
+      "sites": "all original columns",
+      "seed": 20260934,
+      "view_seed": "seed + view",
+      "dense_matrix": "bounded terminal only, at most512x512",
+      "numeric_work": "O(NL+N log N+B^2 R^2 L+B^3), fixed B=512,R=2",
+      "space": "O(NL+N+B^2)",
+      "proof": "evidence/APNJ_COMPLEXITY.md",
+      "row_control": "Exact observed-intersection coordinate sums with fixed-population ratio-Taylor control; same formula on every input",
+      "merge_selection": "deterministic maximal matching of exact mutual Q minima, then original bounded path completion",
+      "no_information": "exact zero-variable-observed-site detection and explicitly uninformative balanced binary completion",
+      "raw_control_scratch_limit_bytes": 67108864,
+      "raw_control_site_block": 131072
+    }
+  },
+  "posterior_stop_ratio": 0.005,
+  "all_sites_used_in_posterior": true,
+  "numerical_repair": "alpha lower/upper and pinv upper: normalize only values <=4 ULP outside original boundaries",
+  "changed_scientific_configuration": "User-authorized bounded AP-NJ initializer; normal inference configuration preserved by2026-11-07 repair, with explicit termination for pathological repeated/plateau states",
+  "scientific_limits": [
+    "initial accuracy/speed superiority is paired development evidence, not universal dominance",
+    "gene final-tree superiority unresolved; paired difference interval crosses zero",
+    "no global ML optimum or general MSC consistency certificate",
+    "post-freeze new seeds use the same simulator family",
+    "historical website benchmark data retain their original scientific freeze",
+    "Gene initial mean target failed in this repair; final development means slightly lower with intervals crossing zero and individual losses retained.",
+    "Ordinary warm initialization has measured small overhead; severe overlap-deficient cases can still have long strictly progressing tails."
+  ],
+  "outputs": {
+    "tree": "prediction.nwk",
+    "result": "RESULT.json",
+    "progress": "progress.json",
+    "initial": "initial/",
+    "gene": "gene/",
+    "species": "species.json",
+    "branch_support": "branch-support.json",
+    "unannotated_tree": "prediction.unannotated.nwk (support enabled only)",
+    "initial_tree": "initial/apnj.nwk (additional views: apnj-01.nwk etc.)",
+    "quality": "RESULT.json.quality: posterior search convergence, parameter convergence and intervention notices; initializer information and zero-overlap/gamma evidence warnings"
+  },
+  "provenance": "SOURCE_PROVENANCE.json",
+  "branch_support": {
+    "enabled_by_default": true,
+    "scale": [
+      0,
+      100
+    ],
+    "calibrated": false,
+    "bootstrap": false,
+    "correctness_probability": false,
+    "gene": {
+      "method": "gene_local_likelihood_weight",
+      "evidence": "three final-state approximate local profile likelihoods",
+      "additional_inference_runs": 0,
+      "additional_parameter_fits": 0,
+      "final_nni_verification_evaluations_when_stale": 1
+    },
+    "species": {
+      "method": "mean_worst_quartet_margin",
+      "evidence": "mean(current_score - max(alternative_scores)) over informative cached unique quartets",
+      "additional_inference_runs": 0,
+      "additional_quartet_scores": 0,
+      "final_integer_remapping_passes_when_stale": 1,
+      "missing_evidence": null,
+      "ranking_field": "mean_worst_margin",
+      "display_transform": "50 + 50*m/(1+abs(m)); fixed unit scale, not fitted",
+      "legacy_diagnostic": "sampled_quartet_agreement (0..100)",
+      "selection": "User-authorized pooled-AUC priority; original stricter confirmation gate failed",
+      "numeric_newick_precision": 17
+    },
+    "documentation": "BRANCH_SUPPORT.md"
+  },
+  "revision": "2026-11-07 uniform AP-NJ design repair within existing V1.0.2; no new version",
+  "search_robustness": {
+    "mlp": "exact complete neighbor-array recurrence, with downstream task refinement",
+    "gene": "eight low-gain rounds; every topology repeats; total LL span <= .01+1e-6*L; retain best verified state; convergence unconfirmed",
+    "msc": "compiled complete tree state plus append-only evidence epoch; finite objective/gains; accumulated objective verification",
+    "parameter_fit": "exact seed recurrence and at most64 rate-mode continuations; report nonconvergence on intervention",
+    "emergency": "10000 posterior sweeps, explicit failure rather than false convergence; existing web subprocess900s deadline",
+    "graph": "reject cycles, disconnected/dangling/asymmetric/empty graphs in reachable traversal/serialization paths",
+    "no_signal": "skip zero-variable-site warmstart with notice; uniform quartet probability for zero jointly observed evidence"
+  }
+}

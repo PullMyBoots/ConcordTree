@@ -1,0 +1,116 @@
+[
+  {
+    "task": "species",
+    "method": "ConcordTree",
+    "host_rss_gib": {
+      "n": 699,
+      "median": 0.9661827087402344,
+      "p25": 0.9116134643554688,
+      "p75": 1.1292381286621094
+    },
+    "gpu_allocated_gib": {
+      "n": 699,
+      "median": 0.11600065231323242,
+      "p25": 0.05147743225097656,
+      "p75": 0.30144357681274414
+    }
+  },
+  {
+    "task": "gene",
+    "method": "ConcordTree",
+    "host_rss_gib": {
+      "n": 159,
+      "median": 1.5700149536132812,
+      "p25": 1.3515567779541016,
+      "p75": 1.948965072631836
+    },
+    "gpu_allocated_gib": {
+      "n": 159,
+      "median": 0.5754132270812988,
+      "p25": 0.3257479667663574,
+      "p75": 0.5802168846130371
+    }
+  },
+  {
+    "task": "gene",
+    "method": "FastME",
+    "host_rss_gib": null,
+    "gpu_allocated_gib": null
+  },
+  {
+    "task": "gene",
+    "method": "RapidNJ",
+    "host_rss_gib": null,
+    "gpu_allocated_gib": null
+  },
+  {
+    "task": "gene",
+    "method": "VeryFastTree",
+    "host_rss_gib": null,
+    "gpu_allocated_gib": null
+  },
+  {
+    "task": "gene",
+    "method": "DIPPER GPU",
+    "host_rss_gib": null,
+    "gpu_allocated_gib": null
+  },
+  {
+    "task": "gene",
+    "method": "IQ-TREE --fast",
+    "host_rss_gib": {
+      "n": 200,
+      "median": 0.6608772277832031,
+      "p25": 0.2583789825439453,
+      "p75": 1.8648033142089844
+    },
+    "gpu_allocated_gib": null
+  },
+  {
+    "task": "gene",
+    "method": "FastTree",
+    "host_rss_gib": {
+      "n": 200,
+      "median": 0.3628349304199219,
+      "p25": 0.10853958129882812,
+      "p75": 0.8373050689697266
+    },
+    "gpu_allocated_gib": null
+  },
+  {
+    "task": "species",
+    "method": "CASTER-site",
+    "host_rss_gib": null,
+    "gpu_allocated_gib": null
+  },
+  {
+    "task": "species",
+    "method": "FastTree",
+    "host_rss_gib": null,
+    "gpu_allocated_gib": null
+  },
+  {
+    "task": "species",
+    "method": "FastME",
+    "host_rss_gib": null,
+    "gpu_allocated_gib": null
+  },
+  {
+    "task": "species",
+    "method": "RapidNJ",
+    "host_rss_gib": null,
+    "gpu_allocated_gib": null
+  },
+  {
+    "task": "species",
+    "method": "VeryFastTree",
+    "host_rss_gib": null,
+    "gpu_allocated_gib": null
+  },
+  {
+    "task": "species",
+    "method": "DIPPER GPU",
+    "host_rss_gib": null,
+    "gpu_allocated_gib": null
+  }
+]

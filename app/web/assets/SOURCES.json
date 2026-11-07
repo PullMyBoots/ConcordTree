@@ -1,0 +1,561 @@
+[
+  {
+    "id": "chameleon",
+    "title": "Panther chameleon",
+    "category": "Animals",
+    "kind": "Photograph",
+    "author": "Philipp Fahlbusch",
+    "source": "https://www.pexels.com/photo/close-up-photograph-of-a-panther-chameleon-14565246/",
+    "url": "https://images.pexels.com/photos/14565246/pexels-photo-14565246.jpeg?w=4096&q=95",
+    "license": "Pexels License",
+    "license_url": "https://www.pexels.com/license/",
+    "original": "output/web-closeups/chameleon-original.jpeg",
+    "original_dimensions": [
+      4096,
+      2732
+    ],
+    "original_sha256": "ad4ca4a8b7fab3e680bd3c1b8e5c8f15c165c71a43b22c8c8a0e4ba64e2d4748",
+    "active": true,
+    "panel": "right",
+    "composition": "Desktop and mobile focal crops over a blurred extension of the same image. No subject synthesis, colorization or sharpening. Sharp crops are downsampled or kept at native resolution; background canvas size is not a claim of native 4K detail.",
+    "files": [
+      {
+        "path": "web/assets/chameleon.webp",
+        "bytes": 307826,
+        "dimensions": [
+          3840,
+          2160
+        ],
+        "sha256": "0230f981e77eb98126b7d780749dd3266289699ad337f081fa62fd5fe0a267dc"
+      },
+      {
+        "path": "web/assets/chameleon-mobile.webp",
+        "bytes": 92570,
+        "dimensions": [
+          1080,
+          2340
+        ],
+        "sha256": "2b46f032ea94e8c107dada47e48ca17c0a8d2ae154ccf379abe3a9e40408aa13"
+      }
+    ],
+    "desktop": "/assets/chameleon.webp",
+    "mobile": "/assets/chameleon-mobile.webp"
+  },
+  {
+    "id": "sundew",
+    "title": "Sundew",
+    "category": "Plants",
+    "kind": "Macro photograph",
+    "author": "Liana Laur",
+    "source": "https://www.pexels.com/photo/close-up-of-a-sundew-plant-in-a-swamp-setting-29494251/",
+    "url": "https://images.pexels.com/photos/29494251/pexels-photo-29494251.jpeg?w=4096&q=95",
+    "license": "Pexels License",
+    "license_url": "https://www.pexels.com/license/",
+    "original": "output/web-closeups/sundew-original.jpeg",
+    "original_dimensions": [
+      4096,
+      2721
+    ],
+    "original_sha256": "f717621bac8ddf317c69824c9960e25f58ecb14cb6ab087fa895cd313acfb4a1",
+    "active": true,
+    "panel": "right",
+    "composition": "Desktop and mobile focal crops over a blurred extension of the same image. No subject synthesis, colorization or sharpening. Sharp crops are downsampled or kept at native resolution; background canvas size is not a claim of native 4K detail.",
+    "files": [
+      {
+        "path": "web/assets/sundew.webp",
+        "bytes": 611890,
+        "dimensions": [
+          3840,
+          2160
+        ],
+        "sha256": "fbc519bdfa901d934a78cec161e5929ccea581b3e1757393f9a1859a75cec9be"
+      },
+      {
+        "path": "web/assets/sundew-mobile.webp",
+        "bytes": 120158,
+        "dimensions": [
+          1080,
+          2340
+        ],
+        "sha256": "5142ae069ef983a5232296feddcd58980643a3c941d8e0260dbbc59dbcc9b307"
+      }
+    ],
+    "desktop": "/assets/sundew.webp",
+    "mobile": "/assets/sundew-mobile.webp"
+  },
+  {
+    "id": "mushroom",
+    "title": "Mushroom",
+    "category": "Fungi",
+    "kind": "Macro photograph",
+    "author": "Tommes Frites",
+    "source": "https://www.pexels.com/photo/close-up-of-a-mushroom-on-forest-moss-40384997/",
+    "url": "https://images.pexels.com/photos/40384997/pexels-photo-40384997.jpeg?w=4096&q=95",
+    "license": "Pexels License",
+    "license_url": "https://www.pexels.com/license/",
+    "original": "output/web-closeups/mushroom-original.jpeg",
+    "original_dimensions": [
+      4096,
+      6130
+    ],
+    "original_sha256": "0aec954eff82fea4d1b69da9b4ecadb65245a026f225a06e718723f1e7adc8c2",
+    "active": true,
+    "panel": "right",
+    "composition": "Desktop and mobile focal crops over a blurred extension of the same image. No subject synthesis, colorization or sharpening. Sharp crops are downsampled or kept at native resolution; background canvas size is not a claim of native 4K detail.",
+    "files": [
+      {
+        "path": "web/assets/mushroom.webp",
+        "bytes": 192602,
+        "dimensions": [
+          3840,
+          2160
+        ],
+        "sha256": "a3f2caaf63a497464fbcb0555fd7c0d3faa8e7943bad823684879b68c4fd139d"
+      },
+      {
+        "path": "web/assets/mushroom-mobile.webp",
+        "bytes": 53078,
+        "dimensions": [
+          1080,
+          2340
+        ],
+        "sha256": "3a6327fb0f055aefa232eff574d31257e18a288c86f87477f470828662d548e6"
+      }
+    ],
+    "desktop": "/assets/mushroom.webp",
+    "mobile": "/assets/mushroom-mobile.webp"
+  },
+  {
+    "id": "tiger",
+    "title": "Tiger",
+    "category": "Animals",
+    "kind": "Photograph",
+    "author": "Diego F. Parra",
+    "source": "https://www.pexels.com/photo/close-up-of-a-tiger-in-the-wild-16878233/",
+    "url": "https://images.pexels.com/photos/16878233/pexels-photo-16878233.jpeg?w=4096&q=95",
+    "license": "Pexels License",
+    "license_url": "https://www.pexels.com/license/",
+    "original": "output/web-closeups/tiger-original.jpeg",
+    "original_dimensions": [
+      4096,
+      2734
+    ],
+    "original_sha256": "1f7e7db6c20b2aadb147cd08a7298d7311739bd6b0563f4517fbceb6f80c4866",
+    "active": true,
+    "panel": "right",
+    "composition": "Desktop and mobile focal crops over a blurred extension of the same image. No subject synthesis, colorization or sharpening. Sharp crops are downsampled or kept at native resolution; background canvas size is not a claim of native 4K detail.",
+    "files": [
+      {
+        "path": "web/assets/tiger.webp",
+        "bytes": 595218,
+        "dimensions": [
+          3840,
+          2160
+        ],
+        "sha256": "a7ea279bbd1961c6f3d49ff22c4ea53aa751fda5792babb4abb29d4161c63704"
+      },
+      {
+        "path": "web/assets/tiger-mobile.webp",
+        "bytes": 166952,
+        "dimensions": [
+          1080,
+          2340
+        ],
+        "sha256": "24cdbbe5fea9a30132e208bef1e37ee6e8d02c93141ae2138ccf0bf709e0f780"
+      }
+    ],
+    "desktop": "/assets/tiger.webp",
+    "mobile": "/assets/tiger-mobile.webp"
+  },
+  {
+    "id": "tyrannosaurus",
+    "title": "Tyrannosaurus reconstruction",
+    "author": "Mehmet Turgut Kirkgoz",
+    "category": "Prehistoric animals",
+    "kind": "Dinosaur reconstruction, not a photograph of a living animal",
+    "url": "https://images.pexels.com/photos/13681328/pexels-photo-13681328.jpeg?w=4096&q=95",
+    "source": "https://www.pexels.com/photo/close-up-shot-of-a-dinosaur-13681328/",
+    "license": "Pexels License",
+    "license_url": "https://www.pexels.com/license/",
+    "original": "output/web-closeups/tyrannosaurus-original.jpg",
+    "original_dimensions": [
+      4096,
+      2731
+    ],
+    "original_sha256": "882eb4a6d295146ad19f1d8a3a5899e093707365bd5d9ac77beb37597fbd83c7",
+    "active": true,
+    "panel": "right",
+    "composition": "Desktop and mobile focal crops over a blurred extension of the same image. No subject synthesis, colorization or sharpening. Sharp crops are downsampled or kept at native resolution; background canvas size is not a claim of native 4K detail. Desktop and mobile crops are horizontally mirrored to place the subject on the left; the form remains on the right.",
+    "files": [
+      {
+        "path": "web/assets/tyrannosaurus.webp",
+        "bytes": 881918,
+        "dimensions": [
+          3840,
+          2160
+        ],
+        "sha256": "e65415218f483abab961c7da7b4f92fc6b74ca1a2c60a2847403ee2a6db520d5"
+      },
+      {
+        "path": "web/assets/tyrannosaurus-mobile.webp",
+        "bytes": 224430,
+        "dimensions": [
+          1080,
+          2340
+        ],
+        "sha256": "8f5c1ee6e5434947fcf1cd3e2b5188406349cbd534ba3f644810fbb12436c815"
+      }
+    ],
+    "desktop": "/assets/tyrannosaurus.webp",
+    "mobile": "/assets/tyrannosaurus-mobile.webp",
+    "mirrored": true
+  },
+  {
+    "id": "ammonite",
+    "title": "Ammonite fossils",
+    "author": "Inês Pavão",
+    "category": "Animal fossils",
+    "kind": "Close-up photograph of fossil specimens",
+    "url": "https://images.pexels.com/photos/40675665/pexels-photo-40675665.jpeg?w=4096&q=95",
+    "source": "https://www.pexels.com/photo/detailed-ammonite-fossil-display-with-spiral-patterns-40675665/",
+    "license": "Pexels License",
+    "license_url": "https://www.pexels.com/license/",
+    "original": "output/web-closeups/ammonite-original.jpg",
+    "original_dimensions": [
+      4096,
+      2731
+    ],
+    "original_sha256": "af79528798f8255794b36cf7e9ad07b732b8db7413690f8b8b4e08d02c9ced4e",
+    "active": true,
+    "panel": "right",
+    "composition": "Desktop and mobile focal crops over a blurred extension of the same image. No subject synthesis, colorization or sharpening. Sharp crops are downsampled or kept at native resolution; background canvas size is not a claim of native 4K detail.",
+    "files": [
+      {
+        "path": "web/assets/ammonite.webp",
+        "bytes": 754172,
+        "dimensions": [
+          3840,
+          2160
+        ],
+        "sha256": "0bed6ab3767ce72ad39ce52d7f0066a56462ff8ccb4982ea71657d6287d5bcb3"
+      },
+      {
+        "path": "web/assets/ammonite-mobile.webp",
+        "bytes": 236562,
+        "dimensions": [
+          1080,
+          2340
+        ],
+        "sha256": "c7cbaf3fe3bd374f45fae9c5f60f9560f2904e87d80bed563461c484a0650df0"
+      }
+    ],
+    "desktop": "/assets/ammonite.webp",
+    "mobile": "/assets/ammonite-mobile.webp"
+  },
+  {
+    "id": "diatom",
+    "title": "Diatom",
+    "author": "turek",
+    "category": "Algae",
+    "kind": "Light micrograph of a diatom (microscopic alga)",
+    "url": "https://images.pexels.com/photos/8740054/pexels-photo-8740054.jpeg?w=4096&q=95",
+    "source": "https://www.pexels.com/photo/a-microorganism-under-a-microscope-8740054/",
+    "license": "Pexels License",
+    "license_url": "https://www.pexels.com/license/",
+    "original": "output/web-closeups/diatom-original.jpg",
+    "original_dimensions": [
+      4096,
+      3072
+    ],
+    "original_sha256": "7b5d5b3bad611599c6e03bc286a83e91856a441a3e5b66bd6696aa831a41113d",
+    "active": true,
+    "panel": "right",
+    "composition": "Desktop and mobile focal crops over a blurred extension of the same image. No subject synthesis, colorization or sharpening. Sharp crops are downsampled or kept at native resolution; background canvas size is not a claim of native 4K detail.",
+    "files": [
+      {
+        "path": "web/assets/diatom.webp",
+        "bytes": 667694,
+        "dimensions": [
+          3840,
+          2160
+        ],
+        "sha256": "22590a4f6ff823758431ebd656d87bb1f7c75845064d3e84be5229cc81d1f932"
+      },
+      {
+        "path": "web/assets/diatom-mobile.webp",
+        "bytes": 199988,
+        "dimensions": [
+          1080,
+          2340
+        ],
+        "sha256": "4a0734912eed53a4f85a423e48009bf7b409f19f89cb30fc4084a9bb836cbc35"
+      }
+    ],
+    "desktop": "/assets/diatom.webp",
+    "mobile": "/assets/diatom-mobile.webp"
+  },
+  {
+    "id": "cells",
+    "title": "Plant cells",
+    "author": "turek",
+    "category": "Eukaryotic cells",
+    "kind": "Light micrograph of plant cells, as described by the photographer; species unspecified",
+    "url": "https://images.pexels.com/photos/8932609/pexels-photo-8932609.jpeg?w=4096&q=95",
+    "source": "https://www.pexels.com/photo/microscopic-view-of-elements-8932609/",
+    "license": "Pexels License",
+    "license_url": "https://www.pexels.com/license/",
+    "original": "output/web-closeups/cells-alternative-original.jpg",
+    "original_dimensions": [
+      4096,
+      3072
+    ],
+    "original_sha256": "67274569517c626569cb367e50ae170f413671ce28d564a743c5730c5b72e77f",
+    "active": true,
+    "panel": "right",
+    "composition": "Desktop and mobile focal crops over a blurred extension of the same image. No subject synthesis, colorization or sharpening. Sharp crops are downsampled or kept at native resolution; background canvas size is not a claim of native 4K detail.",
+    "files": [
+      {
+        "path": "web/assets/cells.webp",
+        "bytes": 694030,
+        "dimensions": [
+          3840,
+          2160
+        ],
+        "sha256": "1a75d195fcd819fd463ebec501a08335586507716fe5d1c5e037bc3be8c23f72"
+      },
+      {
+        "path": "web/assets/cells-mobile.webp",
+        "bytes": 247030,
+        "dimensions": [
+          1080,
+          2340
+        ],
+        "sha256": "0d8ffe0afa0041f363018b55d9983eaacbf99a719841ed145e429f9a70ac050b"
+      }
+    ],
+    "desktop": "/assets/cells.webp",
+    "mobile": "/assets/cells-mobile.webp"
+  },
+  {
+    "id": "seed-fern",
+    "title": "Lepidodendron fossil",
+    "author": "Richard Daintree / State Library of Victoria; via Museums Victoria",
+    "category": "Prehistoric plants / plant fossils",
+    "kind": "Historical photograph of Lepidodendron fossil specimens; collection item P 1330 is classified as a natural-sciences model",
+    "url": "https://collections.museumsvictoria.com.au/content/media/41/886191-large.jpg",
+    "source": "https://collections.museumsvictoria.com.au/specimens/1064123",
+    "license": "Public domain",
+    "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+    "original": "output/web-closeups/seed-fern-original.jpg",
+    "original_dimensions": [
+      3000,
+      2252
+    ],
+    "original_sha256": "0a841cbff65d9df61e363f4a203298c5245c8149e5f7133e28d036e1dd6e1066",
+    "active": true,
+    "panel": "right",
+    "composition": "Desktop and mobile focal crops over a blurred extension of the same image. No subject synthesis, colorization or sharpening. Sharp crops are downsampled or kept at native resolution; background canvas size is not a claim of native 4K detail.",
+    "files": [
+      {
+        "path": "web/assets/seed-fern.webp",
+        "bytes": 1104332,
+        "dimensions": [
+          3840,
+          2160
+        ],
+        "sha256": "632971ea37283441b1d2bc798e609968a0cc5e9773de307bc5e09db41396583e"
+      },
+      {
+        "path": "web/assets/seed-fern-mobile.webp",
+        "bytes": 315954,
+        "dimensions": [
+          1080,
+          2340
+        ],
+        "sha256": "73ee068416aff4e0a5908a63b0115d742465fedc519249febfdc81ad02a0a39a"
+      }
+    ],
+    "desktop": "/assets/seed-fern.webp",
+    "mobile": "/assets/seed-fern-mobile.webp"
+  },
+  {
+    "id": "virus",
+    "title": "SARS-CoV-2 particle",
+    "author": "CDC / Cynthia S. Goldsmith and A. Tamin",
+    "category": "Viruses",
+    "kind": "Electron micrograph of a negatively stained virus particle",
+    "url": "https://wwwn.cdc.gov/phil/PHIL_Images/23640/23640.tif",
+    "source": "https://wwwn.cdc.gov/phil/details.aspx?pid=23640",
+    "license": "Public domain",
+    "license_url": "https://wwwn.cdc.gov/phil/details.aspx?pid=23640",
+    "original": "output/web-closeups/virus-original.jpg",
+    "original_dimensions": [
+      2097,
+      2097
+    ],
+    "original_sha256": "dcf77b65f98698bd1e2ec179719ca775f6e975f7217e3691f1e50a633981c4f7",
+    "active": true,
+    "panel": "right",
+    "composition": "Desktop and mobile focal crops over a blurred extension of the same image. No subject synthesis, colorization or sharpening. Sharp crops are downsampled or kept at native resolution; background canvas size is not a claim of native 4K detail.",
+    "files": [
+      {
+        "path": "web/assets/virus.webp",
+        "bytes": 1144658,
+        "dimensions": [
+          3840,
+          2160
+        ],
+        "sha256": "1d776b1923f1c41eb43a5f026b8ea0d1f9eff1e6587777454d073ad7432b842a"
+      },
+      {
+        "path": "web/assets/virus-mobile.webp",
+        "bytes": 445322,
+        "dimensions": [
+          1080,
+          2340
+        ],
+        "sha256": "af5859b5a489c4aea1cfe19a576994f60373777b5bfe5b77c27ee89c2df55c08"
+      }
+    ],
+    "desktop": "/assets/virus.webp",
+    "mobile": "/assets/virus-mobile.webp"
+  },
+  {
+    "id": "fern",
+    "title": "Backlit fern",
+    "category": "Plants",
+    "kind": "Close-up photograph of fern fronds",
+    "author": "Ardi Evans",
+    "source": "https://unsplash.com/photos/shallow-focus-photography-of-sunlight-passing-through-fern-plant-gnUeb6nSFY8",
+    "license": "Unsplash License",
+    "license_url": "https://unsplash.com/license",
+    "original": "output/web-background-sources/fern-highres.jpg",
+    "original_dimensions": [
+      4000,
+      5333
+    ],
+    "original_sha256": "06eab602e1db8732c2dc6faa06098a9f52ef9092062462a5bbf37113f4087727",
+    "active": true,
+    "panel": "right",
+    "composition": "Desktop and mobile focal crops over a blurred extension of the same image. No subject synthesis, colorization or sharpening. Sharp crops are downsampled or kept at native resolution; background canvas size is not a claim of native 4K detail.",
+    "files": [
+      {
+        "path": "web/assets/fern.webp",
+        "bytes": 723996,
+        "dimensions": [
+          3840,
+          2160
+        ],
+        "sha256": "6c0a5f65ce59a98e9b94a7980044d8e6ca61f9271627f2d8d9a66438766a7ddd"
+      },
+      {
+        "path": "web/assets/fern-mobile.webp",
+        "bytes": 215590,
+        "dimensions": [
+          1080,
+          2340
+        ],
+        "sha256": "a28b35bdb5e65cf20d498b77ec643904e17b3aeaac3877439badb18fd1bab8ae"
+      }
+    ],
+    "desktop": "/assets/fern.webp",
+    "mobile": "/assets/fern-mobile.webp"
+  },
+  {
+    "id": "hummingbird",
+    "title": "Hummingbird",
+    "category": "Animals",
+    "kind": "Photograph of a hummingbird in flight",
+    "author": "Mohan Nannapaneni",
+    "source": "https://www.pexels.com/photo/green-hummingbird-in-flight-17917429/",
+    "url": "https://images.pexels.com/photos/17917429/pexels-photo-17917429.jpeg",
+    "license": "Pexels License",
+    "license_url": "https://www.pexels.com/license/",
+    "original": "output/web-background-sources/hummingbird-highres.jpg",
+    "original_dimensions": [
+      4096,
+      2732
+    ],
+    "original_sha256": "2cb8daab486b16fe8e2a041203c7be0caa2875261616d34c07d4f76d7a9e24e7",
+    "active": true,
+    "panel": "right",
+    "composition": "Desktop and mobile focal crops over a blurred extension of the same image. No subject synthesis, colorization or sharpening. Sharp crops are downsampled or kept at native resolution; background canvas size is not a claim of native 4K detail.",
+    "files": [
+      {
+        "path": "web/assets/hummingbird.webp",
+        "bytes": 289638,
+        "dimensions": [
+          3840,
+          2160
+        ],
+        "sha256": "135b98d9ed2fae9c3a1a63d74eb99a7107d47aacaf60e6b926ea3c0c23077508"
+      },
+      {
+        "path": "web/assets/hummingbird-mobile.webp",
+        "bytes": 106898,
+        "dimensions": [
+          1080,
+          2340
+        ],
+        "sha256": "420f398e43bf7ad711cf1eccbb5fbc8d5969004499cc1eb4912c62fe9d0b8d15"
+      }
+    ],
+    "desktop": "/assets/hummingbird.webp",
+    "mobile": "/assets/hummingbird-mobile.webp"
+  },
+  {
+    "name": "forest",
+    "subject": "Sunlit forest",
+    "source": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e",
+    "license": "https://unsplash.com/license",
+    "files": [
+      {
+        "path": "web/assets/forest-mobile.webp",
+        "bytes": 879730,
+        "sha256": "856a94ae5b8d659062036d3fbb042ea577ffdb2073012db52c8111a4e8b0dbd7",
+        "dimensions": [
+          1920,
+          1279
+        ]
+      },
+      {
+        "path": "web/assets/forest.webp",
+        "bytes": 1728252,
+        "sha256": "7954f932bf97355ebc550e523f96e1936febd3108965c4e43f32e5f0f4a1f43e",
+        "dimensions": [
+          2560,
+          1705
+        ]
+      }
+    ],
+    "active": false
+  },
+  {
+    "name": "reef",
+    "subject": "Coral reef and fish, Red Sea",
+    "photographer": "Francesco Ungaro",
+    "source": "https://unsplash.com/photos/orange-fish-on-coral-reef-hqAGgNsMpEY",
+    "license": "https://unsplash.com/license",
+    "files": [
+      {
+        "path": "web/assets/reef.webp",
+        "bytes": 1225092,
+        "sha256": "8b4f295e22c460c73e3f25b9f0d48b86b52eebaf1e87302842946088ecac3e3a",
+        "dimensions": [
+          3000,
+          4000
+        ]
+      },
+      {
+        "path": "web/assets/reef-mobile.webp",
+        "bytes": 619646,
+        "sha256": "b05981ecd3183b2d18087a1bcd70b4fc849ec29eb53894706c965446bec67de1",
+        "dimensions": [
+          1920,
+          2560
+        ]
+      }
+    ],
+    "active": false
+  }
+]

@@ -1,0 +1,181 @@
+{
+  "status": "passed",
+  "cases": [
+    {
+      "name": "gene256",
+      "task": "gene",
+      "taxa": 256,
+      "seconds": 2.533231073990464,
+      "initialization": [
+        {
+          "preparation_seconds": 0.000947443,
+          "placement_seconds": 0.036320821,
+          "download_seconds": 3.7768e-05,
+          "sequence_bytes": 262144,
+          "topology_workspace_bytes": 114688,
+          "constructor": "DIPPER GPU k-closest placement",
+          "backend": "in-process packed native",
+          "upstream_commit": "d80df351107f05ea2ac01076709defc4ab9d702e",
+          "seed": 20260934,
+          "all_sites": 2048,
+          "native_sha256": "d797813f8c87de96ca81fb1556b0466746e015278da24caa8adb963e543f2d91",
+          "taxa": 256,
+          "distance": "upstream JC; union of usable sites",
+          "sampled_sites": 2048,
+          "full_site_input": true,
+          "host_encoding": "existing packed nibbles; row padding and deterministic shuffle only",
+          "constructor_seconds": 0.04221767792478204,
+          "initial_split_hash": "0db30c7dc6966e2aa13f73c9a513703566920dbc0f73cb53114f9216ffeefd45",
+          "requested_missing_data_model": "standard",
+          "dipper_seconds": 0.04377669608220458,
+          "mlp_seconds": 0.3070390443317592,
+          "mlp_predictor": "homogeneous",
+          "mlp_checkpoint_sha256": "8554764e33885992cc31e4d044a82a4ae8e876f119197e72b07ae3a1dcbc533b",
+          "frontend_seconds": 0.35550255607813597
+        }
+      ],
+      "support": {
+        "enabled": true,
+        "method": "gene_local_likelihood_weight",
+        "label": "Local likelihood weight",
+        "path": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/output/dipper-integration-20261106/pipeline-fixed/gene256/branch-support.json",
+        "annotated_tree": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/output/dipper-integration-20261106/pipeline-fixed/gene256/prediction.nwk",
+        "unannotated_tree": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/output/dipper-integration-20261106/pipeline-fixed/gene256/prediction.unannotated.nwk",
+        "calibrated": false,
+        "internal_branches": 253,
+        "available": 253,
+        "unavailable": 0,
+        "computation": {
+          "source": "last_search_scan",
+          "additional_inference_runs": 0,
+          "additional_parameter_fits": 0,
+          "additional_nni_evaluations": 0,
+          "final_state_verified": true,
+          "final_verification_and_summary_seconds": 0.006637813989073038,
+          "export_seconds": 0.0034076361916959286
+        }
+      }
+    },
+    {
+      "name": "species256-msa",
+      "task": "species",
+      "taxa": 256,
+      "seconds": 1.1265402059070766,
+      "initialization": [
+        {
+          "preparation_seconds": 0.013811486,
+          "placement_seconds": 0.035199781,
+          "download_seconds": 3.8119e-05,
+          "sequence_bytes": 15734784,
+          "topology_workspace_bytes": 114688,
+          "constructor": "DIPPER GPU k-closest placement",
+          "backend": "in-process packed native",
+          "upstream_commit": "d80df351107f05ea2ac01076709defc4ab9d702e",
+          "seed": 20260934,
+          "all_sites": 122917,
+          "native_sha256": "d797813f8c87de96ca81fb1556b0466746e015278da24caa8adb963e543f2d91",
+          "taxa": 256,
+          "distance": "upstream JC; union of usable sites",
+          "sampled_sites": 122917,
+          "full_site_input": true,
+          "host_encoding": "existing packed nibbles; row padding and deterministic shuffle only",
+          "constructor_seconds": 0.0509667550213635,
+          "initial_split_hash": "ffb37c76c39e3c56aab9c1cccbc694260b73ea8be70cc16aa830fc3ad538aca8",
+          "requested_missing_data_model": "standard",
+          "dipper_seconds": 0.051746014039963484,
+          "mlp_seconds": 0.061578353866934776,
+          "mlp_predictor": "heterogeneous",
+          "mlp_checkpoint_sha256": "a74e89e7b6091938f0b413a5c1446864bc18a8db7176f5c77a204018bc8e2edb",
+          "frontend_seconds": 0.1179579901508987
+        }
+      ],
+      "support": {
+        "enabled": true,
+        "method": "mean_worst_quartet_margin",
+        "label": "Quartet margin index",
+        "path": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/output/dipper-integration-20261106/pipeline-fixed/species256-msa/branch-support.json",
+        "annotated_tree": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/output/dipper-integration-20261106/pipeline-fixed/species256-msa/prediction.nwk",
+        "unannotated_tree": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/output/dipper-integration-20261106/pipeline-fixed/species256-msa/prediction.unannotated.nwk",
+        "calibrated": false,
+        "ranking_field": "mean_worst_margin",
+        "internal_branches": 253,
+        "available": 253,
+        "unavailable": 0,
+        "computation": {
+          "source": "remapped_cached_quartets",
+          "additional_inference_runs": 0,
+          "additional_quartet_scores": 0,
+          "additional_classification_passes": 1,
+          "cached_unique_quartets": 388134,
+          "retained_classification_bytes": 1552536,
+          "final_state_verified": true,
+          "summary_seconds": 0.010911112185567617,
+          "export_seconds": 0.0037878979928791523
+        }
+      }
+    },
+    {
+      "name": "species256-loci",
+      "task": "species",
+      "taxa": 256,
+      "seconds": 2.4432185208424926,
+      "initialization": [
+        {
+          "preparation_seconds": 0.008435272,
+          "placement_seconds": 0.035406737,
+          "download_seconds": 3.8601e-05,
+          "sequence_bytes": 15734784,
+          "topology_workspace_bytes": 114688,
+          "constructor": "DIPPER GPU k-closest placement",
+          "backend": "in-process packed native",
+          "upstream_commit": "d80df351107f05ea2ac01076709defc4ab9d702e",
+          "seed": 20260934,
+          "all_sites": 122917,
+          "native_sha256": "d797813f8c87de96ca81fb1556b0466746e015278da24caa8adb963e543f2d91",
+          "taxa": 256,
+          "distance": "upstream JC; union of usable sites",
+          "sampled_sites": 122917,
+          "full_site_input": true,
+          "host_encoding": "existing packed nibbles; row padding and deterministic shuffle only",
+          "constructor_seconds": 0.04624504689127207,
+          "initial_split_hash": "ffb37c76c39e3c56aab9c1cccbc694260b73ea8be70cc16aa830fc3ad538aca8",
+          "requested_missing_data_model": "standard",
+          "dipper_seconds": 0.046799175906926394,
+          "mlp_seconds": 0.05287768878042698,
+          "mlp_predictor": "heterogeneous",
+          "mlp_checkpoint_sha256": "a74e89e7b6091938f0b413a5c1446864bc18a8db7176f5c77a204018bc8e2edb",
+          "frontend_seconds": 0.10414500907063484
+        }
+      ],
+      "support": {
+        "enabled": true,
+        "method": "mean_worst_quartet_margin",
+        "label": "Quartet margin index",
+        "path": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/output/dipper-integration-20261106/pipeline-fixed/species256-loci/branch-support.json",
+        "annotated_tree": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/output/dipper-integration-20261106/pipeline-fixed/species256-loci/prediction.nwk",
+        "unannotated_tree": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/output/dipper-integration-20261106/pipeline-fixed/species256-loci/prediction.unannotated.nwk",
+        "calibrated": false,
+        "ranking_field": "mean_worst_margin",
+        "internal_branches": 253,
+        "available": 253,
+        "unavailable": 0,
+        "computation": {
+          "source": "remapped_cached_quartets",
+          "additional_inference_runs": 0,
+          "additional_quartet_scores": 0,
+          "additional_classification_passes": 1,
+          "cached_unique_quartets": 914940,
+          "retained_classification_bytes": 3659760,
+          "final_state_verified": true,
+          "summary_seconds": 0.027847029268741608,
+          "export_seconds": 0.004701581317931414
+        }
+      }
+    },
+    {
+      "name": "gene-legacy-multiview",
+      "status": "passed",
+      "seconds": 0.3234374728053808
+    }
+  ]
+}

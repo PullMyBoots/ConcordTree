@@ -1,0 +1,12 @@
+test_api_options_and_fresh_output (__main__.Contracts) ... ok
+test_bad_alignment_rejected (__main__.Contracts) ... ok
+test_checkpoints_and_task_routing (__main__.Contracts) ... ok
+test_fasta_conversion_and_input_unchanged (__main__.Contracts) ... ok
+test_foreign_runtime_rejected (__main__.Contracts) ... ok
+test_immutable_paths (__main__.Contracts) ... ok
+test_roundtrip_parameter_bounds (__main__.Contracts) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.025s
+
+OK

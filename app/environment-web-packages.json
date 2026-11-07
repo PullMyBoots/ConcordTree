@@ -1,0 +1,104 @@
+{
+  "python": "3.12.3",
+  "executable": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/release/V1.0.2/.venv-web/bin/python",
+  "base_prefix": "/usr",
+  "prefix": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/release/V1.0.2/.venv-web",
+  "packages": [
+    {
+      "name": "annotated-doc",
+      "version": "0.0.5"
+    },
+    {
+      "name": "annotated-types",
+      "version": "0.8.0"
+    },
+    {
+      "name": "anyio",
+      "version": "4.16.0"
+    },
+    {
+      "name": "certifi",
+      "version": "2026.10.23"
+    },
+    {
+      "name": "click",
+      "version": "8.5.0"
+    },
+    {
+      "name": "fastapi",
+      "version": "0.136.3"
+    },
+    {
+      "name": "h11",
+      "version": "0.16.0"
+    },
+    {
+      "name": "httpcore",
+      "version": "1.0.9"
+    },
+    {
+      "name": "httpx",
+      "version": "0.28.1"
+    },
+    {
+      "name": "idna",
+      "version": "3.20"
+    },
+    {
+      "name": "pip",
+      "version": "24.0"
+    },
+    {
+      "name": "pydantic",
+      "version": "2.14.2"
+    },
+    {
+      "name": "pydantic_core",
+      "version": "2.50.2"
+    },
+    {
+      "name": "python-multipart",
+      "version": "0.0.29"
+    },
+    {
+      "name": "starlette",
+      "version": "1.10.0"
+    },
+    {
+      "name": "typing-inspection",
+      "version": "0.4.5"
+    },
+    {
+      "name": "typing_extensions",
+      "version": "4.16.0"
+    },
+    {
+      "name": "uvicorn",
+      "version": "0.47.0"
+    }
+  ],
+  "loaded_modules": {
+    "fastapi": {
+      "file": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/release/V1.0.2/.venv-web/lib/python3.12/site-packages/fastapi/__init__.py",
+      "version": "0.136.3"
+    },
+    "uvicorn": {
+      "file": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/release/V1.0.2/.venv-web/lib/python3.12/site-packages/uvicorn/__init__.py",
+      "version": "0.47.0"
+    },
+    "multipart": {
+      "file": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/release/V1.0.2/.venv-web/lib/python3.12/site-packages/multipart/__init__.py",
+      "version": "0.0.29"
+    },
+    "pydantic": {
+      "file": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/release/V1.0.2/.venv-web/lib/python3.12/site-packages/pydantic/__init__.py",
+      "version": "2.14.2"
+    },
+    "starlette": {
+      "file": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/release/V1.0.2/.venv-web/lib/python3.12/site-packages/starlette/__init__.py",
+      "version": "1.10.0"
+    }
+  },
+  "external_home_modules": [],
+  "scope": "Local web packages and copied executable; system Python3.12 standard library and Linux shared libraries remain required."
+}

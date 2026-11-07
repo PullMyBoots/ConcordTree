@@ -1,0 +1,206 @@
+{
+  "status": "complete",
+  "planned": 64,
+  "complete": 64,
+  "failed": 0,
+  "methods": {
+    "common": {
+      "by_task": {
+        "gene": {
+          "records": 64,
+          "candidate_nrf": 0.13159199509657807,
+          "dipper_nrf": 0.29669324822094373,
+          "delta": -0.1651012531243657,
+          "paired_stratified_bootstrap95": [
+            -0.19389627369753473,
+            -0.13833772963880842
+          ],
+          "win": 63,
+          "tie": 0,
+          "loss": 1,
+          "worst_delta": 0.217200097727828,
+          "best_delta": -0.6836935166994106
+        }
+      },
+      "by_scale": {
+        "gene/512": {
+          "records": 16,
+          "candidate_nrf": 0.12843811394891946,
+          "dipper_nrf": 0.3504420432220039,
+          "delta": -0.2220039292730845,
+          "paired_stratified_bootstrap95": [
+            -0.30402750491159136,
+            -0.15397838899803537
+          ],
+          "win": 16,
+          "tie": 0,
+          "loss": 0,
+          "worst_delta": -0.07662082514734775,
+          "best_delta": -0.6836935166994106
+        },
+        "gene/1024": {
+          "records": 16,
+          "candidate_nrf": 0.10320763956904995,
+          "dipper_nrf": 0.2761998041136141,
+          "delta": -0.17299216454456415,
+          "paired_stratified_bootstrap95": [
+            -0.21786238981390793,
+            -0.1317320641527914
+          ],
+          "win": 16,
+          "tie": 0,
+          "loss": 0,
+          "worst_delta": -0.03623898139079333,
+          "best_delta": -0.3379040156709109
+        },
+        "gene/2048": {
+          "records": 16,
+          "candidate_nrf": 0.09935819070904645,
+          "dipper_nrf": 0.26809290953545234,
+          "delta": -0.16873471882640587,
+          "paired_stratified_bootstrap95": [
+            -0.2183694987775061,
+            -0.12258404645476775
+          ],
+          "win": 16,
+          "tie": 0,
+          "loss": 0,
+          "worst_delta": -0.0254278728606357,
+          "best_delta": -0.3691931540342298
+        },
+        "gene/4096": {
+          "records": 16,
+          "candidate_nrf": 0.19536403615929637,
+          "dipper_nrf": 0.2920382360127046,
+          "delta": -0.09667419985340825,
+          "paired_stratified_bootstrap95": [
+            -0.14486661678475446,
+            -0.04112051062790132
+          ],
+          "win": 15,
+          "tie": 0,
+          "loss": 1,
+          "worst_delta": 0.217200097727828,
+          "best_delta": -0.29025164915709745
+        }
+      },
+      "by_family": {
+        "gene/gene": {
+          "records": 64,
+          "candidate_nrf": 0.13159199509657807,
+          "dipper_nrf": 0.29669324822094373,
+          "delta": -0.1651012531243657,
+          "paired_stratified_bootstrap95": [
+            -0.19389627369753473,
+            -0.13833772963880842
+          ],
+          "win": 63,
+          "tie": 0,
+          "loss": 1,
+          "worst_delta": 0.217200097727828,
+          "best_delta": -0.6836935166994106
+        }
+      }
+    },
+    "union": {
+      "by_task": {
+        "gene": {
+          "records": 64,
+          "candidate_nrf": 0.13135912800642413,
+          "dipper_nrf": 0.29669324822094373,
+          "delta": -0.1653341202145196,
+          "paired_stratified_bootstrap95": [
+            -0.19419254234457245,
+            -0.1385886333112281
+          ],
+          "win": 63,
+          "tie": 0,
+          "loss": 1,
+          "worst_delta": 0.217200097727828,
+          "best_delta": -0.6836935166994106
+        }
+      },
+      "by_scale": {
+        "gene/512": {
+          "records": 16,
+          "candidate_nrf": 0.12843811394891946,
+          "dipper_nrf": 0.3504420432220039,
+          "delta": -0.2220039292730845,
+          "paired_stratified_bootstrap95": [
+            -0.30402750491159136,
+            -0.15397838899803537
+          ],
+          "win": 16,
+          "tie": 0,
+          "loss": 0,
+          "worst_delta": -0.07662082514734775,
+          "best_delta": -0.6836935166994106
+        },
+        "gene/1024": {
+          "records": 16,
+          "candidate_nrf": 0.10320763956904995,
+          "dipper_nrf": 0.2761998041136141,
+          "delta": -0.17299216454456415,
+          "paired_stratified_bootstrap95": [
+            -0.21786238981390793,
+            -0.1317320641527914
+          ],
+          "win": 16,
+          "tie": 0,
+          "loss": 0,
+          "worst_delta": -0.03623898139079333,
+          "best_delta": -0.3379040156709109
+        },
+        "gene/2048": {
+          "records": 16,
+          "candidate_nrf": 0.09935819070904645,
+          "dipper_nrf": 0.26809290953545234,
+          "delta": -0.16873471882640587,
+          "paired_stratified_bootstrap95": [
+            -0.2183694987775061,
+            -0.12258404645476775
+          ],
+          "win": 16,
+          "tie": 0,
+          "loss": 0,
+          "worst_delta": -0.0254278728606357,
+          "best_delta": -0.3691931540342298
+        },
+        "gene/4096": {
+          "records": 16,
+          "candidate_nrf": 0.19443256779868068,
+          "dipper_nrf": 0.2920382360127046,
+          "delta": -0.09760566821402394,
+          "paired_stratified_bootstrap95": [
+            -0.1458442768140728,
+            -0.041686644881505024
+          ],
+          "win": 15,
+          "tie": 0,
+          "loss": 1,
+          "worst_delta": 0.217200097727828,
+          "best_delta": -0.29025164915709745
+        }
+      },
+      "by_family": {
+        "gene/gene": {
+          "records": 64,
+          "candidate_nrf": 0.13135912800642413,
+          "dipper_nrf": 0.29669324822094373,
+          "delta": -0.1653341202145196,
+          "paired_stratified_bootstrap95": [
+            -0.19419254234457245,
+            -0.1385886333112281
+          ],
+          "win": 63,
+          "tie": 0,
+          "loss": 1,
+          "worst_delta": 0.217200097727828,
+          "best_delta": -0.6836935166994106
+        }
+      }
+    }
+  },
+  "failures": [],
+  "scope": "paired record-level descriptive evidence; maintain source-role caveats in source manifest"
+}

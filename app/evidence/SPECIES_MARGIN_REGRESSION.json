@@ -1,0 +1,200 @@
+[
+  {
+    "id": "gene32",
+    "checks": {
+      "tree": true,
+      "history": true,
+      "no_extra_fits": true,
+      "no_extra_quartet_scoring": true,
+      "model": true
+    },
+    "counts": {
+      "False": {
+        "fits": 2,
+        "nni": 6,
+        "quartet_calls": 0,
+        "quartets": 0,
+        "classifications": 0
+      },
+      "True": {
+        "fits": 2,
+        "nni": 6,
+        "quartet_calls": 0,
+        "quartets": 0,
+        "classifications": 0
+      }
+    },
+    "support": {
+      "enabled": true,
+      "method": "gene_local_likelihood_weight",
+      "label": "Local likelihood weight",
+      "path": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/output/species-margin-adoption-20261105/reg-gene32-1/branch-support.json",
+      "annotated_tree": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/output/species-margin-adoption-20261105/reg-gene32-1/prediction.nwk",
+      "unannotated_tree": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/output/species-margin-adoption-20261105/reg-gene32-1/prediction.unannotated.nwk",
+      "calibrated": false,
+      "internal_branches": 29,
+      "available": 29,
+      "unavailable": 0,
+      "computation": {
+        "source": "last_search_scan",
+        "additional_inference_runs": 0,
+        "additional_parameter_fits": 0,
+        "additional_nni_evaluations": 0,
+        "final_state_verified": true,
+        "final_verification_and_summary_seconds": 0.003910088911652565,
+        "export_seconds": 0.0005399486981332302
+      }
+    },
+    "status": "passed"
+  },
+  {
+    "id": "species32",
+    "checks": {
+      "tree": true,
+      "history": true,
+      "no_extra_fits": true,
+      "no_extra_quartet_scoring": true
+    },
+    "counts": {
+      "False": {
+        "fits": 0,
+        "nni": 0,
+        "quartet_calls": 4,
+        "quartets": 11301,
+        "classifications": 4
+      },
+      "True": {
+        "fits": 0,
+        "nni": 0,
+        "quartet_calls": 4,
+        "quartets": 11301,
+        "classifications": 4
+      }
+    },
+    "support": {
+      "enabled": true,
+      "method": "mean_worst_quartet_margin",
+      "label": "Quartet margin index",
+      "path": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/output/species-margin-adoption-20261105/reg-species32-1/branch-support.json",
+      "annotated_tree": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/output/species-margin-adoption-20261105/reg-species32-1/prediction.nwk",
+      "unannotated_tree": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/output/species-margin-adoption-20261105/reg-species32-1/prediction.unannotated.nwk",
+      "calibrated": false,
+      "ranking_field": "mean_worst_margin",
+      "internal_branches": 29,
+      "available": 29,
+      "unavailable": 0,
+      "computation": {
+        "source": "last_search_scan",
+        "additional_inference_runs": 0,
+        "additional_quartet_scores": 0,
+        "additional_classification_passes": 0,
+        "cached_unique_quartets": 11301,
+        "retained_classification_bytes": 45204,
+        "final_state_verified": true,
+        "summary_seconds": 0.0011377139016985893,
+        "export_seconds": 0.0007350039668381214
+      }
+    },
+    "status": "passed"
+  },
+  {
+    "id": "species-stop-early",
+    "checks": {
+      "tree": true,
+      "history": true,
+      "no_extra_fits": true,
+      "no_extra_quartet_scoring": true
+    },
+    "counts": {
+      "False": {
+        "fits": 0,
+        "nni": 0,
+        "quartet_calls": 1,
+        "quartets": 7040,
+        "classifications": 1
+      },
+      "True": {
+        "fits": 0,
+        "nni": 0,
+        "quartet_calls": 1,
+        "quartets": 7040,
+        "classifications": 2
+      }
+    },
+    "support": {
+      "enabled": true,
+      "method": "mean_worst_quartet_margin",
+      "label": "Quartet margin index",
+      "path": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/output/species-margin-adoption-20261105/reg-species-stop-early-1/branch-support.json",
+      "annotated_tree": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/output/species-margin-adoption-20261105/reg-species-stop-early-1/prediction.nwk",
+      "unannotated_tree": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/output/species-margin-adoption-20261105/reg-species-stop-early-1/prediction.unannotated.nwk",
+      "calibrated": false,
+      "ranking_field": "mean_worst_margin",
+      "internal_branches": 29,
+      "available": 29,
+      "unavailable": 0,
+      "computation": {
+        "source": "remapped_cached_quartets",
+        "additional_inference_runs": 0,
+        "additional_quartet_scores": 0,
+        "additional_classification_passes": 1,
+        "cached_unique_quartets": 7040,
+        "retained_classification_bytes": 28160,
+        "final_state_verified": true,
+        "summary_seconds": 0.0007744659669697285,
+        "export_seconds": 0.0006140018813312054
+      }
+    },
+    "status": "passed"
+  },
+  {
+    "id": "species-ils-loci",
+    "checks": {
+      "tree": true,
+      "history": true,
+      "no_extra_fits": true,
+      "no_extra_quartet_scoring": true
+    },
+    "counts": {
+      "False": {
+        "fits": 0,
+        "nni": 0,
+        "quartet_calls": 1,
+        "quartets": 5449,
+        "classifications": 1
+      },
+      "True": {
+        "fits": 0,
+        "nni": 0,
+        "quartet_calls": 1,
+        "quartets": 5449,
+        "classifications": 1
+      }
+    },
+    "support": {
+      "enabled": true,
+      "method": "mean_worst_quartet_margin",
+      "label": "Quartet margin index",
+      "path": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/output/species-margin-adoption-20261105/reg-species-ils-loci-1/branch-support.json",
+      "annotated_tree": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/output/species-margin-adoption-20261105/reg-species-ils-loci-1/prediction.nwk",
+      "unannotated_tree": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/output/species-margin-adoption-20261105/reg-species-ils-loci-1/prediction.unannotated.nwk",
+      "calibrated": false,
+      "ranking_field": "mean_worst_margin",
+      "internal_branches": 29,
+      "available": 29,
+      "unavailable": 0,
+      "computation": {
+        "source": "last_search_scan",
+        "additional_inference_runs": 0,
+        "additional_quartet_scores": 0,
+        "additional_classification_passes": 0,
+        "cached_unique_quartets": 5449,
+        "retained_classification_bytes": 21796,
+        "final_state_verified": true,
+        "summary_seconds": 0.0004816330038011074,
+        "export_seconds": 0.000574951060116291
+      }
+    },
+    "status": "passed"
+  }
+]

@@ -1,0 +1,186 @@
+[
+  {
+    "task": "species",
+    "repeat": 0,
+    "warmup": true,
+    "enabled": false,
+    "seconds": 2.4877007231116295,
+    "file_to_tree_seconds": 2.4862855710089207,
+    "prediction_sha256": "2983533e5b03409ffdd8948739badaff6365f41f9e24416ea3e04d1fd055563d",
+    "history_sha256": "30a73158b436018686cff29e3a9bfe97bd6c6bfbda774c1975d53699d6518b60",
+    "support": {
+      "enabled": false
+    }
+  },
+  {
+    "task": "species",
+    "repeat": 0,
+    "warmup": true,
+    "enabled": true,
+    "seconds": 2.6364428899250925,
+    "file_to_tree_seconds": 2.6348177092149854,
+    "prediction_sha256": "2983533e5b03409ffdd8948739badaff6365f41f9e24416ea3e04d1fd055563d",
+    "history_sha256": "30a73158b436018686cff29e3a9bfe97bd6c6bfbda774c1975d53699d6518b60",
+    "support": {
+      "enabled": true,
+      "method": "sampled_quartet_agreement",
+      "label": "Sampled quartet agreement",
+      "path": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/output/branch-support-validation-20261105/bench-native-species-0-1/branch-support.json",
+      "annotated_tree": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/output/branch-support-validation-20261105/bench-native-species-0-1/prediction.nwk",
+      "unannotated_tree": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/output/branch-support-validation-20261105/bench-native-species-0-1/prediction.unannotated.nwk",
+      "calibrated": false,
+      "internal_branches": 4093,
+      "available": 4093,
+      "unavailable": 0,
+      "computation": {
+        "source": "remapped_cached_quartets",
+        "additional_inference_runs": 0,
+        "additional_quartet_scores": 0,
+        "additional_classification_passes": 1,
+        "cached_unique_quartets": 1850787,
+        "retained_classification_bytes": 7403148,
+        "final_state_verified": true,
+        "summary_seconds": 0.04584803432226181,
+        "export_seconds": 0.1358987707644701
+      }
+    }
+  },
+  {
+    "task": "species",
+    "repeat": 1,
+    "warmup": false,
+    "enabled": true,
+    "seconds": 2.617839423008263,
+    "file_to_tree_seconds": 2.6162314820103347,
+    "prediction_sha256": "2983533e5b03409ffdd8948739badaff6365f41f9e24416ea3e04d1fd055563d",
+    "history_sha256": "30a73158b436018686cff29e3a9bfe97bd6c6bfbda774c1975d53699d6518b60",
+    "support": {
+      "enabled": true,
+      "method": "sampled_quartet_agreement",
+      "label": "Sampled quartet agreement",
+      "path": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/output/branch-support-validation-20261105/bench-native-species-1-1/branch-support.json",
+      "annotated_tree": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/output/branch-support-validation-20261105/bench-native-species-1-1/prediction.nwk",
+      "unannotated_tree": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/output/branch-support-validation-20261105/bench-native-species-1-1/prediction.unannotated.nwk",
+      "calibrated": false,
+      "internal_branches": 4093,
+      "available": 4093,
+      "unavailable": 0,
+      "computation": {
+        "source": "remapped_cached_quartets",
+        "additional_inference_runs": 0,
+        "additional_quartet_scores": 0,
+        "additional_classification_passes": 1,
+        "cached_unique_quartets": 1850787,
+        "retained_classification_bytes": 7403148,
+        "final_state_verified": true,
+        "summary_seconds": 0.043773934710770845,
+        "export_seconds": 0.1351621081121266
+      }
+    }
+  },
+  {
+    "task": "species",
+    "repeat": 1,
+    "warmup": false,
+    "enabled": false,
+    "seconds": 2.415516131091863,
+    "file_to_tree_seconds": 2.414102070964873,
+    "prediction_sha256": "2983533e5b03409ffdd8948739badaff6365f41f9e24416ea3e04d1fd055563d",
+    "history_sha256": "30a73158b436018686cff29e3a9bfe97bd6c6bfbda774c1975d53699d6518b60",
+    "support": {
+      "enabled": false
+    }
+  },
+  {
+    "task": "species",
+    "repeat": 2,
+    "warmup": false,
+    "enabled": false,
+    "seconds": 2.4425762449391186,
+    "file_to_tree_seconds": 2.441158057190478,
+    "prediction_sha256": "2983533e5b03409ffdd8948739badaff6365f41f9e24416ea3e04d1fd055563d",
+    "history_sha256": "30a73158b436018686cff29e3a9bfe97bd6c6bfbda774c1975d53699d6518b60",
+    "support": {
+      "enabled": false
+    }
+  },
+  {
+    "task": "species",
+    "repeat": 2,
+    "warmup": false,
+    "enabled": true,
+    "seconds": 2.637998598627746,
+    "file_to_tree_seconds": 2.636359214782715,
+    "prediction_sha256": "2983533e5b03409ffdd8948739badaff6365f41f9e24416ea3e04d1fd055563d",
+    "history_sha256": "30a73158b436018686cff29e3a9bfe97bd6c6bfbda774c1975d53699d6518b60",
+    "support": {
+      "enabled": true,
+      "method": "sampled_quartet_agreement",
+      "label": "Sampled quartet agreement",
+      "path": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/output/branch-support-validation-20261105/bench-native-species-2-1/branch-support.json",
+      "annotated_tree": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/output/branch-support-validation-20261105/bench-native-species-2-1/prediction.nwk",
+      "unannotated_tree": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/output/branch-support-validation-20261105/bench-native-species-2-1/prediction.unannotated.nwk",
+      "calibrated": false,
+      "internal_branches": 4093,
+      "available": 4093,
+      "unavailable": 0,
+      "computation": {
+        "source": "remapped_cached_quartets",
+        "additional_inference_runs": 0,
+        "additional_quartet_scores": 0,
+        "additional_classification_passes": 1,
+        "cached_unique_quartets": 1850787,
+        "retained_classification_bytes": 7403148,
+        "final_state_verified": true,
+        "summary_seconds": 0.04472484067082405,
+        "export_seconds": 0.13640316715463996
+      }
+    }
+  },
+  {
+    "task": "species",
+    "repeat": 3,
+    "warmup": false,
+    "enabled": true,
+    "seconds": 2.634675564710051,
+    "file_to_tree_seconds": 2.6330288629978895,
+    "prediction_sha256": "2983533e5b03409ffdd8948739badaff6365f41f9e24416ea3e04d1fd055563d",
+    "history_sha256": "30a73158b436018686cff29e3a9bfe97bd6c6bfbda774c1975d53699d6518b60",
+    "support": {
+      "enabled": true,
+      "method": "sampled_quartet_agreement",
+      "label": "Sampled quartet agreement",
+      "path": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/output/branch-support-validation-20261105/bench-native-species-3-1/branch-support.json",
+      "annotated_tree": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/output/branch-support-validation-20261105/bench-native-species-3-1/prediction.nwk",
+      "unannotated_tree": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/output/branch-support-validation-20261105/bench-native-species-3-1/prediction.unannotated.nwk",
+      "calibrated": false,
+      "internal_branches": 4093,
+      "available": 4093,
+      "unavailable": 0,
+      "computation": {
+        "source": "remapped_cached_quartets",
+        "additional_inference_runs": 0,
+        "additional_quartet_scores": 0,
+        "additional_classification_passes": 1,
+        "cached_unique_quartets": 1850787,
+        "retained_classification_bytes": 7403148,
+        "final_state_verified": true,
+        "summary_seconds": 0.04568273527547717,
+        "export_seconds": 0.13645749306306243
+      }
+    }
+  },
+  {
+    "task": "species",
+    "repeat": 3,
+    "warmup": false,
+    "enabled": false,
+    "seconds": 2.4290676820091903,
+    "file_to_tree_seconds": 2.4275954947806895,
+    "prediction_sha256": "2983533e5b03409ffdd8948739badaff6365f41f9e24416ea3e04d1fd055563d",
+    "history_sha256": "30a73158b436018686cff29e3a9bfe97bd6c6bfbda774c1975d53699d6518b60",
+    "support": {
+      "enabled": false
+    }
+  }
+]

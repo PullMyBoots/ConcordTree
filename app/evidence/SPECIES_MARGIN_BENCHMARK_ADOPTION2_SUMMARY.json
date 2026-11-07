@@ -1,0 +1,16 @@
+[
+  {
+    "task": "species",
+    "taxa": 4096,
+    "sites": 2048,
+    "medians": {
+      "False": 2.590558256022632,
+      "True": 2.6434175251051784
+    },
+    "overhead_seconds": 0.052859269082546234,
+    "overhead_ratio": 0.02040458613878182,
+    "exact_tree_history_and_gene_fit": true,
+    "measured_repeats": 3,
+    "warmup_per_arm": 1
+  }
+]

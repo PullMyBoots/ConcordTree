@@ -1,0 +1,1386 @@
+[
+  {
+    "environment": ".conda/env",
+    "package": "_libgcc_mutex",
+    "version": "0.1",
+    "build": "main",
+    "license": "",
+    "source_url": "https://repo.anaconda.com/pkgs/main/linux-64/_libgcc_mutex-0.1-main.conda",
+    "license_files": []
+  },
+  {
+    "environment": ".conda/env",
+    "package": "_openmp_mutex",
+    "version": "5.1",
+    "build": "1_gnu",
+    "license": "BSD-3-Clause",
+    "source_url": "https://repo.anaconda.com/pkgs/main/linux-64/_openmp_mutex-5.1-1_gnu.conda",
+    "license_files": [
+      "THIRD_PARTY_LICENSES/_openmp_mutex-5.1-1_gnu/LICENSE0.txt"
+    ]
+  },
+  {
+    "environment": ".conda/env",
+    "package": "aom",
+    "version": "3.6.0",
+    "build": "h6a678d5_0",
+    "license": "BSD-2-Clause",
+    "source_url": "https://repo.anaconda.com/pkgs/main/linux-64/aom-3.6.0-h6a678d5_0.conda",
+    "license_files": [
+      "THIRD_PARTY_LICENSES/aom-3.6.0-h6a678d5_0/LICENSE"
+    ]
+  },
+  {
+    "environment": ".conda/env",
+    "package": "blas",
+    "version": "1.0",
+    "build": "mkl",
+    "license": "",
+    "source_url": "https://repo.anaconda.com/pkgs/main/linux-64/blas-1.0-mkl.conda",
+    "license_files": []
+  },
+  {
+    "environment": ".conda/env",
+    "package": "brotlicffi",
+    "version": "1.0.9.2",
+    "build": "py310hbdd6827_2",
+    "license": "MIT",
+    "source_url": "https://repo.anaconda.com/pkgs/main/linux-64/brotlicffi-1.0.9.2-py310hbdd6827_2.conda",
+    "license_files": [
+      "THIRD_PARTY_LICENSES/brotlicffi-1.0.9.2-py310hbdd6827_2/LICENSE"
+    ]
+  },
+  {
+    "environment": ".conda/env",
+    "package": "bzip2",
+    "version": "1.0.8",
+    "build": "h5eee18b_6",
+    "license": "bzip2-1.0.8",
+    "source_url": "https://repo.anaconda.com/pkgs/main/linux-64/bzip2-1.0.8-h5eee18b_6.conda",
+    "license_files": [
+      "THIRD_PARTY_LICENSES/bzip2-1.0.8-h5eee18b_6/LICENSE"
+    ]
+  },
+  {
+    "environment": ".conda/env",
+    "package": "ca-certificates",
+    "version": "2026.1.4",
+    "build": "hbd8a1cb_0",
+    "license": "ISC",
+    "source_url": "https://conda.anaconda.org/conda-forge/noarch/ca-certificates-2026.1.4-hbd8a1cb_0.conda",
+    "license_files": [
+      "THIRD_PARTY_LICENSES/ca-certificates-2026.1.4-hbd8a1cb_0/LICENSE"
+    ]
+  },
+  {
+    "environment": ".conda/env",
+    "package": "cairo",
+    "version": "1.18.4",
+    "build": "h44eff21_0",
+    "license": "LGPL-2.1-or-later or MPL-1.1",
+    "source_url": "https://repo.anaconda.com/pkgs/main/linux-64/cairo-1.18.4-h44eff21_0.conda",
+    "license_files": [
+      "THIRD_PARTY_LICENSES/cairo-1.18.4-h44eff21_0/COPYING-MPL-1.1",
+      "THIRD_PARTY_LICENSES/cairo-1.18.4-h44eff21_0/COPYING-LGPL-2.1",
+      "THIRD_PARTY_LICENSES/cairo-1.18.4-h44eff21_0/COPYING"
+    ]
+  },
+  {
+    "environment": ".conda/env",
+    "package": "certifi",
+    "version": "2026.1.4",
+    "build": "pyhd8ed1ab_0",
+    "license": "ISC",
+    "source_url": "https://conda.anaconda.org/conda-forge/noarch/certifi-2026.1.4-pyhd8ed1ab_0.conda",
+    "license_files": [
+      "THIRD_PARTY_LICENSES/certifi-2026.1.4-pyhd8ed1ab_0/certifi/LICENSE"
+    ]
+  },
+  {
+    "environment": ".conda/env",
+    "package": "cffi",
+    "version": "2.0.0",
+    "build": "py310h4eded50_1",
+    "license": "MIT",
+    "source_url": "https://repo.anaconda.com/pkgs/main/linux-64/cffi-2.0.0-py310h4eded50_1.conda",
+    "license_files": [
+      "THIRD_PARTY_LICENSES/cffi-2.0.0-py310h4eded50_1/LICENSE"
+    ]
+  },
+  {
+    "environment": ".conda/env",
+    "package": "charset-normalizer",
+    "version": "3.4.4",
+    "build": "py310h06a4308_0",
+    "license": "MIT",
+    "source_url": "https://repo.anaconda.com/pkgs/main/linux-64/charset-normalizer-3.4.4-py310h06a4308_0.conda",
+    "license_files": [
+      "THIRD_PARTY_LICENSES/charset-normalizer-3.4.4-py310h06a4308_0/LICENSE"
+    ]
+  },
+  {
+    "environment": ".conda/env",
+    "package": "cuda-crt-tools",
+    "version": "13.0.88",
+    "build": "ha770c72_0",
+    "license": "LicenseRef-NVIDIA-End-User-License-Agreement",
+    "source_url": "https://conda.anaconda.org/conda-forge/linux-64/cuda-crt-tools-13.0.88-ha770c72_0.conda",
+    "license_files": [
+      "THIRD_PARTY_LICENSES/cuda-crt-tools-13.0.88-ha770c72_0/crt/LICENSE"
+    ]
+  },
+  {
+    "environment": ".conda/env",
+    "package": "cuda-cudart",
+    "version": "11.8.89",
+    "build": "0",
+    "license": "",
+    "source_url": "https://conda.anaconda.org/nvidia/linux-64/cuda-cudart-11.8.89-0.tar.bz2",
+    "license_files": []
+  },
+  {
+    "environment": ".conda/env",
+    "package": "cuda-cudart_linux-64",
+    "version": "13.0.96",
+    "build": "h376f20c_0",
+    "license": "LicenseRef-NVIDIA-End-User-License-Agreement",
+    "source_url": "https://conda.anaconda.org/conda-forge/noarch/cuda-cudart_linux-64-13.0.96-h376f20c_0.conda",
+    "license_files": [
+      "THIRD_PARTY_LICENSES/cuda-cudart_linux-64-13.0.96-h376f20c_0/LICENSE"
+    ]
+  },
+  {
+    "environment": ".conda/env",
+    "package": "cuda-cuobjdump",
+    "version": "13.0.85",
+    "build": "hffce074_0",
+    "license": "LicenseRef-NVIDIA-End-User-License-Agreement",
+    "source_url": "https://conda.anaconda.org/conda-forge/linux-64/cuda-cuobjdump-13.0.85-hffce074_0.conda",
+    "license_files": [
+      "THIRD_PARTY_LICENSES/cuda-cuobjdump-13.0.85-hffce074_0/LICENSE"
+    ]
+  },
+  {
+    "environment": ".conda/env",
+    "package": "cuda-cupti",
+    "version": "11.8.87",
+    "build": "0",
+    "license": "",
+    "source_url": "https://conda.anaconda.org/nvidia/linux-64/cuda-cupti-11.8.87-0.tar.bz2",
+    "license_files": []
+  },
+  {
+    "environment": ".conda/env",
+    "package": "cuda-libraries",
+    "version": "11.8.0",
+    "build": "0",
+    "license": "",
+    "source_url": "https://conda.anaconda.org/nvidia/linux-64/cuda-libraries-11.8.0-0.tar.bz2",
+    "license_files": []
+  },
+  {
+    "environment": ".conda/env",
+    "package": "cuda-nvcc-tools",
+    "version": "13.0.88",
+    "build": "he02047a_0",
+    "license": "LicenseRef-NVIDIA-End-User-License-Agreement",
+    "source_url": "https://conda.anaconda.org/conda-forge/linux-64/cuda-nvcc-tools-13.0.88-he02047a_0.conda",
+    "license_files": [
+      "THIRD_PARTY_LICENSES/cuda-nvcc-tools-13.0.88-he02047a_0/nvcc/LICENSE"
+    ]
+  },
+  {
+    "environment": ".conda/env",
+    "package": "cuda-nvdisasm",
+    "version": "13.0.85",
+    "build": "hffce074_0",
+    "license": "LicenseRef-NVIDIA-End-User-License-Agreement",
+    "source_url": "https://conda.anaconda.org/conda-forge/linux-64/cuda-nvdisasm-13.0.85-hffce074_0.conda",
+    "license_files": [
+      "THIRD_PARTY_LICENSES/cuda-nvdisasm-13.0.85-hffce074_0/LICENSE"
+    ]
+  },
+  {
+    "environment": ".conda/env",
+    "package": "cuda-nvrtc",
+    "version": "11.8.89",
+    "build": "0",
+    "license": "",
+    "source_url": "https://conda.anaconda.org/nvidia/linux-64/cuda-nvrtc-11.8.89-0.tar.bz2",
+    "license_files": []
+  },
+  {
+    "environment": ".conda/env",
+    "package": "cuda-nvtx",
+    "version": "11.8.86",
+    "build": "0",
+    "license": "",
+    "source_url": "https://conda.anaconda.org/nvidia/linux-64/cuda-nvtx-11.8.86-0.tar.bz2",
+    "license_files": []
+  },
+  {
+    "environment": ".conda/env",
+    "package": "cuda-nvvm-tools",
+    "version": "13.0.88",
+    "build": "h4bc722e_0",
+    "license": "LicenseRef-NVIDIA-End-User-License-Agreement",
+    "source_url": "https://conda.anaconda.org/conda-forge/linux-64/cuda-nvvm-tools-13.0.88-h4bc722e_0.conda",
+    "license_files": [
+      "THIRD_PARTY_LICENSES/cuda-nvvm-tools-13.0.88-h4bc722e_0/nvvm/LICENSE"
+    ]
+  },
+  {
+    "environment": ".conda/env",
+    "package": "cuda-runtime",
+    "version": "11.8.0",
+    "build": "0",
+    "license": "",
+    "source_url": "https://conda.anaconda.org/nvidia/linux-64/cuda-runtime-11.8.0-0.tar.bz2",
+    "license_files": []
+  },
+  {
+    "environment": ".conda/env",
+    "package": "cuda-version",
+    "version": "13.0",
+    "build": "3",
+    "license": "LicenseRef-NVIDIA-End-User-License-Agreement",
+    "source_url": "https://conda.anaconda.org/nvidia/noarch/cuda-version-13.0-3.conda",
+    "license_files": [
+      "THIRD_PARTY_LICENSES/cuda-version-13.0-3/LICENSE.txt"
+    ]
+  },
+  {
+    "environment": ".conda/env",
+    "package": "dav1d",
+    "version": "1.2.1",
+    "build": "h5eee18b_0",
+    "license": "BSD-2-Clause",
+    "source_url": "https://repo.anaconda.com/pkgs/main/linux-64/dav1d-1.2.1-h5eee18b_0.conda",
+    "license_files": [
+      "THIRD_PARTY_LICENSES/dav1d-1.2.1-h5eee18b_0/COPYING"
+    ]
+  },
+  {
+    "environment": ".conda/env",
+    "package": "eigen",
+    "version": "3.4.0",
+    "build": "h171cf75_1",
+    "license": "MPL-2.0",
+    "source_url": "https://conda.anaconda.org/conda-forge/linux-64/eigen-3.4.0-h171cf75_1.conda",
+    "license_files": [
+      "THIRD_PARTY_LICENSES/eigen-3.4.0-h171cf75_1/COPYING.MPL2"
+    ]
+  },
+  {
+    "environment": ".conda/env",
+    "package": "expat",
+    "version": "2.7.3",
+    "build": "h3385a95_0",
+    "license": "MIT",
+    "source_url": "https://repo.anaconda.com/pkgs/main/linux-64/expat-2.7.3-h3385a95_0.conda",
+    "license_files": [
+      "THIRD_PARTY_LICENSES/expat-2.7.3-h3385a95_0/COPYING"
+    ]
+  },
+  {
+    "environment": ".conda/env",
+    "package": "fasttree",
+    "version": "2.2.0",
+    "build": "h7b50bb2_1",
+    "license": "GPL-2.0-or-later",
+    "source_url": "https://conda.anaconda.org/bioconda/linux-64/fasttree-2.2.0-h7b50bb2_1.conda",
+    "license_files": []
+  },
+  {
+    "environment": ".conda/env",
+    "package": "ffmpeg",
+    "version": "4.3",
+    "build": "hf484d3e_0",
+    "license": "LGPL",
+    "source_url": "https://conda.anaconda.org/pytorch/linux-64/ffmpeg-4.3-hf484d3e_0.tar.bz2",
+    "license_files": [
+      "THIRD_PARTY_LICENSES/ffmpeg-4.3-hf484d3e_0/COPYING.LGPLv2.1"
+    ]
+  },
+  {
+    "environment": ".conda/env",
+    "package": "filelock",
+    "version": "3.20.0",
+    "build": "py310h06a4308_0",
+    "license": "Unlicense",
+    "source_url": "https://repo.anaconda.com/pkgs/main/linux-64/filelock-3.20.0-py310h06a4308_0.conda",
+    "license_files": [
+      "THIRD_PARTY_LICENSES/filelock-3.20.0-py310h06a4308_0/LICENSE"
+    ]
+  },
+  {
+    "environment": ".conda/env",
+    "package": "fontconfig",
+    "version": "2.15.0",
+    "build": "h2c49b7f_0",
+    "license": "MIT",
+    "source_url": "https://repo.anaconda.com/pkgs/main/linux-64/fontconfig-2.15.0-h2c49b7f_0.conda",
+    "license_files": [
+      "THIRD_PARTY_LICENSES/fontconfig-2.15.0-h2c49b7f_0/COPYING"
+    ]
+  },
+  {
+    "environment": ".conda/env",
+    "package": "freetype",
+    "version": "2.13.3",
+    "build": "h4a9f257_0",
+    "license": "GPL-2.0-only or FTL",
+    "source_url": "https://repo.anaconda.com/pkgs/main/linux-64/freetype-2.13.3-h4a9f257_0.conda",
+    "license_files": [
+      "THIRD_PARTY_LICENSES/freetype-2.13.3-h4a9f257_0/docs/GPLv2.TXT",
+      "THIRD_PARTY_LICENSES/freetype-2.13.3-h4a9f257_0/docs/FTL.TXT"
+    ]
+  },
+  {
+    "environment": ".conda/env",
+    "package": "fribidi",
+    "version": "1.0.10",
+    "build": "h7b6447c_0",
+    "license": "LGPL-2.1",
+    "source_url": "https://repo.anaconda.com/pkgs/main/linux-64/fribidi-1.0.10-h7b6447c_0.conda",
+    "license_files": [
+      "THIRD_PARTY_LICENSES/fribidi-1.0.10-h7b6447c_0/COPYING"
+    ]
+  },
+  {
+    "environment": ".conda/env",
+    "package": "giflib",
+    "version": "5.2.2",
+    "build": "h5eee18b_0",
+    "license": "MIT",
+    "source_url": "https://repo.anaconda.com/pkgs/main/linux-64/giflib-5.2.2-h5eee18b_0.conda",
+    "license_files": [
+      "THIRD_PARTY_LICENSES/giflib-5.2.2-h5eee18b_0/COPYING"
+    ]
+  },
+  {
+    "environment": ".conda/env",
+    "package": "gmp",
+    "version": "6.3.0",
+    "build": "h6a678d5_0",
+    "license": "GPL-2.0-or-later AND LGPL-3.0-or-later",
+    "source_url": "https://repo.anaconda.com/pkgs/main/linux-64/gmp-6.3.0-h6a678d5_0.conda",
+    "license_files": [
+      "THIRD_PARTY_LICENSES/gmp-6.3.0-h6a678d5_0/COPYING.LESSERv3"
+    ]
+  },
+  {
+    "environment": ".conda/env",
+    "package": "gmpy2",
+    "version": "2.2.1",
+    "build": "py310h5eee18b_0",
+    "license": "LGPL-3.0-or-later",
+    "source_url": "https://repo.anaconda.com/pkgs/main/linux-64/gmpy2-2.2.1-py310h5eee18b_0.conda",
+    "license_files": [
+      "THIRD_PARTY_LICENSES/gmpy2-2.2.1-py310h5eee18b_0/COPYING.LESSER"
+    ]
+  },
+  {
+    "environment": ".conda/env",
+    "package": "gnutls",
+    "version": "3.6.15",
+    "build": "he1e5248_0",
+    "license": "LGPL-2.1-or-later",
+    "source_url": "https://repo.anaconda.com/pkgs/main/linux-64/gnutls-3.6.15-he1e5248_0.conda",
+    "license_files": [
+      "THIRD_PARTY_LICENSES/gnutls-3.6.15-he1e5248_0/LICENSE"
+    ]
+  },
+  {
+    "environment": ".conda/env",
+    "package": "graphite2",
+    "version": "1.3.14",
+    "build": "h295c915_1",
+    "license": "LGPL-2.1-or-later",
+    "source_url": "https://repo.anaconda.com/pkgs/main/linux-64/graphite2-1.3.14-h295c915_1.conda",
+    "license_files": [
+      "THIRD_PARTY_LICENSES/graphite2-1.3.14-h295c915_1/COPYING"
+    ]
+  },
+  {
+    "environment": ".conda/env",
+    "package": "harfbuzz",
+    "version": "10.2.0",
+    "build": "hdfddeaa_1",
+    "license": "MIT",
+    "source_url": "https://repo.anaconda.com/pkgs/main/linux-64/harfbuzz-10.2.0-hdfddeaa_1.conda",
+    "license_files": [
+      "THIRD_PARTY_LICENSES/harfbuzz-10.2.0-hdfddeaa_1/COPYING"
+    ]
+  },
+  {
+    "environment": ".conda/env",
+    "package": "icu",
+    "version": "73.1",
+    "build": "h6a678d5_0",
+    "license": "MIT",
+    "source_url": "https://repo.anaconda.com/pkgs/main/linux-64/icu-73.1-h6a678d5_0.conda",
+    "license_files": [
+      "THIRD_PARTY_LICENSES/icu-73.1-h6a678d5_0/LICENSE"
+    ]
+  },
+  {
+    "environment": ".conda/env",
+    "package": "idna",
+    "version": "3.11",
+    "build": "py310h06a4308_0",
+    "license": "BSD-3-Clause",
+    "source_url": "https://repo.anaconda.com/pkgs/main/linux-64/idna-3.11-py310h06a4308_0.conda",
+    "license_files": [
+      "THIRD_PARTY_LICENSES/idna-3.11-py310h06a4308_0/LICENSE.md"
+    ]
+  },
+  {
+    "environment": ".conda/env",
+    "package": "intel-openmp",
+    "version": "2025.0.0",
+    "build": "h06a4308_1171",
+    "license": "LicenseRef-IntelSimplifiedSoftwareOct2022",
+    "source_url": "https://repo.anaconda.com/pkgs/main/linux-64/intel-openmp-2025.0.0-h06a4308_1171.conda",
+    "license_files": [
+      "THIRD_PARTY_LICENSES/intel-openmp-2025.0.0-h06a4308_1171/intel-openmp/info/licenses/tpp.txt",
+      "THIRD_PARTY_LICENSES/intel-openmp-2025.0.0-h06a4308_1171/intel-openmp/info/licenses/license.txt"
+    ]
+  },
+  {
+    "environment": ".conda/env",
+    "package": "jinja2",
+    "version": "3.1.6",
+    "build": "py310h06a4308_0",
+    "license": "BSD-3-Clause",
+    "source_url": "https://repo.anaconda.com/pkgs/main/linux-64/jinja2-3.1.6-py310h06a4308_0.conda",
+    "license_files": [
+      "THIRD_PARTY_LICENSES/jinja2-3.1.6-py310h06a4308_0/LICENSE.txt"
+    ]
+  },
+  {
+    "environment": ".conda/env",
+    "package": "jpeg",
+    "version": "9f",
+    "build": "h5ce9db8_0",
+    "license": "IJG",
+    "source_url": "https://repo.anaconda.com/pkgs/main/linux-64/jpeg-9f-h5ce9db8_0.conda",
+    "license_files": [
+      "THIRD_PARTY_LICENSES/jpeg-9f-h5ce9db8_0/README"
+    ]
+  },
+  {
+    "environment": ".conda/env",
+    "package": "lame",
+    "version": "3.100",
+    "build": "h7b6447c_0",
+    "license": "LGPL",
+    "source_url": "https://repo.anaconda.com/pkgs/main/linux-64/lame-3.100-h7b6447c_0.conda",
+    "license_files": [
+      "THIRD_PARTY_LICENSES/lame-3.100-h7b6447c_0/LICENSE"
+    ]
+  },
+  {
+    "environment": ".conda/env",
+    "package": "lcms2",
+    "version": "2.16",
+    "build": "h92b89f2_1",
+    "license": "MIT",
+    "source_url": "https://repo.anaconda.com/pkgs/main/linux-64/lcms2-2.16-h92b89f2_1.conda",
+    "license_files": [
+      "THIRD_PARTY_LICENSES/lcms2-2.16-h92b89f2_1/LICENSE"
+    ]
+  },
+  {
+    "environment": ".conda/env",
+    "package": "ld_impl_linux-64",
+    "version": "2.44",
+    "build": "h153f514_2",
+    "license": "GPL-3.0-only",
+    "source_url": "https://repo.anaconda.com/pkgs/main/linux-64/ld_impl_linux-64-2.44-h153f514_2.conda",
+    "license_files": [
+      "THIRD_PARTY_LICENSES/ld_impl_linux-64-2.44-h153f514_2/COPYING3.LIB",
+      "THIRD_PARTY_LICENSES/ld_impl_linux-64-2.44-h153f514_2/COPYING3",
+      "THIRD_PARTY_LICENSES/ld_impl_linux-64-2.44-h153f514_2/COPYING.LIB",
+      "THIRD_PARTY_LICENSES/ld_impl_linux-64-2.44-h153f514_2/COPYING"
+    ]
+  },
+  {
+    "environment": ".conda/env",
+    "package": "lerc",
+    "version": "4.0.0",
+    "build": "h6a678d5_0",
+    "license": "Apache-2.0",
+    "source_url": "https://repo.anaconda.com/pkgs/main/linux-64/lerc-4.0.0-h6a678d5_0.conda",
+    "license_files": [
+      "THIRD_PARTY_LICENSES/lerc-4.0.0-h6a678d5_0/LICENSE"
+    ]
+  },
+  {
+    "environment": ".conda/env",
+    "package": "libavif",
+    "version": "1.1.1",
+    "build": "h5eee18b_0",
+    "license": "BSD-2-Clause",
+    "source_url": "https://repo.anaconda.com/pkgs/main/linux-64/libavif-1.1.1-h5eee18b_0.conda",
+    "license_files": [
+      "THIRD_PARTY_LICENSES/libavif-1.1.1-h5eee18b_0/LICENSE"
+    ]
+  },
+  {
+    "environment": ".conda/env",
+    "package": "libcublas",
+    "version": "11.11.3.6",
+    "build": "0",
+    "license": "",
+    "source_url": "https://conda.anaconda.org/nvidia/linux-64/libcublas-11.11.3.6-0.tar.bz2",
+    "license_files": []
+  },
+  {
+    "environment": ".conda/env",
+    "package": "libcufft",
+    "version": "10.9.0.58",
+    "build": "0",
+    "license": "",
+    "source_url": "https://conda.anaconda.org/nvidia/linux-64/libcufft-10.9.0.58-0.tar.bz2",
+    "license_files": []
+  },
+  {
+    "environment": ".conda/env",
+    "package": "libcufile",
+    "version": "1.15.1.6",
+    "build": "h2e68323_0",
+    "license": "LicenseRef-NVIDIA-End-User-License-Agreement",
+    "source_url": "https://conda.anaconda.org/nvidia/linux-64/libcufile-1.15.1.6-h2e68323_0.conda",
+    "license_files": [
+      "THIRD_PARTY_LICENSES/libcufile-1.15.1.6-h2e68323_0/LICENSE"
+    ]
+  },
+  {
+    "environment": ".conda/env",
+    "package": "libcurand",
+    "version": "10.4.0.35",
+    "build": "h50d9014_0",
+    "license": "LicenseRef-NVIDIA-End-User-License-Agreement",
+    "source_url": "https://conda.anaconda.org/nvidia/linux-64/libcurand-10.4.0.35-h50d9014_0.conda",
+    "license_files": [
+      "THIRD_PARTY_LICENSES/libcurand-10.4.0.35-h50d9014_0/LICENSE"
+    ]
+  },
+  {
+    "environment": ".conda/env",
+    "package": "libcusolver",
+    "version": "11.4.1.48",
+    "build": "0",
+    "license": "",
+    "source_url": "https://conda.anaconda.org/nvidia/linux-64/libcusolver-11.4.1.48-0.tar.bz2",
+    "license_files": []
+  },
+  {
+    "environment": ".conda/env",
+    "package": "libcusparse",
+    "version": "11.7.5.86",
+    "build": "0",
+    "license": "",
+    "source_url": "https://conda.anaconda.org/nvidia/linux-64/libcusparse-11.7.5.86-0.tar.bz2",
+    "license_files": []
+  },
+  {
+    "environment": ".conda/env",
+    "package": "libdeflate",
+    "version": "1.22",
+    "build": "h5eee18b_0",
+    "license": "MIT",
+    "source_url": "https://repo.anaconda.com/pkgs/main/linux-64/libdeflate-1.22-h5eee18b_0.conda",
+    "license_files": [
+      "THIRD_PARTY_LICENSES/libdeflate-1.22-h5eee18b_0/COPYING"
+    ]
+  },
+  {
+    "environment": ".conda/env",
+    "package": "libffi",
+    "version": "3.4.4",
+    "build": "h6a678d5_1",
+    "license": "MIT",
+    "source_url": "https://repo.anaconda.com/pkgs/main/linux-64/libffi-3.4.4-h6a678d5_1.conda",
+    "license_files": [
+      "THIRD_PARTY_LICENSES/libffi-3.4.4-h6a678d5_1/LICENSE"
+    ]
+  },
+  {
+    "environment": ".conda/env",
+    "package": "libgcc",
+    "version": "15.2.0",
+    "build": "h69a1729_7",
+    "license": "GPL-3.0-only WITH GCC-exception-3.1",
+    "source_url": "https://repo.anaconda.com/pkgs/main/linux-64/libgcc-15.2.0-h69a1729_7.conda",
+    "license_files": []
+  },
+  {
+    "environment": ".conda/env",
+    "package": "libgcc-ng",
+    "version": "15.2.0",
+    "build": "h166f726_7",
+    "license": "GPL-3.0-only WITH GCC-exception-3.1",
+    "source_url": "https://repo.anaconda.com/pkgs/main/linux-64/libgcc-ng-15.2.0-h166f726_7.conda",
+    "license_files": []
+  },
+  {
+    "environment": ".conda/env",
+    "package": "libglib",
+    "version": "2.84.4",
+    "build": "h77a78f3_0",
+    "license": "LGPL-2.1-or-later",
+    "source_url": "https://repo.anaconda.com/pkgs/main/linux-64/libglib-2.84.4-h77a78f3_0.conda",
+    "license_files": [
+      "THIRD_PARTY_LICENSES/libglib-2.84.4-h77a78f3_0/COPYING"
+    ]
+  },
+  {
+    "environment": ".conda/env",
+    "package": "libgomp",
+    "version": "15.2.0",
+    "build": "h4751f2c_7",
+    "license": "GPL-3.0-only WITH GCC-exception-3.1",
+    "source_url": "https://repo.anaconda.com/pkgs/main/linux-64/libgomp-15.2.0-h4751f2c_7.conda",
+    "license_files": []
+  },
+  {
+    "environment": ".conda/env",
+    "package": "libiconv",
+    "version": "1.16",
+    "build": "h5eee18b_3",
+    "license": "GPL-3.0-or-later",
+    "source_url": "https://repo.anaconda.com/pkgs/main/linux-64/libiconv-1.16-h5eee18b_3.conda",
+    "license_files": [
+      "THIRD_PARTY_LICENSES/libiconv-1.16-h5eee18b_3/COPYING.LIB",
+      "THIRD_PARTY_LICENSES/libiconv-1.16-h5eee18b_3/COPYING"
+    ]
+  },
+  {
+    "environment": ".conda/env",
+    "package": "libidn2",
+    "version": "2.3.4",
+    "build": "h5eee18b_0",
+    "license": "LGPL-2.0 AND LGPL-3.0-or-later AND GPL-3.0-or-later",
+    "source_url": "https://repo.anaconda.com/pkgs/main/linux-64/libidn2-2.3.4-h5eee18b_0.conda",
+    "license_files": [
+      "THIRD_PARTY_LICENSES/libidn2-2.3.4-h5eee18b_0/COPYING"
+    ]
+  },
+  {
+    "environment": ".conda/env",
+    "package": "libjpeg-turbo",
+    "version": "2.0.0",
+    "build": "h9bf148f_0",
+    "license": "IJG, modified 3-clause BSD and zlib",
+    "source_url": "https://conda.anaconda.org/pytorch/linux-64/libjpeg-turbo-2.0.0-h9bf148f_0.tar.bz2",
+    "license_files": [
+      "THIRD_PARTY_LICENSES/libjpeg-turbo-2.0.0-h9bf148f_0/LICENSE.md"
+    ]
+  },
+  {
+    "environment": ".conda/env",
+    "package": "libnpp",
+    "version": "11.8.0.86",
+    "build": "0",
+    "license": "",
+    "source_url": "https://conda.anaconda.org/nvidia/linux-64/libnpp-11.8.0.86-0.tar.bz2",
+    "license_files": []
+  },
+  {
+    "environment": ".conda/env",
+    "package": "libnvjpeg",
+    "version": "11.9.0.86",
+    "build": "0",
+    "license": "",
+    "source_url": "https://conda.anaconda.org/nvidia/linux-64/libnvjpeg-11.9.0.86-0.tar.bz2",
+    "license_files": []
+  },
+  {
+    "environment": ".conda/env",
+    "package": "libopenjpeg",
+    "version": "2.5.4",
+    "build": "hee96239_1",
+    "license": "BSD-2-Clause",
+    "source_url": "https://repo.anaconda.com/pkgs/main/linux-64/libopenjpeg-2.5.4-hee96239_1.conda",
+    "license_files": [
+      "THIRD_PARTY_LICENSES/libopenjpeg-2.5.4-hee96239_1/LICENSE"
+    ]
+  },
+  {
+    "environment": ".conda/env",
+    "package": "libpng",
+    "version": "1.6.50",
+    "build": "h2ed474d_0",
+    "license": "Zlib",
+    "source_url": "https://repo.anaconda.com/pkgs/main/linux-64/libpng-1.6.50-h2ed474d_0.conda",
+    "license_files": [
+      "THIRD_PARTY_LICENSES/libpng-1.6.50-h2ed474d_0/LICENSE"
+    ]
+  },
+  {
+    "environment": ".conda/env",
+    "package": "libstdcxx",
+    "version": "15.2.0",
+    "build": "h39759b7_7",
+    "license": "GPL-3.0-only WITH GCC-exception-3.1",
+    "source_url": "https://repo.anaconda.com/pkgs/main/linux-64/libstdcxx-15.2.0-h39759b7_7.conda",
+    "license_files": []
+  },
+  {
+    "environment": ".conda/env",
+    "package": "libstdcxx-ng",
+    "version": "15.2.0",
+    "build": "hc03a8fd_7",
+    "license": "GPL-3.0-only WITH GCC-exception-3.1",
+    "source_url": "https://repo.anaconda.com/pkgs/main/linux-64/libstdcxx-ng-15.2.0-hc03a8fd_7.conda",
+    "license_files": []
+  },
+  {
+    "environment": ".conda/env",
+    "package": "libtasn1",
+    "version": "4.20.0",
+    "build": "ha30cf84_0",
+    "license": "LGPL-2.1-or-later",
+    "source_url": "https://repo.anaconda.com/pkgs/main/linux-64/libtasn1-4.20.0-ha30cf84_0.conda",
+    "license_files": [
+      "THIRD_PARTY_LICENSES/libtasn1-4.20.0-ha30cf84_0/COPYING"
+    ]
+  },
+  {
+    "environment": ".conda/env",
+    "package": "libtiff",
+    "version": "4.7.0",
+    "build": "hde9077f_0",
+    "license": "HPND",
+    "source_url": "https://repo.anaconda.com/pkgs/main/linux-64/libtiff-4.7.0-hde9077f_0.conda",
+    "license_files": [
+      "THIRD_PARTY_LICENSES/libtiff-4.7.0-hde9077f_0/LICENSE.md"
+    ]
+  },
+  {
+    "environment": ".conda/env",
+    "package": "libunistring",
+    "version": "0.9.10",
+    "build": "h27cfd23_0",
+    "license": "LGPL",
+    "source_url": "https://repo.anaconda.com/pkgs/main/linux-64/libunistring-0.9.10-h27cfd23_0.conda",
+    "license_files": []
+  },
+  {
+    "environment": ".conda/env",
+    "package": "libuuid",
+    "version": "1.41.5",
+    "build": "h5eee18b_0",
+    "license": "BSD-3-Clause",
+    "source_url": "https://repo.anaconda.com/pkgs/main/linux-64/libuuid-1.41.5-h5eee18b_0.conda",
+    "license_files": [
+      "THIRD_PARTY_LICENSES/libuuid-1.41.5-h5eee18b_0/Documentation/licenses/COPYING.BSD-3"
+    ]
+  },
+  {
+    "environment": ".conda/env",
+    "package": "libwebp",
+    "version": "1.3.2",
+    "build": "h9f374a3_1",
+    "license": "BSD-3-Clause",
+    "source_url": "https://repo.anaconda.com/pkgs/main/linux-64/libwebp-1.3.2-h9f374a3_1.conda",
+    "license_files": [
+      "THIRD_PARTY_LICENSES/libwebp-1.3.2-h9f374a3_1/COPYING"
+    ]
+  },
+  {
+    "environment": ".conda/env",
+    "package": "libwebp-base",
+    "version": "1.3.2",
+    "build": "h5eee18b_1",
+    "license": "BSD-3-Clause",
+    "source_url": "https://repo.anaconda.com/pkgs/main/linux-64/libwebp-base-1.3.2-h5eee18b_1.conda",
+    "license_files": [
+      "THIRD_PARTY_LICENSES/libwebp-base-1.3.2-h5eee18b_1/COPYING"
+    ]
+  },
+  {
+    "environment": ".conda/env",
+    "package": "libxcb",
+    "version": "1.17.0",
+    "build": "h9b100fa_0",
+    "license": "MIT",
+    "source_url": "https://repo.anaconda.com/pkgs/main/linux-64/libxcb-1.17.0-h9b100fa_0.conda",
+    "license_files": [
+      "THIRD_PARTY_LICENSES/libxcb-1.17.0-h9b100fa_0/COPYING"
+    ]
+  },
+  {
+    "environment": ".conda/env",
+    "package": "libxml2",
+    "version": "2.13.9",
+    "build": "h2c43086_0",
+    "license": "MIT",
+    "source_url": "https://repo.anaconda.com/pkgs/main/linux-64/libxml2-2.13.9-h2c43086_0.conda",
+    "license_files": [
+      "THIRD_PARTY_LICENSES/libxml2-2.13.9-h2c43086_0/Copyright"
+    ]
+  },
+  {
+    "environment": ".conda/env",
+    "package": "llvm-openmp",
+    "version": "14.0.6",
+    "build": "h9e868ea_0",
+    "license": "Apache-2.0 WITH LLVM-exception",
+    "source_url": "https://repo.anaconda.com/pkgs/main/linux-64/llvm-openmp-14.0.6-h9e868ea_0.conda",
+    "license_files": [
+      "THIRD_PARTY_LICENSES/llvm-openmp-14.0.6-h9e868ea_0/openmp/LICENSE.TXT"
+    ]
+  },
+  {
+    "environment": ".conda/env",
+    "package": "lz4-c",
+    "version": "1.9.4",
+    "build": "h6a678d5_1",
+    "license": "BSD-2-Clause",
+    "source_url": "https://repo.anaconda.com/pkgs/main/linux-64/lz4-c-1.9.4-h6a678d5_1.conda",
+    "license_files": [
+      "THIRD_PARTY_LICENSES/lz4-c-1.9.4-h6a678d5_1/lib/LICENSE"
+    ]
+  },
+  {
+    "environment": ".conda/env",
+    "package": "markupsafe",
+    "version": "3.0.2",
+    "build": "py310h5eee18b_0",
+    "license": "BSD-3-Clause",
+    "source_url": "https://repo.anaconda.com/pkgs/main/linux-64/markupsafe-3.0.2-py310h5eee18b_0.conda",
+    "license_files": [
+      "THIRD_PARTY_LICENSES/markupsafe-3.0.2-py310h5eee18b_0/LICENSE.txt"
+    ]
+  },
+  {
+    "environment": ".conda/env",
+    "package": "mkl",
+    "version": "2025.0.0",
+    "build": "hacee8c2_941",
+    "license": "LicenseRef-IntelSimplifiedSoftwareOct2022",
+    "source_url": "https://repo.anaconda.com/pkgs/main/linux-64/mkl-2025.0.0-hacee8c2_941.conda",
+    "license_files": [
+      "THIRD_PARTY_LICENSES/mkl-2025.0.0-hacee8c2_941/mkl/info/licenses/tpp.txt",
+      "THIRD_PARTY_LICENSES/mkl-2025.0.0-hacee8c2_941/mkl/info/licenses/license.txt"
+    ]
+  },
+  {
+    "environment": ".conda/env",
+    "package": "mkl-service",
+    "version": "2.5.2",
+    "build": "py310hacdc0fc_0",
+    "license": "BSD-3-Clause",
+    "source_url": "https://repo.anaconda.com/pkgs/main/linux-64/mkl-service-2.5.2-py310hacdc0fc_0.conda",
+    "license_files": [
+      "THIRD_PARTY_LICENSES/mkl-service-2.5.2-py310hacdc0fc_0/LICENSE.txt"
+    ]
+  },
+  {
+    "environment": ".conda/env",
+    "package": "mkl_fft",
+    "version": "1.3.11",
+    "build": "py310hacdc0fc_1",
+    "license": "BSD-3-Clause",
+    "source_url": "https://repo.anaconda.com/pkgs/main/linux-64/mkl_fft-1.3.11-py310hacdc0fc_1.conda",
+    "license_files": [
+      "THIRD_PARTY_LICENSES/mkl_fft-1.3.11-py310hacdc0fc_1/LICENSE.txt"
+    ]
+  },
+  {
+    "environment": ".conda/env",
+    "package": "mkl_random",
+    "version": "1.2.8",
+    "build": "py310h2fd27a0_1",
+    "license": "BSD-3-Clause",
+    "source_url": "https://repo.anaconda.com/pkgs/main/linux-64/mkl_random-1.2.8-py310h2fd27a0_1.conda",
+    "license_files": [
+      "THIRD_PARTY_LICENSES/mkl_random-1.2.8-py310h2fd27a0_1/LICENSE.txt"
+    ]
+  },
+  {
+    "environment": ".conda/env",
+    "package": "mpc",
+    "version": "1.3.1",
+    "build": "h5eee18b_0",
+    "license": "LGPL-3.0-or-later",
+    "source_url": "https://repo.anaconda.com/pkgs/main/linux-64/mpc-1.3.1-h5eee18b_0.conda",
+    "license_files": [
+      "THIRD_PARTY_LICENSES/mpc-1.3.1-h5eee18b_0/LICENSE0.txt"
+    ]
+  },
+  {
+    "environment": ".conda/env",
+    "package": "mpfr",
+    "version": "4.2.1",
+    "build": "h5eee18b_0",
+    "license": "LGPL-3.0-only",
+    "source_url": "https://repo.anaconda.com/pkgs/main/linux-64/mpfr-4.2.1-h5eee18b_0.conda",
+    "license_files": [
+      "THIRD_PARTY_LICENSES/mpfr-4.2.1-h5eee18b_0/COPYING.LESSER"
+    ]
+  },
+  {
+    "environment": ".conda/env",
+    "package": "mpmath",
+    "version": "1.3.0",
+    "build": "py310h06a4308_0",
+    "license": "BSD-3-Clause",
+    "source_url": "https://repo.anaconda.com/pkgs/main/linux-64/mpmath-1.3.0-py310h06a4308_0.conda",
+    "license_files": [
+      "THIRD_PARTY_LICENSES/mpmath-1.3.0-py310h06a4308_0/LICENSE"
+    ]
+  },
+  {
+    "environment": ".conda/env",
+    "package": "ncurses",
+    "version": "6.5",
+    "build": "h7934f7d_0",
+    "license": "MIT AND X11",
+    "source_url": "https://repo.anaconda.com/pkgs/main/linux-64/ncurses-6.5-h7934f7d_0.conda",
+    "license_files": [
+      "THIRD_PARTY_LICENSES/ncurses-6.5-h7934f7d_0/COPYING"
+    ]
+  },
+  {
+    "environment": ".conda/env",
+    "package": "nettle",
+    "version": "3.7.3",
+    "build": "hbbd107a_1",
+    "license": "GPL-2.0-or-later AND LGPL-3.0-or-later",
+    "source_url": "https://repo.anaconda.com/pkgs/main/linux-64/nettle-3.7.3-hbbd107a_1.conda",
+    "license_files": [
+      "THIRD_PARTY_LICENSES/nettle-3.7.3-hbbd107a_1/LICENSE0.txt"
+    ]
+  },
+  {
+    "environment": ".conda/env",
+    "package": "networkx",
+    "version": "3.4.2",
+    "build": "py310h06a4308_0",
+    "license": "BSD-3-Clause",
+    "source_url": "https://repo.anaconda.com/pkgs/main/linux-64/networkx-3.4.2-py310h06a4308_0.conda",
+    "license_files": [
+      "THIRD_PARTY_LICENSES/networkx-3.4.2-py310h06a4308_0/LICENSE.txt"
+    ]
+  },
+  {
+    "environment": ".conda/env",
+    "package": "numpy",
+    "version": "1.24.3",
+    "build": "py310h64c44e4_2",
+    "license": "BSD-3-Clause",
+    "source_url": "https://repo.anaconda.com/pkgs/main/linux-64/numpy-1.24.3-py310h64c44e4_2.conda",
+    "license_files": [
+      "THIRD_PARTY_LICENSES/numpy-1.24.3-py310h64c44e4_2/LICENSE.txt"
+    ]
+  },
+  {
+    "environment": ".conda/env",
+    "package": "openh264",
+    "version": "2.1.1",
+    "build": "h4ff587b_0",
+    "license": "BSD-2-Clause",
+    "source_url": "https://repo.anaconda.com/pkgs/main/linux-64/openh264-2.1.1-h4ff587b_0.conda",
+    "license_files": [
+      "THIRD_PARTY_LICENSES/openh264-2.1.1-h4ff587b_0/LICENSE"
+    ]
+  },
+  {
+    "environment": ".conda/env",
+    "package": "openssl",
+    "version": "3.6.1",
+    "build": "h35e630c_1",
+    "license": "Apache-2.0",
+    "source_url": "https://conda.anaconda.org/conda-forge/linux-64/openssl-3.6.1-h35e630c_1.conda",
+    "license_files": [
+      "THIRD_PARTY_LICENSES/openssl-3.6.1-h35e630c_1/LICENSE.txt"
+    ]
+  },
+  {
+    "environment": ".conda/env",
+    "package": "pcre2",
+    "version": "10.46",
+    "build": "hf426167_0",
+    "license": "BSD-3-Clause WITH PCRE2-exception",
+    "source_url": "https://repo.anaconda.com/pkgs/main/linux-64/pcre2-10.46-hf426167_0.conda",
+    "license_files": [
+      "THIRD_PARTY_LICENSES/pcre2-10.46-hf426167_0/LICENCE.md"
+    ]
+  },
+  {
+    "environment": ".conda/env",
+    "package": "pixman",
+    "version": "0.46.4",
+    "build": "h7934f7d_0",
+    "license": "MIT",
+    "source_url": "https://repo.anaconda.com/pkgs/main/linux-64/pixman-0.46.4-h7934f7d_0.conda",
+    "license_files": [
+      "THIRD_PARTY_LICENSES/pixman-0.46.4-h7934f7d_0/COPYING"
+    ]
+  },
+  {
+    "environment": ".conda/env",
+    "package": "pthread-stubs",
+    "version": "0.3",
+    "build": "h0ce48e5_1",
+    "license": "MIT",
+    "source_url": "https://repo.anaconda.com/pkgs/main/linux-64/pthread-stubs-0.3-h0ce48e5_1.conda",
+    "license_files": []
+  },
+  {
+    "environment": ".conda/env",
+    "package": "pycparser",
+    "version": "2.23",
+    "build": "py310h06a4308_0",
+    "license": "BSD-3-Clause",
+    "source_url": "https://repo.anaconda.com/pkgs/main/linux-64/pycparser-2.23-py310h06a4308_0.conda",
+    "license_files": [
+      "THIRD_PARTY_LICENSES/pycparser-2.23-py310h06a4308_0/LICENSE"
+    ]
+  },
+  {
+    "environment": ".conda/env",
+    "package": "pysocks",
+    "version": "1.7.1",
+    "build": "py310h06a4308_1",
+    "license": "BSD 3-Clause",
+    "source_url": "https://repo.anaconda.com/pkgs/main/linux-64/pysocks-1.7.1-py310h06a4308_1.conda",
+    "license_files": [
+      "THIRD_PARTY_LICENSES/pysocks-1.7.1-py310h06a4308_1/LICENSE"
+    ]
+  },
+  {
+    "environment": ".conda/env",
+    "package": "python",
+    "version": "3.10.18",
+    "build": "h1a3bd86_0",
+    "license": "PSF-2.0",
+    "source_url": "https://repo.anaconda.com/pkgs/main/linux-64/python-3.10.18-h1a3bd86_0.conda",
+    "license_files": [
+      "THIRD_PARTY_LICENSES/python-3.10.18-h1a3bd86_0/LICENSE"
+    ]
+  },
+  {
+    "environment": ".conda/env",
+    "package": "python_abi",
+    "version": "3.10",
+    "build": "2_cp310",
+    "license": "BSD-3-Clause",
+    "source_url": "https://conda.anaconda.org/conda-forge/linux-64/python_abi-3.10-2_cp310.tar.bz2",
+    "license_files": [
+      "THIRD_PARTY_LICENSES/python_abi-3.10-2_cp310/LICENSE"
+    ]
+  },
+  {
+    "environment": ".conda/env",
+    "package": "pytorch-cuda",
+    "version": "11.8",
+    "build": "h7e8668a_6",
+    "license": "",
+    "source_url": "https://conda.anaconda.org/pytorch/linux-64/pytorch-cuda-11.8-h7e8668a_6.tar.bz2",
+    "license_files": []
+  },
+  {
+    "environment": ".conda/env",
+    "package": "pytorch-mutex",
+    "version": "1.0",
+    "build": "cuda",
+    "license": "",
+    "source_url": "https://conda.anaconda.org/pytorch/noarch/pytorch-mutex-1.0-cuda.tar.bz2",
+    "license_files": []
+  },
+  {
+    "environment": ".conda/env",
+    "package": "pyyaml",
+    "version": "6.0.2",
+    "build": "py310h5eee18b_0",
+    "license": "MIT",
+    "source_url": "https://repo.anaconda.com/pkgs/main/linux-64/pyyaml-6.0.2-py310h5eee18b_0.conda",
+    "license_files": [
+      "THIRD_PARTY_LICENSES/pyyaml-6.0.2-py310h5eee18b_0/LICENSE"
+    ]
+  },
+  {
+    "environment": ".conda/env",
+    "package": "readline",
+    "version": "8.3",
+    "build": "hc2a1206_0",
+    "license": "GPL-3.0-only",
+    "source_url": "https://repo.anaconda.com/pkgs/main/linux-64/readline-8.3-hc2a1206_0.conda",
+    "license_files": [
+      "THIRD_PARTY_LICENSES/readline-8.3-hc2a1206_0/COPYING"
+    ]
+  },
+  {
+    "environment": ".conda/env",
+    "package": "requests",
+    "version": "2.32.5",
+    "build": "py310h06a4308_1",
+    "license": "Apache-2.0",
+    "source_url": "https://repo.anaconda.com/pkgs/main/linux-64/requests-2.32.5-py310h06a4308_1.conda",
+    "license_files": [
+      "THIRD_PARTY_LICENSES/requests-2.32.5-py310h06a4308_1/LICENSE"
+    ]
+  },
+  {
+    "environment": ".conda/env",
+    "package": "setuptools",
+    "version": "80.9.0",
+    "build": "py310h06a4308_0",
+    "license": "MIT",
+    "source_url": "https://repo.anaconda.com/pkgs/main/linux-64/setuptools-80.9.0-py310h06a4308_0.conda",
+    "license_files": [
+      "THIRD_PARTY_LICENSES/setuptools-80.9.0-py310h06a4308_0/LICENSE"
+    ]
+  },
+  {
+    "environment": ".conda/env",
+    "package": "sqlite",
+    "version": "3.51.0",
+    "build": "h2a70700_0",
+    "license": "blessing",
+    "source_url": "https://repo.anaconda.com/pkgs/main/linux-64/sqlite-3.51.0-h2a70700_0.conda",
+    "license_files": [
+      "THIRD_PARTY_LICENSES/sqlite-3.51.0-h2a70700_0/LICENSE.md"
+    ]
+  },
+  {
+    "environment": ".conda/env",
+    "package": "tbb",
+    "version": "2022.0.0",
+    "build": "hdb19cb5_0",
+    "license": "Apache-2.0",
+    "source_url": "https://repo.anaconda.com/pkgs/main/linux-64/tbb-2022.0.0-hdb19cb5_0.conda",
+    "license_files": [
+      "THIRD_PARTY_LICENSES/tbb-2022.0.0-hdb19cb5_0/LICENSE.txt",
+      "THIRD_PARTY_LICENSES/tbb-2022.0.0-hdb19cb5_0/third-party-programs.txt"
+    ]
+  },
+  {
+    "environment": ".conda/env",
+    "package": "tbb-devel",
+    "version": "2022.0.0",
+    "build": "hdb19cb5_0",
+    "license": "",
+    "source_url": "https://repo.anaconda.com/pkgs/main/linux-64/tbb-devel-2022.0.0-hdb19cb5_0.conda",
+    "license_files": [
+      "THIRD_PARTY_LICENSES/tbb-devel-2022.0.0-hdb19cb5_0/LICENSE.txt",
+      "THIRD_PARTY_LICENSES/tbb-devel-2022.0.0-hdb19cb5_0/third-party-programs.txt"
+    ]
+  },
+  {
+    "environment": ".conda/env",
+    "package": "tk",
+    "version": "8.6.15",
+    "build": "h54e0aa7_0",
+    "license": "TCL",
+    "source_url": "https://repo.anaconda.com/pkgs/main/linux-64/tk-8.6.15-h54e0aa7_0.conda",
+    "license_files": [
+      "THIRD_PARTY_LICENSES/tk-8.6.15-h54e0aa7_0/tcl8.6.15/license.terms"
+    ]
+  },
+  {
+    "environment": ".conda/env",
+    "package": "typing_extensions",
+    "version": "4.15.0",
+    "build": "py310h06a4308_0",
+    "license": "PSF-2.0",
+    "source_url": "https://repo.anaconda.com/pkgs/main/linux-64/typing_extensions-4.15.0-py310h06a4308_0.conda",
+    "license_files": [
+      "THIRD_PARTY_LICENSES/typing_extensions-4.15.0-py310h06a4308_0/LICENSE"
+    ]
+  },
+  {
+    "environment": ".conda/env",
+    "package": "tzdata",
+    "version": "2025b",
+    "build": "h04d1e81_0",
+    "license": "CC-PDDC OR BSD-3-Clause",
+    "source_url": "https://repo.anaconda.com/pkgs/main/noarch/tzdata-2025b-h04d1e81_0.conda",
+    "license_files": [
+      "THIRD_PARTY_LICENSES/tzdata-2025b-h04d1e81_0/LICENSE"
+    ]
+  },
+  {
+    "environment": ".conda/env",
+    "package": "urllib3",
+    "version": "2.5.0",
+    "build": "py310h06a4308_0",
+    "license": "MIT",
+    "source_url": "https://repo.anaconda.com/pkgs/main/linux-64/urllib3-2.5.0-py310h06a4308_0.conda",
+    "license_files": [
+      "THIRD_PARTY_LICENSES/urllib3-2.5.0-py310h06a4308_0/LICENSE.txt"
+    ]
+  },
+  {
+    "environment": ".conda/env",
+    "package": "wheel",
+    "version": "0.45.1",
+    "build": "py310h06a4308_0",
+    "license": "MIT",
+    "source_url": "https://repo.anaconda.com/pkgs/main/linux-64/wheel-0.45.1-py310h06a4308_0.conda",
+    "license_files": [
+      "THIRD_PARTY_LICENSES/wheel-0.45.1-py310h06a4308_0/LICENSE.txt"
+    ]
+  },
+  {
+    "environment": ".conda/env",
+    "package": "xorg-libx11",
+    "version": "1.8.12",
+    "build": "h9b100fa_1",
+    "license": "MIT",
+    "source_url": "https://repo.anaconda.com/pkgs/main/linux-64/xorg-libx11-1.8.12-h9b100fa_1.conda",
+    "license_files": [
+      "THIRD_PARTY_LICENSES/xorg-libx11-1.8.12-h9b100fa_1/COPYING"
+    ]
+  },
+  {
+    "environment": ".conda/env",
+    "package": "xorg-libxau",
+    "version": "1.0.12",
+    "build": "h9b100fa_0",
+    "license": "MIT",
+    "source_url": "https://repo.anaconda.com/pkgs/main/linux-64/xorg-libxau-1.0.12-h9b100fa_0.conda",
+    "license_files": [
+      "THIRD_PARTY_LICENSES/xorg-libxau-1.0.12-h9b100fa_0/COPYING"
+    ]
+  },
+  {
+    "environment": ".conda/env",
+    "package": "xorg-libxdmcp",
+    "version": "1.1.5",
+    "build": "h9b100fa_0",
+    "license": "MIT",
+    "source_url": "https://repo.anaconda.com/pkgs/main/linux-64/xorg-libxdmcp-1.1.5-h9b100fa_0.conda",
+    "license_files": [
+      "THIRD_PARTY_LICENSES/xorg-libxdmcp-1.1.5-h9b100fa_0/COPYING"
+    ]
+  },
+  {
+    "environment": ".conda/env",
+    "package": "xorg-libxext",
+    "version": "1.3.6",
+    "build": "h9b100fa_0",
+    "license": "MIT",
+    "source_url": "https://repo.anaconda.com/pkgs/main/linux-64/xorg-libxext-1.3.6-h9b100fa_0.conda",
+    "license_files": [
+      "THIRD_PARTY_LICENSES/xorg-libxext-1.3.6-h9b100fa_0/COPYING"
+    ]
+  },
+  {
+    "environment": ".conda/env",
+    "package": "xorg-libxrender",
+    "version": "0.9.12",
+    "build": "h9b100fa_0",
+    "license": "MIT",
+    "source_url": "https://repo.anaconda.com/pkgs/main/linux-64/xorg-libxrender-0.9.12-h9b100fa_0.conda",
+    "license_files": [
+      "THIRD_PARTY_LICENSES/xorg-libxrender-0.9.12-h9b100fa_0/COPYING"
+    ]
+  },
+  {
+    "environment": ".conda/env",
+    "package": "xorg-xorgproto",
+    "version": "2024.1",
+    "build": "h5eee18b_1",
+    "license": "MIT",
+    "source_url": "https://repo.anaconda.com/pkgs/main/linux-64/xorg-xorgproto-2024.1-h5eee18b_1.conda",
+    "license_files": [
+      "THIRD_PARTY_LICENSES/xorg-xorgproto-2024.1-h5eee18b_1/licenses/COPYING-dri3proto",
+      "THIRD_PARTY_LICENSES/xorg-xorgproto-2024.1-h5eee18b_1/licenses/COPYING-resourceproto",
+      "THIRD_PARTY_LICENSES/xorg-xorgproto-2024.1-h5eee18b_1/licenses/COPYING-recordproto",
+      "THIRD_PARTY_LICENSES/xorg-xorgproto-2024.1-h5eee18b_1/licenses/COPYING-applewmproto",
+      "THIRD_PARTY_LICENSES/xorg-xorgproto-2024.1-h5eee18b_1/licenses/COPYING-fontcacheproto",
+      "THIRD_PARTY_LICENSES/xorg-xorgproto-2024.1-h5eee18b_1/licenses/COPYING-scrnsaverproto",
+      "THIRD_PARTY_LICENSES/xorg-xorgproto-2024.1-h5eee18b_1/licenses/COPYING-trapproto",
+      "THIRD_PARTY_LICENSES/xorg-xorgproto-2024.1-h5eee18b_1/licenses/COPYING-lg3dproto",
+      "THIRD_PARTY_LICENSES/xorg-xorgproto-2024.1-h5eee18b_1/licenses/COPYING-damageproto",
+      "THIRD_PARTY_LICENSES/xorg-xorgproto-2024.1-h5eee18b_1/licenses/COPYING-xf86bigfontproto",
+      "THIRD_PARTY_LICENSES/xorg-xorgproto-2024.1-h5eee18b_1/licenses/COPYING-evieproto",
+      "THIRD_PARTY_LICENSES/xorg-xorgproto-2024.1-h5eee18b_1/licenses/COPYING-videoproto",
+      "THIRD_PARTY_LICENSES/xorg-xorgproto-2024.1-h5eee18b_1/licenses/COPYING-xextproto",
+      "THIRD_PARTY_LICENSES/xorg-xorgproto-2024.1-h5eee18b_1/licenses/COPYING-xf86dgaproto",
+      "THIRD_PARTY_LICENSES/xorg-xorgproto-2024.1-h5eee18b_1/licenses/COPYING-dri2proto",
+      "THIRD_PARTY_LICENSES/xorg-xorgproto-2024.1-h5eee18b_1/licenses/COPYING-xcmiscproto",
+      "THIRD_PARTY_LICENSES/xorg-xorgproto-2024.1-h5eee18b_1/licenses/COPYING-xf86rushproto",
+      "THIRD_PARTY_LICENSES/xorg-xorgproto-2024.1-h5eee18b_1/licenses/COPYING-x11proto",
+      "THIRD_PARTY_LICENSES/xorg-xorgproto-2024.1-h5eee18b_1/licenses/COPYING-bigreqsproto",
+      "THIRD_PARTY_LICENSES/xorg-xorgproto-2024.1-h5eee18b_1/licenses/COPYING-fixesproto",
+      "THIRD_PARTY_LICENSES/xorg-xorgproto-2024.1-h5eee18b_1/licenses/COPYING-fontsproto",
+      "THIRD_PARTY_LICENSES/xorg-xorgproto-2024.1-h5eee18b_1/licenses/COPYING-kbproto",
+      "THIRD_PARTY_LICENSES/xorg-xorgproto-2024.1-h5eee18b_1/licenses/COPYING-xineramaproto",
+      "THIRD_PARTY_LICENSES/xorg-xorgproto-2024.1-h5eee18b_1/licenses/COPYING-pmproto",
+      "THIRD_PARTY_LICENSES/xorg-xorgproto-2024.1-h5eee18b_1/licenses/COPYING-printproto",
+      "THIRD_PARTY_LICENSES/xorg-xorgproto-2024.1-h5eee18b_1/licenses/COPYING-xf86vidmodeproto",
+      "THIRD_PARTY_LICENSES/xorg-xorgproto-2024.1-h5eee18b_1/licenses/COPYING-xf86miscproto",
+      "THIRD_PARTY_LICENSES/xorg-xorgproto-2024.1-h5eee18b_1/licenses/COPYING-inputproto",
+      "THIRD_PARTY_LICENSES/xorg-xorgproto-2024.1-h5eee18b_1/licenses/COPYING-xf86driproto",
+      "THIRD_PARTY_LICENSES/xorg-xorgproto-2024.1-h5eee18b_1/licenses/COPYING-compositeproto",
+      "THIRD_PARTY_LICENSES/xorg-xorgproto-2024.1-h5eee18b_1/licenses/COPYING-dmxproto",
+      "THIRD_PARTY_LICENSES/xorg-xorgproto-2024.1-h5eee18b_1/licenses/COPYING-glproto",
+      "THIRD_PARTY_LICENSES/xorg-xorgproto-2024.1-h5eee18b_1/licenses/COPYING-windowswmproto",
+      "THIRD_PARTY_LICENSES/xorg-xorgproto-2024.1-h5eee18b_1/licenses/COPYING-presentproto",
+      "THIRD_PARTY_LICENSES/xorg-xorgproto-2024.1-h5eee18b_1/licenses/COPYING-renderproto",
+      "THIRD_PARTY_LICENSES/xorg-xorgproto-2024.1-h5eee18b_1/licenses/COPYING-randrproto"
+    ]
+  },
+  {
+    "environment": ".conda/env",
+    "package": "xz",
+    "version": "5.6.4",
+    "build": "h5eee18b_1",
+    "license": "LGPL-2.1-or-later and GPL-2.0-or-later and 0BSD",
+    "source_url": "https://repo.anaconda.com/pkgs/main/linux-64/xz-5.6.4-h5eee18b_1.conda",
+    "license_files": [
+      "THIRD_PARTY_LICENSES/xz-5.6.4-h5eee18b_1/COPYING"
+    ]
+  },
+  {
+    "environment": ".conda/env",
+    "package": "yaml",
+    "version": "0.2.5",
+    "build": "h7b6447c_0",
+    "license": "MIT",
+    "source_url": "https://repo.anaconda.com/pkgs/main/linux-64/yaml-0.2.5-h7b6447c_0.conda",
+    "license_files": [
+      "THIRD_PARTY_LICENSES/yaml-0.2.5-h7b6447c_0/License"
+    ]
+  },
+  {
+    "environment": ".conda/env",
+    "package": "zlib",
+    "version": "1.2.13",
+    "build": "hd233ad5_2",
+    "license": "Zlib",
+    "source_url": "https://repo.anaconda.com/pkgs/main/linux-64/zlib-1.2.13-hd233ad5_2.conda",
+    "license_files": [
+      "THIRD_PARTY_LICENSES/zlib-1.2.13-hd233ad5_2/zlib.h"
+    ]
+  },
+  {
+    "environment": ".conda/env",
+    "package": "zstd",
+    "version": "1.5.7",
+    "build": "hb8e6e7a_2",
+    "license": "BSD-3-Clause",
+    "source_url": "https://conda.anaconda.org/conda-forge/linux-64/zstd-1.5.7-hb8e6e7a_2.conda",
+    "license_files": [
+      "THIRD_PARTY_LICENSES/zstd-1.5.7-hb8e6e7a_2/LICENSE"
+    ]
+  },
+  {
+    "environment": ".web-python",
+    "package": "python",
+    "version": "3.12.12",
+    "build": "hd17a9e1_1",
+    "license": "PSF-2.0",
+    "source_url": "file:///home/student_su/miniconda3/pkgs/python-3.12.12-hd17a9e1_1.conda",
+    "license_files": [
+      "THIRD_PARTY_LICENSES/python-3.12.12-hd17a9e1_1/LICENSE"
+    ]
+  }
+]

@@ -1,0 +1,369 @@
+{
+  "source": "https://pullmyboots.github.io/ConcordTree/",
+  "downloaded_at": "2026-11-05T16:23:20.329205+00:00",
+  "content": "Local measured report retains the earlier AP-NJ scientific freeze. The current application method was updated to user-authorized DIPPER initialization inside V1.0.2; existing accuracy, support and runtime measurements were not relabeled or rerun.",
+  "source_download_files": [
+    {
+      "source": "https://pullmyboots.github.io/ConcordTree/",
+      "file": "index.html",
+      "bytes": 34141,
+      "sha256": "ccecffd3a38caf243266aedc965ccc655df6f769dbe203c2468286974d0b14c2"
+    },
+    {
+      "source": "https://pullmyboots.github.io/ConcordTree/assets/concordtree-mark.svg",
+      "file": "assets/concordtree-mark.svg",
+      "bytes": 703,
+      "sha256": "02f4c8a2481857b434a6b236a218166e8e3c3734c4e6a84603b933aad9a0f2d2"
+    },
+    {
+      "source": "https://pullmyboots.github.io/ConcordTree/assets/gene-tree-accuracy.svg?v=20260921-0315",
+      "file": "assets/gene-tree-accuracy.svg",
+      "bytes": 18152,
+      "sha256": "a3c3e72f489f155dae8be706e00b08900fd11953b032e6f5fa60e0647fb2cf7a"
+    },
+    {
+      "source": "https://pullmyboots.github.io/ConcordTree/assets/method-overview.svg?v=20260921-0705",
+      "file": "assets/method-overview.svg",
+      "bytes": 13412,
+      "sha256": "9c656a048dfc2c948e9312f7a6c0fc61bd3ba86c9a13a655a5eda1bc7336f46f"
+    },
+    {
+      "source": "https://pullmyboots.github.io/ConcordTree/assets/runtime-scaling.svg?v=20260921-0315",
+      "file": "assets/runtime-scaling.svg",
+      "bytes": 31540,
+      "sha256": "e982aa8d0b106e93d5a115b57240f7550b8954a882e12342408d450d0372b294"
+    },
+    {
+      "source": "https://pullmyboots.github.io/ConcordTree/assets/site.css",
+      "file": "assets/site.css",
+      "bytes": 10791,
+      "sha256": "cd0cedf3a5de7dd9308caadeb858c4b276fbed62ebd5cfd73d56c3028049f26c"
+    },
+    {
+      "source": "https://pullmyboots.github.io/ConcordTree/assets/site.js?v=20260921-1200",
+      "file": "assets/site.js",
+      "bytes": 38784,
+      "sha256": "960457bf2c5855f1a1f5c8559bacd4c4a0852e4832d6079f88f3f264bde180fd"
+    },
+    {
+      "source": "https://pullmyboots.github.io/ConcordTree/assets/species-tree-accuracy.svg?v=20260921-0315",
+      "file": "assets/species-tree-accuracy.svg",
+      "bytes": 28012,
+      "sha256": "8213b770b7d0ae0d4316559826e0544911c4fbc2c9c194f3143615bf0e8ee94f"
+    }
+  ],
+  "locally_edited_at": "2026-11-06T21:50:58.680292+00:00",
+  "layout_instruction_sha256": "e72a1bb61fdb47d2460f3509342dd4e1261fa9cba34029a204cb2fd3748e14e7",
+  "local_files": {
+    "accuracy.html": {
+      "sha256": "2e5f9aed93cf71e4b6ebe1ee090f5d6ca4c7eec3e711538bdd7c79c9002e5761",
+      "bytes": 6149
+    },
+    "assets/benchmark/gene-branch-lengths.png": {
+      "sha256": "38e906515f098881ffedbe15fcdbd7972887ae94d31b350e451bcf60414a2493",
+      "bytes": 92171
+    },
+    "assets/benchmark/gene-branch-lengths.svg": {
+      "sha256": "844dfc0fabe03a6f15d3cee8e9706ae510b95f61cf037d5b64cf0fee552087c6",
+      "bytes": 14727
+    },
+    "assets/benchmark/gene-gpu-memory.png": {
+      "sha256": "e7376bfe2bb53c7711a8d3e7caa1ec9e63cbb4f977f024e5b580755864721562",
+      "bytes": 53573
+    },
+    "assets/benchmark/gene-gpu-memory.svg": {
+      "sha256": "8ec2dd154d2af76fd7da782ff93157c9517ec165088b0b352eded7104637a3b3",
+      "bytes": 8263
+    },
+    "assets/benchmark/gene-host-memory.png": {
+      "sha256": "239b72d92202177eb8cbca542615f55a40e1d989e9cbf6160a3557033e48bc18",
+      "bytes": 68864
+    },
+    "assets/benchmark/gene-host-memory.svg": {
+      "sha256": "8e6125d981cde5293e34b96045f6605394eb073cc45b4e1f8d06e6e330256939",
+      "bytes": 12171
+    },
+    "assets/benchmark/gene-runtime.png": {
+      "sha256": "a67d875174e46791dff5bae70468b8220b780b38437807a461c00a5fb89c5bc8",
+      "bytes": 186162
+    },
+    "assets/benchmark/gene-runtime.svg": {
+      "sha256": "b1a47c957cd036cc8aff003ee3a14b8955076e2fa4e80670749f52c826ca4eb3",
+      "bytes": 26740
+    },
+    "assets/benchmark/gene-speedup.png": {
+      "sha256": "8c813f8b3c848babc201d9ab68518c2efd3be7d371f0f95ef95ea18866bd491e",
+      "bytes": 235056
+    },
+    "assets/benchmark/gene-speedup.svg": {
+      "sha256": "ae9c388cc9b23283431ce4e9aeebfc5f307d1442bd6a117fd0ace112447fd4d3",
+      "bytes": 42840
+    },
+    "assets/benchmark/gene-support-bins.png": {
+      "sha256": "fa19351f2d80a4fc4beb132f28b9d3b7cdffb60515657e2b4bd12f6cf8570c19",
+      "bytes": 120438
+    },
+    "assets/benchmark/gene-support-bins.svg": {
+      "sha256": "8b8cba3aca69ea7dd04f6fbea0b4dd7141f14b055b0321fd6ec83b63157e17f1",
+      "bytes": 10761
+    },
+    "assets/benchmark/gene-topology.png": {
+      "sha256": "5a3b53d0473fe2dba28acf900283278ee9fb0e3963de01d45bf02832116e37a1",
+      "bytes": 105102
+    },
+    "assets/benchmark/gene-topology.svg": {
+      "sha256": "39101a9e81cbe36e1afca9806785cc46fbfce81144f01de13eb4b124994cb6e5",
+      "bytes": 16726
+    },
+    "assets/benchmark/species-gpu-memory.png": {
+      "sha256": "e75ec1dd7ef140e22db46c603460c292319af4d72a2ac6618a81fb974aeac96c",
+      "bytes": 50816
+    },
+    "assets/benchmark/species-gpu-memory.svg": {
+      "sha256": "f4e3b2e182de05451675c42fb0240af72c7fa9ae1b1462b3394e7bf24d4fef8a",
+      "bytes": 8944
+    },
+    "assets/benchmark/species-host-memory.png": {
+      "sha256": "7996a25f7cffdbba99bc4b040573c213bcb8f0c60beac8bccd6fa54eda26ae47",
+      "bytes": 54854
+    },
+    "assets/benchmark/species-host-memory.svg": {
+      "sha256": "917f5ffb052801521c30d57cf0245d244557a7866350e1184fe0b73ce65a8015",
+      "bytes": 8248
+    },
+    "assets/benchmark/species-runtime.png": {
+      "sha256": "59330353862f7b89c908909f57aa0b95e2aa1018ab7ade85e88d65c946539244",
+      "bytes": 156205
+    },
+    "assets/benchmark/species-runtime.svg": {
+      "sha256": "9e45c3f91b1856cd203405a0993c75590bfcd0eb0435a7075336c0431e4caafd",
+      "bytes": 30533
+    },
+    "assets/benchmark/species-speedup.png": {
+      "sha256": "797f8d39c30152c5ff3b82703bf64b6259787e52fce822f8a6625fe691b79334",
+      "bytes": 217693
+    },
+    "assets/benchmark/species-speedup.svg": {
+      "sha256": "17e0f9c09654f91a6cbef7600e7569fe631bdaf77163cbd29ba8a79bea1d7afe",
+      "bytes": 43872
+    },
+    "assets/benchmark/species-support-bins.png": {
+      "sha256": "48de7d0c0ddcf7c5c8298d60f8cacf24fb5566126628e6804a4544d8955e185c",
+      "bytes": 132650
+    },
+    "assets/benchmark/species-support-bins.svg": {
+      "sha256": "8e1dc33d0ff5f48df2bf819f631c158511b4bed8420a612c26039c8f1dc00d65",
+      "bytes": 11823
+    },
+    "assets/benchmark/species-topology-complex.png": {
+      "sha256": "4d3d0622f481eec7089b54505c610da277d56e526c9db96a3c66caa017f89ed9",
+      "bytes": 104435
+    },
+    "assets/benchmark/species-topology-complex.svg": {
+      "sha256": "f6f410b5cd41c739052aafb703789b16b8a2e461db7c843d77969769ac65fcb2",
+      "bytes": 18109
+    },
+    "assets/benchmark/species-topology-simple.png": {
+      "sha256": "0aad8dfc47be517701f009ad95360c6cd992e8ebe95c481a791ab92b230dda53",
+      "bytes": 103124
+    },
+    "assets/benchmark/species-topology-simple.svg": {
+      "sha256": "5cf28d885788b74e5ba9794ae3cea86cc98e124bc1693837e4eac62bb7f7435c",
+      "bytes": 17424
+    },
+    "assets/benchmark/support-roc.png": {
+      "sha256": "803c8f7942e2eb58b2961fedc9460ed72deda31642f9fbefc2103f10ea903669",
+      "bytes": 149767
+    },
+    "assets/benchmark/support-roc.svg": {
+      "sha256": "84698a9659d48f05c45856e0485458ed6f858c70e2056655de7533b0973ab303",
+      "bytes": 15019
+    },
+    "assets/concordtree-mark.svg": {
+      "sha256": "02f4c8a2481857b434a6b236a218166e8e3c3734c4e6a84603b933aad9a0f2d2",
+      "bytes": 703
+    },
+    "assets/site.css": {
+      "sha256": "e29c684a96e19a7608aa1bc7849e23090f119a7614c8421535ede33b3b812c45",
+      "bytes": 9479
+    },
+    "data/BASELINES.json": {
+      "sha256": "aa8b51becb44a2aac57f6536f3ec9e5f6785e74c80360e46b7ca1dbe90fd29c9",
+      "bytes": 3543710
+    },
+    "data/BASELINE_CONFIGURATIONS.json": {
+      "sha256": "120ae13677e9f9f4f3c41e241005f325d49c7e64599b1abdec26e89e207e32a4",
+      "bytes": 4965
+    },
+    "data/BASELINE_IMPORT_AUDIT.json": {
+      "sha256": "f02a50ce11a20fbbaf42c3e0e0525dad33022ef933722a4f2d44c313652ca0fe",
+      "bytes": 2925
+    },
+    "data/BASELINE_INPUT_COPY_AUDIT.json": {
+      "sha256": "0b5742b513d9840417a8910d661642eace3d82a642cb92931a76bd249e471a16",
+      "bytes": 254712
+    },
+    "data/EMPIRICAL_ALL_EVALUATIONS.json": {
+      "sha256": "12781ca51648ac94a3db02d116882b4ec12ab4d585cf6c21990624a6890e690e",
+      "bytes": 46757
+    },
+    "data/EMPIRICAL_CONCAT_EVALUATIONS.json": {
+      "sha256": "12781ca51648ac94a3db02d116882b4ec12ab4d585cf6c21990624a6890e690e",
+      "bytes": 46757
+    },
+    "data/EMPIRICAL_CONCAT_FREEZE.json": {
+      "sha256": "fdc0129147fc8879750cf7059a5cbae8107aeae071a086a4bb46367d39e9e90c",
+      "bytes": 1926
+    },
+    "data/EMPIRICAL_EVALUATIONS.json": {
+      "sha256": "fbcf15e6778c44915e5517f6080a8f1782454d1504c2807730bc90c8aa9bb0dc",
+      "bytes": 22071
+    },
+    "data/EMPIRICAL_GAPS.json": {
+      "sha256": "0ce634960479233db551012b1990573cccd2bd23208e94be038128427f3eeee4",
+      "bytes": 1543
+    },
+    "data/EMPIRICAL_SOURCES.json": {
+      "sha256": "3c0c30298b4e5b12b0e24a1932843e540a11c8572d5a1c7c3024146cc9cecd60",
+      "bytes": 9992
+    },
+    "data/EMPIRICAL_SUMMARY.json": {
+      "sha256": "375ee9b7c94f00a781740946fdae544543a7d1e9a9af9eb9256116be7597be8c",
+      "bytes": 3363
+    },
+    "data/EMPIRICAL_SUPERMATRIX_EVALUATIONS.json": {
+      "sha256": "12781ca51648ac94a3db02d116882b4ec12ab4d585cf6c21990624a6890e690e",
+      "bytes": 46757
+    },
+    "data/EMPIRICAL_SUPERMATRIX_FREEZE.json": {
+      "sha256": "9e6a3862ebf4c649042b7088a4f036b27c85ed06b9a307cb358af77ff3d8d01f",
+      "bytes": 5576
+    },
+    "data/FREEZE.json": {
+      "sha256": "dca7b34eee8f9eb1eea7ab20dfeca0c815909e0bedbb62caf26b6dd44ac6a083",
+      "bytes": 3721
+    },
+    "data/INPUTS.json": {
+      "sha256": "deb99709ec1a7ccf4bd32ff6e64f2796ee610b1ca3e0c122ece875b842284627",
+      "bytes": 784877
+    },
+    "data/POOLED_RESOURCES.json": {
+      "sha256": "b1dd1eef4df1091ab8012dbdceb684ccd3ee8252a8ab1d8d65f04248f86090bc",
+      "bytes": 2322
+    },
+    "data/REUSE.json": {
+      "sha256": "fdd0bf4f6e7e65668c970091672471d11eac04382e99ffafa118363cccdafe57",
+      "bytes": 418
+    },
+    "data/RUNTIME_COMPARISON.json": {
+      "sha256": "a4a3f469e2fca30dd8a3920319358b068d3096ff1369a2d1201b4dbbbb5f2771",
+      "bytes": 1276476
+    },
+    "data/SPECIES_FAMILY_SUMMARY.json": {
+      "sha256": "ca13466ffbf20c352a159e5ee04ebb77ff0a3093a2261dd2bf0133fc8664f875",
+      "bytes": 138363
+    },
+    "data/SUMMARY.json": {
+      "sha256": "3b3f3606230fe07a9c205877f66d208df9a7f9a5442627ebe26119c65b1f1dc3",
+      "bytes": 463407
+    },
+    "data/SUPPORT_GENE.json": {
+      "sha256": "37ae8755787a621e276fd900941ce8c73208ff40a6cab9cc18fcc2580cbd5746",
+      "bytes": 134655
+    },
+    "data/SUPPORT_SPECIES.json": {
+      "sha256": "6730e6a74bd719e4f87bcf12b31f8bcdec2fcf1cda3e57530e17a0a7fddf1417",
+      "bytes": 203089
+    },
+    "data/branch-length-records.csv": {
+      "sha256": "445bd3ce0afea173bdd3c61e2dcd6d2f759ee1e4738f3c7ecac0d57d8075086c",
+      "bytes": 309455
+    },
+    "data/empirical-all.csv": {
+      "sha256": "8162e21e5694df032247c4111bf424ae2dc6d5b8cfe037322c1b6a66a2a63457",
+      "bytes": 4568
+    },
+    "data/empirical-original-loci.csv": {
+      "sha256": "376be2d2e69c9d99bfd3feda975ad441f7752c97e31dc8122a9bbae436134a0a",
+      "bytes": 741
+    },
+    "data/empirical.csv": {
+      "sha256": "8162e21e5694df032247c4111bf424ae2dc6d5b8cfe037322c1b6a66a2a63457",
+      "bytes": 4568
+    },
+    "data/paired-branch-lengths.csv": {
+      "sha256": "2c869b45390a7010e79c259e69039d2a9de85a72737b3cda8271c8a5851d6460",
+      "bytes": 88382
+    },
+    "data/paired-topology.csv": {
+      "sha256": "f4c95dd073194460334bbcfc416172c1bf96ee2bc2c62c3e3482238f25fa33d5",
+      "bytes": 1697
+    },
+    "data/records.csv": {
+      "sha256": "4a05ed984e683b017d93f628fc5b09d94c20d7669f5ace06c50aaf3a3e04f748",
+      "bytes": 2479994
+    },
+    "data/resources.csv": {
+      "sha256": "be42a5709b5286dc0f7b36d5728a328e7f676b7e43f27fbb8ac6e2bd7d118a77",
+      "bytes": 1268081
+    },
+    "data/risk-coverage.csv": {
+      "sha256": "817e938db3cbe964a7b550952a5d62e4f51aab1a827819cf549636e7db57d5fd",
+      "bytes": 1290
+    },
+    "data/support-bins.csv": {
+      "sha256": "69b7a3f13f40ab03a700bb0c88835a3c1ee7dd4221429d0e77b9e5a47a406aff",
+      "bytes": 946
+    },
+    "examples/gene.phy": {
+      "sha256": "96846c8b380c4b1a56bff3be8c99f10c2db44af56a90960220733ed80abf0900",
+      "bytes": 8423
+    },
+    "examples/species.paml": {
+      "sha256": "84f12775599ed1ba56f10e08c3216ef0837dcbd85b1017513887396034f0b7af",
+      "bytes": 8551
+    },
+    "index.html": {
+      "sha256": "23491d4b0b5d77449f93c932c5d245e4a9482dd83cdd436cf5d39839c0efb9f7",
+      "bytes": 4409
+    },
+    "method.html": {
+      "sha256": "9383cc04d6bd6339bcb0a02cba018adc785841a36c794bf1aa55c9d6fe2d6e65",
+      "bytes": 14090
+    },
+    "performance.html": {
+      "sha256": "b219488a179395f686aefb123e8d19a99efa5b7311ad6fe139352cdd3a4b740b",
+      "bytes": 3052
+    }
+  },
+  "presentation": {
+    "topology_charts": "horizontal method bars pooled over all completed alignments, with original 95% bootstrap intervals",
+    "resource_charts": "time only; separate gene/species median runtime curves against taxon count, base-10 logarithmic time axis; median paired observed comparator/ConcordTree time ratio curves by taxon count, base-10 logarithmic ratio axis",
+    "excluded_comparator": "IQ-TREE default search",
+    "retained_iqtree": "IQ-TREE --fast",
+    "excluded_gene_comparator": "CASTER-site",
+    "topology_order": "ascending mean nRF, most accurate at top",
+    "accuracy_sample_counts_visible": false,
+    "branch_length_comparison": "one horizontal bar per method; ascending mean per-alignment NMAE on each method own correctly recovered internal branches",
+    "species_topology_groups": [
+      "Simple (ILS)",
+      "Complex"
+    ],
+    "species_topology_tables": false,
+    "empirical_presentation": "table only, DIPPER archived CPU results included; final mean nRF row uses each method available datasets",
+    "gene_topology_paired_table": false,
+    "requested_accuracy_intro_removed": true,
+    "plant_fasttree": {
+      "nrf": 0.0979,
+      "source": "published reported value confirmed by user"
+    }
+  },
+  "campaign": "output/report-data-20261106",
+  "scientific_freeze_manifest_sha256": "5832476a2e3f69645d1a36206ef2fbf11519fe0caf7b9f5d283b338c34af2993",
+  "current_method_update": {
+    "date": "2026-11-06T21:50:58.680292+00:00",
+    "method": "bounded full-site AP-NJ",
+    "evidence": "../evidence/APNJ_INITIALIZATION.md",
+    "scope": "Current Methods text only. Historical accuracy, support and runtime datasets and figures retain their original scientific freeze."
+  }
+}

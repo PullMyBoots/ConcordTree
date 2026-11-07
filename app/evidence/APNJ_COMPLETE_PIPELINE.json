@@ -1,0 +1,568 @@
+{
+  "created_at": "2026-11-06T20:25:10.979823+00:00",
+  "completion": {
+    "gene": {
+      "status": "complete",
+      "finished": 200,
+      "planned": 200
+    },
+    "species": {
+      "status": "complete",
+      "finished": 700,
+      "planned": 700
+    }
+  },
+  "status": "complete",
+  "by_task": {
+    "gene": {
+      "records": 200,
+      "arm_status": {
+        "candidate": {
+          "complete": 200
+        },
+        "dipper": {
+          "complete": 200
+        }
+      },
+      "pairs": 200,
+      "candidate_nrf": 0.03344781335771189,
+      "dipper_nrf": 0.03702138082623878,
+      "delta": -0.0035735674685268854,
+      "paired_stratified_bootstrap95": [
+        -0.008784653366774803,
+        0.0009633423583646605
+      ],
+      "win": 63,
+      "tie": 75,
+      "loss": 62,
+      "worst_delta": 0.23379174852652257,
+      "best_delta": -0.3794466403162055,
+      "baseline_reused": 40,
+      "descriptive_fresh_runtime": {
+        "records": 160,
+        "candidate_mean": 4.770433259935817,
+        "dipper_mean": 7.762626562226797,
+        "dipper_over_candidate": 1.6272372212856905,
+        "scope": "single fresh full runs, alternating arm order; includes common parser and downstream; first-use/context differences not a strict warm benchmark"
+      }
+    },
+    "species": {
+      "records": 700,
+      "arm_status": {
+        "candidate": {
+          "complete": 700
+        },
+        "dipper": {
+          "complete": 700
+        }
+      },
+      "pairs": 700,
+      "candidate_nrf": 0.0668346403913677,
+      "dipper_nrf": 0.07065310584179069,
+      "delta": -0.003818465450422986,
+      "paired_stratified_bootstrap95": [
+        -0.005074884669058716,
+        -0.0026001555556246993
+      ],
+      "win": 196,
+      "tie": 395,
+      "loss": 109,
+      "worst_delta": 0.09430255402750493,
+      "best_delta": -0.13227513227513227,
+      "baseline_reused": 56,
+      "descriptive_fresh_runtime": {
+        "records": 644,
+        "candidate_mean": 1.0072088032203108,
+        "dipper_mean": 1.1208316012826511,
+        "dipper_over_candidate": 1.1128095760273922,
+        "scope": "single fresh full runs, alternating arm order; includes common parser and downstream; first-use/context differences not a strict warm benchmark"
+      }
+    }
+  },
+  "by_scale": {
+    "gene/256": {
+      "records": 40,
+      "arm_status": {
+        "candidate": {
+          "complete": 40
+        },
+        "dipper": {
+          "complete": 40
+        }
+      },
+      "pairs": 40,
+      "candidate_nrf": 0.025889328063241106,
+      "dipper_nrf": 0.03754940711462451,
+      "delta": -0.011660079051383398,
+      "paired_stratified_bootstrap95": [
+        -0.034093379446640315,
+        0.00158102766798419
+      ],
+      "win": 4,
+      "tie": 26,
+      "loss": 10,
+      "worst_delta": 0.019762845849802375,
+      "best_delta": -0.3794466403162055,
+      "baseline_reused": 8,
+      "descriptive_fresh_runtime": {
+        "records": 32,
+        "candidate_mean": 1.8637971657735761,
+        "dipper_mean": 1.750059563666582,
+        "dipper_over_candidate": 0.9389753326189941,
+        "scope": "single fresh full runs, alternating arm order; includes common parser and downstream; first-use/context differences not a strict warm benchmark"
+      }
+    },
+    "gene/512": {
+      "records": 40,
+      "arm_status": {
+        "candidate": {
+          "complete": 40
+        },
+        "dipper": {
+          "complete": 40
+        }
+      },
+      "pairs": 40,
+      "candidate_nrf": 0.06296660117878192,
+      "dipper_nrf": 0.0668467583497053,
+      "delta": -0.0038801571709233804,
+      "paired_stratified_bootstrap95": [
+        -0.01802554027504912,
+        0.01282048133595283
+      ],
+      "win": 14,
+      "tie": 15,
+      "loss": 11,
+      "worst_delta": 0.23379174852652257,
+      "best_delta": -0.14734774066797643,
+      "baseline_reused": 8,
+      "descriptive_fresh_runtime": {
+        "records": 32,
+        "candidate_mean": 1.9755401409056503,
+        "dipper_mean": 3.0504497966030613,
+        "dipper_over_candidate": 1.5441092455882157,
+        "scope": "single fresh full runs, alternating arm order; includes common parser and downstream; first-use/context differences not a strict warm benchmark"
+      }
+    },
+    "gene/1024": {
+      "records": 40,
+      "arm_status": {
+        "candidate": {
+          "complete": 40
+        },
+        "dipper": {
+          "complete": 40
+        }
+      },
+      "pairs": 40,
+      "candidate_nrf": 0.02730166503428012,
+      "dipper_nrf": 0.027375122428991185,
+      "delta": -7.345739471106734e-05,
+      "paired_stratified_bootstrap95": [
+        -0.002277179236043094,
+        0.002081292850146915
+      ],
+      "win": 12,
+      "tie": 15,
+      "loss": 13,
+      "worst_delta": 0.022526934378060727,
+      "best_delta": -0.022526934378060724,
+      "baseline_reused": 8,
+      "descriptive_fresh_runtime": {
+        "records": 32,
+        "candidate_mean": 2.153672981163254,
+        "dipper_mean": 3.946815464150859,
+        "dipper_over_candidate": 1.8325973806938334,
+        "scope": "single fresh full runs, alternating arm order; includes common parser and downstream; first-use/context differences not a strict warm benchmark"
+      }
+    },
+    "gene/2048": {
+      "records": 40,
+      "arm_status": {
+        "candidate": {
+          "complete": 40
+        },
+        "dipper": {
+          "complete": 40
+        }
+      },
+      "pairs": 40,
+      "candidate_nrf": 0.025488997555012226,
+      "dipper_nrf": 0.02589242053789731,
+      "delta": -0.0004034229828850856,
+      "paired_stratified_bootstrap95": [
+        -0.0018092909535452326,
+        0.0007212713936430319
+      ],
+      "win": 13,
+      "tie": 11,
+      "loss": 16,
+      "worst_delta": 0.007334963325183373,
+      "best_delta": -0.02102689486552567,
+      "baseline_reused": 8,
+      "descriptive_fresh_runtime": {
+        "records": 32,
+        "candidate_mean": 5.7847978326899465,
+        "dipper_mean": 11.929011201806134,
+        "dipper_over_candidate": 2.062131045340112,
+        "scope": "single fresh full runs, alternating arm order; includes common parser and downstream; first-use/context differences not a strict warm benchmark"
+      }
+    },
+    "gene/4096": {
+      "records": 40,
+      "arm_status": {
+        "candidate": {
+          "complete": 40
+        },
+        "dipper": {
+          "complete": 40
+        }
+      },
+      "pairs": 40,
+      "candidate_nrf": 0.025592474957244076,
+      "dipper_nrf": 0.02744319569997557,
+      "delta": -0.0018507207427314932,
+      "paired_stratified_bootstrap95": [
+        -0.003872617884192523,
+        -0.0002504275592474962
+      ],
+      "win": 20,
+      "tie": 8,
+      "loss": 12,
+      "worst_delta": 0.004886391399951135,
+      "best_delta": -0.02760811140972392,
+      "baseline_reused": 8,
+      "descriptive_fresh_runtime": {
+        "records": 32,
+        "candidate_mean": 12.074358179146657,
+        "dipper_mean": 18.136796784907347,
+        "dipper_over_candidate": 1.5020919965941533,
+        "scope": "single fresh full runs, alternating arm order; includes common parser and downstream; first-use/context differences not a strict warm benchmark"
+      }
+    },
+    "species/32": {
+      "records": 100,
+      "arm_status": {
+        "candidate": {
+          "complete": 100
+        },
+        "dipper": {
+          "complete": 100
+        }
+      },
+      "pairs": 100,
+      "candidate_nrf": 0.062068965517241385,
+      "dipper_nrf": 0.061034482758620695,
+      "delta": 0.0010344827586206897,
+      "paired_stratified_bootstrap95": [
+        -0.0006896551724137934,
+        0.0031034482758620693
+      ],
+      "win": 1,
+      "tie": 96,
+      "loss": 3,
+      "worst_delta": 0.06896551724137931,
+      "best_delta": -0.03448275862068967,
+      "baseline_reused": 8,
+      "descriptive_fresh_runtime": {
+        "records": 92,
+        "candidate_mean": 0.1033120473401378,
+        "dipper_mean": 0.1378632784092232,
+        "dipper_over_candidate": 1.3344356438444318,
+        "scope": "single fresh full runs, alternating arm order; includes common parser and downstream; first-use/context differences not a strict warm benchmark"
+      }
+    },
+    "species/64": {
+      "records": 100,
+      "arm_status": {
+        "candidate": {
+          "complete": 100
+        },
+        "dipper": {
+          "complete": 100
+        }
+      },
+      "pairs": 100,
+      "candidate_nrf": 0.06278688524590165,
+      "dipper_nrf": 0.06360655737704918,
+      "delta": -0.0008196721311475411,
+      "paired_stratified_bootstrap95": [
+        -0.003114754098360656,
+        0.0013114754098360651
+      ],
+      "win": 8,
+      "tie": 86,
+      "loss": 6,
+      "worst_delta": 0.04918032786885246,
+      "best_delta": -0.08196721311475408,
+      "baseline_reused": 8,
+      "descriptive_fresh_runtime": {
+        "records": 92,
+        "candidate_mean": 0.1919892228046513,
+        "dipper_mean": 0.20182808587813508,
+        "dipper_over_candidate": 1.0512469550621328,
+        "scope": "single fresh full runs, alternating arm order; includes common parser and downstream; first-use/context differences not a strict warm benchmark"
+      }
+    },
+    "species/128": {
+      "records": 100,
+      "arm_status": {
+        "candidate": {
+          "complete": 100
+        },
+        "dipper": {
+          "complete": 100
+        }
+      },
+      "pairs": 100,
+      "candidate_nrf": 0.06576000000000001,
+      "dipper_nrf": 0.06480000000000001,
+      "delta": 0.00096,
+      "paired_stratified_bootstrap95": [
+        -0.0008800000000000004,
+        0.00328
+      ],
+      "win": 12,
+      "tie": 74,
+      "loss": 14,
+      "worst_delta": 0.08000000000000002,
+      "best_delta": -0.02400000000000002,
+      "baseline_reused": 8,
+      "descriptive_fresh_runtime": {
+        "records": 92,
+        "candidate_mean": 0.37657063219534315,
+        "dipper_mean": 0.39996157827503653,
+        "dipper_over_candidate": 1.0621156937898426,
+        "scope": "single fresh full runs, alternating arm order; includes common parser and downstream; first-use/context differences not a strict warm benchmark"
+      }
+    },
+    "species/192": {
+      "records": 100,
+      "arm_status": {
+        "candidate": {
+          "complete": 100
+        },
+        "dipper": {
+          "complete": 100
+        }
+      },
+      "pairs": 100,
+      "candidate_nrf": 0.07153439153439152,
+      "dipper_nrf": 0.07465608465608466,
+      "delta": -0.003121693121693122,
+      "paired_stratified_bootstrap95": [
+        -0.006719576719576721,
+        -0.00026455026455026625
+      ],
+      "win": 24,
+      "tie": 58,
+      "loss": 18,
+      "worst_delta": 0.015873015873015872,
+      "best_delta": -0.13227513227513227,
+      "baseline_reused": 8,
+      "descriptive_fresh_runtime": {
+        "records": 92,
+        "candidate_mean": 0.5848138661063074,
+        "dipper_mean": 0.6341657375552409,
+        "dipper_over_candidate": 1.0843890241138063,
+        "scope": "single fresh full runs, alternating arm order; includes common parser and downstream; first-use/context differences not a strict warm benchmark"
+      }
+    },
+    "species/256": {
+      "records": 100,
+      "arm_status": {
+        "candidate": {
+          "complete": 100
+        },
+        "dipper": {
+          "complete": 100
+        }
+      },
+      "pairs": 100,
+      "candidate_nrf": 0.06573122529644268,
+      "dipper_nrf": 0.0675098814229249,
+      "delta": -0.0017786561264822131,
+      "paired_stratified_bootstrap95": [
+        -0.0046640316205533595,
+        0.0006324110671936757
+      ],
+      "win": 31,
+      "tie": 46,
+      "loss": 23,
+      "worst_delta": 0.023715415019762848,
+      "best_delta": -0.09881422924901184,
+      "baseline_reused": 8,
+      "descriptive_fresh_runtime": {
+        "records": 92,
+        "candidate_mean": 0.7440790370228174,
+        "dipper_mean": 0.8180079681940539,
+        "dipper_over_candidate": 1.0993562880994985,
+        "scope": "single fresh full runs, alternating arm order; includes common parser and downstream; first-use/context differences not a strict warm benchmark"
+      }
+    },
+    "species/512": {
+      "records": 100,
+      "arm_status": {
+        "candidate": {
+          "complete": 100
+        },
+        "dipper": {
+          "complete": 100
+        }
+      },
+      "pairs": 100,
+      "candidate_nrf": 0.07339882121807466,
+      "dipper_nrf": 0.07899803536345776,
+      "delta": -0.005599214145383105,
+      "paired_stratified_bootstrap95": [
+        -0.010078585461689587,
+        -0.0011984282907662078
+      ],
+      "win": 51,
+      "tie": 23,
+      "loss": 26,
+      "worst_delta": 0.09430255402750493,
+      "best_delta": -0.10216110019646364,
+      "baseline_reused": 8,
+      "descriptive_fresh_runtime": {
+        "records": 92,
+        "candidate_mean": 1.7060802025599,
+        "dipper_mean": 1.9528072544920219,
+        "dipper_over_candidate": 1.1446163266896354,
+        "scope": "single fresh full runs, alternating arm order; includes common parser and downstream; first-use/context differences not a strict warm benchmark"
+      }
+    },
+    "species/1024": {
+      "records": 100,
+      "arm_status": {
+        "candidate": {
+          "complete": 100
+        },
+        "dipper": {
+          "complete": 100
+        }
+      },
+      "pairs": 100,
+      "candidate_nrf": 0.06656219392752204,
+      "dipper_nrf": 0.08396669931439765,
+      "delta": -0.017404505386875612,
+      "paired_stratified_bootstrap95": [
+        -0.022595739471106758,
+        -0.012526689520078356
+      ],
+      "win": 69,
+      "tie": 12,
+      "loss": 19,
+      "worst_delta": 0.032321253672869754,
+      "best_delta": -0.12830558276199805,
+      "baseline_reused": 8,
+      "descriptive_fresh_runtime": {
+        "records": 92,
+        "candidate_mean": 3.343616614513018,
+        "dipper_mean": 3.7011873061748464,
+        "dipper_over_candidate": 1.1069412952758362,
+        "scope": "single fresh full runs, alternating arm order; includes common parser and downstream; first-use/context differences not a strict warm benchmark"
+      }
+    }
+  },
+  "by_family": {
+    "gene/single_history": {
+      "records": 200,
+      "arm_status": {
+        "candidate": {
+          "complete": 200
+        },
+        "dipper": {
+          "complete": 200
+        }
+      },
+      "pairs": 200,
+      "candidate_nrf": 0.03344781335771189,
+      "dipper_nrf": 0.03702138082623878,
+      "delta": -0.0035735674685268854,
+      "paired_stratified_bootstrap95": [
+        -0.008784653366774803,
+        0.0009633423583646605
+      ],
+      "win": 63,
+      "tie": 75,
+      "loss": 62,
+      "worst_delta": 0.23379174852652257,
+      "best_delta": -0.3794466403162055,
+      "baseline_reused": 40,
+      "descriptive_fresh_runtime": {
+        "records": 160,
+        "candidate_mean": 4.770433259935817,
+        "dipper_mean": 7.762626562226797,
+        "dipper_over_candidate": 1.6272372212856905,
+        "scope": "single fresh full runs, alternating arm order; includes common parser and downstream; first-use/context differences not a strict warm benchmark"
+      }
+    },
+    "species/ILS": {
+      "records": 350,
+      "arm_status": {
+        "candidate": {
+          "complete": 350
+        },
+        "dipper": {
+          "complete": 350
+        }
+      },
+      "pairs": 350,
+      "candidate_nrf": 0.06189454804826456,
+      "dipper_nrf": 0.06486665440652233,
+      "delta": -0.002972106358257763,
+      "paired_stratified_bootstrap95": [
+        -0.004725692566287571,
+        -0.0013316678527692564
+      ],
+      "win": 89,
+      "tie": 209,
+      "loss": 52,
+      "worst_delta": 0.09430255402750493,
+      "best_delta": -0.13227513227513227,
+      "baseline_reused": 28,
+      "descriptive_fresh_runtime": {
+        "records": 322,
+        "candidate_mean": 0.9955339623493669,
+        "dipper_mean": 1.0635311250626949,
+        "dipper_over_candidate": 1.0683022029232043,
+        "scope": "single fresh full runs, alternating arm order; includes common parser and downstream; first-use/context differences not a strict warm benchmark"
+      }
+    },
+    "species/complex": {
+      "records": 350,
+      "arm_status": {
+        "candidate": {
+          "complete": 350
+        },
+        "dipper": {
+          "complete": 350
+        }
+      },
+      "pairs": 350,
+      "candidate_nrf": 0.07177473273447085,
+      "dipper_nrf": 0.07643955727705906,
+      "delta": -0.004664824542588209,
+      "paired_stratified_bootstrap95": [
+        -0.0065335217453041244,
+        -0.002878757605925832
+      ],
+      "win": 107,
+      "tie": 186,
+      "loss": 57,
+      "worst_delta": 0.08000000000000002,
+      "best_delta": -0.12830558276199805,
+      "baseline_reused": 28,
+      "descriptive_fresh_runtime": {
+        "records": 322,
+        "candidate_mean": 1.0188836440912545,
+        "dipper_mean": 1.1781320775026074,
+        "dipper_over_candidate": 1.1562969769265332,
+        "scope": "single fresh full runs, alternating arm order; includes common parser and downstream; first-use/context differences not a strict warm benchmark"
+      }
+    }
+  },
+  "failures": [],
+  "scope": "all900 exposed development simulations, original fixedK10 DIPPER full pipeline versus frozen observed-intersection AP-NJ; default branch support, homogeneous gene MLP, heterogeneous species MLP and all downstream code unchanged"
+}

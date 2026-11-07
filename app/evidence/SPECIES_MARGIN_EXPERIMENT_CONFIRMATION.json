@@ -1,0 +1,615 @@
+{
+  "created_at": "2026-11-05T12:52:15.720769+00:00",
+  "selected": "mean_worst_margin",
+  "selected_file_sha256": "b101ea367dd72662813392ec6693284e531e5c171f38c7d917a4f3b9772a3ee0",
+  "records": 40,
+  "branches": 48008,
+  "errors": 4781,
+  "bootstrap_repeats": 2000,
+  "method": "Paired stratified whole-tree bootstrap, exact pooled AUC with ties; no branch independence assumed",
+  "groups": {
+    "all": {
+      "baseline_auc": 0.9170828468714215,
+      "selected_auc": 0.9228206744656474,
+      "delta": 0.005737827594225919,
+      "delta_ci95": [
+        -0.0012807420983281415,
+        0.014639646815075093
+      ],
+      "baseline_high": {
+        "threshold": 0.99,
+        "total": 35264,
+        "incorrect": 355,
+        "correctness": 0.9899330762250453,
+        "coverage": 0.734544242626229
+      },
+      "selected_high": {
+        "threshold": 2.6871078482695987,
+        "total": 33176,
+        "incorrect": 323,
+        "correctness": 0.990264046298529,
+        "coverage": 0.691051491418097
+      },
+      "selected_matched_coverage": {
+        "total": 35264,
+        "incorrect": 446.0,
+        "correctness": 0.9873525408348457,
+        "coverage": 0.734544242626229,
+        "threshold": 2.1409525763988495,
+        "boundary_tie_weight": 1.0,
+        "boundary_tie_count": 1
+      },
+      "record_auc": [
+        {
+          "record": "species-n128-ILS-012",
+          "baseline": 0.8333333333333334,
+          "selected": 0.9176245210727969,
+          "delta": 0.08429118773946354
+        },
+        {
+          "record": "species-n128-ILS-013",
+          "baseline": 0.9274193548387096,
+          "selected": 0.9838709677419355,
+          "delta": 0.05645161290322587
+        },
+        {
+          "record": "species-n128-ILS-014",
+          "baseline": 0.9634146341463414,
+          "selected": 0.975609756097561,
+          "delta": 0.012195121951219523
+        },
+        {
+          "record": "species-n128-ILS-015",
+          "baseline": 0.8317460317460318,
+          "selected": 0.8523809523809524,
+          "delta": 0.02063492063492056
+        },
+        {
+          "record": "species-n128-complex-012",
+          "baseline": 0.9011473962930273,
+          "selected": 0.8984995586937334,
+          "delta": -0.0026478375992938785
+        },
+        {
+          "record": "species-n128-complex-013",
+          "baseline": 0.9542857142857143,
+          "selected": 0.9461904761904761,
+          "delta": -0.008095238095238155
+        },
+        {
+          "record": "species-n128-complex-014",
+          "baseline": 0.987603305785124,
+          "selected": 0.987603305785124,
+          "delta": 0.0
+        },
+        {
+          "record": "species-n128-complex-015",
+          "baseline": 0.9855371900826446,
+          "selected": 0.9834710743801653,
+          "delta": -0.0020661157024792765
+        },
+        {
+          "record": "species-n256-ILS-008",
+          "baseline": 0.8798800799467023,
+          "selected": 0.884477015323118,
+          "delta": 0.004596935376415701
+        },
+        {
+          "record": "species-n256-ILS-009",
+          "baseline": 0.9651567944250871,
+          "selected": 0.9639953542392566,
+          "delta": -0.0011614401858304202
+        },
+        {
+          "record": "species-n256-ILS-010",
+          "baseline": 0.8793991416309013,
+          "selected": 0.9315450643776824,
+          "delta": 0.05214592274678109
+        },
+        {
+          "record": "species-n256-ILS-011",
+          "baseline": 0.9875145180023229,
+          "selected": 0.9878048780487805,
+          "delta": 0.00029036004645754954
+        },
+        {
+          "record": "species-n256-complex-008",
+          "baseline": 0.8943376068376069,
+          "selected": 0.8946581196581197,
+          "delta": 0.0003205128205128194
+        },
+        {
+          "record": "species-n256-complex-009",
+          "baseline": 0.8966738197424893,
+          "selected": 0.9231759656652361,
+          "delta": 0.0265021459227468
+        },
+        {
+          "record": "species-n256-complex-010",
+          "baseline": 0.9598893499308437,
+          "selected": 0.9674965421853389,
+          "delta": 0.007607192254495132
+        },
+        {
+          "record": "species-n256-complex-011",
+          "baseline": 0.9757085020242915,
+          "selected": 0.9676113360323887,
+          "delta": -0.0080971659919028
+        },
+        {
+          "record": "species-n512-ILS-020",
+          "baseline": 0.9732142857142857,
+          "selected": 0.9752146760343482,
+          "delta": 0.002000390320062495
+        },
+        {
+          "record": "species-n512-ILS-021",
+          "baseline": 0.8687972521779176,
+          "selected": 0.8986069002571286,
+          "delta": 0.02980964807921105
+        },
+        {
+          "record": "species-n512-ILS-022",
+          "baseline": 0.8574195308237862,
+          "selected": 0.9302236770321877,
+          "delta": 0.07280414620840148
+        },
+        {
+          "record": "species-n512-ILS-023",
+          "baseline": 0.8825330049935016,
+          "selected": 0.9118270743552911,
+          "delta": 0.029294069361789465
+        },
+        {
+          "record": "species-n512-complex-017",
+          "baseline": 0.9504690527174467,
+          "selected": 0.9652799021107372,
+          "delta": 0.01481084939329047
+        },
+        {
+          "record": "species-n512-complex-019",
+          "baseline": 0.9751734209565535,
+          "selected": 0.977364001460387,
+          "delta": 0.0021905805038335835
+        },
+        {
+          "record": "species-n512-complex-021",
+          "baseline": 0.989065606361829,
+          "selected": 0.9930417495029821,
+          "delta": 0.003976143141153021
+        },
+        {
+          "record": "species-n512-complex-022",
+          "baseline": 0.9750763941940412,
+          "selected": 0.9799465240641712,
+          "delta": 0.004870129870129913
+        },
+        {
+          "record": "species-n1024-ILS-004",
+          "baseline": 0.902520385470719,
+          "selected": 0.9493402520385471,
+          "delta": 0.046819866567828106
+        },
+        {
+          "record": "species-n1024-ILS-005",
+          "baseline": 0.965720608979036,
+          "selected": 0.9752906269760202,
+          "delta": 0.009570017996984204
+        },
+        {
+          "record": "species-n1024-ILS-006",
+          "baseline": 0.9337928153717627,
+          "selected": 0.9431913116123642,
+          "delta": 0.009398496240601517
+        },
+        {
+          "record": "species-n1024-ILS-007",
+          "baseline": 0.9649067836440545,
+          "selected": 0.9684839939422424,
+          "delta": 0.003577210298187916
+        },
+        {
+          "record": "species-n1024-complex-002",
+          "baseline": 0.9203401939622412,
+          "selected": 0.9373118900677956,
+          "delta": 0.01697169610555438
+        },
+        {
+          "record": "species-n1024-complex-003",
+          "baseline": 0.9365302237029985,
+          "selected": 0.9457083928288117,
+          "delta": 0.009178169125813151
+        },
+        {
+          "record": "species-n1024-complex-005",
+          "baseline": 0.9635401442073468,
+          "selected": 0.964910357595245,
+          "delta": 0.0013702133878982226
+        },
+        {
+          "record": "species-n1024-complex-007",
+          "baseline": 0.9351653632749356,
+          "selected": 0.9673642360959412,
+          "delta": 0.03219887282100564
+        },
+        {
+          "record": "species-n4096-ILS-000",
+          "baseline": 0.8461248437291714,
+          "selected": 0.8784899284126486,
+          "delta": 0.03236508468347721
+        },
+        {
+          "record": "species-n4096-ILS-001",
+          "baseline": 0.9654274409037994,
+          "selected": 0.9758367563589864,
+          "delta": 0.010409315455186974
+        },
+        {
+          "record": "species-n4096-ILS-002",
+          "baseline": 0.9098338256157407,
+          "selected": 0.9153550441503671,
+          "delta": 0.005521218534626393
+        },
+        {
+          "record": "species-n4096-ILS-003",
+          "baseline": 0.8946846169352289,
+          "selected": 0.8943714616615379,
+          "delta": -0.0003131552736910237
+        },
+        {
+          "record": "species-n4096-complex-000",
+          "baseline": 0.8885521451293956,
+          "selected": 0.9583273626992997,
+          "delta": 0.06977521756990412
+        },
+        {
+          "record": "species-n4096-complex-001",
+          "baseline": 0.9428860749273335,
+          "selected": 0.9763542003086088,
+          "delta": 0.033468125381275304
+        },
+        {
+          "record": "species-n4096-complex-004",
+          "baseline": 0.8841847019873038,
+          "selected": 0.8963196965176603,
+          "delta": 0.012134994530356491
+        },
+        {
+          "record": "species-n4096-complex-006",
+          "baseline": 0.935319418173481,
+          "selected": 0.9734659594449809,
+          "delta": 0.03814654127149997
+        }
+      ],
+      "records_improved": 33,
+      "records_worse": 6
+    },
+    "ILS": {
+      "baseline_auc": 0.9062245826968588,
+      "selected_auc": 0.9069065351150825,
+      "delta": 0.0006819524182236636,
+      "delta_ci95": [
+        -0.008084460766830942,
+        0.013303619943754948
+      ],
+      "baseline_high": {
+        "threshold": 0.99,
+        "total": 15848,
+        "incorrect": 199,
+        "correctness": 0.9874432104997476,
+        "coverage": 0.6602232961173138
+      },
+      "selected_high": {
+        "threshold": 2.6871078482695987,
+        "total": 15420,
+        "incorrect": 224,
+        "correctness": 0.9854734111543451,
+        "coverage": 0.6423929345109148
+      },
+      "selected_matched_coverage": {
+        "total": 15848,
+        "incorrect": 255.0,
+        "correctness": 0.9839096415951539,
+        "coverage": 0.6602232961173138,
+        "threshold": 2.4805141818275054,
+        "boundary_tie_weight": 1.0,
+        "boundary_tie_count": 1
+      },
+      "record_auc": [
+        {
+          "record": "species-n128-ILS-012",
+          "baseline": 0.8333333333333334,
+          "selected": 0.9176245210727969,
+          "delta": 0.08429118773946354
+        },
+        {
+          "record": "species-n128-ILS-013",
+          "baseline": 0.9274193548387096,
+          "selected": 0.9838709677419355,
+          "delta": 0.05645161290322587
+        },
+        {
+          "record": "species-n128-ILS-014",
+          "baseline": 0.9634146341463414,
+          "selected": 0.975609756097561,
+          "delta": 0.012195121951219523
+        },
+        {
+          "record": "species-n128-ILS-015",
+          "baseline": 0.8317460317460318,
+          "selected": 0.8523809523809524,
+          "delta": 0.02063492063492056
+        },
+        {
+          "record": "species-n256-ILS-008",
+          "baseline": 0.8798800799467023,
+          "selected": 0.884477015323118,
+          "delta": 0.004596935376415701
+        },
+        {
+          "record": "species-n256-ILS-009",
+          "baseline": 0.9651567944250871,
+          "selected": 0.9639953542392566,
+          "delta": -0.0011614401858304202
+        },
+        {
+          "record": "species-n256-ILS-010",
+          "baseline": 0.8793991416309013,
+          "selected": 0.9315450643776824,
+          "delta": 0.05214592274678109
+        },
+        {
+          "record": "species-n256-ILS-011",
+          "baseline": 0.9875145180023229,
+          "selected": 0.9878048780487805,
+          "delta": 0.00029036004645754954
+        },
+        {
+          "record": "species-n512-ILS-020",
+          "baseline": 0.9732142857142857,
+          "selected": 0.9752146760343482,
+          "delta": 0.002000390320062495
+        },
+        {
+          "record": "species-n512-ILS-021",
+          "baseline": 0.8687972521779176,
+          "selected": 0.8986069002571286,
+          "delta": 0.02980964807921105
+        },
+        {
+          "record": "species-n512-ILS-022",
+          "baseline": 0.8574195308237862,
+          "selected": 0.9302236770321877,
+          "delta": 0.07280414620840148
+        },
+        {
+          "record": "species-n512-ILS-023",
+          "baseline": 0.8825330049935016,
+          "selected": 0.9118270743552911,
+          "delta": 0.029294069361789465
+        },
+        {
+          "record": "species-n1024-ILS-004",
+          "baseline": 0.902520385470719,
+          "selected": 0.9493402520385471,
+          "delta": 0.046819866567828106
+        },
+        {
+          "record": "species-n1024-ILS-005",
+          "baseline": 0.965720608979036,
+          "selected": 0.9752906269760202,
+          "delta": 0.009570017996984204
+        },
+        {
+          "record": "species-n1024-ILS-006",
+          "baseline": 0.9337928153717627,
+          "selected": 0.9431913116123642,
+          "delta": 0.009398496240601517
+        },
+        {
+          "record": "species-n1024-ILS-007",
+          "baseline": 0.9649067836440545,
+          "selected": 0.9684839939422424,
+          "delta": 0.003577210298187916
+        },
+        {
+          "record": "species-n4096-ILS-000",
+          "baseline": 0.8461248437291714,
+          "selected": 0.8784899284126486,
+          "delta": 0.03236508468347721
+        },
+        {
+          "record": "species-n4096-ILS-001",
+          "baseline": 0.9654274409037994,
+          "selected": 0.9758367563589864,
+          "delta": 0.010409315455186974
+        },
+        {
+          "record": "species-n4096-ILS-002",
+          "baseline": 0.9098338256157407,
+          "selected": 0.9153550441503671,
+          "delta": 0.005521218534626393
+        },
+        {
+          "record": "species-n4096-ILS-003",
+          "baseline": 0.8946846169352289,
+          "selected": 0.8943714616615379,
+          "delta": -0.0003131552736910237
+        }
+      ],
+      "records_improved": 18,
+      "records_worse": 2
+    },
+    "complex": {
+      "baseline_auc": 0.9229358121934509,
+      "selected_auc": 0.9405083432875267,
+      "delta": 0.01757253109407586,
+      "delta_ci95": [
+        0.007387745501188312,
+        0.03575368709038019
+      ],
+      "baseline_high": {
+        "threshold": 0.99,
+        "total": 19416,
+        "incorrect": 156,
+        "correctness": 0.9919653893695921,
+        "coverage": 0.8088651891351442
+      },
+      "selected_high": {
+        "threshold": 2.6871078482695987,
+        "total": 17756,
+        "incorrect": 99,
+        "correctness": 0.9944244199143951,
+        "coverage": 0.7397100483252791
+      },
+      "selected_matched_coverage": {
+        "total": 19416,
+        "incorrect": 159.0,
+        "correctness": 0.9918108776266996,
+        "coverage": 0.8088651891351442,
+        "threshold": 1.7356151857159354,
+        "boundary_tie_weight": 1.0,
+        "boundary_tie_count": 1
+      },
+      "record_auc": [
+        {
+          "record": "species-n128-complex-012",
+          "baseline": 0.9011473962930273,
+          "selected": 0.8984995586937334,
+          "delta": -0.0026478375992938785
+        },
+        {
+          "record": "species-n128-complex-013",
+          "baseline": 0.9542857142857143,
+          "selected": 0.9461904761904761,
+          "delta": -0.008095238095238155
+        },
+        {
+          "record": "species-n128-complex-014",
+          "baseline": 0.987603305785124,
+          "selected": 0.987603305785124,
+          "delta": 0.0
+        },
+        {
+          "record": "species-n128-complex-015",
+          "baseline": 0.9855371900826446,
+          "selected": 0.9834710743801653,
+          "delta": -0.0020661157024792765
+        },
+        {
+          "record": "species-n256-complex-008",
+          "baseline": 0.8943376068376069,
+          "selected": 0.8946581196581197,
+          "delta": 0.0003205128205128194
+        },
+        {
+          "record": "species-n256-complex-009",
+          "baseline": 0.8966738197424893,
+          "selected": 0.9231759656652361,
+          "delta": 0.0265021459227468
+        },
+        {
+          "record": "species-n256-complex-010",
+          "baseline": 0.9598893499308437,
+          "selected": 0.9674965421853389,
+          "delta": 0.007607192254495132
+        },
+        {
+          "record": "species-n256-complex-011",
+          "baseline": 0.9757085020242915,
+          "selected": 0.9676113360323887,
+          "delta": -0.0080971659919028
+        },
+        {
+          "record": "species-n512-complex-017",
+          "baseline": 0.9504690527174467,
+          "selected": 0.9652799021107372,
+          "delta": 0.01481084939329047
+        },
+        {
+          "record": "species-n512-complex-019",
+          "baseline": 0.9751734209565535,
+          "selected": 0.977364001460387,
+          "delta": 0.0021905805038335835
+        },
+        {
+          "record": "species-n512-complex-021",
+          "baseline": 0.989065606361829,
+          "selected": 0.9930417495029821,
+          "delta": 0.003976143141153021
+        },
+        {
+          "record": "species-n512-complex-022",
+          "baseline": 0.9750763941940412,
+          "selected": 0.9799465240641712,
+          "delta": 0.004870129870129913
+        },
+        {
+          "record": "species-n1024-complex-002",
+          "baseline": 0.9203401939622412,
+          "selected": 0.9373118900677956,
+          "delta": 0.01697169610555438
+        },
+        {
+          "record": "species-n1024-complex-003",
+          "baseline": 0.9365302237029985,
+          "selected": 0.9457083928288117,
+          "delta": 0.009178169125813151
+        },
+        {
+          "record": "species-n1024-complex-005",
+          "baseline": 0.9635401442073468,
+          "selected": 0.964910357595245,
+          "delta": 0.0013702133878982226
+        },
+        {
+          "record": "species-n1024-complex-007",
+          "baseline": 0.9351653632749356,
+          "selected": 0.9673642360959412,
+          "delta": 0.03219887282100564
+        },
+        {
+          "record": "species-n4096-complex-000",
+          "baseline": 0.8885521451293956,
+          "selected": 0.9583273626992997,
+          "delta": 0.06977521756990412
+        },
+        {
+          "record": "species-n4096-complex-001",
+          "baseline": 0.9428860749273335,
+          "selected": 0.9763542003086088,
+          "delta": 0.033468125381275304
+        },
+        {
+          "record": "species-n4096-complex-004",
+          "baseline": 0.8841847019873038,
+          "selected": 0.8963196965176603,
+          "delta": 0.012134994530356491
+        },
+        {
+          "record": "species-n4096-complex-006",
+          "baseline": 0.935319418173481,
+          "selected": 0.9734659594449809,
+          "delta": 0.03814654127149997
+        }
+      ],
+      "records_improved": 15,
+      "records_worse": 4
+    }
+  },
+  "all_frozen_candidates": {
+    "agreement": 0.9170828468714215,
+    "mean_margin": 0.9175490480549635,
+    "mean_worst_margin": 0.9228206744656474,
+    "standardized_margin": 0.9261323001143373,
+    "normalized_margin": 0.9306263326216083
+  },
+  "gates": {
+    "paired_auc_lower_positive": false,
+    "high_error_counts_do_not_increase_in_either_family": false,
+    "family_auc_not_lower": true,
+    "confirmation_high_correctness_at_least99": true
+  },
+  "predeclared_primary_gate_passed": false,
+  "recommendation": "Keep as a prototype until the high-region target and deployable score-scale contract are satisfied."
+}

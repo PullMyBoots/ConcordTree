@@ -1,0 +1,24 @@
+{
+  "features": {
+    "gene": {
+      "status": "passed",
+      "rows": 16,
+      "maximum_absolute_error": 3.944425022717191e-09,
+      "checkpoint_sha256": "8554764e33885992cc31e4d044a82a4ae8e876f119197e72b07ae3a1dcbc533b"
+    },
+    "species": {
+      "status": "passed",
+      "rows": 16,
+      "maximum_absolute_error": 3.944425022717191e-09,
+      "checkpoint_sha256": "a74e89e7b6091938f0b413a5c1446864bc18a8db7176f5c77a204018bc8e2edb"
+    }
+  },
+  "checks": {
+    "gene_advanced_options": true,
+    "serial_task_switch": true,
+    "small-species": true,
+    "constant-gene": true,
+    "missing-gene": true
+  },
+  "status": "passed"
+}

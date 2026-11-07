@@ -1,0 +1,7 @@
+{
+  "status": "passed",
+  "taxa": 8,
+  "exhaustive_quartets": 70,
+  "edges": 5,
+  "reference": "independent four-component traversal and scalar votes"
+}

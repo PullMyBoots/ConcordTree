@@ -1,0 +1,60 @@
+[
+  {
+    "id": "gene32",
+    "task": "gene",
+    "checks": {
+      "history": true,
+      "model": true,
+      "prefix": true,
+      "final_tree_and_serialized_lengths": true
+    },
+    "status": "passed"
+  },
+  {
+    "id": "gene256",
+    "task": "gene",
+    "checks": {
+      "history": true,
+      "model": true,
+      "prefix": true,
+      "final_tree_and_serialized_lengths": true
+    },
+    "status": "passed"
+  },
+  {
+    "id": "species32",
+    "task": "species",
+    "checks": {
+      "posterior": true,
+      "final_tree_and_serialized_lengths": true
+    },
+    "status": "passed"
+  },
+  {
+    "id": "species32-loci",
+    "task": "species",
+    "checks": {
+      "posterior": true,
+      "final_tree_and_serialized_lengths": true
+    },
+    "status": "passed"
+  },
+  {
+    "id": "species-real32",
+    "task": "species",
+    "checks": {
+      "posterior": true,
+      "final_tree_and_serialized_lengths": true
+    },
+    "status": "passed"
+  },
+  {
+    "id": "species-real32-loci",
+    "task": "species",
+    "checks": {
+      "posterior": true,
+      "final_tree_and_serialized_lengths": true
+    },
+    "status": "passed"
+  }
+]

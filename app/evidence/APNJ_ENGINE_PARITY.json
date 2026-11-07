@@ -1,0 +1,127 @@
+{
+  "status": "passed",
+  "planned": 10,
+  "unchanged_downstream_verified": true,
+  "rows": [
+    {
+      "id": "gene/n256/000",
+      "task": "gene",
+      "status": "complete",
+      "final_bytes_equal": true,
+      "initial_bytes_equal": true,
+      "mlp_actions_equal": true,
+      "branch_evidence_equal": true,
+      "final_sha256": "2d4b95462685cc966a5474a19e5f231fbe42aa102901edbc590d833c9880d479",
+      "source_hash_unchanged": true,
+      "pipeline": "Bounded AP-NJ -> MLP-NNI -> V11 full-site likelihood"
+    },
+    {
+      "id": "gene/n512/004",
+      "task": "gene",
+      "status": "complete",
+      "final_bytes_equal": true,
+      "initial_bytes_equal": true,
+      "mlp_actions_equal": true,
+      "branch_evidence_equal": true,
+      "final_sha256": "abf9935e550d25103ac7afd9ee695d8b42ba33dac8da9f62979cc35f2b47c7e4",
+      "source_hash_unchanged": true,
+      "pipeline": "Bounded AP-NJ -> MLP-NNI -> V11 full-site likelihood"
+    },
+    {
+      "id": "gene/n1024/012",
+      "task": "gene",
+      "status": "complete",
+      "final_bytes_equal": true,
+      "initial_bytes_equal": true,
+      "mlp_actions_equal": true,
+      "branch_evidence_equal": true,
+      "final_sha256": "874d09ba2e26d228c010d76fe2499a07b88f430b52a7d367be2a62e851a468ed",
+      "source_hash_unchanged": true,
+      "pipeline": "Bounded AP-NJ -> MLP-NNI -> V11 full-site likelihood"
+    },
+    {
+      "id": "gene/n2048/000",
+      "task": "gene",
+      "status": "complete",
+      "final_bytes_equal": true,
+      "initial_bytes_equal": true,
+      "mlp_actions_equal": true,
+      "branch_evidence_equal": true,
+      "final_sha256": "62b7b7ab6298573ef45d64d7b37bf7caaedfbe59538184b0979202b80230983b",
+      "source_hash_unchanged": true,
+      "pipeline": "Bounded AP-NJ -> MLP-NNI -> V11 full-site likelihood"
+    },
+    {
+      "id": "gene/n4096/001",
+      "task": "gene",
+      "status": "complete",
+      "final_bytes_equal": true,
+      "initial_bytes_equal": true,
+      "mlp_actions_equal": true,
+      "branch_evidence_equal": true,
+      "final_sha256": "313ba47ee9b4bcd97e201435f1bbbf8a8cc64e4b6d4032d7a4097d3ac3de9e20",
+      "source_hash_unchanged": true,
+      "pipeline": "Bounded AP-NJ -> MLP-NNI -> V11 full-site likelihood"
+    },
+    {
+      "id": "gene/n4096/017",
+      "task": "gene",
+      "status": "complete",
+      "final_bytes_equal": true,
+      "initial_bytes_equal": true,
+      "mlp_actions_equal": true,
+      "branch_evidence_equal": true,
+      "final_sha256": "dfc0d123ec64611a7820fcddfa4b9e6078f8bc7572ac9ddeed5dbc5b5c8d5452",
+      "source_hash_unchanged": true,
+      "pipeline": "Bounded AP-NJ -> MLP-NNI -> V11 full-site likelihood"
+    },
+    {
+      "id": "species/small/n32/ILS/0",
+      "task": "species",
+      "status": "complete",
+      "final_bytes_equal": true,
+      "initial_bytes_equal": true,
+      "mlp_actions_equal": true,
+      "branch_evidence_equal": true,
+      "final_sha256": "f503af9665c1c9583cac091e8048363b0cbae2d8fe6cae0c31551b395163c7ac",
+      "source_hash_unchanged": true,
+      "pipeline": "Bounded AP-NJ -> MLP-NNI -> MSC compact statistical refinement"
+    },
+    {
+      "id": "species/small/n256/complex/0",
+      "task": "species",
+      "status": "complete",
+      "final_bytes_equal": true,
+      "initial_bytes_equal": true,
+      "mlp_actions_equal": true,
+      "branch_evidence_equal": true,
+      "final_sha256": "9949ebece63035d5f83b0cb848b69793be25a66a8c7da5857bc8577774950805",
+      "source_hash_unchanged": true,
+      "pipeline": "Bounded AP-NJ -> MLP-NNI -> MSC compact statistical refinement"
+    },
+    {
+      "id": "species/large/n512/ILS/0",
+      "task": "species",
+      "status": "complete",
+      "final_bytes_equal": true,
+      "initial_bytes_equal": true,
+      "mlp_actions_equal": true,
+      "branch_evidence_equal": true,
+      "final_sha256": "fb77e93430d37a295174d508f1c3631aa82f019e8296b01b11e9daec067f9f06",
+      "source_hash_unchanged": true,
+      "pipeline": "Bounded AP-NJ -> MLP-NNI -> MSC compact statistical refinement"
+    },
+    {
+      "id": "species/large/n1024/complex/0",
+      "task": "species",
+      "status": "complete",
+      "final_bytes_equal": true,
+      "initial_bytes_equal": true,
+      "mlp_actions_equal": true,
+      "branch_evidence_equal": true,
+      "final_sha256": "ea6836ed64eb99d3fc1bc3419d5eea71ce250a29b7f3fd5e4bc662af33bc6327",
+      "source_hash_unchanged": true,
+      "pipeline": "Bounded AP-NJ -> MLP-NNI -> MSC compact statistical refinement"
+    }
+  ]
+}

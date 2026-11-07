@@ -1,0 +1,79 @@
+{
+  "created_at": "2026-11-05T12:48:11.523405+00:00",
+  "contract_sha256": "8788cb3db8ac229aed9259c9d08aa20658d9412db767e4c73369fe008486c1a3",
+  "selected": "mean_worst_margin",
+  "selection_rule": "Largest pooled development ROC-AUC among exactly four predeclared candidates",
+  "development": {
+    "agreement": {
+      "auc": 0.8967301284129484,
+      "family_auc": {
+        "ILS": 0.9294762795635535,
+        "complex": 0.8774137113602345
+      },
+      "high_region": null
+    },
+    "mean_margin": {
+      "auc": 0.9158991516982428,
+      "family_auc": {
+        "ILS": 0.9442782661771045,
+        "complex": 0.898104644903078
+      },
+      "high_region": {
+        "value": 2.9159745751112176,
+        "total": 31988,
+        "incorrect": 319,
+        "correctness": 0.9900275103163686,
+        "coverage": 0.6663056157307116,
+        "records": 40
+      }
+    },
+    "mean_worst_margin": {
+      "auc": 0.9204170749516029,
+      "family_auc": {
+        "ILS": 0.947962853421068,
+        "complex": 0.9033525023251322
+      },
+      "high_region": {
+        "value": 2.6871078482695987,
+        "total": 32443,
+        "incorrect": 324,
+        "correctness": 0.9900132540147335,
+        "coverage": 0.6757832027995334,
+        "records": 40
+      }
+    },
+    "standardized_margin": {
+      "auc": 0.9108765791570894,
+      "family_auc": {
+        "ILS": 0.947220467612453,
+        "complex": 0.891779588833154
+      },
+      "high_region": {
+        "value": 0.9681891604872651,
+        "total": 24842,
+        "incorrect": 248,
+        "correctness": 0.9900169068513002,
+        "coverage": 0.517455424095984,
+        "records": 40
+      }
+    },
+    "normalized_margin": {
+      "auc": 0.917200781276245,
+      "family_auc": {
+        "ILS": 0.9501989648863878,
+        "complex": 0.8975868212324669
+      },
+      "high_region": {
+        "value": 0.8571955752339018,
+        "total": 30901,
+        "incorrect": 309,
+        "correctness": 0.9900003236141225,
+        "coverage": 0.6436635560739876,
+        "records": 40
+      }
+    }
+  },
+  "baseline_high_cutoff": 0.99,
+  "selected_high_cutoff": 2.6871078482695987,
+  "confirmation_not_started": true
+}

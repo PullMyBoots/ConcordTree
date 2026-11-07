@@ -1,8 +1,5 @@
+app/webdeps/** linguist-vendored
+app/THIRD_PARTY_LICENSES/** linguist-vendored
 *.pt binary
 *.pth binary
 *.so binary
-*.phy text eol=lf
-*.nwk text eol=lf
-*.py text eol=lf
-*.md text eol=lf
-*.sh text eol=lf
