@@ -5,7 +5,7 @@
 Portable archive: `concordtree-1.0.2-linux-x86_64-cuda121.tar.gz` (4,732,982,106 bytes).
 SHA256: `97cce5a23f61e94f85a5cb46088a6b8862b284b35721edd2908324eda024f75c`.
 
-The portable archive and container include the scientific and Web runtimes, weights and native libraries. The installer verifies all five portable parts before extraction, then verifies 1121 static files. Outputs and caches are excluded from release archives.
+The portable archive and container include the scientific and Web runtimes, weights and native libraries. The unified installer automatically selects portable when glibc/compiler prerequisites are met, otherwise an existing accessible Docker installation. It verifies five ordered parts before extraction/import. Portable extraction additionally verifies 1121 static files; Docker import checks the exact image ID. Outputs and caches are excluded from release archives.
 
 ## Matched regression
 
@@ -76,6 +76,8 @@ Warm timings use persistent scientific processes, exclude process/model startup 
 
 ## Relocation, UI and hardware
 
+- Unified installer: automatic portable selection and reuse passed. A fresh-cache localhost HTTP installation downloaded and verified all five portable parts, extracted atomically and verified 1121 static files. A clean Ubuntu 22.04 CUDA base container without a C compiler selected Docker successfully using ordinary UID/GID and an existing host Docker daemon. Explicit Docker installation verified all five parts and streamed image import using a fixed installer snapshot. A fresh-cache localhost HTTP Docker installation downloaded and verified the launcher, reusing the exact image without downloading its parts again.
+- Latest Docker launcher: GPU index 1, four CPU threads, ordinary UID/GID, persistent state, custom loopback port 8882 mapped identically inside/outside. Real Gene and Species upload/inference/download succeeded and both trees matched the final container outputs byte for byte; invalid upload returned 422. Public GitHub download URLs have not yet been exercised. Earlier shell-edit-during-test failure is retained as an invalidated attempt; the fixed-snapshot rerun passed.
 - Complete final archive installed from verified parts into a new local directory; all static hashes verified. A directory containing spaces also completed actual Gene and Species Web inference after startup-path adaptation.
 - Final container: Ubuntu 22.04 userspace, NVIDIA L40S, ordinary UID/GID, persistent results/cache mounts; actual Gene/Species upload, inference, download and invalid input rejection passed. Image save/load passed.
 - Workstation: Ubuntu 22.04 WSL, RTX 4090, driver 610.88. Archive copied to `D:\serve-backup\ConcordTree\distribution-test`, SHA256 verified, extracted independently. Environment doctor, two Web examples, and two existing regression inputs completed.

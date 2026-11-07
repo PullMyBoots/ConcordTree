@@ -1133,5 +1133,76 @@
     "final_newick_byte_identical": false,
     "blackwell_hardware_tested": false,
     "reason": "Strict unchanged-artifact gate failed; no stable Blackwell support claim."
+  },
+  "installer_routing": {
+    "status": "passed",
+    "launcher_sha256": {
+      "install.sh": "696df95f2fd80720ad396657a73c56a051f0cf57ea915257ab622384923631e6",
+      "docker-web.sh": "4aa552692cb7b47fce8705b2c3bd097ff1c87078de7fc3c8c40824336de8d15e"
+    },
+    "docker_image_id": "sha256:09515e53a65eb59518617c6eab9556ccc4f5e625cadfb016bea474b8c20e5686",
+    "checks": {
+      "auto_portable": {
+        "status": "passed",
+        "evidence": "evidence/unified-auto-portable.log"
+      },
+      "portable_reuse": {
+        "status": "passed",
+        "evidence": "evidence/unified-portable-reuse.log"
+      },
+      "auto_without_compiler": {
+        "status": "passed",
+        "selected": "docker",
+        "environment": "CUDA 12.1.1 Ubuntu 22.04 base container, ordinary UID/GID, no C compiler",
+        "evidence": "evidence/unified-auto-no-compiler.log"
+      },
+      "docker_full_split_import": {
+        "status": "passed",
+        "evidence": "evidence/unified-docker-streamed-install.log",
+        "fixed_installer_sha256": "696df95f2fd80720ad396657a73c56a051f0cf57ea915257ab622384923631e6"
+      },
+      "http_install": {
+        "status": "passed",
+        "transport": "localhost HTTP",
+        "fresh_cache": true,
+        "exact_image_reused": true,
+        "downloaded_files": [
+          "DOCKER_SHA256SUMS",
+          "docker-web.sh"
+        ],
+        "evidence": "evidence/unified-http-install.log"
+      },
+      "latest_docker_web": {
+        "status": "passed",
+        "gpu_host_index": 1,
+        "cpu_threads": 4,
+        "uid_gid": "1001:1002",
+        "port": 8882,
+        "loopback_only": true,
+        "gene_species_byte_equal_to_final_container": true,
+        "evidence": "evidence/unified-http-web/report.json"
+      },
+      "invalid_installer_arguments": {
+        "status": "passed",
+        "evidence": "evidence/unified-installer-errors.json"
+      },
+      "http_full_portable_install": {
+        "status": "passed",
+        "transport": "localhost HTTP",
+        "runtime_selection": "auto -> portable",
+        "fresh_cache": true,
+        "parts_downloaded_and_verified": 5,
+        "static_files_verified": 1121,
+        "evidence": "evidence/unified-http-portable-install.log",
+        "fixed_installer_sha256": "696df95f2fd80720ad396657a73c56a051f0cf57ea915257ab622384923631e6",
+        "doctor": "ok",
+        "external_home_dependencies": false
+      }
+    },
+    "retained_invalid_test": {
+      "evidence": "evidence/unified-docker-fresh-import.log",
+      "reason": "The shell file was edited during execution. This invalidated that attempt; fixed-snapshot rerun passed."
+    },
+    "public_download_tested": false
   }
 }

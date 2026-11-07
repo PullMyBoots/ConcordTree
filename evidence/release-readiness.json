@@ -5,9 +5,12 @@
   "modern_runtime_admitted": false,
   "accuracy_cases_passed": 48,
   "speed_followup_passed": true,
-  "remaining": [
-    "GitHub Release API login and publication",
-    "Blackwell/ARM require separate validated artifacts"
-  ],
-  "portable_sha256": "97cce5a23f61e94f85a5cb46088a6b8862b284b35721edd2908324eda024f75c"
+  "installer_routing_ready": true,
+  "launcher_sha256": {
+    "install.sh": "696df95f2fd80720ad396657a73c56a051f0cf57ea915257ab622384923631e6",
+    "docker-web.sh": "4aa552692cb7b47fce8705b2c3bd097ff1c87078de7fc3c8c40824336de8d15e"
+  },
+  "pending_local_checks": [],
+  "portable_sha256": "97cce5a23f61e94f85a5cb46088a6b8862b284b35721edd2908324eda024f75c",
+  "scope": "Build-time local validation snapshot. Public download verification remains pending."
 }
