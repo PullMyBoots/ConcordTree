@@ -1,4 +1,4 @@
-"""Shared MLP-NNI frontend and the retained historical AP-NJ helper.
+"""Shared task-specific MLP-NNI frontend for the unified AP-NJ pipeline.
 
 The unified engine initializes with apnj_frontend, then calls this MLP.
 This file does not invoke SplitBank. Load the original
@@ -8,9 +8,7 @@ The small network below matches the frozen model's names and forward exactly.
 from __future__ import annotations
 
 import hashlib
-import importlib.util
 import math
-import sys
 import time
 from pathlib import Path
 
@@ -29,14 +27,6 @@ class QuartetMLP(nn.Module):
 
     def forward(self, value):
         return self.fc3(F.relu(self.fc2(F.relu(self.fc1(value)))))
-
-
-def load_module(name, path):
-    spec = importlib.util.spec_from_file_location(name, path)
-    module = importlib.util.module_from_spec(spec)
-    sys.modules[name] = module
-    spec.loader.exec_module(module)
-    return module
 
 
 MLP_ASSETS = {
@@ -102,7 +92,7 @@ class MLPWarmstart:
                     checkpoint_sha256=self.checkpoint_sha256)
 
     @torch.no_grad()
-    def refine(self, tree, names, msa, *, stop_ratio=.005, progress=None, packed_data=None):
+    def refine(self, tree, names, msa, *, stop_ratio=.005, progress=None, packed_data=None, max_rounds=None, representatives=4, min_margin=.10, batch_size=65536, checkpoint=None):
         start = time.perf_counter()
         load_seconds = self.load()
         if packed_data is None:
@@ -145,12 +135,18 @@ class MLPWarmstart:
 
         search_start = time.perf_counter()
         from array_mlp_nni import refine
+        def checkpoint_neighbors(neighbors,record):
+            from concordtree.treeio import Tree
+            import _ct_apnj_topology as topology
+            if checkpoint:checkpoint(Tree(topology.export_graph(neighbors,len(names),True),dict(enumerate(names)),{}),dict(stage='mlp',round=record['pass']))
         result = refine(
-            adjacency, len(names), predict, passes=10000, representatives=4,
-            min_margin=.10, stop_moves_at_most=math.floor(stop_ratio * (len(names)-3)),
-            plan_backend=self.plan, nni=self.nni, progress=progress)
+            adjacency, len(names), predict, passes=max_rounds or 10000, representatives=representatives,
+            min_margin=min_margin,batch_size=batch_size, stop_moves_at_most=math.floor(stop_ratio * (len(names)-3)),
+            plan_backend=self.plan, nni=self.nni, progress=progress,checkpoint=checkpoint_neighbors if checkpoint else None)
         torch.cuda.synchronize()
         search_seconds = time.perf_counter() - search_start
+        if result['stop']=='emergency_pass_guard' and max_rounds is not None:
+            result.update(stop='round_budget',converged=False,warnings=['MLP stopped at requested maximum rounds'])
         if result['stop']=='emergency_pass_guard':
             raise RuntimeError('MLP emergency guard exhausted before requested stop ratio')
         from concordtree.treeio import Tree, edge
@@ -161,30 +157,5 @@ class MLPWarmstart:
                       preparation_seconds=prep_seconds, search_seconds=search_seconds,
                       variable_sites=int(length), checkpoint_sha256=self.checkpoint_sha256,
                       source='v0.5.9 optimized MLP-NNI; task-specific checkpoint; no SplitBank',
-                      stop_ratio=stop_ratio, model=self.predictor, representatives=4, min_margin=.10)
+                      stop_ratio=stop_ratio, model=self.predictor, representatives=representatives, min_margin=min_margin, max_rounds=max_rounds, batch_size=batch_size)
         return refined, result
-
-
-def build_apnj(names,states,seed,missing_data_model,packed_data=None):
-    """Native AP-NJ, with the storage repair applied statically in this release."""
-    from dataclasses import asdict
-    from concordtree._core.sctb_aggregate_nj import build_aggregate_parallel_nj,imputed_profile_slab
-    from concordtree._core.scaleqf import graph_to_newick
-    from concordtree.treeio import parse_newick
-    keep=~np.all(states==states[0:1],axis=0)
-    order=sorted(range(len(names)),key=lambda i:names[i])
-    from concordtree.assets import load_candidate_graph_backend
-    x=load_candidate_graph_backend().gather_states(states,np.asarray(order,dtype=np.int64),np.flatnonzero(keep).astype(np.int64),16)
-    if not x.shape[1]:
-        # No sequence information: any binary topology is equally unidentifiable.
-        # Return an explicitly warned deterministic topology, not a fake fit.
-        from concordtree.treeio import parse_newick
-        quoted=["'"+str(names[i]).replace("'","''")+"'" for i in order]
-        while len(quoted)>3:quoted=[f'({quoted[0]},{quoted[1]})']+quoted[2:]
-        return parse_newick('('+','.join(quoted)+');'),dict(uninformative=True)
-    graph,stats=build_aggregate_parallel_nj(x,projections=16,window=8,candidate_cap=32,
-        seed=seed,candidate_device='cuda:0',candidate_distance_backend='native',row_sum_backend='native',
-        immutable_complete_slab=imputed_profile_slab(x),compact_imputed_first_round=True,
-        profile_stream_sites=1024,missing_distance_model='coverage' if missing_data_model=='coverage-aware' else 'imputed')
-    return parse_newick(graph_to_newick(graph,[names[i] for i in order],len(names))),dict(
-        seed=seed,sampled_sites=states.shape[1],variable_sites=x.shape[1],statistics=asdict(stats))

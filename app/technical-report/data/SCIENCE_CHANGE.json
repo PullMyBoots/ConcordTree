@@ -1,0 +1,25 @@
+{
+  "changes": {
+    "apnj_frontend.py": {
+      "before": "e6782f13a119dc7e50320a4da29371a54ff3efb6f7657c7af4eb8b436bc57dcd",
+      "after": "e60991a32d54105fb96a9faf0f0d09a4404c77e290d2ad1dbaaa7dd2bccd719a"
+    },
+    "METHOD_CONTRACT.json": {
+      "before": "b09f5df9dd6c4488c6d961aadbbae8a1e1f4d8381373150de1521465620ea5a9",
+      "after": "0a5ac979386d73e2ceb547103a26fc8d30330189397929d71a09f623afc4f867"
+    },
+    "evidence/APNJ_INITIALIZATION.md": {
+      "before": "fee2b1ad24f6d14a9e84e7350e2b76518e1d5f2413b8cc15ec037452a50b1b54",
+      "after": "3e43c2ec3a5cda8a4e530e4af9820e580357f8298a2f74cf36e8819cc05b87d9"
+    }
+  },
+  "implementation_files_changed": [
+    "apnj_frontend.py"
+  ],
+  "implementation_change": "model=3 if task=='gene' else 1 -> model=3",
+  "native_binaries_changed": false,
+  "weights_changed": false,
+  "downstream_refinement_changed": false,
+  "gene_distance_unchanged": true,
+  "third_party_comparators_rerun": false
+}

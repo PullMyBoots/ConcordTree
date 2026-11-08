@@ -1,0 +1,32 @@
+/* Opaque workspace, with the existing frosted halo confined to its exterior. */
+body[data-theme=seasons]{--season-card:#20332b;--season-accent:#dfdfbc;--season-line:#819c80;--season-sky:#182e2d;--accent:var(--season-accent);background:var(--season-sky)}
+body[data-theme=seasons] .cinema{background:var(--season-sky)}
+body[data-theme=seasons] .cinema-shade{background:none}
+body[data-theme=seasons] .submit-page,body[data-theme=seasons] .result-page,body[data-theme=seasons] .settings-dialog{background:var(--season-card);border-color:color-mix(in srgb,var(--season-line) 35%,transparent)}
+body[data-theme=seasons] .submit-page::after,body[data-theme=seasons] .result-page::after{border-color:color-mix(in srgb,var(--season-accent) 20%,transparent)}
+body[data-theme=seasons] .dropzone,body[data-theme=seasons] .file-card{background:color-mix(in srgb,var(--season-accent) 3%,var(--season-card));border-color:color-mix(in srgb,var(--season-accent) 30%,transparent)}
+body[data-theme=seasons] .dropzone:hover,body[data-theme=seasons] .dropzone.dragging{background:color-mix(in srgb,var(--season-accent) 7%,var(--season-card));border-color:var(--season-accent)}
+body[data-theme=seasons] .upload-mark{background:color-mix(in srgb,var(--season-accent) 5%,transparent);border-color:color-mix(in srgb,var(--season-accent) 17%,transparent)}
+body[data-theme=seasons] .upload-mark svg{stroke:var(--season-accent)}
+body[data-theme=seasons] .task-tabs button::after{background:var(--season-accent)}
+body[data-theme=seasons] .primary-button:not(:disabled){background:var(--season-accent);border-color:var(--season-accent);color:var(--season-card)}
+body[data-theme=seasons] .host-metric meter::-webkit-meter-optimum-value{background:var(--season-accent)}
+body[data-theme=seasons] .host-metric meter::-moz-meter-bar{background:var(--season-accent)}
+body[data-theme=seasons] .settings-actions{background:var(--season-card)}
+body[data-theme=seasons] .parameter-field input,body[data-theme=seasons] .parameter-field select{background:color-mix(in srgb,var(--season-card) 75%,#000)}
+.seasons-dot{background:conic-gradient(#a3bd9c,#5f9c87,#c7976c,#a7bdcf,#a3bd9c)}
+.seasons-dot::after{content:''}
+
+body[data-theme=seasons] #evolutionCanvas{opacity:1}
+body[data-theme=seasons] .scene{opacity:0!important}
+body[data-theme=seasons] .light-rays,body[data-theme=seasons] .motes,body[data-theme=seasons] .cinema-grain{display:none}
+body[data-theme=seasons] .scene img{animation-play-state:paused}
+
+.season-controls{display:flex;align-items:center;gap:10px;height:34px;padding:0 12px;border:1px solid #f1f5e12b;border-radius:18px;background:#08160cb3;backdrop-filter:blur(16px)}
+.season-controls output{width:43px;color:#e1e9e0b3;font-size:10px;user-select:none}
+.season-controls input{width:145px;height:22px;margin:0;appearance:none;-webkit-appearance:none;background:transparent;cursor:ew-resize;accent-color:#e1ece1}
+.season-controls input::-webkit-slider-runnable-track{height:3px;border-radius:3px;background:linear-gradient(90deg,#9abf8b,#879eb1 25%,#c49760 50%,#c5d8e5 75%,#9abf8b)}
+.season-controls input::-moz-range-track{height:3px;border-radius:3px;background:linear-gradient(90deg,#9abf8b,#879eb1 25%,#c49760 50%,#c5d8e5 75%,#9abf8b)}
+.season-controls input::-webkit-slider-thumb{appearance:none;-webkit-appearance:none;width:10px;height:10px;margin-top:-3.5px;border:1px solid #ecf3e6;border-radius:50%;background:#c5d6c7;box-shadow:0 1px 6px #0005}
+.season-controls input::-moz-range-thumb{width:9px;height:9px;border:1px solid #ecf3e6;border-radius:50%;background:#c5d6c7;box-shadow:0 1px 6px #0005}
+.season-controls input:focus-visible{outline:1px solid #d2e2d0;outline-offset:3px;border-radius:3px}

@@ -1,1 +1,1 @@
-"""Isolated MSC species-tree refinement research (no release default changes)."""
+"""Production species-tree kernel scoring and accumulated-quartet NNI refinement."""

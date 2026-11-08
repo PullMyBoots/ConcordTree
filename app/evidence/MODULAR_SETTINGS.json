@@ -1,0 +1,186 @@
+{
+  "status": "passed",
+  "date": "2026-11-08T11:25:20.272856+00:00",
+  "scope": "Local modular settings, complete-tree pause protocol and seasonal desktop theme",
+  "defaults": {
+    "gene_case": "gene/n256/000",
+    "species_case": "species/small/n32/ILS/0",
+    "annotated_newick_byte_identical": true,
+    "unannotated_newick_byte_identical": true,
+    "unchanged_weight_and_native_files": 26
+  },
+  "scientific_checks": [
+    {
+      "name": "default-gene",
+      "output": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/release/V1.0.2/runs/settings-661023d6/default-gene",
+      "seconds": 2.7130607990548015,
+      "pipeline": "AP-NJ -> distance -> mlp -> likelihood",
+      "support": true,
+      "lengths": true
+    },
+    {
+      "name": "default-species",
+      "output": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/release/V1.0.2/runs/settings-661023d6/default-species",
+      "seconds": 0.18903103098273277,
+      "pipeline": "AP-NJ -> distance -> mlp -> kernel",
+      "support": true,
+      "lengths": false
+    },
+    {
+      "name": "pure",
+      "output": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/release/V1.0.2/runs/settings-661023d6/pure",
+      "seconds": 0.022773638367652893,
+      "pipeline": "AP-NJ",
+      "support": false,
+      "lengths": false
+    },
+    {
+      "name": "distance",
+      "output": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/release/V1.0.2/runs/settings-661023d6/distance",
+      "seconds": 0.03155145049095154,
+      "pipeline": "AP-NJ -> distance",
+      "support": false,
+      "lengths": false
+    },
+    {
+      "name": "mlp",
+      "output": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/release/V1.0.2/runs/settings-661023d6/mlp",
+      "seconds": 0.04040559288114309,
+      "pipeline": "AP-NJ -> mlp",
+      "support": false,
+      "lengths": false
+    },
+    {
+      "name": "reorder",
+      "output": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/release/V1.0.2/runs/settings-661023d6/reorder",
+      "seconds": 3.1720571368932724,
+      "pipeline": "AP-NJ -> mlp -> distance -> likelihood",
+      "support": true,
+      "lengths": true
+    },
+    {
+      "name": "likelihood-first",
+      "output": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/release/V1.0.2/runs/settings-661023d6/likelihood-first",
+      "seconds": 0.16563994530588388,
+      "pipeline": "AP-NJ -> likelihood -> mlp -> distance",
+      "support": false,
+      "lengths": false
+    },
+    {
+      "name": "kernel-first",
+      "output": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/release/V1.0.2/runs/settings-661023d6/kernel-first",
+      "seconds": 0.11032748874276876,
+      "pipeline": "AP-NJ -> kernel -> distance -> mlp",
+      "support": false,
+      "lengths": false
+    },
+    {
+      "name": "apnj-advanced",
+      "output": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/release/V1.0.2/runs/settings-661023d6/apnj-advanced",
+      "seconds": 0.025904769077897072,
+      "pipeline": "AP-NJ",
+      "support": false,
+      "lengths": false
+    }
+  ],
+  "http": {
+    "status": "passed",
+    "paused_at_pure_apnj": true,
+    "resume_identical": true,
+    "cancel_removes_outputs": true,
+    "finished_job": "5c9536d75d81455bb5819dcfa0126d34",
+    "cancelled_job": "c6880a338ede4f9d9d14e2e415065a78"
+  },
+  "later_round_pause": {
+    "status": "passed",
+    "likelihood_round": {
+      "available": true,
+      "sequence": 8,
+      "taxa": 256,
+      "stage": "likelihood",
+      "round": 1
+    },
+    "paused_seconds": 0.10041334759443998,
+    "constant_pure_tree": true,
+    "output": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/release/V1.0.2/runs/round-check-9ad9138a"
+  },
+  "browser_pause": {
+    "status": "passed",
+    "job": "6f73394d4f494dadb135c7a73d7d7cf5",
+    "submitted_settings": true,
+    "paused_at": "apnj",
+    "download": true,
+    "cancel": true,
+    "errors": []
+  },
+  "seasons": {
+    "status": "passed",
+    "cycle_ms": 600000,
+    "themes": [
+      {
+        "season": "spring",
+        "card": "rgb(32, 51, 43)",
+        "blur": "none"
+      },
+      {
+        "season": "summer",
+        "card": "rgb(25, 54, 46)",
+        "blur": "none"
+      },
+      {
+        "season": "autumn",
+        "card": "rgb(53, 47, 40)",
+        "blur": "none"
+      },
+      {
+        "season": "winter",
+        "card": "rgb(38, 52, 64)",
+        "blur": "none"
+      }
+    ],
+    "clockSeason": "summer",
+    "nature": {
+      "card": "rgb(20, 39, 31)",
+      "photo": "tiger"
+    },
+    "drag": [
+      "likelihood",
+      "distance",
+      "mlp"
+    ],
+    "invalid_input_rejected": true,
+    "errors": []
+  },
+  "regression_tests": {
+    "source_web_api": 30,
+    "portable_web_api": 30,
+    "contracts_search_pause_config": 30,
+    "apnj_native": 7
+  },
+  "evidence_workspace": "/home/student_su/publish_code/research-workbench/subprojects-main/concordtree-modular-settings-20261108",
+  "limits": [
+    "Small execution regressions, not new generalization or speed claims.",
+    "Pause retains the current process and GPU state; it is not a cross-restart resume format.",
+    "Total runtime excludes paused time; internal stage timings may include it.",
+    "Intermediate trees do not include final branch support.",
+    "Custom ordering is currently single-view; branch lengths/support are emitted only when the final module supports them.",
+    "Archive/container artifacts have not been rebuilt in this settings pass."
+  ],
+  "live_ui": {
+    "status": "passed",
+    "url": "http://127.0.0.1:8765",
+    "values": {
+      "model": "GTR+FO+I+G4",
+      "blocks": 3,
+      "opaque": "rgb(32, 51, 43)",
+      "theme": "Seasons"
+    },
+    "errors": []
+  },
+  "portable_cli": {
+    "status": "passed",
+    "pipeline": "AP-NJ",
+    "tree_byte_identical_to_source": true,
+    "output": "subprojects-main/concordtree-linux-distribution/output/final-installed/runs/modular-settings-final-check"
+  }
+}

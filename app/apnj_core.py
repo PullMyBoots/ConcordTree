@@ -16,6 +16,7 @@ def _health(state,*,uninformative=False,unobserved=0):
 def _uninformative(names,state,started,allocated,model,common,seed,canonical,settings):
  import _ct_apnj_topology as topology
  from concordtree.treeio import Tree
+ dense_limit=settings.pop('terminal_limit',DENSE_LIMIT)
  n=len(names);neighbors=np.full((2*n-2,3),-1,np.int64);active=np.arange(n,dtype=np.int64);nextnode=n
  while len(active)>3:
   count=min(len(active)//2,len(active)-3);dest=np.arange(nextnode,nextnode+count,dtype=np.int64)
@@ -28,23 +29,25 @@ def _uninformative(names,state,started,allocated,model,common,seed,canonical,set
   local_cleanup=dict(method='skipped: no variable observed site',passes=[],times={},seconds=0.,maximum_passes=4,component_width=4),
   method='uninformative observed alignment: balanced binary completion',constructor_seconds=time.perf_counter()-started,
   projection_seconds=0.,times=dict(candidate=0.,statistics=0.,selection=0.,merge=0.),history=[],sequence_bytes=allocated,taxa=n,all_sites=settings.pop('length'),full_site_input=True,seed=seed,model=model,common_sites=common,gamma_shape=None,
-  terminal=dict(active=3,pairs=0,matrix_bytes=0,query_seconds=0.,solve_seconds=0.,limit=DENSE_LIMIT,solver='deterministic topology completion without distance evidence'),active_work=0,candidate_work=0,health=_health(state,uninformative=True),**settings)
+  terminal=dict(active=3,pairs=0,matrix_bytes=0,query_seconds=0.,solve_seconds=0.,limit=dense_limit,solver='deterministic topology completion without distance evidence'),active_work=0,candidate_work=0,health=_health(state,uninformative=True),**settings)
 
-def build(names,packed,length,*,seed=20260934,projections=16,window=8,cap=32,representatives=2,landmarks=32,ann_k=16,ann_rounds=2,model=1,common=False,minimum_divisor=4,real_ann=True,row_control=False,sketch_ann=False,q_candidates=True,canonical=False,cpu_threads=16):
+def build(names,packed,length,*,seed=20260934,projections=16,window=8,cap=32,representatives=2,landmarks=32,ann_k=16,ann_rounds=2,model=1,common=False,minimum_divisor=4,real_ann=True,row_control=False,sketch_ann=False,q_candidates=True,canonical=False,cpu_threads=16,terminal_limit=512,cleanup_options=None,checkpoint_fn=None):
  import _ct_apnj_packed as native
  import _ct_apnj_graph as graph
  from concordtree.treeio import Tree
- started=time.perf_counter();n=len(names);R=representatives;workers=min(16,int(cpu_threads))
+ started=time.perf_counter();n=len(names);R=representatives;dense_limit=int(terminal_limit);workers=min(16,int(cpu_threads))
  if R not in (1,2,4):raise ValueError('representative width must be 1,2,4')
  if not real_ann:raise ValueError('this AP-NJ backend requires real_ann=True')
  if workers<1:raise ValueError('positive CPU thread count required')
  state=native.State(packed,int(length),workers);upload_seconds=time.perf_counter()-started;allocated=state.memory();evidence=state.evidence()
  if evidence['variable_observed_sites']==0:
-  return _uninformative(names,state,started,allocated,model,common,seed,canonical,dict(length=length,upload_seconds=upload_seconds,projections=projections,window=window,cap=cap,representatives=R,landmarks=landmarks,ann_k=ann_k,minimum_divisor=minimum_divisor,real_ann=real_ann,row_control=row_control,q_candidates=q_candidates))
+  tree,meta=_uninformative(names,state,started,allocated,model,common,seed,canonical,dict(length=length,terminal_limit=dense_limit,upload_seconds=upload_seconds,projections=projections,window=window,cap=cap,representatives=R,landmarks=landmarks,ann_k=ann_k,minimum_divisor=minimum_divisor,real_ann=real_ann,row_control=row_control,q_candidates=q_candidates))
+  if checkpoint_fn:checkpoint_fn(tree,dict(stage='apnj'))
+  return tree,meta
  coherent=bool(common);unobserved_rows=0
  alpha=state.gamma_shape() if model>=2 else 100.;phase=time.perf_counter()
  projected=np.zeros((2*n-2,projections),np.float64)
- if n>DENSE_LIMIT:projected[:n]=state.project(seed,projections)
+ if n>dense_limit:projected[:n]=state.project(seed,projections)
  projection_seconds=time.perf_counter()-phase
  reps=np.zeros((2*n-2,R),np.int32);mass=np.zeros((2*n-2,R),np.float64)
  reps[:n]=np.arange(n,dtype=np.int32)[:,None];mass[:n,0]=1
@@ -52,7 +55,7 @@ def build(names,packed,length,*,seed=20260934,projections=16,window=8,cap=32,rep
  active=np.arange(n,dtype=np.int32);neighbors=np.full((2*n-2,3),-1,np.int64);nextnode=n;history=[]
  import _ct_apnj_topology as topology
  times=dict(candidate=0.,statistics=0.,selection=0.,merge=0.);rng=np.random.default_rng(seed)
- while len(active)>DENSE_LIMIT:
+ while len(active)>dense_limit:
   m=len(active);phase=time.perf_counter();z=np.ascontiguousarray(projected[active]);order=np.argsort(z[:,0],kind='stable').astype(np.int64)
   pairs=np.asarray(graph.projection_pairs(z,window,workers),dtype=np.int64)
   times['candidate']+=time.perf_counter()-phase
@@ -133,11 +136,14 @@ def build(names,packed,length,*,seed=20260934,projections=16,window=8,cap=32,rep
  triples,remaining=solve(matrix,np.ascontiguousarray(active,dtype=np.int64),np.ascontiguousarray(minleaf[active]),nextnode)
  topology.attach(neighbors,np.ascontiguousarray(triples,dtype=np.int64))
  nextnode+=len(triples);active=np.asarray(remaining,dtype=np.int32);terminal_solve_seconds=time.perf_counter()-phase
- terminal_meta=dict(active=m,pairs=len(terminal_pairs),matrix_bytes=matrix.nbytes,query_seconds=terminal_query_seconds,solve_seconds=terminal_solve_seconds,limit=DENSE_LIMIT,
+ terminal_meta=dict(active=m,pairs=len(terminal_pairs),matrix_bytes=matrix.nbytes,query_seconds=terminal_query_seconds,solve_seconds=terminal_solve_seconds,limit=dense_limit,
                     solver='standard global-minimum NJ; signed reduced distances retained')
  center=nextnode;topology.connect_center(neighbors,np.ascontiguousarray(active,dtype=np.int64),center)
+ def checkpoint_neighbors(adj,event):
+  if checkpoint_fn:checkpoint_fn(Tree(topology.export_graph(adj,n,True),dict(enumerate(names)),{}),event)
+ if checkpoint_fn:checkpoint_neighbors(neighbors,dict(stage='apnj'))
  from apnj_cleanup import refine
- local_meta=refine(neighbors,n,state,model,common,alpha)
+ local_meta=refine(neighbors,n,state,model,common,alpha,checkpoint=checkpoint_neighbors if checkpoint_fn else None,**(cleanup_options or {}))
  phase=time.perf_counter();g=topology.export_graph(neighbors,n,canonical)
  tree=Tree(g,dict(enumerate(names)),{});tree.require_binary()
  export_seconds=time.perf_counter()-phase

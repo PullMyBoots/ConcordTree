@@ -10,7 +10,7 @@
     "license_url": "https://www.pexels.com/license/",
     "desktop": "/assets/chameleon.webp",
     "mobile": "/assets/chameleon-mobile.webp",
-    "panel": "right"
+    "panel": "center"
   },
   {
     "id": "sundew",
@@ -23,7 +23,7 @@
     "license_url": "https://www.pexels.com/license/",
     "desktop": "/assets/sundew.webp",
     "mobile": "/assets/sundew-mobile.webp",
-    "panel": "right"
+    "panel": "center"
   },
   {
     "id": "mushroom",
@@ -36,7 +36,7 @@
     "license_url": "https://www.pexels.com/license/",
     "desktop": "/assets/mushroom.webp",
     "mobile": "/assets/mushroom-mobile.webp",
-    "panel": "right"
+    "panel": "center"
   },
   {
     "id": "tiger",
@@ -49,7 +49,7 @@
     "license_url": "https://www.pexels.com/license/",
     "desktop": "/assets/tiger.webp",
     "mobile": "/assets/tiger-mobile.webp",
-    "panel": "right"
+    "panel": "center"
   },
   {
     "id": "tyrannosaurus",
@@ -62,7 +62,7 @@
     "license_url": "https://www.pexels.com/license/",
     "desktop": "/assets/tyrannosaurus.webp",
     "mobile": "/assets/tyrannosaurus-mobile.webp",
-    "panel": "right"
+    "panel": "center"
   },
   {
     "id": "ammonite",
@@ -75,7 +75,7 @@
     "license_url": "https://www.pexels.com/license/",
     "desktop": "/assets/ammonite.webp",
     "mobile": "/assets/ammonite-mobile.webp",
-    "panel": "right"
+    "panel": "center"
   },
   {
     "id": "diatom",
@@ -88,7 +88,7 @@
     "license_url": "https://www.pexels.com/license/",
     "desktop": "/assets/diatom.webp",
     "mobile": "/assets/diatom-mobile.webp",
-    "panel": "right"
+    "panel": "center"
   },
   {
     "id": "cells",
@@ -101,7 +101,7 @@
     "license_url": "https://www.pexels.com/license/",
     "desktop": "/assets/cells.webp",
     "mobile": "/assets/cells-mobile.webp",
-    "panel": "right"
+    "panel": "center"
   },
   {
     "id": "seed-fern",
@@ -114,7 +114,7 @@
     "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
     "desktop": "/assets/seed-fern.webp",
     "mobile": "/assets/seed-fern-mobile.webp",
-    "panel": "right"
+    "panel": "center"
   },
   {
     "id": "virus",
@@ -127,7 +127,7 @@
     "license_url": "https://wwwn.cdc.gov/phil/details.aspx?pid=23640",
     "desktop": "/assets/virus.webp",
     "mobile": "/assets/virus-mobile.webp",
-    "panel": "right"
+    "panel": "center"
   },
   {
     "id": "fern",
@@ -140,7 +140,7 @@
     "license_url": "https://unsplash.com/license",
     "desktop": "/assets/fern.webp",
     "mobile": "/assets/fern-mobile.webp",
-    "panel": "right"
+    "panel": "center"
   },
   {
     "id": "hummingbird",
@@ -153,6 +153,6 @@
     "license_url": "https://www.pexels.com/license/",
     "desktop": "/assets/hummingbird.webp",
     "mobile": "/assets/hummingbird-mobile.webp",
-    "panel": "right"
+    "panel": "center"
   }
 ]

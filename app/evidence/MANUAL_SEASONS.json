@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "colors": {
+    "spring": "rgb(32, 51, 43)",
+    "summer": "rgb(25, 54, 46)",
+    "autumn": "rgb(53, 47, 40)",
+    "winter": "rgb(38, 52, 64)"
+  },
+  "manual_holds_for_minutes": true,
+  "persists_on_reload": true,
+  "works_while_paused": true,
+  "auto_resumes_at_selection": true,
+  "other_themes_unaffected": true,
+  "errors": [],
+  "date": "2026-11-08T12:18:53.720775+00:00",
+  "scope": "Manual seasonal choice and resuming the automatic cycle; no inference changes"
+}

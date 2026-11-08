@@ -95,5 +95,7 @@
     "checked": 502,
     "matched": 502,
     "ledger": "BASELINE_INPUT_COPY_AUDIT.json"
-  }
+  },
+  "current_dipper_runtime_contract": "dipper-timing/metric_contract.json",
+  "historical_contracts_preserved": true
 }

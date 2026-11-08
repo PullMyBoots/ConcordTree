@@ -1,10 +1,7 @@
 """Exact integer quartet classification on GPU; FP64 reduction stays on CPU."""
-import numpy as np
-import torch
 import triton
 import triton.language as tl
 from triton.language.extra.cuda import libdevice
-from . import _msc_active_gpu
 
 @triton.jit
 def _lca(a,b,A,R,V:tl.constexpr,W:tl.constexpr):
@@ -85,20 +82,3 @@ def _classify(Q,A,R,E,B,O,N,V:tl.constexpr,W:tl.constexpr,TAXA:tl.constexpr,BLOC
     code=tl.where(valid&(~active|((e>=0)&(alt!=state))),code,-1)
     tl.store(O+i,code,mask)
 
-@torch.inference_mode()
-def evaluate_gpu(tree,n,queries,weights,*,device='cuda:0'):
-    idx=_msc_active_gpu.export_index(tree,n)
-    dev=torch.device(device)
-    arrays={key:torch.as_tensor(idx[key],device=dev,dtype=torch.int32) for key in ['nodes','rmq','edges','branches']}
-    q=np.ascontiguousarray(queries,dtype=np.int32)
-    if q.ndim!=2 or q.shape[1]!=4:
-        raise ValueError('canonical Qx4 queries required')
-    if len(q) and (q.min()<0 or q.max()>=n):
-        raise ValueError('query out of range')
-    query=torch.as_tensor(q,device=dev)
-    codes=torch.empty((len(q),),device=dev,dtype=torch.int32)
-    _classify[(triton.cdiv(len(q),256),)](query,arrays['nodes'],arrays['rmq'],arrays['edges'],arrays['branches'],codes,len(q),2*n-2,arrays['rmq'].shape[1],n,256)
-    cpu=codes.cpu().numpy()
-    result=_msc_active_gpu.reduce(cpu,weights,n-3)
-    result['edges']=idx['edges']
-    return result

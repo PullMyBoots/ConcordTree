@@ -1,5 +1,7 @@
 # 从工作站保存的发行快照恢复
 
+这里描述的是此前保存的冻结归档和源码 bundle，不包含后续的最新源码修改。当前源码请从本仓库 `main` 分支获取；本次更新没有替换工作站备份或重建二进制归档。
+
 工作站目录：`D:\serve-backup\ConcordTree\distribution-test`。
 
 完整运行环境保存在 `concordtree-1.0.2-linux-x86_64-cuda121.tar.gz`；发行源码、模型及 Git 历史保存在 `concordtree-1.0.2-linux-r1-source.bundle`。两者各有 `.sha256` 校验文件。完整研究工作台的灾备归档另行管理。

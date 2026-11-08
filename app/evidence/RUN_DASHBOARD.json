@@ -1,0 +1,124 @@
+{
+  "status": "passed",
+  "date": "2026-11-08T12:53:36.202597+00:00",
+  "scope": "Per-job CPU/GPU resources, structured run dashboard and persistent GPU monitoring",
+  "changes": [
+    "Removed Logs settings tab",
+    "CPU thread count and physical GPU index saved per job and forwarded to runtime",
+    "One persistent nvidia-smi -l 2 process; separate CPU/RAM sampling; cached HTTP telemetry; 2-second UI polling; stale markers and automatic reconnect",
+    "Algorithm segments follow enabled pipeline modules and ordering; no extra support/export segment",
+    "Fixed-column table: stage, NNI round, cumulative seconds, criterion-specific score/gain, moves; no view/size/debug fields"
+  ],
+  "score_semantics": {
+    "likelihood": "whole-tree log likelihood",
+    "distance": "largest proposed distance improvement in this round",
+    "mlp": "mean probability gain of moved edges",
+    "kernel": "summed objective gain in this round",
+    "note": "Criteria differ and must not be compared across stages; missing scores are shown as a dash. Elapsed seconds include pauses."
+  },
+  "tests": {
+    "source_api_and_host": 42,
+    "distribution_api_and_host": 42,
+    "driver_stream_and_reconnect": "passed",
+    "browser": {
+      "status": "passed",
+      "logs_removed": true,
+      "resource_persistence": true,
+      "discard_works": true,
+      "gpus_detected": 3,
+      "stage_count": 4,
+      "reordered_disabled_stages": [
+        "apnj",
+        "likelihood",
+        "distance"
+      ],
+      "table_no_wrap": true,
+      "table_no_clipping": true,
+      "live_job": "3b3d37fd9ed64b178ca4ffce3e894f40",
+      "live_resources": {
+        "cpu_threads": 4,
+        "gpu": 1
+      },
+      "errors": []
+    },
+    "telemetry_ui": {
+      "status": "passed",
+      "gpus_retained_on_stale_and_transport_failure": true,
+      "automatic_recovery": true,
+      "poll_requests": 4,
+      "errors": []
+    },
+    "live_watch": {
+      "status": "passed",
+      "samples": [
+        {
+          "gpus": 3,
+          "status": "available",
+          "sampled_at": "2026-11-08T12:51:33.074402+00:00",
+          "monitor_pids": [
+            "3083889"
+          ]
+        },
+        {
+          "gpus": 3,
+          "status": "available",
+          "sampled_at": "2026-11-08T12:51:35.075021+00:00",
+          "monitor_pids": [
+            "3083889"
+          ]
+        },
+        {
+          "gpus": 3,
+          "status": "available",
+          "sampled_at": "2026-11-08T12:51:37.075405+00:00",
+          "monitor_pids": [
+            "3083889"
+          ]
+        },
+        {
+          "gpus": 3,
+          "status": "available",
+          "sampled_at": "2026-11-08T12:51:39.076046+00:00",
+          "monitor_pids": [
+            "3083889"
+          ]
+        },
+        {
+          "gpus": 3,
+          "status": "available",
+          "sampled_at": "2026-11-08T12:51:43.076976+00:00",
+          "monitor_pids": [
+            "3083889"
+          ]
+        }
+      ]
+    },
+    "scientific_regression": {
+      "status": "passed",
+      "resources": {
+        "cpu_threads": 4,
+        "gpu": 1
+      },
+      "cases": [
+        {
+          "task": "gene",
+          "tree_bytes_identical": true,
+          "annotated_tree_identical": true,
+          "events": 23,
+          "output": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/release/V1.0.2/runs/dashboard-867bbd44/gene-after"
+        },
+        {
+          "task": "species",
+          "tree_bytes_identical": true,
+          "annotated_tree_identical": true,
+          "events": 23,
+          "output": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/release/V1.0.2/runs/dashboard-eb459ab7/species-after"
+        }
+      ]
+    }
+  },
+  "limitations": [
+    "Tree equality regression covers one supplied gene example and one supplied species example, not a comprehensive numerical benchmark.",
+    "Distribution directories updated; archives and containers were not rebuilt."
+  ]
+}

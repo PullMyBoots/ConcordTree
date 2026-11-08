@@ -5,7 +5,10 @@
       "source": "release/gene-likelihood-v0.5.9-hybrid/source/release/gene-likelihood-v0.5.0-fullsite-v11/algorithm.py",
       "sha256": "b28fcdd89efbdd3e00ea2e1469fbb5da6c6c2702992667a4edba923cf2b70a2d",
       "disposition": "integrated-modified",
-      "final_sha256": "b3902549e5cb8bf373dd4d48e12fcfb78eacf9b896e121cd5295bca75ce47b94"
+      "final_sha256": "fbded42982d61d043c1e66112ec6d3dc0f1381c0316f50466e06feaa6a91970f",
+      "historical_final_sha256": "b3902549e5cb8bf373dd4d48e12fcfb78eacf9b896e121cd5295bca75ce47b94",
+      "pre_cleanup_sha256": "74eb4d4444905f707ca1d1780a56c7070f4e200a2e27cc1650512690ca1db87f",
+      "release_status": "production-tools-separated-2026-11-08"
     },
     {
       "path": "runtime/gene/binary_likelihood.py",
@@ -26,7 +29,9 @@
       "source": "release/gene-likelihood-v0.5.9-hybrid/source/release/gene-likelihood-v0.5.0-fullsite-v11/cli.py",
       "sha256": "135355983bdc36260ac0a567c239d2fc09618ec63faadd4837ca3f55210ccec8",
       "disposition": "imported-unchanged",
-      "final_sha256": "135355983bdc36260ac0a567c239d2fc09618ec63faadd4837ca3f55210ccec8"
+      "historical_final_sha256": "135355983bdc36260ac0a567c239d2fc09618ec63faadd4837ca3f55210ccec8",
+      "pre_cleanup_sha256": "135355983bdc36260ac0a567c239d2fc09618ec63faadd4837ca3f55210ccec8",
+      "release_status": "retired-unused-2026-11-08"
     },
     {
       "path": "runtime/gene/global_compression.py",
@@ -243,7 +248,9 @@
       "source": "release/gene-likelihood-v0.5.9-hybrid/source/release/gene-likelihood-v0.5.0-fullsite-v11/runtime/full_context_ml.py",
       "sha256": "d02035f2b9bcd88df7d6cb65f3bc0b7f1a27565f90260dd1e447a9a93ea07e22",
       "disposition": "imported-unchanged",
-      "final_sha256": "d02035f2b9bcd88df7d6cb65f3bc0b7f1a27565f90260dd1e447a9a93ea07e22"
+      "historical_final_sha256": "d02035f2b9bcd88df7d6cb65f3bc0b7f1a27565f90260dd1e447a9a93ea07e22",
+      "pre_cleanup_sha256": "d02035f2b9bcd88df7d6cb65f3bc0b7f1a27565f90260dd1e447a9a93ea07e22",
+      "release_status": "retired-unused-2026-11-08"
     },
     {
       "path": "runtime/gene/runtime/global_patterns.cpp",
@@ -565,56 +572,75 @@
       "source": "release/species-msc-compact-20261105/runtime/statistical-methods/msc_refine/METHOD.md",
       "sha256": "0d82aa26e218b602d39d8000213129ad117bceecb7601c5517c4bb24b6f88398",
       "disposition": "imported-unchanged",
-      "final_sha256": "0d82aa26e218b602d39d8000213129ad117bceecb7601c5517c4bb24b6f88398"
+      "final_sha256": "db39d65f4efc43f45b414df582697b75597740813c648f3068351fd206ff6408",
+      "historical_final_sha256": "0d82aa26e218b602d39d8000213129ad117bceecb7601c5517c4bb24b6f88398",
+      "pre_cleanup_sha256": "0d82aa26e218b602d39d8000213129ad117bceecb7601c5517c4bb24b6f88398",
+      "release_status": "production-tools-separated-2026-11-08"
     },
     {
       "path": "runtime/msc_refine/README.md",
       "source": "release/species-msc-compact-20261105/runtime/statistical-methods/msc_refine/README.md",
       "sha256": "55f909574733827c1132ddf1b2cfd9db141e75db970d6e369c2061d85125de2b",
       "disposition": "imported-unchanged",
-      "final_sha256": "55f909574733827c1132ddf1b2cfd9db141e75db970d6e369c2061d85125de2b"
+      "final_sha256": "ec84a703a282298c574e496e7ba077e015bb8f8edfd777dec49062714dd0692c",
+      "historical_final_sha256": "55f909574733827c1132ddf1b2cfd9db141e75db970d6e369c2061d85125de2b",
+      "pre_cleanup_sha256": "55f909574733827c1132ddf1b2cfd9db141e75db970d6e369c2061d85125de2b",
+      "release_status": "production-tools-separated-2026-11-08"
     },
     {
       "path": "runtime/msc_refine/README_GPU0.md",
       "source": "release/species-msc-compact-20261105/runtime/statistical-methods/msc_refine/README_GPU0.md",
       "sha256": "11ec2c35c0754b3fad25644f6a717575c26f898c1808213570e7232289dd585a",
       "disposition": "imported-unchanged",
-      "final_sha256": "11ec2c35c0754b3fad25644f6a717575c26f898c1808213570e7232289dd585a"
+      "historical_final_sha256": "11ec2c35c0754b3fad25644f6a717575c26f898c1808213570e7232289dd585a",
+      "pre_cleanup_sha256": "11ec2c35c0754b3fad25644f6a717575c26f898c1808213570e7232289dd585a",
+      "release_status": "retired-unused-2026-11-08"
     },
     {
       "path": "runtime/msc_refine/__init__.py",
       "source": "release/species-msc-compact-20261105/runtime/statistical-methods/msc_refine/__init__.py",
       "sha256": "f1ca659f52eddcf7e902b2633d2a36a99efcda12f55ade1dca70ce149935a8f0",
       "disposition": "imported-unchanged",
-      "final_sha256": "f1ca659f52eddcf7e902b2633d2a36a99efcda12f55ade1dca70ce149935a8f0"
+      "final_sha256": "d1f6354e08fdd1200afb8ef9434e0e49f0ca1b80315739af73dee2d809ec59e5",
+      "historical_final_sha256": "f1ca659f52eddcf7e902b2633d2a36a99efcda12f55ade1dca70ce149935a8f0",
+      "pre_cleanup_sha256": "f1ca659f52eddcf7e902b2633d2a36a99efcda12f55ade1dca70ce149935a8f0",
+      "release_status": "production-tools-separated-2026-11-08"
     },
     {
       "path": "runtime/msc_refine/_msc_active.cpython-310-x86_64-linux-gnu.so",
       "source": "release/species-msc-compact-20261105/runtime/statistical-methods/msc_refine/_msc_active.cpython-310-x86_64-linux-gnu.so",
       "sha256": "52a7d04e935b0573c37679c684294d527de6f0e9337c35c16281bee62df6eba0",
       "disposition": "imported-unchanged",
-      "final_sha256": "52a7d04e935b0573c37679c684294d527de6f0e9337c35c16281bee62df6eba0"
+      "historical_final_sha256": "52a7d04e935b0573c37679c684294d527de6f0e9337c35c16281bee62df6eba0",
+      "pre_cleanup_sha256": "52a7d04e935b0573c37679c684294d527de6f0e9337c35c16281bee62df6eba0",
+      "release_status": "retired-unused-2026-11-08"
     },
     {
       "path": "runtime/msc_refine/_msc_active_fast.cpython-310-x86_64-linux-gnu.so",
       "source": "release/species-msc-compact-20261105/runtime/statistical-methods/msc_refine/_msc_active_fast.cpython-310-x86_64-linux-gnu.so",
       "sha256": "6b74e37513451e7393f78f9f2d9e25fc331635f604e93e62435bda1abd7eb121",
       "disposition": "imported-unchanged",
-      "final_sha256": "6b74e37513451e7393f78f9f2d9e25fc331635f604e93e62435bda1abd7eb121"
+      "historical_final_sha256": "6b74e37513451e7393f78f9f2d9e25fc331635f604e93e62435bda1abd7eb121",
+      "pre_cleanup_sha256": "6b74e37513451e7393f78f9f2d9e25fc331635f604e93e62435bda1abd7eb121",
+      "release_status": "retired-unused-2026-11-08"
     },
     {
       "path": "runtime/msc_refine/_msc_active_gpu.cpython-310-x86_64-linux-gnu.so",
       "source": "release/species-msc-compact-20261105/runtime/statistical-methods/msc_refine/_msc_active_gpu.cpython-310-x86_64-linux-gnu.so",
       "sha256": "df2f20c3381d2367a4a5642c73c5c2b86a97dc420d3a33eb8d3cefa3e6ecc80f",
       "disposition": "imported-unchanged",
-      "final_sha256": "df2f20c3381d2367a4a5642c73c5c2b86a97dc420d3a33eb8d3cefa3e6ecc80f"
+      "historical_final_sha256": "df2f20c3381d2367a4a5642c73c5c2b86a97dc420d3a33eb8d3cefa3e6ecc80f",
+      "pre_cleanup_sha256": "df2f20c3381d2367a4a5642c73c5c2b86a97dc420d3a33eb8d3cefa3e6ecc80f",
+      "release_status": "retired-unused-2026-11-08"
     },
     {
       "path": "runtime/msc_refine/_msc_active_norm.cpython-310-x86_64-linux-gnu.so",
       "source": "release/species-msc-compact-20261105/runtime/statistical-methods/msc_refine/_msc_active_norm.cpython-310-x86_64-linux-gnu.so",
       "sha256": "63872eb6d9be34fc3bcb3bb25d428bf8509bcc5507ce1e09743164ef24313ddf",
       "disposition": "imported-unchanged",
-      "final_sha256": "63872eb6d9be34fc3bcb3bb25d428bf8509bcc5507ce1e09743164ef24313ddf"
+      "historical_final_sha256": "63872eb6d9be34fc3bcb3bb25d428bf8509bcc5507ce1e09743164ef24313ddf",
+      "pre_cleanup_sha256": "63872eb6d9be34fc3bcb3bb25d428bf8509bcc5507ce1e09743164ef24313ddf",
+      "release_status": "retired-unused-2026-11-08"
     },
     {
       "path": "runtime/msc_refine/_msc_active_plan.cpython-310-x86_64-linux-gnu.so",
@@ -628,7 +654,9 @@
       "source": "release/species-msc-compact-20261105/runtime/statistical-methods/msc_refine/_msc_active_rmq.cpython-310-x86_64-linux-gnu.so",
       "sha256": "1a6c1bb1de9c6d8c94e91601157857dcc59e0f4be606fd9778694ff575479230",
       "disposition": "imported-unchanged",
-      "final_sha256": "1a6c1bb1de9c6d8c94e91601157857dcc59e0f4be606fd9778694ff575479230"
+      "historical_final_sha256": "1a6c1bb1de9c6d8c94e91601157857dcc59e0f4be606fd9778694ff575479230",
+      "pre_cleanup_sha256": "1a6c1bb1de9c6d8c94e91601157857dcc59e0f4be606fd9778694ff575479230",
+      "release_status": "retired-unused-2026-11-08"
     },
     {
       "path": "runtime/msc_refine/_msc_active_streamsum.cpython-310-x86_64-linux-gnu.so",
@@ -656,14 +684,18 @@
       "source": "release/species-msc-compact-20261105/runtime/statistical-methods/msc_refine/_msc_rate_objective.cpython-310-x86_64-linux-gnu.so",
       "sha256": "8ff3053d3ee8413f5a8fdecc858b7f5b71b5b53aa2ee5beed8c8449ded198583",
       "disposition": "imported-unchanged",
-      "final_sha256": "8ff3053d3ee8413f5a8fdecc858b7f5b71b5b53aa2ee5beed8c8449ded198583"
+      "historical_final_sha256": "8ff3053d3ee8413f5a8fdecc858b7f5b71b5b53aa2ee5beed8c8449ded198583",
+      "pre_cleanup_sha256": "8ff3053d3ee8413f5a8fdecc858b7f5b71b5b53aa2ee5beed8c8449ded198583",
+      "release_status": "retired-unused-2026-11-08"
     },
     {
       "path": "runtime/msc_refine/_msc_rate_pair.cpython-310-x86_64-linux-gnu.so",
       "source": "release/species-msc-compact-20261105/runtime/statistical-methods/msc_refine/_msc_rate_pair.cpython-310-x86_64-linux-gnu.so",
       "sha256": "c55e383f7d0aa79ef4994d88d35a24393dd3297f976b0a4f96bae5dc0d3bbac7",
       "disposition": "imported-unchanged",
-      "final_sha256": "c55e383f7d0aa79ef4994d88d35a24393dd3297f976b0a4f96bae5dc0d3bbac7"
+      "historical_final_sha256": "c55e383f7d0aa79ef4994d88d35a24393dd3297f976b0a4f96bae5dc0d3bbac7",
+      "pre_cleanup_sha256": "c55e383f7d0aa79ef4994d88d35a24393dd3297f976b0a4f96bae5dc0d3bbac7",
+      "release_status": "retired-unused-2026-11-08"
     },
     {
       "path": "runtime/msc_refine/_msc_slim_index.cpython-310-x86_64-linux-gnu.so",
@@ -677,35 +709,45 @@
       "source": "release/species-msc-compact-20261105/runtime/statistical-methods/msc_refine/_msc_sparse.cpython-310-x86_64-linux-gnu.so",
       "sha256": "5faef7e31b0a9283b863d2bd01702527abcd2ff5f9b417eb93a0b0e78bacba6b",
       "disposition": "imported-unchanged",
-      "final_sha256": "5faef7e31b0a9283b863d2bd01702527abcd2ff5f9b417eb93a0b0e78bacba6b"
+      "historical_final_sha256": "5faef7e31b0a9283b863d2bd01702527abcd2ff5f9b417eb93a0b0e78bacba6b",
+      "pre_cleanup_sha256": "5faef7e31b0a9283b863d2bd01702527abcd2ff5f9b417eb93a0b0e78bacba6b",
+      "release_status": "retired-unused-2026-11-08"
     },
     {
       "path": "runtime/msc_refine/_msc_spr.cpython-310-x86_64-linux-gnu.so",
       "source": "release/species-msc-compact-20261105/runtime/statistical-methods/msc_refine/_msc_spr.cpython-310-x86_64-linux-gnu.so",
       "sha256": "64aa659ae9f820208414a94486b56dd70b594e050b29159074342e611ad999f3",
       "disposition": "imported-unchanged",
-      "final_sha256": "64aa659ae9f820208414a94486b56dd70b594e050b29159074342e611ad999f3"
+      "historical_final_sha256": "64aa659ae9f820208414a94486b56dd70b594e050b29159074342e611ad999f3",
+      "pre_cleanup_sha256": "64aa659ae9f820208414a94486b56dd70b594e050b29159074342e611ad999f3",
+      "release_status": "retired-unused-2026-11-08"
     },
     {
       "path": "runtime/msc_refine/_pair_features.cpython-310-x86_64-linux-gnu.so",
       "source": "release/species-msc-compact-20261105/runtime/statistical-methods/msc_refine/_pair_features.cpython-310-x86_64-linux-gnu.so",
       "sha256": "efcc6e895cc51d7f4bbf96cdfe189a9b76831c0a6daf9ff871a01463f22e4f2d",
       "disposition": "imported-unchanged",
-      "final_sha256": "efcc6e895cc51d7f4bbf96cdfe189a9b76831c0a6daf9ff871a01463f22e4f2d"
+      "historical_final_sha256": "efcc6e895cc51d7f4bbf96cdfe189a9b76831c0a6daf9ff871a01463f22e4f2d",
+      "pre_cleanup_sha256": "efcc6e895cc51d7f4bbf96cdfe189a9b76831c0a6daf9ff871a01463f22e4f2d",
+      "release_status": "retired-unused-2026-11-08"
     },
     {
       "path": "runtime/msc_refine/_uniform_plan.cpython-310-x86_64-linux-gnu.so",
       "source": "release/species-msc-compact-20261105/runtime/statistical-methods/msc_refine/_uniform_plan.cpython-310-x86_64-linux-gnu.so",
       "sha256": "87c0113471b7b50fca79a55402390b6aa416d1d4914a1ef3c0b62b2eb568417d",
       "disposition": "imported-unchanged",
-      "final_sha256": "87c0113471b7b50fca79a55402390b6aa416d1d4914a1ef3c0b62b2eb568417d"
+      "historical_final_sha256": "87c0113471b7b50fca79a55402390b6aa416d1d4914a1ef3c0b62b2eb568417d",
+      "pre_cleanup_sha256": "87c0113471b7b50fca79a55402390b6aa416d1d4914a1ef3c0b62b2eb568417d",
+      "release_status": "retired-unused-2026-11-08"
     },
     {
       "path": "runtime/msc_refine/active_backend.cpp",
       "source": "release/species-msc-compact-20261105/runtime/statistical-methods/msc_refine/active_backend.cpp",
       "sha256": "c49286cb709a041382bbe6350b8d7cfa0c50408bc270440ac730ca96d30a501a",
       "disposition": "imported-unchanged",
-      "final_sha256": "c49286cb709a041382bbe6350b8d7cfa0c50408bc270440ac730ca96d30a501a"
+      "historical_final_sha256": "c49286cb709a041382bbe6350b8d7cfa0c50408bc270440ac730ca96d30a501a",
+      "pre_cleanup_sha256": "c49286cb709a041382bbe6350b8d7cfa0c50408bc270440ac730ca96d30a501a",
+      "release_status": "retired-unused-2026-11-08"
     },
     {
       "path": "runtime/msc_refine/active_compact.py",
@@ -724,14 +766,18 @@
       "source": "release/species-msc-compact-20261105/runtime/statistical-methods/msc_refine/active_fast_backend.cpp",
       "sha256": "1c66edc9e78aac9187205676ad6c5b0b5a5d2699f62238d182700292f31e7262",
       "disposition": "imported-unchanged",
-      "final_sha256": "1c66edc9e78aac9187205676ad6c5b0b5a5d2699f62238d182700292f31e7262"
+      "historical_final_sha256": "1c66edc9e78aac9187205676ad6c5b0b5a5d2699f62238d182700292f31e7262",
+      "pre_cleanup_sha256": "1c66edc9e78aac9187205676ad6c5b0b5a5d2699f62238d182700292f31e7262",
+      "release_status": "retired-unused-2026-11-08"
     },
     {
       "path": "runtime/msc_refine/active_gpu_backend.cpp",
       "source": "release/species-msc-compact-20261105/runtime/statistical-methods/msc_refine/active_gpu_backend.cpp",
       "sha256": "8b4c76bb4d901bf12295a16b6c5563e03ac7fe0c4e497252ff013ab1ac8bbc55",
       "disposition": "imported-unchanged",
-      "final_sha256": "8b4c76bb4d901bf12295a16b6c5563e03ac7fe0c4e497252ff013ab1ac8bbc55"
+      "historical_final_sha256": "8b4c76bb4d901bf12295a16b6c5563e03ac7fe0c4e497252ff013ab1ac8bbc55",
+      "pre_cleanup_sha256": "8b4c76bb4d901bf12295a16b6c5563e03ac7fe0c4e497252ff013ab1ac8bbc55",
+      "release_status": "retired-unused-2026-11-08"
     },
     {
       "path": "runtime/msc_refine/active_incremental_plan_backend.cpp",
@@ -745,7 +791,9 @@
       "source": "release/species-msc-compact-20261105/runtime/statistical-methods/msc_refine/active_index.hpp",
       "sha256": "e4990b6f6c447171e09a67da810be53a0480defad8053db9dc69b37b8870fbd3",
       "disposition": "imported-unchanged",
-      "final_sha256": "e4990b6f6c447171e09a67da810be53a0480defad8053db9dc69b37b8870fbd3"
+      "historical_final_sha256": "e4990b6f6c447171e09a67da810be53a0480defad8053db9dc69b37b8870fbd3",
+      "pre_cleanup_sha256": "e4990b6f6c447171e09a67da810be53a0480defad8053db9dc69b37b8870fbd3",
+      "release_status": "retired-unused-2026-11-08"
     },
     {
       "path": "runtime/msc_refine/active_norm.py",
@@ -758,7 +806,9 @@
       "source": "release/species-msc-compact-20261105/runtime/statistical-methods/msc_refine/active_norm_backend.cpp",
       "sha256": "44f622f90fe6e0e86038f11d59f7ff39a15ec0ea1cf6aaa9adfd8f285c51f668",
       "disposition": "imported-unchanged",
-      "final_sha256": "44f622f90fe6e0e86038f11d59f7ff39a15ec0ea1cf6aaa9adfd8f285c51f668"
+      "historical_final_sha256": "44f622f90fe6e0e86038f11d59f7ff39a15ec0ea1cf6aaa9adfd8f285c51f668",
+      "pre_cleanup_sha256": "44f622f90fe6e0e86038f11d59f7ff39a15ec0ea1cf6aaa9adfd8f285c51f668",
+      "release_status": "retired-unused-2026-11-08"
     },
     {
       "path": "runtime/msc_refine/active_parallel.py",
@@ -771,7 +821,10 @@
       "source": "release/species-msc-compact-20261105/runtime/statistical-methods/msc_refine/active_quartet.py",
       "sha256": "39dae4b7a8eeabcc49a8916a727e38ae361f14efcef3cb019993d81c4ae4cdd7",
       "disposition": "integrated-modified",
-      "final_sha256": "e0010c5c34a874495df1a8d53220db3d54a6b95a211675dd3600da70b95e4270"
+      "final_sha256": "316b2259ed85c7cdafca633eb4852235b32215d2047caa569d172130237df2dc",
+      "historical_final_sha256": "e0010c5c34a874495df1a8d53220db3d54a6b95a211675dd3600da70b95e4270",
+      "pre_cleanup_sha256": "e0010c5c34a874495df1a8d53220db3d54a6b95a211675dd3600da70b95e4270",
+      "release_status": "production-tools-separated-2026-11-08"
     },
     {
       "path": "runtime/msc_refine/active_query_backend.cpp",
@@ -785,14 +838,18 @@
       "source": "release/species-msc-compact-20261105/runtime/statistical-methods/msc_refine/active_rmq_backend.cpp",
       "sha256": "66d9bec624e46a2b093031330258cf04122f30419d90064f2344fcd927c720ce",
       "disposition": "imported-unchanged",
-      "final_sha256": "66d9bec624e46a2b093031330258cf04122f30419d90064f2344fcd927c720ce"
+      "historical_final_sha256": "66d9bec624e46a2b093031330258cf04122f30419d90064f2344fcd927c720ce",
+      "pre_cleanup_sha256": "66d9bec624e46a2b093031330258cf04122f30419d90064f2344fcd927c720ce",
+      "release_status": "retired-unused-2026-11-08"
     },
     {
       "path": "runtime/msc_refine/active_rmq_index.hpp",
       "source": "release/species-msc-compact-20261105/runtime/statistical-methods/msc_refine/active_rmq_index.hpp",
       "sha256": "f9cb37d577016a673ede6262dd1876406dd62fd80bd92b97f9e37a33fc1d7e79",
       "disposition": "imported-unchanged",
-      "final_sha256": "f9cb37d577016a673ede6262dd1876406dd62fd80bd92b97f9e37a33fc1d7e79"
+      "historical_final_sha256": "f9cb37d577016a673ede6262dd1876406dd62fd80bd92b97f9e37a33fc1d7e79",
+      "pre_cleanup_sha256": "f9cb37d577016a673ede6262dd1876406dd62fd80bd92b97f9e37a33fc1d7e79",
+      "release_status": "retired-unused-2026-11-08"
     },
     {
       "path": "runtime/msc_refine/active_slim_index_backend.cpp",
@@ -806,7 +863,10 @@
       "source": "release/species-msc-compact-20261105/runtime/statistical-methods/msc_refine/active_streamsum.py",
       "sha256": "eec01d2f29c578cd02d35a2f37d02851bc395b0a0e95141d45bd7781b8a5bc0d",
       "disposition": "integrated-modified",
-      "final_sha256": "5fe47e37c3f8dcbb2f641dde7aca57f7cf468edabc9f34789fafaebe0185cc33"
+      "final_sha256": "ddbec218a18332a08bce86103822642f37b5135a53ec8cbcac240ea714bb842e",
+      "historical_final_sha256": "5fe47e37c3f8dcbb2f641dde7aca57f7cf468edabc9f34789fafaebe0185cc33",
+      "pre_cleanup_sha256": "5fe47e37c3f8dcbb2f641dde7aca57f7cf468edabc9f34789fafaebe0185cc33",
+      "release_status": "production-tools-separated-2026-11-08"
     },
     {
       "path": "runtime/msc_refine/active_streamsum_backend.cpp",
@@ -832,7 +892,9 @@
       "source": "release/species-msc-compact-20261105/runtime/statistical-methods/msc_refine/barycenter_features_fused.py",
       "sha256": "f1d5878ea0b0c3e89df8f527278f4517832b1e3384134e29173fcc27b9228fbd",
       "disposition": "imported-unchanged",
-      "final_sha256": "f1d5878ea0b0c3e89df8f527278f4517832b1e3384134e29173fcc27b9228fbd"
+      "historical_final_sha256": "f1d5878ea0b0c3e89df8f527278f4517832b1e3384134e29173fcc27b9228fbd",
+      "pre_cleanup_sha256": "f1d5878ea0b0c3e89df8f527278f4517832b1e3384134e29173fcc27b9228fbd",
+      "release_status": "retired-unused-2026-11-08"
     },
     {
       "path": "runtime/msc_refine/barycenter_fused.py",
@@ -845,7 +907,10 @@
       "source": "release/species-msc-compact-20261105/runtime/statistical-methods/msc_refine/barycenter_kernel.py",
       "sha256": "581b354cca0a9487a30d1e81f3a37f732c730c7e709d0e95f6b38851383a1830",
       "disposition": "imported-unchanged",
-      "final_sha256": "581b354cca0a9487a30d1e81f3a37f732c730c7e709d0e95f6b38851383a1830"
+      "final_sha256": "29c482d740868c31f24de85908d4d788307649a1bddd28470e66b6590e2c436d",
+      "historical_final_sha256": "581b354cca0a9487a30d1e81f3a37f732c730c7e709d0e95f6b38851383a1830",
+      "pre_cleanup_sha256": "581b354cca0a9487a30d1e81f3a37f732c730c7e709d0e95f6b38851383a1830",
+      "release_status": "production-tools-separated-2026-11-08"
     },
     {
       "path": "runtime/msc_refine/barycenter_tile_features.py",
@@ -859,35 +924,46 @@
       "source": "release/species-msc-compact-20261105/runtime/statistical-methods/msc_refine/barycenter_tree.py",
       "sha256": "e332e56dfd22235e15f881726ef122319f60f613e24761fc5a3e95d5c837b60d",
       "disposition": "imported-unchanged",
-      "final_sha256": "e332e56dfd22235e15f881726ef122319f60f613e24761fc5a3e95d5c837b60d"
+      "historical_final_sha256": "e332e56dfd22235e15f881726ef122319f60f613e24761fc5a3e95d5c837b60d",
+      "pre_cleanup_sha256": "e332e56dfd22235e15f881726ef122319f60f613e24761fc5a3e95d5c837b60d",
+      "release_status": "retired-unused-2026-11-08"
     },
     {
       "path": "runtime/msc_refine/barycenter_tree_batched.py",
       "source": "release/species-msc-compact-20261105/runtime/statistical-methods/msc_refine/barycenter_tree_batched.py",
       "sha256": "c9410439c00b63a8c1107b7f04adab22e524bb9826c3c5a7bcc34ae1e58bc31c",
       "disposition": "imported-unchanged",
-      "final_sha256": "c9410439c00b63a8c1107b7f04adab22e524bb9826c3c5a7bcc34ae1e58bc31c"
+      "historical_final_sha256": "c9410439c00b63a8c1107b7f04adab22e524bb9826c3c5a7bcc34ae1e58bc31c",
+      "pre_cleanup_sha256": "c9410439c00b63a8c1107b7f04adab22e524bb9826c3c5a7bcc34ae1e58bc31c",
+      "release_status": "retired-unused-2026-11-08"
     },
     {
       "path": "runtime/msc_refine/barycenter_tree_fused_features.py",
       "source": "release/species-msc-compact-20261105/runtime/statistical-methods/msc_refine/barycenter_tree_fused_features.py",
       "sha256": "2823a55d056d9091df4429ab2626d6b04a76de171eb3adeeace37e1beb329c3d",
       "disposition": "imported-unchanged",
-      "final_sha256": "2823a55d056d9091df4429ab2626d6b04a76de171eb3adeeace37e1beb329c3d"
+      "historical_final_sha256": "2823a55d056d9091df4429ab2626d6b04a76de171eb3adeeace37e1beb329c3d",
+      "pre_cleanup_sha256": "2823a55d056d9091df4429ab2626d6b04a76de171eb3adeeace37e1beb329c3d",
+      "release_status": "retired-unused-2026-11-08"
     },
     {
       "path": "runtime/msc_refine/barycenter_tree_resident.py",
       "source": "release/species-msc-compact-20261105/runtime/statistical-methods/msc_refine/barycenter_tree_resident.py",
       "sha256": "390ccb62cd8d4296625399b972595424bb7b0f6a30cee9d62592fe07e09bd46a",
       "disposition": "imported-unchanged",
-      "final_sha256": "390ccb62cd8d4296625399b972595424bb7b0f6a30cee9d62592fe07e09bd46a"
+      "historical_final_sha256": "390ccb62cd8d4296625399b972595424bb7b0f6a30cee9d62592fe07e09bd46a",
+      "pre_cleanup_sha256": "390ccb62cd8d4296625399b972595424bb7b0f6a30cee9d62592fe07e09bd46a",
+      "release_status": "retired-unused-2026-11-08"
     },
     {
       "path": "runtime/msc_refine/barycenter_tree_tiled.py",
       "source": "release/species-msc-compact-20261105/runtime/statistical-methods/msc_refine/barycenter_tree_tiled.py",
       "sha256": "f0f53cd0f2b674ed41e5003ebc1df43a2e55a6128ee75fd053fd18cba27c0dc0",
       "disposition": "integrated-modified",
-      "final_sha256": "be12bbeeca156be43eb4c5c187a23a0a3c9654f5644a62a5f72f37c997078f4b"
+      "final_sha256": "e93c18d2deaff67dbd592f4e5a4fa7f0cd7ca9cdc8956a416a54a0522812a79c",
+      "historical_final_sha256": "be12bbeeca156be43eb4c5c187a23a0a3c9654f5644a62a5f72f37c997078f4b",
+      "pre_cleanup_sha256": "be12bbeeca156be43eb4c5c187a23a0a3c9654f5644a62a5f72f37c997078f4b",
+      "release_status": "production-tools-separated-2026-11-08"
     },
     {
       "path": "runtime/msc_refine/bit_orbits.py",
@@ -913,28 +989,36 @@
       "source": "release/species-msc-compact-20261105/runtime/statistical-methods/msc_refine/build_active.py",
       "sha256": "536d11aa6c18c029de8af7ab9fd59847a9a626aa5f56b57e4793fd72b017b5ab",
       "disposition": "imported-unchanged",
-      "final_sha256": "536d11aa6c18c029de8af7ab9fd59847a9a626aa5f56b57e4793fd72b017b5ab"
+      "historical_final_sha256": "536d11aa6c18c029de8af7ab9fd59847a9a626aa5f56b57e4793fd72b017b5ab",
+      "pre_cleanup_sha256": "536d11aa6c18c029de8af7ab9fd59847a9a626aa5f56b57e4793fd72b017b5ab",
+      "release_status": "retired-unused-2026-11-08"
     },
     {
       "path": "runtime/msc_refine/build_active_fast.py",
       "source": "release/species-msc-compact-20261105/runtime/statistical-methods/msc_refine/build_active_fast.py",
       "sha256": "6a5ba8f674558a2c52465609a7f87ca17c16d08f1e48ea9ff32abe6dbfbce55e",
       "disposition": "imported-unchanged",
-      "final_sha256": "6a5ba8f674558a2c52465609a7f87ca17c16d08f1e48ea9ff32abe6dbfbce55e"
+      "historical_final_sha256": "6a5ba8f674558a2c52465609a7f87ca17c16d08f1e48ea9ff32abe6dbfbce55e",
+      "pre_cleanup_sha256": "6a5ba8f674558a2c52465609a7f87ca17c16d08f1e48ea9ff32abe6dbfbce55e",
+      "release_status": "retired-unused-2026-11-08"
     },
     {
       "path": "runtime/msc_refine/build_active_gpu.py",
       "source": "release/species-msc-compact-20261105/runtime/statistical-methods/msc_refine/build_active_gpu.py",
       "sha256": "95bc169e51c7d74f5023f8751b2a202caa10756487eb0fdd19c4d12b272889ce",
       "disposition": "imported-unchanged",
-      "final_sha256": "95bc169e51c7d74f5023f8751b2a202caa10756487eb0fdd19c4d12b272889ce"
+      "historical_final_sha256": "95bc169e51c7d74f5023f8751b2a202caa10756487eb0fdd19c4d12b272889ce",
+      "pre_cleanup_sha256": "95bc169e51c7d74f5023f8751b2a202caa10756487eb0fdd19c4d12b272889ce",
+      "release_status": "retired-unused-2026-11-08"
     },
     {
       "path": "runtime/msc_refine/build_active_norm.py",
       "source": "release/species-msc-compact-20261105/runtime/statistical-methods/msc_refine/build_active_norm.py",
       "sha256": "48db73d708bf78db65acc5c370935403320bae76294ba15383975e4b12502d87",
       "disposition": "imported-unchanged",
-      "final_sha256": "48db73d708bf78db65acc5c370935403320bae76294ba15383975e4b12502d87"
+      "historical_final_sha256": "48db73d708bf78db65acc5c370935403320bae76294ba15383975e4b12502d87",
+      "pre_cleanup_sha256": "48db73d708bf78db65acc5c370935403320bae76294ba15383975e4b12502d87",
+      "release_status": "retired-unused-2026-11-08"
     },
     {
       "path": "runtime/msc_refine/build_active_queries.py",
@@ -948,7 +1032,9 @@
       "source": "release/species-msc-compact-20261105/runtime/statistical-methods/msc_refine/build_active_rmq.py",
       "sha256": "003ae08ccae763ddf7caafc4600b939db3f8ff02369d8d995c58c5c296640c46",
       "disposition": "imported-unchanged",
-      "final_sha256": "003ae08ccae763ddf7caafc4600b939db3f8ff02369d8d995c58c5c296640c46"
+      "historical_final_sha256": "003ae08ccae763ddf7caafc4600b939db3f8ff02369d8d995c58c5c296640c46",
+      "pre_cleanup_sha256": "003ae08ccae763ddf7caafc4600b939db3f8ff02369d8d995c58c5c296640c46",
+      "release_status": "retired-unused-2026-11-08"
     },
     {
       "path": "runtime/msc_refine/build_active_streamsum.py",
@@ -969,7 +1055,9 @@
       "source": "release/species-msc-compact-20261105/runtime/statistical-methods/msc_refine/build_pair_features.py",
       "sha256": "3d02db6571d1c4afeb5fb89c3c6de74a3279285694532aed36a27cac076e051a",
       "disposition": "imported-unchanged",
-      "final_sha256": "3d02db6571d1c4afeb5fb89c3c6de74a3279285694532aed36a27cac076e051a"
+      "historical_final_sha256": "3d02db6571d1c4afeb5fb89c3c6de74a3279285694532aed36a27cac076e051a",
+      "pre_cleanup_sha256": "3d02db6571d1c4afeb5fb89c3c6de74a3279285694532aed36a27cac076e051a",
+      "release_status": "retired-unused-2026-11-08"
     },
     {
       "path": "runtime/msc_refine/build_plan.py",
@@ -983,14 +1071,18 @@
       "source": "release/species-msc-compact-20261105/runtime/statistical-methods/msc_refine/build_rate_objective.py",
       "sha256": "5f1b1678ea8b19aeaf30f2e6c032b43b298424d82897a0ef0192b373c3717a8d",
       "disposition": "imported-unchanged",
-      "final_sha256": "5f1b1678ea8b19aeaf30f2e6c032b43b298424d82897a0ef0192b373c3717a8d"
+      "historical_final_sha256": "5f1b1678ea8b19aeaf30f2e6c032b43b298424d82897a0ef0192b373c3717a8d",
+      "pre_cleanup_sha256": "5f1b1678ea8b19aeaf30f2e6c032b43b298424d82897a0ef0192b373c3717a8d",
+      "release_status": "retired-unused-2026-11-08"
     },
     {
       "path": "runtime/msc_refine/build_rate_pair.py",
       "source": "release/species-msc-compact-20261105/runtime/statistical-methods/msc_refine/build_rate_pair.py",
       "sha256": "16c280d8215d82d8ae28dde2bc49144f0902f887df25f71f074f23a49bfb9411",
       "disposition": "imported-unchanged",
-      "final_sha256": "16c280d8215d82d8ae28dde2bc49144f0902f887df25f71f074f23a49bfb9411"
+      "historical_final_sha256": "16c280d8215d82d8ae28dde2bc49144f0902f887df25f71f074f23a49bfb9411",
+      "pre_cleanup_sha256": "16c280d8215d82d8ae28dde2bc49144f0902f887df25f71f074f23a49bfb9411",
+      "release_status": "retired-unused-2026-11-08"
     },
     {
       "path": "runtime/msc_refine/build_slim_index.py",
@@ -1004,21 +1096,27 @@
       "source": "release/species-msc-compact-20261105/runtime/statistical-methods/msc_refine/build_sparse.py",
       "sha256": "974aac5b4f5d6ebec9cbb5d68231d3378cb0c5b651c65f1930c9ba630508e4e4",
       "disposition": "imported-unchanged",
-      "final_sha256": "974aac5b4f5d6ebec9cbb5d68231d3378cb0c5b651c65f1930c9ba630508e4e4"
+      "historical_final_sha256": "974aac5b4f5d6ebec9cbb5d68231d3378cb0c5b651c65f1930c9ba630508e4e4",
+      "pre_cleanup_sha256": "974aac5b4f5d6ebec9cbb5d68231d3378cb0c5b651c65f1930c9ba630508e4e4",
+      "release_status": "retired-unused-2026-11-08"
     },
     {
       "path": "runtime/msc_refine/build_spr.py",
       "source": "release/species-msc-compact-20261105/runtime/statistical-methods/msc_refine/build_spr.py",
       "sha256": "73cc894b8d3bd934c548469b4b6b760ff4fa6b853ea7d3cbc8aa5a786a4d788b",
       "disposition": "imported-unchanged",
-      "final_sha256": "73cc894b8d3bd934c548469b4b6b760ff4fa6b853ea7d3cbc8aa5a786a4d788b"
+      "historical_final_sha256": "73cc894b8d3bd934c548469b4b6b760ff4fa6b853ea7d3cbc8aa5a786a4d788b",
+      "pre_cleanup_sha256": "73cc894b8d3bd934c548469b4b6b760ff4fa6b853ea7d3cbc8aa5a786a4d788b",
+      "release_status": "retired-unused-2026-11-08"
     },
     {
       "path": "runtime/msc_refine/build_uniform_plan.py",
       "source": "release/species-msc-compact-20261105/runtime/statistical-methods/msc_refine/build_uniform_plan.py",
       "sha256": "bb09c8f182592f9c7f6e931f93a3ec7221a131e595f9d7e8785b825151d9557a",
       "disposition": "imported-unchanged",
-      "final_sha256": "bb09c8f182592f9c7f6e931f93a3ec7221a131e595f9d7e8785b825151d9557a"
+      "historical_final_sha256": "bb09c8f182592f9c7f6e931f93a3ec7221a131e595f9d7e8785b825151d9557a",
+      "pre_cleanup_sha256": "bb09c8f182592f9c7f6e931f93a3ec7221a131e595f9d7e8785b825151d9557a",
+      "release_status": "retired-unused-2026-11-08"
     },
     {
       "path": "runtime/msc_refine/byte_prefix.py",
@@ -1073,7 +1171,10 @@
       "source": "release/species-msc-compact-20261105/runtime/statistical-methods/msc_refine/core.py",
       "sha256": "10377194995bf114a2e6507209e0067827c82b9d8d423bd212c54f4641b5a033",
       "disposition": "imported-unchanged",
-      "final_sha256": "10377194995bf114a2e6507209e0067827c82b9d8d423bd212c54f4641b5a033"
+      "final_sha256": "cc8e908d11018b46247330a995742352f1df1121ff8f5c7f1953711cc603e02e",
+      "historical_final_sha256": "10377194995bf114a2e6507209e0067827c82b9d8d423bd212c54f4641b5a033",
+      "pre_cleanup_sha256": "10377194995bf114a2e6507209e0067827c82b9d8d423bd212c54f4641b5a033",
+      "release_status": "production-tools-separated-2026-11-08"
     },
     {
       "path": "runtime/msc_refine/crossfit_rank.py",
@@ -1104,7 +1205,9 @@
       "source": "release/species-msc-compact-20261105/runtime/statistical-methods/msc_refine/fixed_rank.py",
       "sha256": "25c1a0e231e8b923cf8f51a539533e1080b84f781d12bed0597a25ed1417b5a6",
       "disposition": "imported-unchanged",
-      "final_sha256": "25c1a0e231e8b923cf8f51a539533e1080b84f781d12bed0597a25ed1417b5a6"
+      "historical_final_sha256": "25c1a0e231e8b923cf8f51a539533e1080b84f781d12bed0597a25ed1417b5a6",
+      "pre_cleanup_sha256": "25c1a0e231e8b923cf8f51a539533e1080b84f781d12bed0597a25ed1417b5a6",
+      "release_status": "retired-unused-2026-11-08"
     },
     {
       "path": "runtime/msc_refine/full_kernel.py",
@@ -1135,14 +1238,20 @@
       "source": "release/species-msc-compact-20261105/runtime/statistical-methods/msc_refine/kernel_direct.py",
       "sha256": "d09a1400a5b549c5864f61dea2caf302aa2f74400d11fc49ad224c2cdc32a9af",
       "disposition": "imported-unchanged",
-      "final_sha256": "d09a1400a5b549c5864f61dea2caf302aa2f74400d11fc49ad224c2cdc32a9af"
+      "final_sha256": "158aaf0766ee2f4eb639668427c4441d03e06287e98eb8d9c75dc97c8e17503b",
+      "historical_final_sha256": "d09a1400a5b549c5864f61dea2caf302aa2f74400d11fc49ad224c2cdc32a9af",
+      "pre_cleanup_sha256": "d09a1400a5b549c5864f61dea2caf302aa2f74400d11fc49ad224c2cdc32a9af",
+      "release_status": "production-tools-separated-2026-11-08"
     },
     {
       "path": "runtime/msc_refine/kernel_direct_dynamic.py",
       "source": "release/species-msc-compact-20261105/runtime/statistical-methods/msc_refine/kernel_direct_dynamic.py",
       "sha256": "aadeb57f669c71d211c9c35fdfb380906871a5dd4fc624e41bb51fa6ee44c671",
       "disposition": "imported-unchanged",
-      "final_sha256": "aadeb57f669c71d211c9c35fdfb380906871a5dd4fc624e41bb51fa6ee44c671"
+      "final_sha256": "f0aea41323019c935687d62a04a5e21f849bef8725ea922d802315df9915fbb1",
+      "historical_final_sha256": "aadeb57f669c71d211c9c35fdfb380906871a5dd4fc624e41bb51fa6ee44c671",
+      "pre_cleanup_sha256": "aadeb57f669c71d211c9c35fdfb380906871a5dd4fc624e41bb51fa6ee44c671",
+      "release_status": "production-tools-separated-2026-11-08"
     },
     {
       "path": "runtime/msc_refine/kernel_fused.py",
@@ -1168,7 +1277,9 @@
       "source": "release/species-msc-compact-20261105/runtime/statistical-methods/msc_refine/kernel_tree.py",
       "sha256": "910e374abf19a86c9b9001ca0f3dbb4e3d77c91f47d97f5d1260f213499b1b14",
       "disposition": "imported-unchanged",
-      "final_sha256": "910e374abf19a86c9b9001ca0f3dbb4e3d77c91f47d97f5d1260f213499b1b14"
+      "historical_final_sha256": "910e374abf19a86c9b9001ca0f3dbb4e3d77c91f47d97f5d1260f213499b1b14",
+      "pre_cleanup_sha256": "910e374abf19a86c9b9001ca0f3dbb4e3d77c91f47d97f5d1260f213499b1b14",
+      "release_status": "retired-unused-2026-11-08"
     },
     {
       "path": "runtime/msc_refine/linked.py",
@@ -1199,7 +1310,9 @@
       "source": "release/species-msc-compact-20261105/runtime/statistical-methods/msc_refine/locus_barycenter.py",
       "sha256": "123a319f3c816ac1ca9b513aa7fa3181779c6dc7dc34c36c080ee737eefc5ab8",
       "disposition": "imported-unchanged",
-      "final_sha256": "123a319f3c816ac1ca9b513aa7fa3181779c6dc7dc34c36c080ee737eefc5ab8"
+      "historical_final_sha256": "123a319f3c816ac1ca9b513aa7fa3181779c6dc7dc34c36c080ee737eefc5ab8",
+      "pre_cleanup_sha256": "123a319f3c816ac1ca9b513aa7fa3181779c6dc7dc34c36c080ee737eefc5ab8",
+      "release_status": "retired-unused-2026-11-08"
     },
     {
       "path": "runtime/msc_refine/locus_gmm.py",
@@ -1242,7 +1355,10 @@
       "source": "release/species-msc-compact-20261105/runtime/statistical-methods/msc_refine/msc_kernel.py",
       "sha256": "8b1acc288e9bd2d83b47f271bc0eee40736f1dc8a2b3a4f240c2fbb7c991b0a5",
       "disposition": "imported-unchanged",
-      "final_sha256": "8b1acc288e9bd2d83b47f271bc0eee40736f1dc8a2b3a4f240c2fbb7c991b0a5"
+      "final_sha256": "e9fab3f210ef3d2874f5770c421deea62a7a45f08fb162f4ee7ef8f4afdee3a1",
+      "historical_final_sha256": "8b1acc288e9bd2d83b47f271bc0eee40736f1dc8a2b3a4f240c2fbb7c991b0a5",
+      "pre_cleanup_sha256": "8b1acc288e9bd2d83b47f271bc0eee40736f1dc8a2b3a4f240c2fbb7c991b0a5",
+      "release_status": "production-tools-separated-2026-11-08"
     },
     {
       "path": "runtime/msc_refine/msc_site_bank.py",
@@ -1280,14 +1396,18 @@
       "source": "release/species-msc-compact-20261105/runtime/statistical-methods/msc_refine/orbit_counts.py",
       "sha256": "cefc3a96ba2591a7dce5bce7712aa4ecb247484fa38580ad000b12b113920e52",
       "disposition": "imported-unchanged",
-      "final_sha256": "cefc3a96ba2591a7dce5bce7712aa4ecb247484fa38580ad000b12b113920e52"
+      "historical_final_sha256": "cefc3a96ba2591a7dce5bce7712aa4ecb247484fa38580ad000b12b113920e52",
+      "pre_cleanup_sha256": "cefc3a96ba2591a7dce5bce7712aa4ecb247484fa38580ad000b12b113920e52",
+      "release_status": "retired-unused-2026-11-08"
     },
     {
       "path": "runtime/msc_refine/pair_feature_backend.cpp",
       "source": "release/species-msc-compact-20261105/runtime/statistical-methods/msc_refine/pair_feature_backend.cpp",
       "sha256": "81285f47a5d606e6cd2c4f56b0131c123d015b954316b03e45ddb1cfcfdcc56f",
       "disposition": "imported-unchanged",
-      "final_sha256": "81285f47a5d606e6cd2c4f56b0131c123d015b954316b03e45ddb1cfcfdcc56f"
+      "historical_final_sha256": "81285f47a5d606e6cd2c4f56b0131c123d015b954316b03e45ddb1cfcfdcc56f",
+      "pre_cleanup_sha256": "81285f47a5d606e6cd2c4f56b0131c123d015b954316b03e45ddb1cfcfdcc56f",
+      "release_status": "retired-unused-2026-11-08"
     },
     {
       "path": "runtime/msc_refine/pair_features.py",
@@ -1349,7 +1469,9 @@
       "source": "release/species-msc-compact-20261105/runtime/statistical-methods/msc_refine/quartet_bank.py",
       "sha256": "4523bc5392716c54c090a9dba0ffb43df907aff0e562a7920281eeb89887484f",
       "disposition": "imported-unchanged",
-      "final_sha256": "4523bc5392716c54c090a9dba0ffb43df907aff0e562a7920281eeb89887484f"
+      "historical_final_sha256": "4523bc5392716c54c090a9dba0ffb43df907aff0e562a7920281eeb89887484f",
+      "pre_cleanup_sha256": "4523bc5392716c54c090a9dba0ffb43df907aff0e562a7920281eeb89887484f",
+      "release_status": "retired-unused-2026-11-08"
     },
     {
       "path": "runtime/msc_refine/quartet_sketch.py",
@@ -1386,14 +1508,18 @@
       "source": "release/species-msc-compact-20261105/runtime/statistical-methods/msc_refine/rate_objective_backend.cpp",
       "sha256": "41d592e986577760e095e79eda91dcceee2a2a2017aff519e27c0c9df4f647e5",
       "disposition": "imported-unchanged",
-      "final_sha256": "41d592e986577760e095e79eda91dcceee2a2a2017aff519e27c0c9df4f647e5"
+      "historical_final_sha256": "41d592e986577760e095e79eda91dcceee2a2a2017aff519e27c0c9df4f647e5",
+      "pre_cleanup_sha256": "41d592e986577760e095e79eda91dcceee2a2a2017aff519e27c0c9df4f647e5",
+      "release_status": "retired-unused-2026-11-08"
     },
     {
       "path": "runtime/msc_refine/rate_pair_backend.cpp",
       "source": "release/species-msc-compact-20261105/runtime/statistical-methods/msc_refine/rate_pair_backend.cpp",
       "sha256": "fbdcb4ce7e2de8fe9896c767bbec588dd5ca39e8ec1b13bc1e51f1c5a9b2c085",
       "disposition": "imported-unchanged",
-      "final_sha256": "fbdcb4ce7e2de8fe9896c767bbec588dd5ca39e8ec1b13bc1e51f1c5a9b2c085"
+      "historical_final_sha256": "fbdcb4ce7e2de8fe9896c767bbec588dd5ca39e8ec1b13bc1e51f1c5a9b2c085",
+      "pre_cleanup_sha256": "fbdcb4ce7e2de8fe9896c767bbec588dd5ca39e8ec1b13bc1e51f1c5a9b2c085",
+      "release_status": "retired-unused-2026-11-08"
     },
     {
       "path": "runtime/msc_refine/rate_pair_score.py",
@@ -1424,7 +1550,9 @@
       "source": "release/species-msc-compact-20261105/runtime/statistical-methods/msc_refine/sparse_backend.cpp",
       "sha256": "01bedfc5efd1fa53dff3304e9ec3759535d0bd1fd4999a3b862c19a83b0a9df4",
       "disposition": "imported-unchanged",
-      "final_sha256": "01bedfc5efd1fa53dff3304e9ec3759535d0bd1fd4999a3b862c19a83b0a9df4"
+      "historical_final_sha256": "01bedfc5efd1fa53dff3304e9ec3759535d0bd1fd4999a3b862c19a83b0a9df4",
+      "pre_cleanup_sha256": "01bedfc5efd1fa53dff3304e9ec3759535d0bd1fd4999a3b862c19a83b0a9df4",
+      "release_status": "retired-unused-2026-11-08"
     },
     {
       "path": "runtime/msc_refine/species_gpu0.py",
@@ -1461,7 +1589,9 @@
       "source": "release/species-msc-compact-20261105/runtime/statistical-methods/msc_refine/spr_backend.cpp",
       "sha256": "56086a207a0a752cae39cb635f4ad4558cb50f4ea2b5a5d41b73d41ef735a463",
       "disposition": "imported-unchanged",
-      "final_sha256": "56086a207a0a752cae39cb635f4ad4558cb50f4ea2b5a5d41b73d41ef735a463"
+      "historical_final_sha256": "56086a207a0a752cae39cb635f4ad4558cb50f4ea2b5a5d41b73d41ef735a463",
+      "pre_cleanup_sha256": "56086a207a0a752cae39cb635f4ad4558cb50f4ea2b5a5d41b73d41ef735a463",
+      "release_status": "retired-unused-2026-11-08"
     },
     {
       "path": "runtime/msc_refine/spr_search.py",
@@ -1474,7 +1604,9 @@
       "source": "release/species-msc-compact-20261105/runtime/statistical-methods/msc_refine/state_cycle.py",
       "sha256": "0a63216fcab48b8f28b4d9a5f6da4e73d995cd5caf57e662d11f1ee46e64a501",
       "disposition": "imported-unchanged",
-      "final_sha256": "0a63216fcab48b8f28b4d9a5f6da4e73d995cd5caf57e662d11f1ee46e64a501"
+      "historical_final_sha256": "0a63216fcab48b8f28b4d9a5f6da4e73d995cd5caf57e662d11f1ee46e64a501",
+      "pre_cleanup_sha256": "0a63216fcab48b8f28b4d9a5f6da4e73d995cd5caf57e662d11f1ee46e64a501",
+      "release_status": "retired-unused-2026-11-08"
     },
     {
       "path": "runtime/msc_refine/studentized_rank.py",
@@ -1535,7 +1667,10 @@
       "source": "release/species-msc-compact-20261105/runtime/statistical-methods/msc_refine/topology_gpu.py",
       "sha256": "ffc7900bf2763ff02e7504393e9f2cd395617206002710bdae7f8da9382653b0",
       "disposition": "imported-unchanged",
-      "final_sha256": "ffc7900bf2763ff02e7504393e9f2cd395617206002710bdae7f8da9382653b0"
+      "final_sha256": "de0aff8873adccc0b522aae3dab44858a3752b7c9c2a8997489b2ec4e5e46813",
+      "historical_final_sha256": "ffc7900bf2763ff02e7504393e9f2cd395617206002710bdae7f8da9382653b0",
+      "pre_cleanup_sha256": "ffc7900bf2763ff02e7504393e9f2cd395617206002710bdae7f8da9382653b0",
+      "release_status": "production-tools-separated-2026-11-08"
     },
     {
       "path": "runtime/msc_refine/topology_gpu_streamsum.py",
@@ -1549,7 +1684,9 @@
       "source": "release/species-msc-compact-20261105/runtime/statistical-methods/msc_refine/uniform_cached.py",
       "sha256": "bc3a8496047ddb311d4ebda0f6ea2d0ef41a8c5b6bc5ea5880f87fb3610dc22c",
       "disposition": "imported-unchanged",
-      "final_sha256": "bc3a8496047ddb311d4ebda0f6ea2d0ef41a8c5b6bc5ea5880f87fb3610dc22c"
+      "historical_final_sha256": "bc3a8496047ddb311d4ebda0f6ea2d0ef41a8c5b6bc5ea5880f87fb3610dc22c",
+      "pre_cleanup_sha256": "bc3a8496047ddb311d4ebda0f6ea2d0ef41a8c5b6bc5ea5880f87fb3610dc22c",
+      "release_status": "retired-unused-2026-11-08"
     },
     {
       "path": "runtime/msc_refine/uniform_chunked.py",
@@ -1562,21 +1699,27 @@
       "source": "release/species-msc-compact-20261105/runtime/statistical-methods/msc_refine/uniform_native.py",
       "sha256": "54ef058d7059a32fa8cc9ed617a46711c4155145492e0a13c8f0b53b8201e2a5",
       "disposition": "imported-unchanged",
-      "final_sha256": "54ef058d7059a32fa8cc9ed617a46711c4155145492e0a13c8f0b53b8201e2a5"
+      "historical_final_sha256": "54ef058d7059a32fa8cc9ed617a46711c4155145492e0a13c8f0b53b8201e2a5",
+      "pre_cleanup_sha256": "54ef058d7059a32fa8cc9ed617a46711c4155145492e0a13c8f0b53b8201e2a5",
+      "release_status": "retired-unused-2026-11-08"
     },
     {
       "path": "runtime/msc_refine/uniform_plan_backend.cpp",
       "source": "release/species-msc-compact-20261105/runtime/statistical-methods/msc_refine/uniform_plan_backend.cpp",
       "sha256": "bfcda0a4bcb432139d1d0f8295bfe55fa06409ba55157d11b010d0337d062c90",
       "disposition": "imported-unchanged",
-      "final_sha256": "bfcda0a4bcb432139d1d0f8295bfe55fa06409ba55157d11b010d0337d062c90"
+      "historical_final_sha256": "bfcda0a4bcb432139d1d0f8295bfe55fa06409ba55157d11b010d0337d062c90",
+      "pre_cleanup_sha256": "bfcda0a4bcb432139d1d0f8295bfe55fa06409ba55157d11b010d0337d062c90",
+      "release_status": "retired-unused-2026-11-08"
     },
     {
       "path": "runtime/msc_refine/uniform_search.py",
       "source": "release/species-msc-compact-20261105/runtime/statistical-methods/msc_refine/uniform_search.py",
       "sha256": "c5f7f329584466ff3188dd1e449d789bb4fc3c0f5291097e1d6032aa694b45b2",
       "disposition": "imported-unchanged",
-      "final_sha256": "c5f7f329584466ff3188dd1e449d789bb4fc3c0f5291097e1d6032aa694b45b2"
+      "historical_final_sha256": "c5f7f329584466ff3188dd1e449d789bb4fc3c0f5291097e1d6032aa694b45b2",
+      "pre_cleanup_sha256": "c5f7f329584466ff3188dd1e449d789bb4fc3c0f5291097e1d6032aa694b45b2",
+      "release_status": "retired-unused-2026-11-08"
     },
     {
       "path": "runtime/msc_refine/variability_bank.py",
@@ -2035,6 +2178,50 @@
       "sha256": "9df91f5d637fe995c0a4156e7ea9eacee56eea90fbe2d22914594039bfe29431",
       "final_sha256": "9df91f5d637fe995c0a4156e7ea9eacee56eea90fbe2d22914594039bfe29431",
       "disposition": "integrated-uniform-apnj-design-repair"
+    },
+    {
+      "path": "runtime/gene/runtime/nni_moves.py",
+      "source": "extracted from pre-cleanup release shared tools",
+      "origin_files": [
+        {
+          "path": "runtime/gene/runtime/full_context_ml.py",
+          "sha256": "d02035f2b9bcd88df7d6cb65f3bc0b7f1a27565f90260dd1e447a9a93ea07e22"
+        }
+      ],
+      "disposition": "extracted-active-tools",
+      "final_sha256": "29cfc6e74ec81279389cf51ede80e0c433e2a3bfadcbb0a25ca93c887f3649d3"
+    },
+    {
+      "path": "runtime/msc_refine/pattern_layout.py",
+      "source": "extracted from pre-cleanup release shared tools",
+      "origin_files": [
+        {
+          "path": "runtime/msc_refine/quartet_bank.py",
+          "sha256": "4523bc5392716c54c090a9dba0ffb43df907aff0e562a7920281eeb89887484f"
+        }
+      ],
+      "disposition": "extracted-active-tools",
+      "final_sha256": "bf6ef4acc6c995e4b64e4b367093d115de51049af48a2939ff6a5f34f1a05dcb"
+    },
+    {
+      "path": "runtime/msc_refine/barycenter_state.py",
+      "source": "extracted from pre-cleanup release shared tools",
+      "origin_files": [
+        {
+          "path": "runtime/msc_refine/barycenter_tree.py",
+          "sha256": "e332e56dfd22235e15f881726ef122319f60f613e24761fc5a3e95d5c837b60d"
+        },
+        {
+          "path": "runtime/msc_refine/barycenter_tree_batched.py",
+          "sha256": "c9410439c00b63a8c1107b7f04adab22e524bb9826c3c5a7bcc34ae1e58bc31c"
+        },
+        {
+          "path": "runtime/msc_refine/barycenter_tree_resident.py",
+          "sha256": "390ccb62cd8d4296625399b972595424bb7b0f6a30cee9d62592fe07e09bd46a"
+        }
+      ],
+      "disposition": "extracted-active-tools",
+      "final_sha256": "789395f753c9cf71a1aca31fed24588ee4d3a57349578d4f5a552caa96b7ca4d"
     }
   ],
   "note": "Original imported source hashes, with final dispositions. Excluded entries describe intentionally unshipped historical files. Final release bytes are frozen in MANIFEST.json.",
@@ -2471,5 +2658,11 @@
     "evidence": "evidence/APNJ_DESIGN_RESULTS.json",
     "documentation": "APNJ_DESIGN.md",
     "decision": "DELIVERY_CONTRACT.json in work evidence; no file-specific route"
+  },
+  "release_cleanup": {
+    "date": "2026-11-08",
+    "evidence": "evidence/RELEASE_CLEANUP.json",
+    "evidence_sha256": "ee4636970e18ed283ec170f28964a03bdff0234b019a379dcaa7c51682b854a9",
+    "scientific_configuration_changed": false
   }
 }

@@ -6,14 +6,15 @@ sums explicitly preserve the original32-lane then4-group reduction tree.
 """
 import numpy as np
 import torch
-from .barycenter_tree_resident import ResidentFeatureBarycenterScorer
+from .barycenter_state import BarycenterState
 from .kernel_transposed import TransposedBarycenterKernel
 from .bit_orbits import _events
 from .barycenter_tile_features import tiled_barycenter
 
-class TiledBarycenterScorer(ResidentFeatureBarycenterScorer):
-    def __init__(self,packed,length,regions,asset,*,device='cuda:0'):
+class TiledBarycenterScorer(BarycenterState):
+    def __init__(self,packed,length,regions,asset,*,device='cuda:0',batch_size=8192):
         super().__init__(packed,length,regions,asset,device=device)
+        self.batch_size=batch_size
         if self.model.expanded_coefficients.dtype==torch.float32:
             self.model=TransposedBarycenterKernel(asset,device=device,query_tile=16,warps=2,reduction_group=32)
         live_bytes=len(self.regions)*self.count_tiles*15*4+15*8+4*8
@@ -36,8 +37,8 @@ class TiledBarycenterScorer(ResidentFeatureBarycenterScorer):
             if not np.all(q[:,1:]>q[:,:-1]) and np.any(np.diff(np.sort(q,axis=1),axis=1)==0):
                 raise ValueError('four distinct in-range query taxa required')
         values=np.empty((len(q),3),dtype=np.float64)
-        for start in range(0,len(q),8192):
-            query=torch.as_tensor(np.ascontiguousarray(q[start:start+8192]),device=self.device,dtype=torch.int64)
+        for start in range(0,len(q),self.batch_size):
+            query=torch.as_tensor(np.ascontiguousarray(q[start:start+self.batch_size]),device=self.device,dtype=torch.int64)
             features=[]
             for first in range(0,len(query),self.count_rows):
                 if self.check is not None:self.check()

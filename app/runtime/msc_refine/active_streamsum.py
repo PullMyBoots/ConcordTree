@@ -2,12 +2,11 @@
 import time
 import numpy as np
 from concordtree.assets import load_panel_score_backend
-from .active_quartet import ActiveQuartetScorer,refine_active,tree_edges
+from .active_quartet import ActiveQuartetScorer,tree_edges
 from .core import EdgePlan
 from . import _msc_plan
 from .topology_gpu_streamsum import evaluate_stream
-from . import _msc_active_rmq as _msc_active
-from . import _msc_active_plan,_msc_active_norm
+from . import _msc_active_plan
 from ._msc_incremental_plan import IncrementalPlanner
 
 

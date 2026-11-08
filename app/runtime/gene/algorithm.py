@@ -1,7 +1,7 @@
 """Budgeted block-coordinate DNA likelihood inference, no neural scoring.
 
 Supplied initializer -> joint model/length update -> full-site NNI -> acceptance.
-The unified entry supplies DIPPER + MLP; the standalone historical fallback is AP-NJ.
+The unified engine supplies the current full-site bounded AP-NJ + MLP initializer.
 One homogeneous sweep is the unit of user budget. A finite valid result is
 different from a strict optimization certificate. This is a local search,
 not a global ML algorithm or an MSC-consistent species-tree estimator.
@@ -20,7 +20,7 @@ from concordtree.treeio import newick
 from invariant_site_patterns import InvariantPatterns
 from stable_patterns import StablePatterns
 from frontier_fitter import fit_reversible_reference_optimizer
-from full_context_ml import apply_proposals,independent_subset
+from nni_moves import apply_proposals,independent_subset
 from global_compression import compress_globally
 from pruned_weighted_likelihood_eager import PrunedWeightedLikelihood
 from flat_uniformized_likelihood import FlatInvariantLikelihood
@@ -48,42 +48,17 @@ def missing_counts(packed,sites):
     return counts
 
 
-def initialize(names,states,seed,missing_data_model,packed_data=None):
-    """Native AP-NJ, with the storage repair applied statically in this release."""
-    from dataclasses import asdict
-    from concordtree._core.sctb_aggregate_nj import build_aggregate_parallel_nj,imputed_profile_slab
-    from concordtree._core.scaleqf import graph_to_newick
-    from concordtree.treeio import parse_newick
-    keep=~np.all(states==states[0:1],axis=0)
-    order=sorted(range(len(names)),key=lambda i:names[i])
-    from concordtree.assets import load_candidate_graph_backend
-    x=load_candidate_graph_backend().gather_states(states,np.asarray(order,dtype=np.int64),np.flatnonzero(keep).astype(np.int64),16)
-    if not x.shape[1]:
-        # No sequence information: any binary topology is equally unidentifiable.
-        # Return an explicitly warned deterministic topology, not a fake fit.
-        from concordtree.treeio import parse_newick
-        quoted=["'"+str(names[i]).replace("'","''")+"'" for i in order]
-        while len(quoted)>3:quoted=[f'({quoted[0]},{quoted[1]})']+quoted[2:]
-        return parse_newick('('+','.join(quoted)+');'),dict(uninformative=True)
-    graph,stats=build_aggregate_parallel_nj(x,projections=16,window=8,candidate_cap=32,
-        seed=seed,candidate_device='cuda:0',candidate_distance_backend='native',row_sum_backend='native',
-        immutable_complete_slab=imputed_profile_slab(x),compact_imputed_first_round=True,
-        profile_stream_sites=1024,missing_distance_model='coverage' if missing_data_model=='coverage-aware' else 'imputed')
-    return parse_newick(graph_to_newick(graph,[names[i] for i in order],len(names))),dict(
-        seed=seed,sampled_sites=states.shape[1],variable_sites=x.shape[1],statistics=asdict(stats))
-
-
-def fit(tree,names,sample,model,previous=None):
+def fit(tree,names,sample,model,previous=None,*,max_iter=32):
     """Observed-likelihood fit; profile invariant mass when present in the model."""
     spec=parse_model(model)
     if spec.invariant:
         from profile_invariant_fitter import fit_profiled
-        return fit_profiled(tree,names,sample,model,previous,max_iter=32)
+        return fit_profiled(tree,names,sample,model,previous,max_iter=max_iter)
     warm={} if previous is None else dict(frequencies=previous['frequencies_acgt'],
         exchangeabilities=previous['exchangeabilities_ac_ag_at_cg_ct_gt'],
         alpha=previous['gamma_alpha'] or .5,pinv=max(previous['invariant_proportion'],1e-7))
     return fit_reversible_reference_optimizer(tree,names,sample,model=model,device='cuda:0',
-        max_iter=32,precision='binary64',length_coordinate='sqrt',
+        max_iter=max_iter,precision='binary64',length_coordinate='sqrt',
         seed_method='parsimony' if previous is None else None,
         model_seed='parsimony-rates' if previous is None and spec.base=='GTR' else 'none',
         block_sites=0,plan_backend='repeat-matrix-factorized',transition_backend='spectral-cuda',
@@ -93,7 +68,8 @@ def fit(tree,names,sample,model,previous=None):
 
 def infer(msa,out,*,model='GTR+FO+I+G4',sample_fraction=None,views=1,
           max_rounds=None,stop_ratio=.005,missing_data_model='standard',progress=None,initialize_fn=None,support_sink=None,
-          initializer_uses_all_sites=False):
+          initializer_uses_all_sites=False,optimizer_iterations=32,min_gain=.001,checkpoint_fn=None):
+    if initialize_fn is None:raise ValueError('use UnifiedEngine to supply the release AP-NJ + MLP initializer')
     if views<1 or (max_rounds is not None and max_rounds<1):raise ValueError('positive views/rounds required')
     if sample_fraction is not None and not 0<sample_fraction<=1:raise ValueError('sample fraction in (0,1]')
     if not 0<=stop_ratio<1:raise ValueError('stopping ratio in [0,1)')
@@ -150,7 +126,7 @@ def infer(msa,out,*,model='GTR+FO+I+G4',sample_fraction=None,views=1,
         # allocator storage can now serve the repeat-pattern fit workspace.
         arena.clear()
         emit(phase='parameter_fit', sites=fit_sample.shape[1])
-        result=fit(tree,names,fit_sample,model,previous)
+        result=fit(tree,names,fit_sample,model,previous,max_iter=optimizer_iterations)
         if result[1].get('continuation_stop'):
             parameter_interventions.append(dict(fit=len(parameter_interventions)+1,
                 reason=result[1]['continuation_stop']))
@@ -172,7 +148,7 @@ def infer(msa,out,*,model='GTR+FO+I+G4',sample_fraction=None,views=1,
             # Retain only O(N) host aggregates; never keep site-level messages.
             scan_state=state_version
             scan_evidence=(plan.internal_edges,plan.branches,values['deltas'],values['profiled_baseline_gain'])
-        proposals=plan.proposals(values,min_gain=.001) if nni and propose else []
+        proposals=plan.proposals(values,min_gain=min_gain) if nni and propose else []
         return values,proposals
     best=None;init_records=[]
     for view in range(views):
@@ -182,7 +158,7 @@ def infer(msa,out,*,model='GTR+FO+I+G4',sample_fraction=None,views=1,
             view_sample,view_indices=alignment.parameter_sample(cap=cap,seed=20261022+view)
             np.save(out/f'initialization-sites-{view:02d}.npy',view_indices)
         else:view_sample=sample
-        tree,info=(initialize_fn or initialize)(names,view_sample,20260934+view,missing_data_model,packed_data=(alignment.packed,names,alignment.original_sites))
+        tree,info=initialize_fn(names,view_sample,20260934+view,missing_data_model,packed_data=(alignment.packed,names,alignment.original_sites))
         (out/f'initial-{view:02d}.nwk').write_text(newick(tree)+'\n')
         tree,parameters=refit(tree)
         write(out/f'fit-initial-{view:02d}.json',parameters)
@@ -219,7 +195,7 @@ def infer(msa,out,*,model='GTR+FO+I+G4',sample_fraction=None,views=1,
         while chosen:
             candidate=apply_proposals(tree,chosen);verified,_=score(candidate,parameters)
             trials.append(dict(moves=len(chosen),ll=verified['log_likelihood']))
-            if verified['log_likelihood']>ll+.001:
+            if verified['log_likelihood']>ll+min_gain:
                 tree,ll=candidate,verified['log_likelihood'];state_version+=1;break
             chosen=chosen[:len(chosen)//2]
         ratio=len(chosen)/max(1,len(names)-3)
@@ -256,6 +232,7 @@ def infer(msa,out,*,model='GTR+FO+I+G4',sample_fraction=None,views=1,
             max_baseline_error=values['max_baseline_error'])
         history.append(record);write(out/'history.json',history)
         (out/'tree.partial.nwk').write_text(newick(tree)+'\n')
+        if checkpoint_fn:checkpoint_fn(tree,dict(stage='likelihood',round=round_index))
         emit(phase='refinement',**record)
         if stop:break
         # Acyclic message workspaces are released by reference counting. Do not
@@ -294,7 +271,7 @@ def infer(msa,out,*,model='GTR+FO+I+G4',sample_fraction=None,views=1,
         all_sites_used_for_topology_scoring=True,all_sites_used_for_parameter_fitting=True,supplied_neural_tree_or_fit=False,views=views,
         max_rounds=max_rounds,stop_ratio=stop_ratio,rounds=round_index,phases=phases,history=history,
         log_likelihood=checked['log_likelihood'],seconds=time.perf_counter()-started,
-        missing_data_model=missing_data_model,local_optimizer_iterations_per_solve=32,
+        missing_data_model=missing_data_model,local_optimizer_iterations_per_solve=optimizer_iterations,minimum_likelihood_gain=min_gain,
         invariant_mass_optimization='conditional concave likelihood profile' if spec.invariant else 'not in supplied model',
         update_schedule='topology block to requested ratio; parameter block; rescan',
         units='expected substitutions per site',precision='FP64 upward fit / FP32 downward and topology messages / int32 binary exponents / FP64 sums',

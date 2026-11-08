@@ -1,5 +1,6 @@
 """ConcordTree V1.0.2: unified sequence-to-gene/species-tree entry point."""
 import argparse
+import json
 from pathlib import Path
 import sys
 
@@ -22,6 +23,8 @@ def main():
     parser.add_argument('--loci',type=Path,help='species only: observed locus JSONL manifest')
     parser.add_argument('--gpu',type=int,default=0,help='physical CUDA GPU index')
     parser.add_argument('--cpu-threads',type=int,default=16)
+    parser.add_argument('--pause-request',type=Path,help=argparse.SUPPRESS)
+    parser.add_argument('--configuration',type=Path,help='JSON pipeline settings snapshot')
     parser.add_argument('--no-support',action='store_true',help='omit lightweight final-branch evidence annotations')
     args=parser.parse_args()
     import sys
@@ -32,12 +35,26 @@ def main():
         parser.error('--model, multiple --views, and --rounds are for gene trees only')
     if not args.input.is_file():parser.error('input file does not exist')
     if args.loci is not None and not args.loci.is_file():parser.error('locus manifest does not exist')
+    configuration=None
+    if args.configuration is not None:
+        try:
+            from pipeline_config import normalize
+            configuration=normalize(json.loads(args.configuration.read_text()),args.task)
+        except (OSError,ValueError) as exc:parser.error(str(exc))
     from engine import UnifiedEngine
+    import os
+    def live_log(event):
+        detail = event.get('detail', event)
+        fields = ' '.join(f'{key}={value}' for key, value in detail.items()
+                          if key not in {'stage', 'task', 'elapsed_seconds', 'detail'}
+                          and isinstance(value, (str, int, float, bool)))
+        print(f"[{event.get('elapsed_seconds', 0):9.2f}s] {event['stage']} {fields}".rstrip(), flush=True)
     try:
         result=UnifiedEngine(gpu=args.gpu,cpu_threads=args.cpu_threads).infer(
             args.input,args.out,task=args.task,model=args.model,loci=args.loci,
             sample_fraction=args.sample_fraction,views=args.views,max_rounds=args.rounds,
-            stop_ratio=args.stop_ratio,missing_data_model=args.missing_data_model,branch_support=not args.no_support)
+            stop_ratio=args.stop_ratio,missing_data_model=args.missing_data_model,branch_support=not args.no_support,configuration=configuration,pause_request=args.pause_request,
+            progress=live_log if os.environ.get('CONCORDTREE_LIVE_LOG') == '1' else None)
     except (ValueError,FileNotFoundError) as exc:parser.error(str(exc))
     print(result['prediction'])
 

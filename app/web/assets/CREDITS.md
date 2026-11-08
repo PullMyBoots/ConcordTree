@@ -2,7 +2,7 @@
 
 Twelve locally served biological close-ups. Nature chooses one image on entry and changes only on request. Photographic, reconstruction and microscopy media are identified below. Random selection implies no evolutionary relationship.
 
-Crops are placed over a blurred extension of the same original to keep the subject clear of the form. No AI upscaling or generated subjects were added. Desktop canvases are 3840 × 2160; source dimensions below describe the actual native detail. Mobile canvases are 1080 × 2340.
+Desktop backgrounds use a single centered crop of each original, with no added blur, mirrored subjects, or synthetic extension. Natural photographic depth of field is retained. Images are downsampled only, up to 3840 × 2160; asset dimensions and current source hashes are recorded in SOURCES.json. Existing mobile assets retain their historical focal crops and blurred extension.
 
 ## Panther chameleon
 - Category: Animals
@@ -43,7 +43,7 @@ Crops are placed over a blurred extension of the same original to keep the subje
 ## Tyrannosaurus reconstruction
 - Category: Prehistoric animals
 - Media: Dinosaur reconstruction, not a photograph of a living animal
-- Transform: Horizontally mirrored desktop and mobile crops; subject on the left, form on the right.
+- Transform: Desktop uses the original orientation; the historical mobile crop remains mirrored.
 - Credit: Mehmet Turgut Kirkgoz
 - Source: https://www.pexels.com/photo/close-up-shot-of-a-dinosaur-13681328/
 - License: [Pexels License](https://www.pexels.com/license/)

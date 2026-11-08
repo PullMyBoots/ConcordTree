@@ -1,4 +1,16 @@
-# ConcordTree 1.0.2 Linux distribution
+# ConcordTree
+
+## Current application source
+
+The `app/` directory contains the latest local Linux/WSL NVIDIA application source, updated on 2026-11-08. The Web interface includes modular Gene Tree and Species Tree pipelines, per-job CPU/GPU selection, pause/download/resume, continuous GPU monitoring, stage-specific progress tables, and seasonal/geometry/photo backgrounds. Unused experimental runtime branches have been removed and the technical report has been updated.
+
+The stage strip highlights the running algorithm. AP-NJ shows elapsed time; NNI tables show the fields relevant to their own criterion. Configure algorithms and advanced parameters with the settings gear. Local inference has no application-imposed upload-size or execution-time limit.
+
+See [pipeline settings](app/PIPELINE_SETTINGS.md), [Web behavior](app/web/README.md), and [current source checks](SOURCE_UPDATE.md). The source checkout includes model assets and native extensions but excludes the multi-gigabyte scientific/Python runtime, local jobs, caches and research datasets. Cloning the repository alone does not create the packaged runtime.
+
+**Prebuilt archives and containers have not been rebuilt for this source update.** The installation commands and 48-case packaging measurements below describe the earlier frozen distribution; they require matching published assets and do not validate the latest source changes.
+
+## Earlier frozen distribution
 
 Install ConcordTree and start its Web interface:
 
@@ -24,7 +36,7 @@ Both runtimes start Web by default. `--no-start` installs without starting. The 
 
 Portable results and caches live in the installation's `runs/` and `.runtime/` directories. Docker results persist under `~/.local/share/concordtree/jobs` and caches under `~/.local/share/concordtree/cache`; set `CONCORDTREE_STATE` to choose another directory. Keep your results when upgrading. Docker runs with the current user's UID/GID and binds Web to host loopback.
 
-For a remote server, forward the Web port with `ssh -L 8765:127.0.0.1:8765 user@server`, then open the same URL locally. The Web upload limit is 100 MiB. See [app/README.md](app/README.md) for the portable CLI, larger inputs and scientific settings.
+For a remote server, forward the Web port with `ssh -L 8765:127.0.0.1:8765 user@server`, then open the same URL locally. The current source has no application-imposed Web upload-size or task-time limit. See [app/README.md](app/README.md) for the portable CLI and scientific settings.
 
 ## Offline installation
 
@@ -50,6 +62,6 @@ The stable artifact targets **Linux x86_64, NVIDIA driver >=525.60.13, compute c
 
 The frozen scientific algorithm and weights are retained. All 48 paired cases produced byte-identical initial/final trees on the same L40S, including branches/support and reference RF. Aggregate warm inference time differed by +0.45%; timing outliers and follow-up investigations are retained in [VALIDATION.md](VALIDATION.md). Across L40S and RTX 4090, the two tested regression inputs have identical topology/RF, with a Gene branch difference up to 1.425e-8. These observations do not guarantee identical timing or bytes on every GPU.
 
-This branch contains the frozen runtime and distribution tooling. Building binary artifacts requires the frozen scientific environment; `scripts/` records build and regression procedures. [RELEASE_NOTES.md](RELEASE_NOTES.md) and [VALIDATION.md](VALIDATION.md) describe the delivery and its evidence.
+This repository retains the earlier distribution tooling and evidence alongside the updated `app/` source. Building binary artifacts requires a scientific environment; the existing `scripts/` freeze checks and build records describe the earlier snapshot and have not been requalified for this source update. [RELEASE_NOTES.md](RELEASE_NOTES.md) and [VALIDATION.md](VALIDATION.md) describe the delivery and its evidence.
 
 [regression-trials.json](regression-trials.json) preserves the original/follow-up per-trial timings and output hashes. A separate [modern-runtime diagnostic](MODERN_VALIDATION.md) completed all 48 cases with identical topology/RF and small numerical changes; it has not been admitted and has no Blackwell hardware validation.

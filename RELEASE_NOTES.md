@@ -1,3 +1,9 @@
+# Current source update — 2026-11-08
+
+The latest application source is under `app/`. It includes the modular pipeline settings, pause/current-tree downloads, runtime cleanup, updated technical report, seasonal landscape controls, per-job CPU/GPU selection, continuous GPU monitoring and stage-specific tables. See [SOURCE_UPDATE.md](SOURCE_UPDATE.md) for current validation and scope. No binary archive, container, release tag or GitHub Release is created by this source update.
+
+# Earlier frozen Linux distribution
+
 ConcordTree 1.0.2 now has a Linux x86_64 GPU distribution with the Web interface as its default entry point. The download includes Python, scientific/Web dependencies and model weights. No Conda setup or model download is needed.
 
 Install and start the Web interface:

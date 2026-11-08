@@ -99,7 +99,7 @@ class Contracts(unittest.TestCase):
 
     def test_foreign_runtime_rejected(self):
         old=sys.modules.get('algorithm');module=types.ModuleType('algorithm')
-        module.__file__=str(PROJECT/'release/old/algorithm.py');sys.modules['algorithm']=module
+        module.__file__=str(HERE.parent/'foreign-release/algorithm.py');sys.modules['algorithm']=module
         try:
             with self.assertRaisesRegex(RuntimeError,'incompatible runtime'):configure_runtime()
         finally:

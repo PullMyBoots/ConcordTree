@@ -18,7 +18,7 @@
   },
   "shared_frontend": {
     "source": "bundled bounded AP-NJ + original optimized v0.5.9 MLP",
-    "algorithm": "bounded full-site Q-aware AP-NJ -> MLP-NNI",
+    "algorithm": "pure bounded full-site AP-NJ -> distance NNI -> MLP-NNI (default configurable order after AP-NJ)",
     "splitbank": false,
     "default_views": 1,
     "mlp": {
@@ -73,7 +73,7 @@
       "distance_cleanup_passes": 4,
       "cleanup_component_representatives": 4,
       "gene_distance": "K2P-gamma",
-      "species_distance": "JC",
+      "species_distance": "K2P-gamma",
       "missing": "observed intersection",
       "sites": "all original columns",
       "seed": 20260934,
@@ -86,13 +86,14 @@
       "merge_selection": "deterministic maximal matching of exact mutual Q minima, then original bounded path completion",
       "no_information": "exact zero-variable-observed-site detection and explicitly uninformative balanced binary completion",
       "raw_control_scratch_limit_bytes": 67108864,
-      "raw_control_site_block": 131072
+      "raw_control_site_block": 131072,
+      "definition": "AP-NJ ends before distance NNI; cleanup fields below describe the separate default distance NNI module"
     }
   },
   "posterior_stop_ratio": 0.005,
   "all_sites_used_in_posterior": true,
   "numerical_repair": "alpha lower/upper and pinv upper: normalize only values <=4 ULP outside original boundaries",
-  "changed_scientific_configuration": "User-authorized bounded AP-NJ initializer; normal inference configuration preserved by2026-11-07 repair, with explicit termination for pathological repeated/plateau states",
+  "changed_scientific_configuration": "Both gene and species AP-NJ initialization use K2P-gamma on all original columns with jointly observed-site distances. MLP checkpoints and downstream refinements unchanged.",
   "scientific_limits": [
     "initial accuracy/speed superiority is paired development evidence, not universal dominance",
     "gene final-tree superiority unresolved; paired difference interval crosses zero",
@@ -112,7 +113,10 @@
     "branch_support": "branch-support.json",
     "unannotated_tree": "prediction.unannotated.nwk (support enabled only)",
     "initial_tree": "initial/apnj.nwk (additional views: apnj-01.nwk etc.)",
-    "quality": "RESULT.json.quality: posterior search convergence, parameter convergence and intervention notices; initializer information and zero-overlap/gamma evidence warnings"
+    "quality": "RESULT.json.quality: posterior search convergence, parameter convergence and intervention notices; initializer information and zero-overlap/gamma evidence warnings",
+    "configuration": "configuration.json",
+    "checkpoint": "checkpoint.nwk",
+    "checkpoint_metadata": "checkpoint.json"
   },
   "provenance": "SOURCE_PROVENANCE.json",
   "branch_support": {
@@ -146,14 +150,46 @@
     },
     "documentation": "BRANCH_SUPPORT.md"
   },
-  "revision": "2026-11-07 uniform AP-NJ design repair within existing V1.0.2; no new version",
+  "revision": "2026-11-08 modular pipeline and complete-tree pause; default numerical configuration preserved",
   "search_robustness": {
     "mlp": "exact complete neighbor-array recurrence, with downstream task refinement",
     "gene": "eight low-gain rounds; every topology repeats; total LL span <= .01+1e-6*L; retain best verified state; convergence unconfirmed",
     "msc": "compiled complete tree state plus append-only evidence epoch; finite objective/gains; accumulated objective verification",
     "parameter_fit": "exact seed recurrence and at most64 rate-mode continuations; report nonconvergence on intervention",
-    "emergency": "10000 posterior sweeps, explicit failure rather than false convergence; existing web subprocess900s deadline",
+    "emergency": "10000 posterior sweeps, explicit failure rather than false convergence; no Web task wall-clock timeout",
     "graph": "reject cycles, disconnected/dangling/asymmetric/empty graphs in reachable traversal/serialization paths",
     "no_signal": "skip zero-variable-site warmstart with notice; uniform quartet probability for zero jointly observed evidence"
+  },
+  "release_structure": {
+    "revision": "2026-11-08 legacy-code separation",
+    "evidence": "evidence/RELEASE_CLEANUP.json",
+    "scientific_configuration_changed": false,
+    "production_species_scorer": "TiledBarycenterScorer -> BarycenterState; StreamSumActiveScorer owns the accumulated quartet search",
+    "retired": "unused CASTER/rank/fixed-evidence experimental branches, broken legacy gene CLI and old full-context ML scanner, unused native variants"
+  },
+  "pipeline_settings": {
+    "schema": "pipeline_config.py: schema()/normalize()",
+    "documentation": "PIPELINE_SETTINGS.md",
+    "default_routes": {
+      "gene": [
+        "apnj",
+        "distance",
+        "mlp",
+        "likelihood"
+      ],
+      "species": [
+        "apnj",
+        "distance",
+        "mlp",
+        "kernel"
+      ]
+    },
+    "custom_routes": "AP-NJ fixed first; each task-compatible refinement module can be disabled or reordered once",
+    "model_setting": "gene likelihood.advanced.model",
+    "checkpoints": "pure AP-NJ and every completed refinement round; complete binary tree only",
+    "pause": "cooperative complete-tree boundary; same-process resume; paused wall time excluded from file_to_tree_seconds",
+    "cancel": "terminate worker and remove job files except status metadata",
+    "branch_lengths": "only when final enabled module is likelihood",
+    "branch_support": "only when final enabled module is task posterior"
   }
 }

@@ -1,3 +1,5 @@
+2026-11-08 update: Species AP-NJ now uses K2P-gamma, matching gene initialization. The JC tables below describe the historical configuration. Current results are in technical-report/.
+
 2026-11-07 update: The tables below retain their historical scientific freeze. Current uniform design repair measurements, individual losses, ordinary timing overhead and scope are in APNJ_DESIGN_REPAIR.md; current delivered file hashes are in MANIFEST.json and APNJ_DESIGN_SOURCE_FREEZE.json.
 
 # Bounded full-site AP-NJ initialization

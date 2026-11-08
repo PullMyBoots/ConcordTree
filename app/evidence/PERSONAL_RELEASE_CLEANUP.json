@@ -1,0 +1,212 @@
+{
+  "status": "retired_from_distribution",
+  "removed_files": [
+    {
+      "file": "dipper_frontend.py",
+      "bytes": 3929,
+      "sha256": "e1d33af2d9e48677a2eb5f2bafb21ab1b7a00ddda9fc84d378ee54b6948da870"
+    },
+    {
+      "file": "_dipper_native.cpython-310-x86_64-linux-gnu.so",
+      "bytes": 1371800,
+      "sha256": "f3f15f94275cb80a3b68fd7bffce2f0f001c507bcdbb403aafdd943097426718"
+    },
+    {
+      "file": "tests/test_dipper.py",
+      "bytes": 3224,
+      "sha256": "b1cc4cd5ce2091d0e211a4ba6e4d4946de6d11d968d8293f99c708be657b46b5"
+    },
+    {
+      "file": "native/dipper/bridge.cpp",
+      "bytes": 9195,
+      "sha256": "3d26f59d32bdfbe3181796b64c5ecdde5df22bbcf1cd07eb2b278aed70e3eeea"
+    },
+    {
+      "file": "native/dipper/LICENSE.DIPPER",
+      "bytes": 1097,
+      "sha256": "d9166ef1b93141fa6fb4c88af00186a61143ce78df660dcc3b3126ddaab9d925"
+    },
+    {
+      "file": "native/dipper/build.py",
+      "bytes": 2821,
+      "sha256": "c980baebf83a5b4d2b2ac9c12f913f820efe52749f72c1e8fd422f841e9adfbf"
+    },
+    {
+      "file": "native/dipper/upstream/matrix_reader.cu",
+      "bytes": 1150,
+      "sha256": "6b078d8dbf8345f836b1b5412e66e12530db30b587db7dc13277515a3b72913a"
+    },
+    {
+      "file": "native/dipper/upstream/twoBitCompressor.hpp",
+      "bytes": 1012,
+      "sha256": "31d8dad1818200a83220685cbc3fbb01c565741c45ad2c18d644c767bf4fe766"
+    },
+    {
+      "file": "native/dipper/upstream/twoBitCompressor.cpp",
+      "bytes": 5008,
+      "sha256": "d6a8c09e3dd75b34a3696c97cb04ebaa4c7b7fc84d3eb6a676d5e84cf8848763"
+    },
+    {
+      "file": "native/dipper/upstream/mash_placement.cuh",
+      "bytes": 19512,
+      "sha256": "c4bfadd9238faded105d0013a24e1ae517a243f7ca0def6c6f4a0e23c4d18d0e"
+    },
+    {
+      "file": "native/dipper/upstream/mash.cu",
+      "bytes": 18920,
+      "sha256": "20c073d700e26469f60be84b8d1bc760b61b44f0e3fd09c9eada6b3e03a15bd8"
+    },
+    {
+      "file": "native/dipper/upstream/dipper_api.hpp",
+      "bytes": 36241,
+      "sha256": "983ae3391fd79bd68cc6408488cda6bc81f5ffc3e44150048aae08f097070a9f"
+    },
+    {
+      "file": "native/dipper/upstream/tree_generation.cu",
+      "bytes": 55450,
+      "sha256": "9f4d09b8bb638a9500883ad9dec8a8a65ead823be78141b97447ca2dc7455cbb"
+    },
+    {
+      "file": "native/dipper/upstream/placement.cu",
+      "bytes": 26670,
+      "sha256": "7db8eefd87b85ab4e247bff81e2f2f3441060ebb82b8d52fe1c792fcce430f35"
+    },
+    {
+      "file": "native/dipper/upstream/fourBitCompressor.cpp",
+      "bytes": 2652,
+      "sha256": "6d158f0511ec1f3f03d515b70c4e47bd6b422bd8475f2df7ae67d8d393d7dc2f"
+    },
+    {
+      "file": "native/dipper/upstream/fourBitCompressor.hpp",
+      "bytes": 890,
+      "sha256": "d75dc4e2bcbf0fb563a864246716916b0e82f5918f8a350d5d559bb5911f932c"
+    },
+    {
+      "file": "native/dipper/upstream/tree.cpp",
+      "bytes": 59492,
+      "sha256": "74c911c3dada43d5f4b83ca822656276b78c781f45a005ca42d23e28783df81c"
+    },
+    {
+      "file": "native/dipper/upstream/version.hpp.in",
+      "bytes": 96,
+      "sha256": "c0466b851126f1088943566c9a862ed6a27e98754802a4a8c883a8c26a610207"
+    },
+    {
+      "file": "native/dipper/upstream/kseq.h",
+      "bytes": 8443,
+      "sha256": "f8de32abb76158a9138967cb8ba8134faa8cbecde638702ef014b98f51ec4372"
+    },
+    {
+      "file": "native/dipper/upstream/placement_close_k.cu",
+      "bytes": 53380,
+      "sha256": "dfb0701633501b183fdea6123a7108e56eed7ba589e27191dd18cfcc3e263af2"
+    },
+    {
+      "file": "native/dipper/upstream/version.hpp",
+      "bytes": 85,
+      "sha256": "61efb7cdddd838e5f16bb905e294694307abd917ed235088af4020f6a3b4e71b"
+    },
+    {
+      "file": "native/dipper/upstream/MSA.cu",
+      "bytes": 19160,
+      "sha256": "3bedc97263c14875d36dd1799b2f8a70666d71ec075d7975c2f0cefd1edb1cca"
+    },
+    {
+      "file": "native/dipper/upstream/tree.hpp",
+      "bytes": 9177,
+      "sha256": "df011a5e2b069f3de32c723976535b3c6e56744c8fd3276dcbe485745c960025"
+    },
+    {
+      "file": "native/dipper/upstream/neighborJoining.cu",
+      "bytes": 12011,
+      "sha256": "7dd6a0c9f7760b816205ac3e4cfb99ab2709050dc0e38d3bb9c0eb85bd7ad833"
+    },
+    {
+      "file": "native/dipper/upstream/divide_and_conquer/mash_placement.cuh",
+      "bytes": 8200,
+      "sha256": "6776d1268fa48735005aa53689b72e72ce821b1ddd0ebb7235772d24306951ab"
+    },
+    {
+      "file": "native/dipper/upstream/divide_and_conquer/mash.cu",
+      "bytes": 26988,
+      "sha256": "38ebb65b59067d5d95eb8394eacaaf2d8e2de1b8cb1e15ea5b8e2a06392a587c"
+    },
+    {
+      "file": "native/dipper/upstream/divide_and_conquer/placement_close_k.cpp",
+      "bytes": 29075,
+      "sha256": "773b9febc56e4a2fc0104223e7b9399d08fc376ab48380b5497853c389501a58"
+    },
+    {
+      "file": "native/dipper/upstream/divide_and_conquer/mash.cpp",
+      "bytes": 3571,
+      "sha256": "10a752f6e8c7022f6bbd6483917b0ec33b6eac6cf233496a89522ca6fc769b91"
+    },
+    {
+      "file": "native/dipper/upstream/divide_and_conquer/msa.cu",
+      "bytes": 34308,
+      "sha256": "d18130e4b5f7e11e2a6afd816b47043dc2728916c72a96a8aee30295d5867fef"
+    },
+    {
+      "file": "native/dipper/upstream/divide_and_conquer/placement_close_k.cu",
+      "bytes": 72588,
+      "sha256": "cc484dc141bb1527032c8cfe0c4d0f0913ea16fdaa859968cca153ea2e6a7199"
+    },
+    {
+      "file": "runtime/gene/src/concordtree/_core/sctb_aggregate_nj.py",
+      "bytes": 36072,
+      "sha256": "4539d14503205cc55908b997981f2e6c3d82009f722068ea89b94be01ac3c573"
+    },
+    {
+      "file": "runtime/gene/src/concordtree/_core/sctb_gpu_candidate.py",
+      "bytes": 46049,
+      "sha256": "db41f4e82a41130a80d9b94b3ce7c51e7bcfdf79f986488c3f37df15b59530fd"
+    },
+    {
+      "file": "runtime/gene/src/concordtree/_core/sctb_reachability.py",
+      "bytes": 14792,
+      "sha256": "860d7804247a307a708b1ea2c3703d626f4bd3c3c46f8cb4e61bdefcfa63a08b"
+    }
+  ],
+  "removed_file_count": 33,
+  "removed_bytes": 1993058,
+  "removed_functions": [
+    "frontend.build_apnj",
+    "frontend.load_module",
+    "algorithm.initialize",
+    "scaleqf.TreeNode",
+    "scaleqf.AlignmentSketch",
+    "scaleqf.BoundedDistanceOracle",
+    "scaleqf._stratified_positions",
+    "scaleqf.load_phylip_sketch",
+    "scaleqf.neighbor_joining",
+    "scaleqf.build_scaffold",
+    "scaleqf.tree_to_graph",
+    "scaleqf._representatives",
+    "scaleqf._between_group_distance",
+    "scaleqf.refine_nni",
+    "scaleqf.infer_alignment",
+    "scaleqf.main"
+  ],
+  "active_pipeline": "full-site bounded AP-NJ (K2P-gamma) -> task-specific MLP-NNI -> gene likelihood or species statistical refinement",
+  "retained_shared_utilities": [
+    "concordtree._core.learned_nni",
+    "concordtree._core.scaleqf",
+    "candidate_graph_backend",
+    "panel_score_backend"
+  ],
+  "retained_mlp_computation_ast_identical": true,
+  "retained_likelihood_functions_ast_identical": true,
+  "scope": "Unused constructors and standalone scaffold CLI retired. Retained graph helpers and computational functions are AST-identical; shared native and inherited scorer routines are preserved.",
+  "trimmed_legacy_modules": [
+    {
+      "file": "runtime/gene/src/concordtree/_core/scaleqf.py",
+      "retained_functions": [
+        "_newick_label",
+        "graph_to_newick",
+        "validate_topology"
+      ],
+      "retained_function_ast_identical": true
+    }
+  ],
+  "historical_sources": "Preserved in research workspace outside this distribution."
+}

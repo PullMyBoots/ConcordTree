@@ -61,7 +61,7 @@ def _interleaved(lines, start, n, length):
     return rows, pos
 
 
-def normalize_alignment(raw: bytes, task='gene', *, max_cells=100 * 1024 * 1024):
+def normalize_alignment(raw: bytes, task='gene'):
     """Return one normalized matrix, summary, and ordered locus lengths.
 
     A single species block uses msa_only; two or more use observed_loci.
@@ -79,7 +79,6 @@ def normalize_alignment(raw: bytes, task='gene', *, max_cells=100 * 1024 * 1024)
         if not header: raise ValueError(f'Locus {len(blocks)+1}: expected a PHYLIP header: number of sequences, number of sites.')
         n, length = map(int, header.group(1, 2)); layout = (header.group(3) or '').upper(); pos += 1
         if n < 2 or length < 1: raise ValueError('Each locus needs at least 2 sequences and 1 aligned site.')
-        if n * length > max_cells: raise ValueError('The alignment exceeds the matrix size limit.')
         readers = [_interleaved] if layout == 'I' else [_sequential] if layout == 'S' else [_sequential, _interleaved]
         failures = []
         for reader in readers:
@@ -94,7 +93,6 @@ def normalize_alignment(raw: bytes, task='gene', *, max_cells=100 * 1024 * 1024)
         for name, sequence in rows.items():
             names.setdefault(name, None)
             if any(base in sequence for base in 'ACGT'): observed.add(name)
-        if len(names) * total > max_cells: raise ValueError('The combined alignment exceeds the matrix size limit after filling missing taxa.')
         blocks.append(rows); lengths.append(length)
         if task == 'gene' and pos < len(lines):
             raise ValueError('Gene Tree accepts exactly one PHYLIP alignment. Use Species Tree for multiple locus blocks.')

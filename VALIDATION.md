@@ -1,5 +1,7 @@
 # ConcordTree 1.0.2 Linux distribution validation
 
+This report describes the earlier frozen binary artifacts, not the latest `app/` source update. See [SOURCE_UPDATE.md](SOURCE_UPDATE.md) for current checks; the earlier 48-case results are retained as historical packaging evidence.
+
 ## Artifacts
 
 Portable archive: `concordtree-1.0.2-linux-x86_64-cuda121.tar.gz` (4,732,982,106 bytes).

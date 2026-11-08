@@ -16,17 +16,17 @@
     ],
     "original_sha256": "ad4ca4a8b7fab3e680bd3c1b8e5c8f15c165c71a43b22c8c8a0e4ba64e2d4748",
     "active": true,
-    "panel": "right",
-    "composition": "Desktop and mobile focal crops over a blurred extension of the same image. No subject synthesis, colorization or sharpening. Sharp crops are downsampled or kept at native resolution; background canvas size is not a claim of native 4K detail.",
+    "panel": "center",
+    "composition": "Desktop: single original crop with no added blur. Existing mobile asset retains its historical focal crop and blurred extension.",
     "files": [
       {
         "path": "web/assets/chameleon.webp",
-        "bytes": 307826,
+        "bytes": 583402,
         "dimensions": [
           3840,
           2160
         ],
-        "sha256": "0230f981e77eb98126b7d780749dd3266289699ad337f081fa62fd5fe0a267dc"
+        "sha256": "be1dd0dcdb97f1c68fcf3eb264290ef04597b003dd7122dc678beb11bf7c8029"
       },
       {
         "path": "web/assets/chameleon-mobile.webp",
@@ -39,7 +39,17 @@
       }
     ],
     "desktop": "/assets/chameleon.webp",
-    "mobile": "/assets/chameleon-mobile.webp"
+    "mobile": "/assets/chameleon-mobile.webp",
+    "mirrored": false,
+    "desktop_original": {
+      "url": "https://images.pexels.com/photos/14565246/pexels-photo-14565246.jpeg?w=4096&q=95",
+      "sha256": "ad4ca4a8b7fab3e680bd3c1b8e5c8f15c165c71a43b22c8c8a0e4ba64e2d4748",
+      "dimensions": [
+        4096,
+        2732
+      ]
+    },
+    "desktop_composition": "Single centered crop of the original, with no added blur, mirrored subject, or synthetic extension. Natural depth of field is retained. Downsampled only; no upscaling."
   },
   {
     "id": "sundew",
@@ -58,17 +68,17 @@
     ],
     "original_sha256": "f717621bac8ddf317c69824c9960e25f58ecb14cb6ab087fa895cd313acfb4a1",
     "active": true,
-    "panel": "right",
-    "composition": "Desktop and mobile focal crops over a blurred extension of the same image. No subject synthesis, colorization or sharpening. Sharp crops are downsampled or kept at native resolution; background canvas size is not a claim of native 4K detail.",
+    "panel": "center",
+    "composition": "Desktop: single original crop with no added blur. Existing mobile asset retains its historical focal crop and blurred extension.",
     "files": [
       {
         "path": "web/assets/sundew.webp",
-        "bytes": 611890,
+        "bytes": 1137070,
         "dimensions": [
           3840,
           2160
         ],
-        "sha256": "fbc519bdfa901d934a78cec161e5929ccea581b3e1757393f9a1859a75cec9be"
+        "sha256": "050ae53eef40392ca366428a8cbc94bb20b0f337f38f0dbf5c12a76a07552ae5"
       },
       {
         "path": "web/assets/sundew-mobile.webp",
@@ -81,7 +91,17 @@
       }
     ],
     "desktop": "/assets/sundew.webp",
-    "mobile": "/assets/sundew-mobile.webp"
+    "mobile": "/assets/sundew-mobile.webp",
+    "mirrored": false,
+    "desktop_original": {
+      "url": "https://images.pexels.com/photos/29494251/pexels-photo-29494251.jpeg?w=4096&q=95",
+      "sha256": "f717621bac8ddf317c69824c9960e25f58ecb14cb6ab087fa895cd313acfb4a1",
+      "dimensions": [
+        4096,
+        2721
+      ]
+    },
+    "desktop_composition": "Single centered crop of the original, with no added blur, mirrored subject, or synthetic extension. Natural depth of field is retained. Downsampled only; no upscaling."
   },
   {
     "id": "mushroom",
@@ -100,17 +120,17 @@
     ],
     "original_sha256": "0aec954eff82fea4d1b69da9b4ecadb65245a026f225a06e718723f1e7adc8c2",
     "active": true,
-    "panel": "right",
-    "composition": "Desktop and mobile focal crops over a blurred extension of the same image. No subject synthesis, colorization or sharpening. Sharp crops are downsampled or kept at native resolution; background canvas size is not a claim of native 4K detail.",
+    "panel": "center",
+    "composition": "Desktop: single original crop with no added blur. Existing mobile asset retains its historical focal crop and blurred extension.",
     "files": [
       {
         "path": "web/assets/mushroom.webp",
-        "bytes": 192602,
+        "bytes": 353590,
         "dimensions": [
           3840,
           2160
         ],
-        "sha256": "a3f2caaf63a497464fbcb0555fd7c0d3faa8e7943bad823684879b68c4fd139d"
+        "sha256": "8d24e24a567723fd1e9ff035c18418439f666cb167b7e7db54c67429894817f4"
       },
       {
         "path": "web/assets/mushroom-mobile.webp",
@@ -123,7 +143,17 @@
       }
     ],
     "desktop": "/assets/mushroom.webp",
-    "mobile": "/assets/mushroom-mobile.webp"
+    "mobile": "/assets/mushroom-mobile.webp",
+    "mirrored": false,
+    "desktop_original": {
+      "url": "https://images.pexels.com/photos/40384997/pexels-photo-40384997.jpeg?w=4096&q=95",
+      "sha256": "0aec954eff82fea4d1b69da9b4ecadb65245a026f225a06e718723f1e7adc8c2",
+      "dimensions": [
+        4096,
+        6130
+      ]
+    },
+    "desktop_composition": "Single centered crop of the original, with no added blur, mirrored subject, or synthetic extension. Natural depth of field is retained. Downsampled only; no upscaling."
   },
   {
     "id": "tiger",
@@ -142,17 +172,17 @@
     ],
     "original_sha256": "1f7e7db6c20b2aadb147cd08a7298d7311739bd6b0563f4517fbceb6f80c4866",
     "active": true,
-    "panel": "right",
-    "composition": "Desktop and mobile focal crops over a blurred extension of the same image. No subject synthesis, colorization or sharpening. Sharp crops are downsampled or kept at native resolution; background canvas size is not a claim of native 4K detail.",
+    "panel": "center",
+    "composition": "Desktop: single original crop with no added blur. Existing mobile asset retains its historical focal crop and blurred extension.",
     "files": [
       {
         "path": "web/assets/tiger.webp",
-        "bytes": 595218,
+        "bytes": 1051292,
         "dimensions": [
           3840,
           2160
         ],
-        "sha256": "a7ea279bbd1961c6f3d49ff22c4ea53aa751fda5792babb4abb29d4161c63704"
+        "sha256": "9ab98935458fab082ae894aec42c76f3e5bfc15f5303fea8fc929f61984fc8ae"
       },
       {
         "path": "web/assets/tiger-mobile.webp",
@@ -165,7 +195,17 @@
       }
     ],
     "desktop": "/assets/tiger.webp",
-    "mobile": "/assets/tiger-mobile.webp"
+    "mobile": "/assets/tiger-mobile.webp",
+    "mirrored": false,
+    "desktop_original": {
+      "url": "https://images.pexels.com/photos/16878233/pexels-photo-16878233.jpeg?w=4096&q=95",
+      "sha256": "1f7e7db6c20b2aadb147cd08a7298d7311739bd6b0563f4517fbceb6f80c4866",
+      "dimensions": [
+        4096,
+        2734
+      ]
+    },
+    "desktop_composition": "Single centered crop of the original, with no added blur, mirrored subject, or synthetic extension. Natural depth of field is retained. Downsampled only; no upscaling."
   },
   {
     "id": "tyrannosaurus",
@@ -184,17 +224,17 @@
     ],
     "original_sha256": "882eb4a6d295146ad19f1d8a3a5899e093707365bd5d9ac77beb37597fbd83c7",
     "active": true,
-    "panel": "right",
-    "composition": "Desktop and mobile focal crops over a blurred extension of the same image. No subject synthesis, colorization or sharpening. Sharp crops are downsampled or kept at native resolution; background canvas size is not a claim of native 4K detail. Desktop and mobile crops are horizontally mirrored to place the subject on the left; the form remains on the right.",
+    "panel": "center",
+    "composition": "Desktop: single original crop with no added blur. Existing mobile asset retains its historical focal crop and blurred extension.",
     "files": [
       {
         "path": "web/assets/tyrannosaurus.webp",
-        "bytes": 881918,
+        "bytes": 1685232,
         "dimensions": [
           3840,
           2160
         ],
-        "sha256": "e65415218f483abab961c7da7b4f92fc6b74ca1a2c60a2847403ee2a6db520d5"
+        "sha256": "e66b6eb43acb3810b0ab264ce3b8057abb632b5193f9775baf69f7c5b919fcd6"
       },
       {
         "path": "web/assets/tyrannosaurus-mobile.webp",
@@ -208,7 +248,16 @@
     ],
     "desktop": "/assets/tyrannosaurus.webp",
     "mobile": "/assets/tyrannosaurus-mobile.webp",
-    "mirrored": true
+    "mirrored": false,
+    "desktop_original": {
+      "url": "https://images.pexels.com/photos/13681328/pexels-photo-13681328.jpeg?w=4096&q=95",
+      "sha256": "882eb4a6d295146ad19f1d8a3a5899e093707365bd5d9ac77beb37597fbd83c7",
+      "dimensions": [
+        4096,
+        2731
+      ]
+    },
+    "desktop_composition": "Single centered crop of the original, with no added blur, mirrored subject, or synthetic extension. Natural depth of field is retained. Downsampled only; no upscaling."
   },
   {
     "id": "ammonite",
@@ -227,17 +276,17 @@
     ],
     "original_sha256": "af79528798f8255794b36cf7e9ad07b732b8db7413690f8b8b4e08d02c9ced4e",
     "active": true,
-    "panel": "right",
-    "composition": "Desktop and mobile focal crops over a blurred extension of the same image. No subject synthesis, colorization or sharpening. Sharp crops are downsampled or kept at native resolution; background canvas size is not a claim of native 4K detail.",
+    "panel": "center",
+    "composition": "Desktop: single original crop with no added blur. Existing mobile asset retains its historical focal crop and blurred extension.",
     "files": [
       {
         "path": "web/assets/ammonite.webp",
-        "bytes": 754172,
+        "bytes": 1292328,
         "dimensions": [
           3840,
           2160
         ],
-        "sha256": "0bed6ab3767ce72ad39ce52d7f0066a56462ff8ccb4982ea71657d6287d5bcb3"
+        "sha256": "0e14243e628111a27e77439b29ebf60d20efdfda0fb7a42e62e0712fcc9e3803"
       },
       {
         "path": "web/assets/ammonite-mobile.webp",
@@ -250,7 +299,17 @@
       }
     ],
     "desktop": "/assets/ammonite.webp",
-    "mobile": "/assets/ammonite-mobile.webp"
+    "mobile": "/assets/ammonite-mobile.webp",
+    "mirrored": false,
+    "desktop_original": {
+      "url": "https://images.pexels.com/photos/40675665/pexels-photo-40675665.jpeg?w=4096&q=95",
+      "sha256": "af79528798f8255794b36cf7e9ad07b732b8db7413690f8b8b4e08d02c9ced4e",
+      "dimensions": [
+        4096,
+        2731
+      ]
+    },
+    "desktop_composition": "Single centered crop of the original, with no added blur, mirrored subject, or synthetic extension. Natural depth of field is retained. Downsampled only; no upscaling."
   },
   {
     "id": "diatom",
@@ -269,17 +328,17 @@
     ],
     "original_sha256": "7b5d5b3bad611599c6e03bc286a83e91856a441a3e5b66bd6696aa831a41113d",
     "active": true,
-    "panel": "right",
-    "composition": "Desktop and mobile focal crops over a blurred extension of the same image. No subject synthesis, colorization or sharpening. Sharp crops are downsampled or kept at native resolution; background canvas size is not a claim of native 4K detail.",
+    "panel": "center",
+    "composition": "Desktop: single original crop with no added blur. Existing mobile asset retains its historical focal crop and blurred extension.",
     "files": [
       {
         "path": "web/assets/diatom.webp",
-        "bytes": 667694,
+        "bytes": 1100614,
         "dimensions": [
           3840,
           2160
         ],
-        "sha256": "22590a4f6ff823758431ebd656d87bb1f7c75845064d3e84be5229cc81d1f932"
+        "sha256": "63f3de2db883f804b34cfb28039a1eba8075a8d4600196c205e6708faa822214"
       },
       {
         "path": "web/assets/diatom-mobile.webp",
@@ -292,7 +351,17 @@
       }
     ],
     "desktop": "/assets/diatom.webp",
-    "mobile": "/assets/diatom-mobile.webp"
+    "mobile": "/assets/diatom-mobile.webp",
+    "mirrored": false,
+    "desktop_original": {
+      "url": "https://images.pexels.com/photos/8740054/pexels-photo-8740054.jpeg?w=4096&q=95",
+      "sha256": "7b5d5b3bad611599c6e03bc286a83e91856a441a3e5b66bd6696aa831a41113d",
+      "dimensions": [
+        4096,
+        3072
+      ]
+    },
+    "desktop_composition": "Single centered crop of the original, with no added blur, mirrored subject, or synthetic extension. Natural depth of field is retained. Downsampled only; no upscaling."
   },
   {
     "id": "cells",
@@ -311,17 +380,17 @@
     ],
     "original_sha256": "67274569517c626569cb367e50ae170f413671ce28d564a743c5730c5b72e77f",
     "active": true,
-    "panel": "right",
-    "composition": "Desktop and mobile focal crops over a blurred extension of the same image. No subject synthesis, colorization or sharpening. Sharp crops are downsampled or kept at native resolution; background canvas size is not a claim of native 4K detail.",
+    "panel": "center",
+    "composition": "Desktop: single original crop with no added blur. Existing mobile asset retains its historical focal crop and blurred extension.",
     "files": [
       {
         "path": "web/assets/cells.webp",
-        "bytes": 694030,
+        "bytes": 1039974,
         "dimensions": [
           3840,
           2160
         ],
-        "sha256": "1a75d195fcd819fd463ebec501a08335586507716fe5d1c5e037bc3be8c23f72"
+        "sha256": "39684045d204b21e8bcc6e5c157e645b6d9aec45fc1b1e3582004c10960e0ae6"
       },
       {
         "path": "web/assets/cells-mobile.webp",
@@ -334,7 +403,17 @@
       }
     ],
     "desktop": "/assets/cells.webp",
-    "mobile": "/assets/cells-mobile.webp"
+    "mobile": "/assets/cells-mobile.webp",
+    "mirrored": false,
+    "desktop_original": {
+      "url": "https://images.pexels.com/photos/8932609/pexels-photo-8932609.jpeg?w=4096&q=95",
+      "sha256": "67274569517c626569cb367e50ae170f413671ce28d564a743c5730c5b72e77f",
+      "dimensions": [
+        4096,
+        3072
+      ]
+    },
+    "desktop_composition": "Single centered crop of the original, with no added blur, mirrored subject, or synthetic extension. Natural depth of field is retained. Downsampled only; no upscaling."
   },
   {
     "id": "seed-fern",
@@ -353,17 +432,17 @@
     ],
     "original_sha256": "0a841cbff65d9df61e363f4a203298c5245c8149e5f7133e28d036e1dd6e1066",
     "active": true,
-    "panel": "right",
-    "composition": "Desktop and mobile focal crops over a blurred extension of the same image. No subject synthesis, colorization or sharpening. Sharp crops are downsampled or kept at native resolution; background canvas size is not a claim of native 4K detail.",
+    "panel": "center",
+    "composition": "Desktop: single original crop with no added blur. Existing mobile asset retains its historical focal crop and blurred extension.",
     "files": [
       {
         "path": "web/assets/seed-fern.webp",
-        "bytes": 1104332,
+        "bytes": 1251370,
         "dimensions": [
-          3840,
-          2160
+          3000,
+          1687
         ],
-        "sha256": "632971ea37283441b1d2bc798e609968a0cc5e9773de307bc5e09db41396583e"
+        "sha256": "0850bb4598adf420097bfbcd0637b4986003dde763c2dc7007be8bf33d314744"
       },
       {
         "path": "web/assets/seed-fern-mobile.webp",
@@ -376,7 +455,17 @@
       }
     ],
     "desktop": "/assets/seed-fern.webp",
-    "mobile": "/assets/seed-fern-mobile.webp"
+    "mobile": "/assets/seed-fern-mobile.webp",
+    "mirrored": false,
+    "desktop_original": {
+      "url": "https://collections.museumsvictoria.com.au/content/media/41/886191-large.jpg",
+      "sha256": "0a841cbff65d9df61e363f4a203298c5245c8149e5f7133e28d036e1dd6e1066",
+      "dimensions": [
+        3000,
+        2252
+      ]
+    },
+    "desktop_composition": "Single centered crop of the original, with no added blur, mirrored subject, or synthetic extension. Natural depth of field is retained. Downsampled only; no upscaling."
   },
   {
     "id": "virus",
@@ -395,17 +484,17 @@
     ],
     "original_sha256": "dcf77b65f98698bd1e2ec179719ca775f6e975f7217e3691f1e50a633981c4f7",
     "active": true,
-    "panel": "right",
-    "composition": "Desktop and mobile focal crops over a blurred extension of the same image. No subject synthesis, colorization or sharpening. Sharp crops are downsampled or kept at native resolution; background canvas size is not a claim of native 4K detail.",
+    "panel": "center",
+    "composition": "Desktop: single original crop with no added blur. Existing mobile asset retains its historical focal crop and blurred extension.",
     "files": [
       {
         "path": "web/assets/virus.webp",
-        "bytes": 1144658,
+        "bytes": 981144,
         "dimensions": [
-          3840,
-          2160
+          2097,
+          1179
         ],
-        "sha256": "1d776b1923f1c41eb43a5f026b8ea0d1f9eff1e6587777454d073ad7432b842a"
+        "sha256": "5ed49e9a3a81dba8dfa1fa6a12eaa699174ab03784f4c62ef3f736b556635f5c"
       },
       {
         "path": "web/assets/virus-mobile.webp",
@@ -418,7 +507,17 @@
       }
     ],
     "desktop": "/assets/virus.webp",
-    "mobile": "/assets/virus-mobile.webp"
+    "mobile": "/assets/virus-mobile.webp",
+    "mirrored": false,
+    "desktop_original": {
+      "url": "https://wwwn.cdc.gov/phil/PHIL_Images/23640/23640.tif",
+      "sha256": "dcf77b65f98698bd1e2ec179719ca775f6e975f7217e3691f1e50a633981c4f7",
+      "dimensions": [
+        2097,
+        2097
+      ]
+    },
+    "desktop_composition": "Single centered crop of the original, with no added blur, mirrored subject, or synthetic extension. Natural depth of field is retained. Downsampled only; no upscaling."
   },
   {
     "id": "fern",
@@ -436,17 +535,17 @@
     ],
     "original_sha256": "06eab602e1db8732c2dc6faa06098a9f52ef9092062462a5bbf37113f4087727",
     "active": true,
-    "panel": "right",
-    "composition": "Desktop and mobile focal crops over a blurred extension of the same image. No subject synthesis, colorization or sharpening. Sharp crops are downsampled or kept at native resolution; background canvas size is not a claim of native 4K detail.",
+    "panel": "center",
+    "composition": "Desktop: single original crop with no added blur. Existing mobile asset retains its historical focal crop and blurred extension.",
     "files": [
       {
         "path": "web/assets/fern.webp",
-        "bytes": 723996,
+        "bytes": 1522328,
         "dimensions": [
           3840,
           2160
         ],
-        "sha256": "6c0a5f65ce59a98e9b94a7980044d8e6ca61f9271627f2d8d9a66438766a7ddd"
+        "sha256": "d86df5734b8a63cea2d8a7c246a2138a9921e8dd9d126112737951be4e0fac36"
       },
       {
         "path": "web/assets/fern-mobile.webp",
@@ -459,7 +558,17 @@
       }
     ],
     "desktop": "/assets/fern.webp",
-    "mobile": "/assets/fern-mobile.webp"
+    "mobile": "/assets/fern-mobile.webp",
+    "mirrored": false,
+    "desktop_original": {
+      "url": "https://images.unsplash.com/photo-1508856897575-ce74bdd4f8cf?auto=format&fit=max&fm=jpg&w=4000&q=95",
+      "sha256": "06eab602e1db8732c2dc6faa06098a9f52ef9092062462a5bbf37113f4087727",
+      "dimensions": [
+        4000,
+        5333
+      ]
+    },
+    "desktop_composition": "Single centered crop of the original, with no added blur, mirrored subject, or synthetic extension. Natural depth of field is retained. Downsampled only; no upscaling."
   },
   {
     "id": "hummingbird",
@@ -478,17 +587,17 @@
     ],
     "original_sha256": "2cb8daab486b16fe8e2a041203c7be0caa2875261616d34c07d4f76d7a9e24e7",
     "active": true,
-    "panel": "right",
-    "composition": "Desktop and mobile focal crops over a blurred extension of the same image. No subject synthesis, colorization or sharpening. Sharp crops are downsampled or kept at native resolution; background canvas size is not a claim of native 4K detail.",
+    "panel": "center",
+    "composition": "Desktop: single original crop with no added blur. Existing mobile asset retains its historical focal crop and blurred extension.",
     "files": [
       {
         "path": "web/assets/hummingbird.webp",
-        "bytes": 289638,
+        "bytes": 387882,
         "dimensions": [
           3840,
           2160
         ],
-        "sha256": "135b98d9ed2fae9c3a1a63d74eb99a7107d47aacaf60e6b926ea3c0c23077508"
+        "sha256": "4168e7e976de8b1d97ca19a956c4dd846d374db9bf33164537ffe8c415c2ab35"
       },
       {
         "path": "web/assets/hummingbird-mobile.webp",
@@ -501,7 +610,17 @@
       }
     ],
     "desktop": "/assets/hummingbird.webp",
-    "mobile": "/assets/hummingbird-mobile.webp"
+    "mobile": "/assets/hummingbird-mobile.webp",
+    "mirrored": false,
+    "desktop_original": {
+      "url": "https://images.pexels.com/photos/17917429/pexels-photo-17917429.jpeg",
+      "sha256": "1ae79278db0ea53979d1711221dc281fd8c391af5e07db55181bd6f3512c481e",
+      "dimensions": [
+        4675,
+        3118
+      ]
+    },
+    "desktop_composition": "Single centered crop of the original, with no added blur, mirrored subject, or synthetic extension. Natural depth of field is retained. Downsampled only; no upscaling."
   },
   {
     "name": "forest",

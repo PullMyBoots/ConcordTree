@@ -1,0 +1,44 @@
+{
+  "status": "passed",
+  "header_removed": true,
+  "active_stage_highlight": true,
+  "stage_specific_columns": {
+    "apnj": [
+      "Time (s)"
+    ],
+    "distance": [
+      "Round",
+      "Time (s)",
+      "Distance gain",
+      "Moves"
+    ],
+    "mlp": [
+      "Round",
+      "Time (s)",
+      "Probability gain",
+      "Moves"
+    ],
+    "likelihood": [
+      "Round",
+      "Time (s)",
+      "Log likelihood",
+      "Moves"
+    ],
+    "kernel": [
+      "Round",
+      "Time (s)",
+      "Score gain",
+      "Moves"
+    ]
+  },
+  "previous_stage_review": true,
+  "review_preserves_active_highlight": true,
+  "disabled_reordered_pipeline": true,
+  "no_wrapping_or_clipping": true,
+  "real_saved_job": true,
+  "errors": [],
+  "date": "2026-11-08T13:00:57.390479+00:00",
+  "scope": "Stage-only progress header and per-stage tables; static UI changes only, no inference changes",
+  "timing": "Cumulative inference seconds including pauses",
+  "archive_rebuilt": false
+}

@@ -55,14 +55,45 @@ class InputTests(unittest.TestCase):
                 with self.assertRaises(ValueError): server.normalize_alignment(data)
         with self.assertRaisesRegex(ValueError,'24'): server.normalize_alignment(PHY,'species')
 
-    def test_expansion_limit_and_locus_integrity(self):
+    def test_expansion_and_locus_integrity(self):
         # Small individual loci can expand substantially when their taxa do not overlap.
-        raw=b'2 4\na ACGT\nb ACGT\n2 4\nc ACGT\nd ACGT\n'
-        with self.assertRaisesRegex(ValueError, 'combined'): server.normalize_alignment(raw,'species',max_cells=24)
+        raw=SPECIES+b'2 4\nnew1 ACGT\nnew2 ACGT\n'
+        matrix, metadata, lengths=server.normalize_alignment(raw,'species')
+        self.assertEqual(metadata, dict(taxa=26,sites=12,loci=2,partitioned=True))
+        self.assertEqual(lengths,[8,4])
+        self.assertIn(b'new1 ????????ACGT\n',matrix)
         with self.assertRaises(ValueError): server.normalize_alignment(SPECIES+b'2 4\na ACGT\na ACGT\n','species')
 
 
 class AppTests(unittest.TestCase):
+    def test_compute_resources_are_validated_and_frozen_per_job(self):
+        import json
+        resources=dict(cpu_threads=2,gpu=1)
+        response=self.upload(resources=json.dumps(resources))
+        self.assertEqual(response.status_code,202,response.text)
+        job=response.json();directory=self.store.directory/job['id']
+        self.assertEqual(job['resources'],resources)
+        with patch.dict(server.os.environ,{'CONCORDTREE_GPU':'0','CONCORDTREE_CPU_THREADS':'8'}):
+            command=server.command_for(job,directory)
+        self.assertEqual(command[command.index('--gpu')+1],'1')
+        self.assertEqual(command[command.index('--cpu-threads')+1],'2')
+        self.assertEqual(json.loads((directory/'job.json').read_text())['resources'],resources)
+        for invalid in [{'gpu':-1},{'gpu':True},{'gpu':1.2},{'cpu_threads':0},{'cpu_threads':65},{'cpu_threads':False},[],{'extra':1}]:
+            self.assertEqual(self.upload(resources=json.dumps(invalid)).status_code,422,invalid)
+
+    def test_structured_events_boundaries_partial_writes_and_legacy_logs(self):
+        import json
+        job=self.upload().json();directory=self.store.directory/job['id'];output=directory/'output';output.mkdir()
+        path=output/'events.jsonl'
+        path.write_text(''.join(json.dumps(dict(stage='mlp',pass_=i,moves=4,elapsed_seconds=i))+ '\n' for i in range(450))+'{"partial":')
+        data=self.client.get(f"/api/jobs/{job['id']}/log").json()
+        self.assertEqual(len(data['events']),300);self.assertTrue(data['truncated'])
+        self.assertEqual(data['events'][-1]['elapsed_seconds'],449)
+        path.unlink()
+        (directory/'execution.log').write_text('[     5.21s] gene_refinement round=2 after_ll=-1200.24 moves=3 view=0\n')
+        event=self.client.get(f"/api/jobs/{job['id']}/log").json()['events'][0]
+        self.assertEqual(event['round'],2);self.assertEqual(event['after_ll'],-1200.24)
+
     def setUp(self):
         root = server.ROOT / 'output/web-tests'
         root.mkdir(parents=True, exist_ok=True)
@@ -83,6 +114,62 @@ class AppTests(unittest.TestCase):
 
     def upload(self, **values):
         return self.client.post('/api/jobs', files={'file': ('input.phy', PHY)}, data=values)
+
+    def test_host_endpoint_serves_cached_sample_without_cuda_import(self):
+        with patch.object(self.app.state.monitor, 'snapshot', return_value={'gpu_status': 'unavailable', 'gpus': []}):
+            self.assertEqual(self.client.get('/api/host').json(), {'gpu_status': 'unavailable', 'gpus': []})
+
+    def test_runtime_log_tail_is_bounded_and_cancel_removes_outputs(self):
+        job = self.upload().json()
+        url = f"/api/jobs/{job['id']}/log"
+        self.assertEqual(self.client.get(url).json()['text'], '')
+        path = self.store.directory / job['id'] / 'execution.log'
+        path.write_text(('运行中 <script>alert(1)</script>\n'*5000)+'final log line\n')
+        data = self.client.get(url).json()
+        self.assertTrue(data['truncated'])
+        self.assertLessEqual(len(data['text'].encode()), 64*1024)
+        self.assertNotIn('\ufffd', data['text'])
+        self.assertTrue(data['text'].endswith('final log line\n'))
+        self.store.cancel(job['id'])
+        self.assertEqual(self.client.get(url).json()['text'], '')
+        self.assertEqual({p.name for p in path.parent.iterdir()},{'job.json'})
+        self.assertEqual(self.client.get('/api/jobs/'+'0'*32+'/log').status_code, 404)
+
+    def test_pipeline_snapshot_and_task_validation(self):
+        import json
+        from pipeline_config import defaults
+        config=defaults('gene');config['stages'][2]['advanced']['model']='JC'
+        config['stages'][0]['enabled']=False
+        job=self.upload(configuration=json.dumps(config)).json()
+        self.assertEqual(job['model'],'JC')
+        self.assertEqual(job['configuration'],config)
+        directory=self.store.directory/job['id']
+        self.assertEqual(json.loads((directory/'configuration.json').read_text()),config)
+        self.assertIn('--configuration',server.command_for(job,directory))
+        config['stages'][2]['id']='kernel'
+        self.assertEqual(self.upload(configuration=json.dumps(config)).status_code,422)
+        config=defaults('gene');config['apnj']['projections']=0
+        self.assertEqual(self.upload(configuration=json.dumps(config)).status_code,422)
+
+    def test_pause_resume_and_cancel_checkpoint_boundary(self):
+        import json
+        job=self.upload().json();id=job['id'];directory=self.store.directory/id
+        self.store.jobs[id]['status']='running'
+        response=self.client.post(f'/api/jobs/{id}/pause').json()
+        self.assertEqual(response['status'],'pausing')
+        self.assertEqual(self.client.get(f'/api/jobs/{id}/checkpoint').status_code,409)
+        out=directory/'output';out.mkdir();(out/'checkpoint.nwk').write_bytes(NWK)
+        (out/'checkpoint.json').write_text(json.dumps(dict(available=True,stage='apnj')))
+        (out/'pause.state.json').write_text(json.dumps(dict(paused=True,request_token=(directory/'pause.request').read_text())))
+        self.assertEqual(self.client.get(f'/api/jobs/{id}').json()['status'],'paused')
+        self.assertEqual(self.client.get(f'/api/jobs/{id}/checkpoint').content,NWK)
+        self.assertEqual(self.client.post(f'/api/jobs/{id}/resume').json()['status'],'running')
+        self.assertFalse((directory/'pause.request').exists())
+        # A stale acknowledgement must never acknowledge a later pause request.
+        self.assertEqual(self.client.post(f'/api/jobs/{id}/pause').json()['status'],'pausing')
+        self.client.post(f'/api/jobs/{id}/cancel')
+        self.assertEqual({p.name for p in directory.iterdir()},{'job.json'})
+        self.assertEqual(self.client.get(f'/api/jobs/{id}/checkpoint').status_code,409)
 
     def test_static_boundary(self):
         response = self.client.get('/')
@@ -159,8 +246,6 @@ class AppTests(unittest.TestCase):
                 self.assertEqual(client.post('/api/jobs/from-server',data={'path':value}).status_code,status,value)
             link=source.parent/'outside.phy';link.symlink_to('/etc/passwd')
             self.assertEqual(client.post('/api/jobs/from-server',data={'path':str(link)}).status_code,403)
-            with patch.object(server,'SERVER_FILE_LIMIT',8):
-                self.assertEqual(client.post('/api/jobs/from-server',data={'path':str(source)}).status_code,413)
 
     def test_queue_counts_and_positions_follow_job_lifecycle(self):
         jobs = [self.upload().json() for _ in range(3)]
@@ -201,15 +286,18 @@ class AppTests(unittest.TestCase):
         response = self.client.post('/api/jobs', headers={'Origin': 'https://unrelated.example'}, files={'file': ('input.phy', PHY)})
         self.assertEqual(response.status_code, 403)
 
-    def test_upload_limit(self):
-        with patch.object(server, 'LIMIT', 32):
-            response = self.client.post('/api/jobs', files={'file': ('input.phy', PHY)})
-            self.assertEqual(response.status_code, 413)
+    def test_upload_config_and_large_content_length(self):
+        self.assertIsNone(self.client.get('/api/config').json()['max_upload_bytes'])
+        response = self.client.post('/api/jobs', files={'file': ('input.phy', PHY)},
+                                    headers={'Content-Length': str(513 * 1024 * 1024)})
+        self.assertEqual(response.status_code, 202, response.text)
 
-    def test_stream_body_limit(self):
-        with patch.object(server, 'LIMIT', 32):
-            response = self.client.post('/api/jobs', files={'file': ('huge.phy', b'x' * 70000)})
-            self.assertEqual(response.status_code, 413)
+    def test_spooled_upload_preserves_alignment(self):
+        # Exceed the multipart in-memory spool threshold, preserving DNA exactly.
+        response = self.client.post('/api/jobs', files={'file': ('input.phy', PHY + b' ' * (2 * 1024 * 1024))})
+        self.assertEqual(response.status_code, 202, response.text)
+        matrix = self.store.directory / response.json()['id'] / 'alignment.phy'
+        self.assertEqual(matrix.read_bytes(), PHY)
 
     def test_result_and_path_boundary(self):
         job = self.upload().json()

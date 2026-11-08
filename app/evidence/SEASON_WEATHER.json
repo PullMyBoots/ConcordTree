@@ -1,0 +1,50 @@
+{
+  "status": "passed",
+  "colors": {
+    "spring": "rgb(32, 56, 44)",
+    "summer": "rgb(28, 52, 51)",
+    "autumn": "rgb(53, 47, 40)",
+    "winter": "rgb(38, 52, 64)"
+  },
+  "pointer_value": 360,
+  "keyboard": true,
+  "manual_holds": true,
+  "persists": true,
+  "auto_resumes": true,
+  "pause": true,
+  "other_themes_preserved": true,
+  "errors": [],
+  "date": "2026-11-08T12:35:19.295238+00:00",
+  "scope": "Seasonal landscape, tree lifecycle, card palettes and draggable season progress; no inference changes",
+  "cycle_seconds": 600,
+  "lifecycle": {
+    "spring": "sunshine and growing leaves",
+    "summer": "flowers, thunderstorm and rain",
+    "autumn": "fruit, cloudy wind and falling leaves",
+    "winter": "bare branches, snowfall and accumulated snow"
+  },
+  "controls": "Drag to hold any seasonal phase; play resumes the ten-minute cycle from that phase. Keyboard adjustment and persisted position supported.",
+  "transitions": "One fixed landscape, smoothly blended weather, tree lifecycle and opaque card colors; Geometry and Nature remain separate themes.",
+  "frame_timing": {
+    "context": "Local headless Chromium requestAnimationFrame measurements; not a hardware performance guarantee. Renderer normally throttled to 20 fps.",
+    "samples": 36,
+    "by_season": {
+      "spring": {
+        "median_ms": 10.2,
+        "max_ms": 10.4
+      },
+      "summer": {
+        "median_ms": 10.3,
+        "max_ms": 13.8
+      },
+      "autumn": {
+        "median_ms": 12,
+        "max_ms": 15.3
+      },
+      "winter": {
+        "median_ms": 2.8,
+        "max_ms": 6.8
+      }
+    }
+  }
+}

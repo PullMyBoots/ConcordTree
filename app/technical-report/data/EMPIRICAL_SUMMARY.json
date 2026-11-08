@@ -6,11 +6,11 @@
       "complete": 0,
       "mean_nrf": null,
       "datasets": [],
-      "definition": "unweighted arithmetic mean across completed datasets"
+      "definition": "Unweighted arithmetic mean across completed datasets"
     },
     "msa_only": {
       "complete": 10,
-      "mean_nrf": 0.07814364997319867,
+      "mean_nrf": 0.07595676402432809,
       "datasets": [
         "butterfly",
         "plant",
@@ -23,11 +23,11 @@
         "mammal2",
         "Bacteria"
       ],
-      "definition": "unweighted arithmetic mean across completed datasets"
+      "definition": "Unweighted arithmetic mean across completed datasets"
     },
     "all": {
       "complete": 10,
-      "mean_nrf": 0.07814364997319867,
+      "mean_nrf": 0.07595676402432809,
       "datasets": [
         "butterfly",
         "plant",
@@ -40,22 +40,12 @@
         "mammal2",
         "Bacteria"
       ],
-      "definition": "unweighted arithmetic mean across completed datasets"
+      "definition": "Unweighted arithmetic mean across completed datasets"
     }
-  },
-  "scope": "All ten original archived benchmark concatenations, user-authorized MSA-only route; descriptive published-reference disagreement.",
-  "observed_locus_results_reused": 0,
-  "reused_concatenated_results": 3,
-  "new_fallback_attempts": 7,
-  "algorithm_changed": false,
-  "archived_original_loci": {
-    "complete": 7,
-    "mean_nrf": 0.09217412247630222,
-    "used_in_current_mean": false
   },
   "method_means": {
     "ConcordTree": {
-      "mean_nrf": 0.07814364997319867,
+      "mean_nrf": 0.07595676402432809,
       "available_datasets": [
         "butterfly",
         "plant",
@@ -70,7 +60,7 @@
       ],
       "missing_datasets": [],
       "count": 10,
-      "definition": "Unweighted arithmetic mean over available datasets for this method; missing values excluded, never replaced with zero."
+      "definition": "Unweighted arithmetic mean over available datasets for this method; missing values excluded"
     },
     "FastTree": {
       "mean_nrf": 0.05187428350673165,
@@ -89,7 +79,7 @@
         "butterfly"
       ],
       "count": 9,
-      "definition": "Unweighted arithmetic mean over available datasets for this method; missing values excluded, never replaced with zero."
+      "definition": "Unweighted arithmetic mean over available datasets for this method; missing values excluded"
     },
     "CASTER-site": {
       "mean_nrf": 0.11325959319068703,
@@ -107,7 +97,7 @@
       ],
       "missing_datasets": [],
       "count": 10,
-      "definition": "Unweighted arithmetic mean over available datasets for this method; missing values excluded, never replaced with zero."
+      "definition": "Unweighted arithmetic mean over available datasets for this method; missing values excluded"
     },
     "DIPPER": {
       "mean_nrf": 0.652552217991779,
@@ -125,7 +115,10 @@
       ],
       "missing_datasets": [],
       "count": 10,
-      "definition": "Unweighted arithmetic mean over available datasets for this method; missing values excluded, never replaced with zero."
+      "definition": "Unweighted arithmetic mean over available datasets for this method; missing values excluded"
     }
-  }
+  },
+  "comparator_inference": false,
+  "comparator_measurements": "Reused historical records, unchanged",
+  "scope": "Current packaged bounded AP-NJ pipeline on original archived concatenations; published references are not biological truth"
 }

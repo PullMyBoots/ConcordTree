@@ -1,0 +1,1303 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-08",
+  "status": "passed",
+  "scope": "Production legacy-code separation, shared-tool extraction and accurate runtime documentation; no scientific configuration change.",
+  "statistics": {
+    "removed_files": 52,
+    "modified_files": 16,
+    "added_files": 3,
+    "removed_native_extensions": 11,
+    "removed_native_bytes": 2624208,
+    "net_removed_code_bytes": 2761193
+  },
+  "files": [
+    {
+      "file": "METHOD_CONTRACT.json",
+      "action": "modified",
+      "before": {
+        "sha256": "0a5ac979386d73e2ceb547103a26fc8d30330189397929d71a09f623afc4f867",
+        "bytes": 7424
+      },
+      "after_sha256": "d39898aa4bb65b6c03eafa334b71c531630bc0935467043be12c178c39cf9965",
+      "after_bytes": 7886
+    },
+    {
+      "file": "NATIVE.md",
+      "action": "modified",
+      "before": {
+        "sha256": "4b0fd89d46f6c8d20af08010a127ec63a540eb00ae0920cf0f266046b586474f",
+        "bytes": 4320
+      },
+      "after_sha256": "324070283c57f9523beb57bf04db3261fd3e31a0a3538ea6c4780414b11dd228",
+      "after_bytes": 4798
+    },
+    {
+      "file": "runtime/gene/algorithm.py",
+      "action": "modified",
+      "before": {
+        "sha256": "74eb4d4444905f707ca1d1780a56c7070f4e200a2e27cc1650512690ca1db87f",
+        "bytes": 17952
+      },
+      "after_sha256": "fbded42982d61d043c1e66112ec6d3dc0f1381c0316f50466e06feaa6a91970f",
+      "after_bytes": 17946
+    },
+    {
+      "file": "runtime/gene/cli.py",
+      "action": "removed",
+      "before": {
+        "sha256": "135355983bdc36260ac0a567c239d2fc09618ec63faadd4837ca3f55210ccec8",
+        "bytes": 5553
+      }
+    },
+    {
+      "file": "runtime/gene/runtime/full_context_ml.py",
+      "action": "removed",
+      "before": {
+        "sha256": "d02035f2b9bcd88df7d6cb65f3bc0b7f1a27565f90260dd1e447a9a93ea07e22",
+        "bytes": 14916
+      }
+    },
+    {
+      "file": "runtime/msc_refine/METHOD.md",
+      "action": "modified",
+      "before": {
+        "sha256": "0d82aa26e218b602d39d8000213129ad117bceecb7601c5517c4bb24b6f88398",
+        "bytes": 5701
+      },
+      "after_sha256": "db39d65f4efc43f45b414df582697b75597740813c648f3068351fd206ff6408",
+      "after_bytes": 3968
+    },
+    {
+      "file": "runtime/msc_refine/README.md",
+      "action": "modified",
+      "before": {
+        "sha256": "55f909574733827c1132ddf1b2cfd9db141e75db970d6e369c2061d85125de2b",
+        "bytes": 4263
+      },
+      "after_sha256": "ec84a703a282298c574e496e7ba077e015bb8f8edfd777dec49062714dd0692c",
+      "after_bytes": 2470
+    },
+    {
+      "file": "runtime/msc_refine/README_GPU0.md",
+      "action": "removed",
+      "before": {
+        "sha256": "11ec2c35c0754b3fad25644f6a717575c26f898c1808213570e7232289dd585a",
+        "bytes": 4423
+      }
+    },
+    {
+      "file": "runtime/msc_refine/__init__.py",
+      "action": "modified",
+      "before": {
+        "sha256": "f1ca659f52eddcf7e902b2633d2a36a99efcda12f55ade1dca70ce149935a8f0",
+        "bytes": 82
+      },
+      "after_sha256": "d1f6354e08fdd1200afb8ef9434e0e49f0ca1b80315739af73dee2d809ec59e5",
+      "after_bytes": 85
+    },
+    {
+      "file": "runtime/msc_refine/_msc_active.cpython-310-x86_64-linux-gnu.so",
+      "action": "removed",
+      "before": {
+        "sha256": "52a7d04e935b0573c37679c684294d527de6f0e9337c35c16281bee62df6eba0",
+        "bytes": 246224
+      }
+    },
+    {
+      "file": "runtime/msc_refine/_msc_active_fast.cpython-310-x86_64-linux-gnu.so",
+      "action": "removed",
+      "before": {
+        "sha256": "6b74e37513451e7393f78f9f2d9e25fc331635f604e93e62435bda1abd7eb121",
+        "bytes": 250072
+      }
+    },
+    {
+      "file": "runtime/msc_refine/_msc_active_gpu.cpython-310-x86_64-linux-gnu.so",
+      "action": "removed",
+      "before": {
+        "sha256": "df2f20c3381d2367a4a5642c73c5c2b86a97dc420d3a33eb8d3cefa3e6ecc80f",
+        "bytes": 241968
+      }
+    },
+    {
+      "file": "runtime/msc_refine/_msc_active_norm.cpython-310-x86_64-linux-gnu.so",
+      "action": "removed",
+      "before": {
+        "sha256": "63872eb6d9be34fc3bcb3bb25d428bf8509bcc5507ce1e09743164ef24313ddf",
+        "bytes": 206000
+      }
+    },
+    {
+      "file": "runtime/msc_refine/_msc_active_rmq.cpython-310-x86_64-linux-gnu.so",
+      "action": "removed",
+      "before": {
+        "sha256": "1a6c1bb1de9c6d8c94e91601157857dcc59e0f4be606fd9778694ff575479230",
+        "bytes": 254728
+      }
+    },
+    {
+      "file": "runtime/msc_refine/_msc_rate_objective.cpython-310-x86_64-linux-gnu.so",
+      "action": "removed",
+      "before": {
+        "sha256": "8ff3053d3ee8413f5a8fdecc858b7f5b71b5b53aa2ee5beed8c8449ded198583",
+        "bytes": 229304
+      }
+    },
+    {
+      "file": "runtime/msc_refine/_msc_rate_pair.cpython-310-x86_64-linux-gnu.so",
+      "action": "removed",
+      "before": {
+        "sha256": "c55e383f7d0aa79ef4994d88d35a24393dd3297f976b0a4f96bae5dc0d3bbac7",
+        "bytes": 224088
+      }
+    },
+    {
+      "file": "runtime/msc_refine/_msc_sparse.cpython-310-x86_64-linux-gnu.so",
+      "action": "removed",
+      "before": {
+        "sha256": "5faef7e31b0a9283b863d2bd01702527abcd2ff5f9b417eb93a0b0e78bacba6b",
+        "bytes": 260816
+      }
+    },
+    {
+      "file": "runtime/msc_refine/_msc_spr.cpython-310-x86_64-linux-gnu.so",
+      "action": "removed",
+      "before": {
+        "sha256": "64aa659ae9f820208414a94486b56dd70b594e050b29159074342e611ad999f3",
+        "bytes": 269032
+      }
+    },
+    {
+      "file": "runtime/msc_refine/_pair_features.cpython-310-x86_64-linux-gnu.so",
+      "action": "removed",
+      "before": {
+        "sha256": "efcc6e895cc51d7f4bbf96cdfe189a9b76831c0a6daf9ff871a01463f22e4f2d",
+        "bytes": 220704
+      }
+    },
+    {
+      "file": "runtime/msc_refine/_uniform_plan.cpython-310-x86_64-linux-gnu.so",
+      "action": "removed",
+      "before": {
+        "sha256": "87c0113471b7b50fca79a55402390b6aa416d1d4914a1ef3c0b62b2eb568417d",
+        "bytes": 221272
+      }
+    },
+    {
+      "file": "runtime/msc_refine/active_backend.cpp",
+      "action": "removed",
+      "before": {
+        "sha256": "c49286cb709a041382bbe6350b8d7cfa0c50408bc270440ac730ca96d30a501a",
+        "bytes": 3842
+      }
+    },
+    {
+      "file": "runtime/msc_refine/active_fast_backend.cpp",
+      "action": "removed",
+      "before": {
+        "sha256": "1c66edc9e78aac9187205676ad6c5b0b5a5d2699f62238d182700292f31e7262",
+        "bytes": 4692
+      }
+    },
+    {
+      "file": "runtime/msc_refine/active_gpu_backend.cpp",
+      "action": "removed",
+      "before": {
+        "sha256": "8b4c76bb4d901bf12295a16b6c5563e03ac7fe0c4e497252ff013ab1ac8bbc55",
+        "bytes": 2330
+      }
+    },
+    {
+      "file": "runtime/msc_refine/active_index.hpp",
+      "action": "removed",
+      "before": {
+        "sha256": "e4990b6f6c447171e09a67da810be53a0480defad8053db9dc69b37b8870fbd3",
+        "bytes": 2341
+      }
+    },
+    {
+      "file": "runtime/msc_refine/active_norm_backend.cpp",
+      "action": "removed",
+      "before": {
+        "sha256": "44f622f90fe6e0e86038f11d59f7ff39a15ec0ea1cf6aaa9adfd8f285c51f668",
+        "bytes": 817
+      }
+    },
+    {
+      "file": "runtime/msc_refine/active_quartet.py",
+      "action": "modified",
+      "before": {
+        "sha256": "e0010c5c34a874495df1a8d53220db3d54a6b95a211675dd3600da70b95e4270",
+        "bytes": 7132
+      },
+      "after_sha256": "316b2259ed85c7cdafca633eb4852235b32215d2047caa569d172130237df2dc",
+      "after_bytes": 4138
+    },
+    {
+      "file": "runtime/msc_refine/active_rmq_backend.cpp",
+      "action": "removed",
+      "before": {
+        "sha256": "66d9bec624e46a2b093031330258cf04122f30419d90064f2344fcd927c720ce",
+        "bytes": 4702
+      }
+    },
+    {
+      "file": "runtime/msc_refine/active_rmq_index.hpp",
+      "action": "removed",
+      "before": {
+        "sha256": "f9cb37d577016a673ede6262dd1876406dd62fd80bd92b97f9e37a33fc1d7e79",
+        "bytes": 1874
+      }
+    },
+    {
+      "file": "runtime/msc_refine/active_streamsum.py",
+      "action": "modified",
+      "before": {
+        "sha256": "5fe47e37c3f8dcbb2f641dde7aca57f7cf468edabc9f34789fafaebe0185cc33",
+        "bytes": 4299
+      },
+      "after_sha256": "ddbec218a18332a08bce86103822642f37b5135a53ec8cbcac240ea714bb842e",
+      "after_bytes": 4223
+    },
+    {
+      "file": "runtime/msc_refine/barycenter_features_fused.py",
+      "action": "removed",
+      "before": {
+        "sha256": "f1d5878ea0b0c3e89df8f527278f4517832b1e3384134e29173fcc27b9228fbd",
+        "bytes": 1338
+      }
+    },
+    {
+      "file": "runtime/msc_refine/barycenter_kernel.py",
+      "action": "modified",
+      "before": {
+        "sha256": "581b354cca0a9487a30d1e81f3a37f732c730c7e709d0e95f6b38851383a1830",
+        "bytes": 889
+      },
+      "after_sha256": "29c482d740868c31f24de85908d4d788307649a1bddd28470e66b6590e2c436d",
+      "after_bytes": 902
+    },
+    {
+      "file": "runtime/msc_refine/barycenter_tree.py",
+      "action": "removed",
+      "before": {
+        "sha256": "e332e56dfd22235e15f881726ef122319f60f613e24761fc5a3e95d5c837b60d",
+        "bytes": 3190
+      }
+    },
+    {
+      "file": "runtime/msc_refine/barycenter_tree_batched.py",
+      "action": "removed",
+      "before": {
+        "sha256": "c9410439c00b63a8c1107b7f04adab22e524bb9826c3c5a7bcc34ae1e58bc31c",
+        "bytes": 1004
+      }
+    },
+    {
+      "file": "runtime/msc_refine/barycenter_tree_fused_features.py",
+      "action": "removed",
+      "before": {
+        "sha256": "2823a55d056d9091df4429ab2626d6b04a76de171eb3adeeace37e1beb329c3d",
+        "bytes": 881
+      }
+    },
+    {
+      "file": "runtime/msc_refine/barycenter_tree_resident.py",
+      "action": "removed",
+      "before": {
+        "sha256": "390ccb62cd8d4296625399b972595424bb7b0f6a30cee9d62592fe07e09bd46a",
+        "bytes": 2479
+      }
+    },
+    {
+      "file": "runtime/msc_refine/barycenter_tree_tiled.py",
+      "action": "modified",
+      "before": {
+        "sha256": "be12bbeeca156be43eb4c5c187a23a0a3c9654f5644a62a5f72f37c997078f4b",
+        "bytes": 3368
+      },
+      "after_sha256": "e93c18d2deaff67dbd592f4e5a4fa7f0cd7ca9cdc8956a416a54a0522812a79c",
+      "after_bytes": 3328
+    },
+    {
+      "file": "runtime/msc_refine/build_active.py",
+      "action": "removed",
+      "before": {
+        "sha256": "536d11aa6c18c029de8af7ab9fd59847a9a626aa5f56b57e4793fd72b017b5ab",
+        "bytes": 424
+      }
+    },
+    {
+      "file": "runtime/msc_refine/build_active_fast.py",
+      "action": "removed",
+      "before": {
+        "sha256": "6a5ba8f674558a2c52465609a7f87ca17c16d08f1e48ea9ff32abe6dbfbce55e",
+        "bytes": 434
+      }
+    },
+    {
+      "file": "runtime/msc_refine/build_active_gpu.py",
+      "action": "removed",
+      "before": {
+        "sha256": "95bc169e51c7d74f5023f8751b2a202caa10756487eb0fdd19c4d12b272889ce",
+        "bytes": 356
+      }
+    },
+    {
+      "file": "runtime/msc_refine/build_active_norm.py",
+      "action": "removed",
+      "before": {
+        "sha256": "48db73d708bf78db65acc5c370935403320bae76294ba15383975e4b12502d87",
+        "bytes": 445
+      }
+    },
+    {
+      "file": "runtime/msc_refine/build_active_rmq.py",
+      "action": "removed",
+      "before": {
+        "sha256": "003ae08ccae763ddf7caafc4600b939db3f8ff02369d8d995c58c5c296640c46",
+        "bytes": 516
+      }
+    },
+    {
+      "file": "runtime/msc_refine/build_pair_features.py",
+      "action": "removed",
+      "before": {
+        "sha256": "3d02db6571d1c4afeb5fb89c3c6de74a3279285694532aed36a27cac076e051a",
+        "bytes": 465
+      }
+    },
+    {
+      "file": "runtime/msc_refine/build_rate_objective.py",
+      "action": "removed",
+      "before": {
+        "sha256": "5f1b1678ea8b19aeaf30f2e6c032b43b298424d82897a0ef0192b373c3717a8d",
+        "bytes": 579
+      }
+    },
+    {
+      "file": "runtime/msc_refine/build_rate_pair.py",
+      "action": "removed",
+      "before": {
+        "sha256": "16c280d8215d82d8ae28dde2bc49144f0902f887df25f71f074f23a49bfb9411",
+        "bytes": 431
+      }
+    },
+    {
+      "file": "runtime/msc_refine/build_sparse.py",
+      "action": "removed",
+      "before": {
+        "sha256": "974aac5b4f5d6ebec9cbb5d68231d3378cb0c5b651c65f1930c9ba630508e4e4",
+        "bytes": 428
+      }
+    },
+    {
+      "file": "runtime/msc_refine/build_spr.py",
+      "action": "removed",
+      "before": {
+        "sha256": "73cc894b8d3bd934c548469b4b6b760ff4fa6b853ea7d3cbc8aa5a786a4d788b",
+        "bytes": 547
+      }
+    },
+    {
+      "file": "runtime/msc_refine/build_uniform_plan.py",
+      "action": "removed",
+      "before": {
+        "sha256": "bb09c8f182592f9c7f6e931f93a3ec7221a131e595f9d7e8785b825151d9557a",
+        "bytes": 520
+      }
+    },
+    {
+      "file": "runtime/msc_refine/core.py",
+      "action": "modified",
+      "before": {
+        "sha256": "10377194995bf114a2e6507209e0067827c82b9d8d423bd212c54f4641b5a033",
+        "bytes": 5830
+      },
+      "after_sha256": "cc8e908d11018b46247330a995742352f1df1121ff8f5c7f1953711cc603e02e",
+      "after_bytes": 3765
+    },
+    {
+      "file": "runtime/msc_refine/fixed_rank.py",
+      "action": "removed",
+      "before": {
+        "sha256": "25c1a0e231e8b923cf8f51a539533e1080b84f781d12bed0597a25ed1417b5a6",
+        "bytes": 4971
+      }
+    },
+    {
+      "file": "runtime/msc_refine/kernel_direct.py",
+      "action": "modified",
+      "before": {
+        "sha256": "d09a1400a5b549c5864f61dea2caf302aa2f74400d11fc49ad224c2cdc32a9af",
+        "bytes": 1818
+      },
+      "after_sha256": "158aaf0766ee2f4eb639668427c4441d03e06287e98eb8d9c75dc97c8e17503b",
+      "after_bytes": 491
+    },
+    {
+      "file": "runtime/msc_refine/kernel_direct_dynamic.py",
+      "action": "modified",
+      "before": {
+        "sha256": "aadeb57f669c71d211c9c35fdfb380906871a5dd4fc624e41bb51fa6ee44c671",
+        "bytes": 1549
+      },
+      "after_sha256": "f0aea41323019c935687d62a04a5e21f849bef8725ea922d802315df9915fbb1",
+      "after_bytes": 826
+    },
+    {
+      "file": "runtime/msc_refine/kernel_tree.py",
+      "action": "removed",
+      "before": {
+        "sha256": "910e374abf19a86c9b9001ca0f3dbb4e3d77c91f47d97f5d1260f213499b1b14",
+        "bytes": 3310
+      }
+    },
+    {
+      "file": "runtime/msc_refine/locus_barycenter.py",
+      "action": "removed",
+      "before": {
+        "sha256": "123a319f3c816ac1ca9b513aa7fa3181779c6dc7dc34c36c080ee737eefc5ab8",
+        "bytes": 1274
+      }
+    },
+    {
+      "file": "runtime/msc_refine/msc_kernel.py",
+      "action": "modified",
+      "before": {
+        "sha256": "8b1acc288e9bd2d83b47f271bc0eee40736f1dc8a2b3a4f240c2fbb7c991b0a5",
+        "bytes": 3752
+      },
+      "after_sha256": "e9fab3f210ef3d2874f5770c421deea62a7a45f08fb162f4ee7ef8f4afdee3a1",
+      "after_bytes": 1574
+    },
+    {
+      "file": "runtime/msc_refine/orbit_counts.py",
+      "action": "removed",
+      "before": {
+        "sha256": "cefc3a96ba2591a7dce5bce7712aa4ecb247484fa38580ad000b12b113920e52",
+        "bytes": 3451
+      }
+    },
+    {
+      "file": "runtime/msc_refine/pair_feature_backend.cpp",
+      "action": "removed",
+      "before": {
+        "sha256": "81285f47a5d606e6cd2c4f56b0131c123d015b954316b03e45ddb1cfcfdcc56f",
+        "bytes": 2364
+      }
+    },
+    {
+      "file": "runtime/msc_refine/quartet_bank.py",
+      "action": "removed",
+      "before": {
+        "sha256": "4523bc5392716c54c090a9dba0ffb43df907aff0e562a7920281eeb89887484f",
+        "bytes": 6019
+      }
+    },
+    {
+      "file": "runtime/msc_refine/rate_objective_backend.cpp",
+      "action": "removed",
+      "before": {
+        "sha256": "41d592e986577760e095e79eda91dcceee2a2a2017aff519e27c0c9df4f647e5",
+        "bytes": 4581
+      }
+    },
+    {
+      "file": "runtime/msc_refine/rate_pair_backend.cpp",
+      "action": "removed",
+      "before": {
+        "sha256": "fbdcb4ce7e2de8fe9896c767bbec588dd5ca39e8ec1b13bc1e51f1c5a9b2c085",
+        "bytes": 2263
+      }
+    },
+    {
+      "file": "runtime/msc_refine/sparse_backend.cpp",
+      "action": "removed",
+      "before": {
+        "sha256": "01bedfc5efd1fa53dff3304e9ec3759535d0bd1fd4999a3b862c19a83b0a9df4",
+        "bytes": 8674
+      }
+    },
+    {
+      "file": "runtime/msc_refine/spr_backend.cpp",
+      "action": "removed",
+      "before": {
+        "sha256": "56086a207a0a752cae39cb635f4ad4558cb50f4ea2b5a5d41b73d41ef735a463",
+        "bytes": 11547
+      }
+    },
+    {
+      "file": "runtime/msc_refine/state_cycle.py",
+      "action": "removed",
+      "before": {
+        "sha256": "0a63216fcab48b8f28b4d9a5f6da4e73d995cd5caf57e662d11f1ee46e64a501",
+        "bytes": 702
+      }
+    },
+    {
+      "file": "runtime/msc_refine/topology_gpu.py",
+      "action": "modified",
+      "before": {
+        "sha256": "ffc7900bf2763ff02e7504393e9f2cd395617206002710bdae7f8da9382653b0",
+        "bytes": 4845
+      },
+      "after_sha256": "de0aff8873adccc0b522aae3dab44858a3752b7c9c2a8997489b2ec4e5e46813",
+      "after_bytes": 3876
+    },
+    {
+      "file": "runtime/msc_refine/uniform_cached.py",
+      "action": "removed",
+      "before": {
+        "sha256": "bc3a8496047ddb311d4ebda0f6ea2d0ef41a8c5b6bc5ea5880f87fb3610dc22c",
+        "bytes": 5501
+      }
+    },
+    {
+      "file": "runtime/msc_refine/uniform_native.py",
+      "action": "removed",
+      "before": {
+        "sha256": "54ef058d7059a32fa8cc9ed617a46711c4155145492e0a13c8f0b53b8201e2a5",
+        "bytes": 2218
+      }
+    },
+    {
+      "file": "runtime/msc_refine/uniform_plan_backend.cpp",
+      "action": "removed",
+      "before": {
+        "sha256": "bfcda0a4bcb432139d1d0f8295bfe55fa06409ba55157d11b010d0337d062c90",
+        "bytes": 5732
+      }
+    },
+    {
+      "file": "runtime/msc_refine/uniform_search.py",
+      "action": "removed",
+      "before": {
+        "sha256": "c5f7f329584466ff3188dd1e449d789bb4fc3c0f5291097e1d6032aa694b45b2",
+        "bytes": 6896
+      }
+    },
+    {
+      "file": "tests/test_contract.py",
+      "action": "modified",
+      "before": {
+        "sha256": "61fef855eba5c860708eb9847b3e89ee2aa634beb1d82ed819c3baa0d05e2483",
+        "bytes": 5552
+      },
+      "after_sha256": "c8fdc0f6bc74e4f2c7e314898c0659d4478d3e2112f0319621f557613b6d808a",
+      "after_bytes": 5560
+    },
+    {
+      "file": "runtime/gene/runtime/nni_moves.py",
+      "action": "added",
+      "after_sha256": "29cfc6e74ec81279389cf51ede80e0c433e2a3bfadcbb0a25ca93c887f3649d3",
+      "after_bytes": 988
+    },
+    {
+      "file": "runtime/msc_refine/barycenter_state.py",
+      "action": "added",
+      "after_sha256": "789395f753c9cf71a1aca31fed24588ee4d3a57349578d4f5a552caa96b7ca4d",
+      "after_bytes": 3156
+    },
+    {
+      "file": "runtime/msc_refine/pattern_layout.py",
+      "action": "added",
+      "after_sha256": "bf6ef4acc6c995e4b64e4b367093d115de51049af48a2939ff6a5f34f1a05dcb",
+      "after_bytes": 841
+    }
+  ],
+  "regression": {
+    "status": "passed",
+    "scope": "11 development regression configurations, warmup plus 2 measured repetitions per revision; no fresh accuracy benchmark",
+    "inferences_per_revision": 33,
+    "comparisons": [
+      {
+        "id": "gene/n256/000/gene",
+        "repeat": -1,
+        "trees": 5,
+        "json_files": 15,
+        "exact_scientific_output": true
+      },
+      {
+        "id": "gene/n256/000/gene",
+        "repeat": 0,
+        "trees": 5,
+        "json_files": 15,
+        "exact_scientific_output": true
+      },
+      {
+        "id": "gene/n256/000/gene",
+        "repeat": 1,
+        "trees": 5,
+        "json_files": 15,
+        "exact_scientific_output": true
+      },
+      {
+        "id": "gene/n1024/000/gene",
+        "repeat": -1,
+        "trees": 5,
+        "json_files": 15,
+        "exact_scientific_output": true
+      },
+      {
+        "id": "gene/n1024/000/gene",
+        "repeat": 0,
+        "trees": 5,
+        "json_files": 15,
+        "exact_scientific_output": true
+      },
+      {
+        "id": "gene/n1024/000/gene",
+        "repeat": 1,
+        "trees": 5,
+        "json_files": 15,
+        "exact_scientific_output": true
+      },
+      {
+        "id": "gene/n4096/000/gene",
+        "repeat": -1,
+        "trees": 5,
+        "json_files": 17,
+        "exact_scientific_output": true
+      },
+      {
+        "id": "gene/n4096/000/gene",
+        "repeat": 0,
+        "trees": 5,
+        "json_files": 17,
+        "exact_scientific_output": true
+      },
+      {
+        "id": "gene/n4096/000/gene",
+        "repeat": 1,
+        "trees": 5,
+        "json_files": 17,
+        "exact_scientific_output": true
+      },
+      {
+        "id": "species/small/n32/ILS/0/msa_only",
+        "repeat": -1,
+        "trees": 4,
+        "json_files": 7,
+        "exact_scientific_output": true
+      },
+      {
+        "id": "species/small/n32/ILS/0/msa_only",
+        "repeat": 0,
+        "trees": 4,
+        "json_files": 7,
+        "exact_scientific_output": true
+      },
+      {
+        "id": "species/small/n32/ILS/0/msa_only",
+        "repeat": 1,
+        "trees": 4,
+        "json_files": 7,
+        "exact_scientific_output": true
+      },
+      {
+        "id": "species/small/n32/ILS/0/observed_loci",
+        "repeat": -1,
+        "trees": 4,
+        "json_files": 7,
+        "exact_scientific_output": true
+      },
+      {
+        "id": "species/small/n32/ILS/0/observed_loci",
+        "repeat": 0,
+        "trees": 4,
+        "json_files": 7,
+        "exact_scientific_output": true
+      },
+      {
+        "id": "species/small/n32/ILS/0/observed_loci",
+        "repeat": 1,
+        "trees": 4,
+        "json_files": 7,
+        "exact_scientific_output": true
+      },
+      {
+        "id": "species/small/n192/complex/0/msa_only",
+        "repeat": -1,
+        "trees": 4,
+        "json_files": 7,
+        "exact_scientific_output": true
+      },
+      {
+        "id": "species/small/n192/complex/0/msa_only",
+        "repeat": 0,
+        "trees": 4,
+        "json_files": 7,
+        "exact_scientific_output": true
+      },
+      {
+        "id": "species/small/n192/complex/0/msa_only",
+        "repeat": 1,
+        "trees": 4,
+        "json_files": 7,
+        "exact_scientific_output": true
+      },
+      {
+        "id": "species/small/n192/complex/0/observed_loci",
+        "repeat": -1,
+        "trees": 4,
+        "json_files": 7,
+        "exact_scientific_output": true
+      },
+      {
+        "id": "species/small/n192/complex/0/observed_loci",
+        "repeat": 0,
+        "trees": 4,
+        "json_files": 7,
+        "exact_scientific_output": true
+      },
+      {
+        "id": "species/small/n192/complex/0/observed_loci",
+        "repeat": 1,
+        "trees": 4,
+        "json_files": 7,
+        "exact_scientific_output": true
+      },
+      {
+        "id": "species/large/n512/ILS/0/msa_only",
+        "repeat": -1,
+        "trees": 4,
+        "json_files": 7,
+        "exact_scientific_output": true
+      },
+      {
+        "id": "species/large/n512/ILS/0/msa_only",
+        "repeat": 0,
+        "trees": 4,
+        "json_files": 7,
+        "exact_scientific_output": true
+      },
+      {
+        "id": "species/large/n512/ILS/0/msa_only",
+        "repeat": 1,
+        "trees": 4,
+        "json_files": 7,
+        "exact_scientific_output": true
+      },
+      {
+        "id": "species/large/n512/ILS/0/observed_loci",
+        "repeat": -1,
+        "trees": 4,
+        "json_files": 7,
+        "exact_scientific_output": true
+      },
+      {
+        "id": "species/large/n512/ILS/0/observed_loci",
+        "repeat": 0,
+        "trees": 4,
+        "json_files": 7,
+        "exact_scientific_output": true
+      },
+      {
+        "id": "species/large/n512/ILS/0/observed_loci",
+        "repeat": 1,
+        "trees": 4,
+        "json_files": 7,
+        "exact_scientific_output": true
+      },
+      {
+        "id": "species/large/n1024/complex/0/msa_only",
+        "repeat": -1,
+        "trees": 4,
+        "json_files": 7,
+        "exact_scientific_output": true
+      },
+      {
+        "id": "species/large/n1024/complex/0/msa_only",
+        "repeat": 0,
+        "trees": 4,
+        "json_files": 7,
+        "exact_scientific_output": true
+      },
+      {
+        "id": "species/large/n1024/complex/0/msa_only",
+        "repeat": 1,
+        "trees": 4,
+        "json_files": 7,
+        "exact_scientific_output": true
+      },
+      {
+        "id": "species/large/n1024/complex/0/observed_loci",
+        "repeat": -1,
+        "trees": 4,
+        "json_files": 7,
+        "exact_scientific_output": true
+      },
+      {
+        "id": "species/large/n1024/complex/0/observed_loci",
+        "repeat": 0,
+        "trees": 4,
+        "json_files": 7,
+        "exact_scientific_output": true
+      },
+      {
+        "id": "species/large/n1024/complex/0/observed_loci",
+        "repeat": 1,
+        "trees": 4,
+        "json_files": 7,
+        "exact_scientific_output": true
+      }
+    ],
+    "code_checks": [
+      {
+        "file": "runtime/gene/runtime/full_context_ml.py",
+        "name": "apply_proposals",
+        "cls": null,
+        "status": "exact_ast"
+      },
+      {
+        "file": "runtime/gene/runtime/full_context_ml.py",
+        "name": "independent_subset",
+        "cls": null,
+        "status": "exact_ast"
+      },
+      {
+        "file": "runtime/msc_refine/core.py",
+        "name": "EdgePlan",
+        "cls": null,
+        "status": "exact_ast"
+      },
+      {
+        "file": "runtime/msc_refine/core.py",
+        "name": "compile_plan",
+        "cls": null,
+        "status": "exact_ast"
+      },
+      {
+        "file": "runtime/msc_refine/core.py",
+        "name": "apply_move",
+        "cls": null,
+        "status": "exact_ast"
+      },
+      {
+        "file": "runtime/msc_refine/core.py",
+        "name": "select_moves",
+        "cls": null,
+        "status": "exact_ast"
+      },
+      {
+        "file": "runtime/msc_refine/quartet_bank.py",
+        "name": "canonical_pattern",
+        "cls": null,
+        "status": "exact_ast"
+      },
+      {
+        "file": "runtime/msc_refine/quartet_bank.py",
+        "name": "pattern_layout",
+        "cls": null,
+        "status": "exact_ast"
+      },
+      {
+        "file": "runtime/msc_refine/active_quartet.py",
+        "name": "tree_edges",
+        "cls": null,
+        "status": "exact_ast"
+      },
+      {
+        "file": "runtime/msc_refine/active_quartet.py",
+        "name": "refine_active",
+        "cls": null,
+        "status": "exact_ast"
+      },
+      {
+        "file": "runtime/msc_refine/active_quartet.py",
+        "name": "__init__",
+        "cls": "ActiveQuartetScorer",
+        "status": "exact_ast"
+      },
+      {
+        "file": "runtime/msc_refine/active_streamsum.py",
+        "name": "__init__",
+        "cls": "StreamSumActiveScorer",
+        "status": "exact_ast"
+      },
+      {
+        "file": "runtime/msc_refine/active_streamsum.py",
+        "name": "score",
+        "cls": "StreamSumActiveScorer",
+        "status": "exact_ast"
+      },
+      {
+        "file": "runtime/msc_refine/active_streamsum.py",
+        "name": "branch_support",
+        "cls": "StreamSumActiveScorer",
+        "status": "exact_ast"
+      },
+      {
+        "file": "runtime/msc_refine/barycenter_tree_tiled.py",
+        "name": "__init__",
+        "cls": "TiledBarycenterScorer",
+        "status": "exact_ast"
+      },
+      {
+        "file": "runtime/msc_refine/barycenter_tree_tiled.py",
+        "name": "predict",
+        "cls": "TiledBarycenterScorer",
+        "status": "exact_ast"
+      },
+      {
+        "file": "runtime/msc_refine/barycenter_kernel.py",
+        "name": "predict_features",
+        "cls": "BarycenterKernel",
+        "status": "exact_ast"
+      },
+      {
+        "file": "runtime/msc_refine/msc_kernel.py",
+        "name": "__init__",
+        "cls": "MSCKernel",
+        "status": "exact_ast"
+      },
+      {
+        "file": "runtime/msc_refine/kernel_direct.py",
+        "name": "__init__",
+        "cls": "DirectMSCKernel",
+        "status": "exact_ast"
+      },
+      {
+        "file": "runtime/msc_refine/msc_kernel.py",
+        "name": "orbit_permutation",
+        "cls": null,
+        "status": "exact_ast"
+      },
+      {
+        "file": "runtime/msc_refine/msc_kernel.py",
+        "name": "group_permutations",
+        "cls": null,
+        "status": "exact_ast"
+      },
+      {
+        "file": "runtime/msc_refine/msc_kernel.py",
+        "name": "candidate_permutations",
+        "cls": null,
+        "status": "exact_ast"
+      },
+      {
+        "file": "runtime/msc_refine/topology_gpu.py",
+        "name": "_lca",
+        "cls": null,
+        "status": "exact_ast"
+      },
+      {
+        "file": "runtime/msc_refine/topology_gpu.py",
+        "name": "_ancestor",
+        "cls": null,
+        "status": "exact_ast"
+      },
+      {
+        "file": "runtime/msc_refine/topology_gpu.py",
+        "name": "_pair",
+        "cls": null,
+        "status": "exact_ast"
+      },
+      {
+        "file": "runtime/msc_refine/topology_gpu.py",
+        "name": "_classify",
+        "cls": null,
+        "status": "exact_ast"
+      },
+      {
+        "file": "runtime/msc_refine/kernel_direct_dynamic.py",
+        "name": "_direct_runtime",
+        "cls": null,
+        "status": "exact_ast"
+      },
+      {
+        "file": "runtime/msc_refine/barycenter_state.py",
+        "status": "exact_constructor_statement_order_and_decorator"
+      }
+    ],
+    "immutable_files": [
+      "_ct_apnj_local.cpython-310-x86_64-linux-gnu.so",
+      "_ct_apnj_topology.cpython-310-x86_64-linux-gnu.so",
+      "_ct_apnj_terminal.cpython-310-x86_64-linux-gnu.so",
+      "_ct_apnj_packed.cpython-310-x86_64-linux-gnu.so",
+      "_ct_apnj_graph.cpython-310-x86_64-linux-gnu.so",
+      "assets/mlp/homogeneous.pth",
+      "assets/mlp/heterogeneous.pth",
+      "assets/msc/observed_loci.npz",
+      "assets/msc/msa_only.npz",
+      "runtime/gene/src/concordtree/assets/backends/candidate_graph_backend.cpython-310-x86_64-linux-gnu.so",
+      "runtime/gene/src/concordtree/assets/backends/pattern_freq_cuda_backend.cpython-310-x86_64-linux-gnu.so",
+      "runtime/gene/src/concordtree/assets/backends/sequence_processor_backend.cpython-310-x86_64-linux-gnu.so",
+      "runtime/gene/src/concordtree/assets/backends/learned_nni_plan_backend.cpython-310-x86_64-linux-gnu.so",
+      "runtime/gene/src/concordtree/assets/backends/panel_score_backend.cpython-310-x86_64-linux-gnu.so",
+      "runtime/gene/runtime/_packed_extract.cpython-310-x86_64-linux-gnu.so",
+      "runtime/gene/runtime/_repeat_builder_invariant.cpython-310-x86_64-linux-gnu.so",
+      "runtime/gene/runtime/_repeat_builder_frontier.cpython-310-x86_64-linux-gnu.so",
+      "runtime/gene/runtime/_tree_plan_native.cpython-310-x86_64-linux-gnu.so",
+      "runtime/gene/runtime/_global_patterns.cpython-310-x86_64-linux-gnu.so",
+      "runtime/gene/runtime/_repeat_builder_schedule.cpython-310-x86_64-linux-gnu.so",
+      "runtime/gene/runtime/_branch_support_reduce.cpython-310-x86_64-linux-gnu.so",
+      "runtime/msc_refine/barycenter_tile_features.py",
+      "runtime/msc_refine/_msc_active_plan.cpython-310-x86_64-linux-gnu.so",
+      "runtime/msc_refine/kernel_transposed.py",
+      "runtime/msc_refine/_msc_incremental_plan.cpython-310-x86_64-linux-gnu.so",
+      "runtime/msc_refine/topology_gpu_streamsum.py",
+      "runtime/msc_refine/bit_orbits.py",
+      "runtime/msc_refine/barycenter_streamed.py",
+      "runtime/msc_refine/_msc_active_streamsum.cpython-310-x86_64-linux-gnu.so",
+      "runtime/msc_refine/_msc_slim_index.cpython-310-x86_64-linux-gnu.so",
+      "runtime/msc_refine/_msc_plan.cpython-310-x86_64-linux-gnu.so"
+    ],
+    "excluded_observations": [
+      "*/apnj_seconds",
+      "*/canonicalization_seconds",
+      "*/constructor_seconds",
+      "*/export_seconds",
+      "*/frontend_seconds",
+      "*/local_cleanup/seconds",
+      "*/local_cleanup/times",
+      "*/mlp_seconds",
+      "*/projection_seconds",
+      "*/seconds",
+      "*/terminal/query_seconds",
+      "*/terminal/solve_seconds",
+      "*/times",
+      "*/update/seconds",
+      "*/upload_seconds",
+      "apnj_seconds",
+      "branch_support/computation/export_seconds",
+      "branch_support/computation/final_verification_and_summary_seconds",
+      "branch_support/computation/summary_seconds",
+      "canonicalization_seconds",
+      "computation/export_seconds",
+      "computation/final_verification_and_summary_seconds",
+      "computation/summary_seconds",
+      "constructor_seconds",
+      "details/initialization/*/apnj_seconds",
+      "details/initialization/*/canonicalization_seconds",
+      "details/initialization/*/constructor_seconds",
+      "details/initialization/*/export_seconds",
+      "details/initialization/*/frontend_seconds",
+      "details/initialization/*/local_cleanup/seconds",
+      "details/initialization/*/local_cleanup/times",
+      "details/initialization/*/mlp_seconds",
+      "details/initialization/*/projection_seconds",
+      "details/initialization/*/terminal/query_seconds",
+      "details/initialization/*/terminal/solve_seconds",
+      "details/initialization/*/times",
+      "details/initialization/*/upload_seconds",
+      "details/posterior/history/*/elapsed_seconds",
+      "details/posterior/history/*/exact_reduction_seconds",
+      "details/posterior/history/*/planning_seconds",
+      "details/posterior/history/*/quartet_seconds",
+      "details/posterior/history/*/seconds",
+      "details/posterior/history/*/update/seconds",
+      "details/posterior/phases",
+      "details/posterior/search_seconds",
+      "details/posterior/seconds",
+      "details/posterior/setup_seconds",
+      "elapsed_seconds",
+      "export_seconds",
+      "file_to_tree_seconds",
+      "frontend_seconds",
+      "global_equality/fold_seconds",
+      "global_equality/seconds",
+      "history/*/elapsed_seconds",
+      "history/*/exact_reduction_seconds",
+      "history/*/planning_seconds",
+      "history/*/quartet_seconds",
+      "history/*/seconds",
+      "history/*/update/seconds",
+      "initialization/seconds",
+      "load_seconds",
+      "local_cleanup/seconds",
+      "local_cleanup/times",
+      "mlp_seconds",
+      "parse_seconds",
+      "phases",
+      "preparation_seconds",
+      "projection_seconds",
+      "rate_mode_profiles/*/seconds",
+      "resident_setup/allocation_seconds",
+      "resident_setup/builder_seconds",
+      "resident_setup/capture_seconds",
+      "resident_setup/peak_live_site_id_bytes",
+      "resident_setup/peak_live_site_id_rows",
+      "search_seconds",
+      "seconds",
+      "setup_seconds",
+      "terminal/query_seconds",
+      "terminal/solve_seconds",
+      "times",
+      "timing",
+      "upload_seconds"
+    ],
+    "normalization": "Only release-root strings, enumerated timing fields and OpenMP-dependent peak live site-ID memory observations. All scientific values compared exactly.",
+    "timings": [
+      {
+        "id": "gene/n256/000/gene",
+        "before_seconds": 0.4965655505657196,
+        "after_seconds": 0.42766950698569417,
+        "after_over_before": 0.8612548866881027
+      },
+      {
+        "id": "gene/n1024/000/gene",
+        "before_seconds": 1.2218579929322004,
+        "after_seconds": 1.2241632211953402,
+        "after_over_before": 1.0018866580866796
+      },
+      {
+        "id": "gene/n4096/000/gene",
+        "before_seconds": 5.815047504380345,
+        "after_seconds": 6.333008882589638,
+        "after_over_before": 1.0890725961944634
+      },
+      {
+        "id": "species/small/n32/ILS/0/msa_only",
+        "before_seconds": 0.11973867192864418,
+        "after_seconds": 0.12125004827976227,
+        "after_over_before": 1.012622290917163
+      },
+      {
+        "id": "species/small/n32/ILS/0/observed_loci",
+        "before_seconds": 0.12817114824429154,
+        "after_seconds": 0.13028355175629258,
+        "after_over_before": 1.0164811156093791
+      },
+      {
+        "id": "species/small/n192/complex/0/msa_only",
+        "before_seconds": 0.5909181809984148,
+        "after_seconds": 0.5762585694901645,
+        "after_over_before": 0.975191808308417
+      },
+      {
+        "id": "species/small/n192/complex/0/observed_loci",
+        "before_seconds": 0.6516673532314599,
+        "after_seconds": 0.622749846894294,
+        "after_over_before": 0.9556253567195426
+      },
+      {
+        "id": "species/large/n512/ILS/0/msa_only",
+        "before_seconds": 1.4230924742296338,
+        "after_seconds": 1.6533249290660024,
+        "after_over_before": 1.1617832003229451
+      },
+      {
+        "id": "species/large/n512/ILS/0/observed_loci",
+        "before_seconds": 1.7314191414043307,
+        "after_seconds": 1.6736285048536956,
+        "after_over_before": 0.9666223878616925
+      },
+      {
+        "id": "species/large/n1024/complex/0/msa_only",
+        "before_seconds": 2.814232010394335,
+        "after_seconds": 2.766240674071014,
+        "after_over_before": 0.9829469154831352
+      },
+      {
+        "id": "species/large/n1024/complex/0/observed_loci",
+        "before_seconds": 2.98893681447953,
+        "after_seconds": 3.0235657007433474,
+        "after_over_before": 1.011585686955998
+      }
+    ],
+    "timing_limitations": "Sequential process runs with warmup; small sample, host noise and JIT effects; no speedup claim."
+  },
+  "timing_followup": {
+    "status": "passed",
+    "repetitions": 8,
+    "warmups": 1,
+    "order": "alternating paired retained processes on GPU0 and CPUs0-15",
+    "selection": "all primary mean deviations >5 percent",
+    "tree_bytes_identical": true,
+    "results": [
+      {
+        "id": "gene/n256/000/gene",
+        "means": {
+          "before": 0.4139669701689854,
+          "after": 0.42664458125364035
+        },
+        "medians": {
+          "before": 0.4251083331182599,
+          "after": 0.43112352257594466
+        },
+        "mean_ratio": 1.0306246923020932,
+        "median_ratio": 1.0141497801597115
+      },
+      {
+        "id": "gene/n4096/000/gene",
+        "means": {
+          "before": 4.5941301573766395,
+          "after": 4.641698048566468
+        },
+        "medians": {
+          "before": 4.594707128126174,
+          "after": 4.604560329578817
+        },
+        "mean_ratio": 1.010354058235257,
+        "median_ratio": 1.0021444677925884
+      },
+      {
+        "id": "species/large/n512/ILS/0/msa_only",
+        "means": {
+          "before": 1.3817566740326583,
+          "after": 1.3622044324874878
+        },
+        "medians": {
+          "before": 1.3478844440542161,
+          "after": 1.3631564513780177
+        },
+        "mean_ratio": 0.9858497216531567,
+        "median_ratio": 1.0113303535708638
+      }
+    ],
+    "limitation": "observational runtime check on development inputs; shared host and no universal equivalence/speedup claim"
+  },
+  "closure": {
+    "status": "passed",
+    "python_syntax_files": 115,
+    "retired_imports": [],
+    "msc_imported_modules": [
+      "msc_refine.active_quartet",
+      "msc_refine.active_streamsum",
+      "msc_refine.barycenter_kernel",
+      "msc_refine.barycenter_state",
+      "msc_refine.barycenter_streamed",
+      "msc_refine.barycenter_tile_features",
+      "msc_refine.barycenter_tree_tiled",
+      "msc_refine.bit_orbits",
+      "msc_refine.core",
+      "msc_refine.kernel_direct",
+      "msc_refine.kernel_direct_dynamic",
+      "msc_refine.kernel_transposed",
+      "msc_refine.msc_kernel",
+      "msc_refine.observations",
+      "msc_refine.pattern_layout",
+      "msc_refine.topology_gpu",
+      "msc_refine.topology_gpu_streamsum"
+    ],
+    "scorer_mro": [
+      "TiledBarycenterScorer",
+      "BarycenterState",
+      "object"
+    ],
+    "gene_nni_tools": "nni_moves",
+    "retained_cpp_local_includes": [],
+    "cuda_initialized": false
+  },
+  "checks": {
+    "contract_support_standalone_search": 39,
+    "kernel_boundaries": 7,
+    "build_audit": {
+      "status": "passed",
+      "verified_approved_snapshot": true,
+      "rejected_unreviewed_drift": true,
+      "manifest_not_rewritten": true
+    }
+  },
+  "test_fixture_repair": "Foreign-runtime contract fixture now points outside HERE for both project and standalone installs. The previous fixture failure was reproduced on the unmodified before snapshot.",
+  "preserved": "UI/Web server, existing technical reports and benchmark evidence, trained assets, active numerical kernels and retained native binary hashes.",
+  "limitations": [
+    "Development regression panel, not fresh held-out accuracy evidence.",
+    "Runtime observations do not establish universal performance equivalence.",
+    "Historical archived bundles/images are separate artifacts and were not rebuilt by this cleanup."
+  ],
+  "retired_code_backup": "Campaign before snapshot and per-target touched-file backups outside release payload."
+}

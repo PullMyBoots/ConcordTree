@@ -1,10 +1,11 @@
 """Numerically audited direct15 Gaussian evaluator on barycenter features."""
 import torch
 import triton
-from .kernel_direct_dynamic import DynamicDirectMSCKernel,_direct_runtime
+from .kernel_direct_dynamic import _direct_runtime
+from .kernel_direct import DirectMSCKernel
 
 
-class BarycenterKernel(DynamicDirectMSCKernel):
+class BarycenterKernel(DirectMSCKernel):
     @torch.inference_mode()
     def predict_features(self,features):
         x=torch.as_tensor(features,device=self.device,dtype=torch.float32).contiguous()

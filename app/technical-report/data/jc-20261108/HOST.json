@@ -1,0 +1,19 @@
+{
+  "captured_at": "2026-11-08T00:37:59.027793+00:00",
+  "system": "Linux-6.8.0-139-generic-x86_64-with-glibc2.39",
+  "cpu_models": [
+    "AMD EPYC 9754 128-Core Processor"
+  ],
+  "gpus": [
+    "0, NVIDIA L40S, 580.178.04, 46068 MiB",
+    "1, NVIDIA L40S, 580.178.04, 46068 MiB",
+    "2, NVIDIA L40S, 580.178.04, 46068 MiB"
+  ],
+  "timezone_for_user": "Asia/Shanghai",
+  "worker_gpus": [
+    0,
+    1
+  ],
+  "threads_per_worker": 16,
+  "other_gpu_untouched": 2
+}

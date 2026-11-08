@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "default": "geometry",
+  "themes": [
+    "geometry",
+    "seasons",
+    "nature"
+  ],
+  "geometry_pixels": 34240,
+  "photo_switch": true,
+  "reload_persistence": true,
+  "errors": [],
+  "date": "2026-11-08T11:54:34.523756+00:00",
+  "change": "Restore the original growing geometric life trees as Geometry; keep Seasons and Nature as independent choices",
+  "original_renderer_source": "subprojects-main/concordtree-modular-settings-20261108/before/web/app.js",
+  "photo_assets": "All 12 original desktop/mobile pairs retained byte-for-byte",
+  "inference_code_changed": false
+}

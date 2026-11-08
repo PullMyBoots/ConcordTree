@@ -9,7 +9,7 @@ import numpy as np
 from search_progress import ExactRecurrence
 
 def refine(adjacency,n_taxa,predict,*,plan_backend,nni,passes=10000,
-           representatives=4,min_margin=.10,stop_moves_at_most=None,progress=None):
+           representatives=4,min_margin=.10,stop_moves_at_most=None,progress=None,batch_size=65536,checkpoint=None):
     from concordtree.assets import load_candidate_graph_backend
     backend=load_candidate_graph_backend()
     neighbors=nni._adjacency_neighbor_array(adjacency,n_taxa)
@@ -23,8 +23,8 @@ def refine(adjacency,n_taxa,predict,*,plan_backend,nni,passes=10000,
         timing['plan_seconds']+=perf_counter()-start
         count=len(canonical);start=perf_counter()
         probabilities=np.empty((count,3),dtype=np.float64)
-        for begin in range(0,count,65536):
-            end=min(begin+65536,count);values=np.asarray(predict(canonical[begin:end]),dtype=np.float64)
+        for begin in range(0,count,batch_size):
+            end=min(begin+batch_size,count);values=np.asarray(predict(canonical[begin:end]),dtype=np.float64)
             if values.shape!=(end-begin,3):raise ValueError('Probability shape mismatch')
             if (not np.isfinite(values).all() or np.any(values<0) or
                     np.any(values>1) or not np.allclose(values.sum(axis=1),1.,rtol=1e-5,atol=1e-7)):
@@ -43,6 +43,7 @@ def refine(adjacency,n_taxa,predict,*,plan_backend,nni,passes=10000,
         record=dict(pass_=pass_idx+1,edges_scored=len(edges),quartets_scored=count,moves=len(selected),
                     selected=[dict(edge=edges[i].tolist(),scores=scores[i].tolist(),best=int(best[i]),margin=float(margins[i])) for i in selected])
         record['pass']=record.pop('pass_');history.append(record)
+        if checkpoint is not None:checkpoint(neighbors,record)
         if progress is not None:progress(record)
         if not len(selected) or (stop_moves_at_most is not None and len(selected)<=stop_moves_at_most):
             stop='requested_move_ratio';converged=True;break
