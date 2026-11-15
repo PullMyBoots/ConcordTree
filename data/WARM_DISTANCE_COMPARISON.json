@@ -1,0 +1,924 @@
+{
+  "status": "complete",
+  "contract": {
+    "selected_ids": [
+      "species/small/n32/ILS/0",
+      "species/small/n32/ILS/25",
+      "species/small/n32/complex/0",
+      "species/small/n32/complex/25",
+      "species/small/n64/ILS/0",
+      "species/small/n64/ILS/25",
+      "species/small/n64/complex/0",
+      "species/small/n64/complex/25",
+      "species/small/n128/ILS/0",
+      "species/small/n128/ILS/25",
+      "species/small/n128/complex/0",
+      "species/small/n128/complex/25",
+      "species/small/n192/ILS/0",
+      "species/small/n192/ILS/25",
+      "species/small/n192/complex/0",
+      "species/small/n192/complex/25",
+      "species/small/n256/ILS/0",
+      "species/small/n256/ILS/25",
+      "species/small/n256/complex/0",
+      "species/small/n256/complex/25",
+      "species/large/n512/ILS/0",
+      "species/large/n512/ILS/25",
+      "species/large/n512/complex/0",
+      "species/large/n512/complex/25",
+      "species/large/n1024/ILS/0",
+      "species/large/n1024/ILS/25",
+      "species/large/n1024/complex/0",
+      "species/large/n1024/complex/25",
+      "empirical-concatenated/Bacteria",
+      "empirical-concatenated/fish",
+      "empirical-concatenated/mammal2",
+      "empirical-concatenated/plant1",
+      "empirical-concatenated/mammal82",
+      "empirical-concatenated/plant",
+      "empirical-concatenated/ruminant44",
+      "empirical-concatenated/Insecta",
+      "empirical-concatenated/mammal241",
+      "empirical-concatenated/butterfly"
+    ],
+    "selection": "Two predetermined record indices 0/25 per taxon-count/family stratum; all10 concatenated empirical inputs",
+    "gpu": 1,
+    "cpu_affinity": [
+      128,
+      129,
+      130,
+      131,
+      132,
+      133,
+      134,
+      135,
+      136,
+      137,
+      138,
+      139,
+      140,
+      141,
+      142,
+      143
+    ],
+    "threads": 16,
+    "warmup_per_arm_per_input": 1,
+    "simulation_measured_repeats_per_arm": 2,
+    "empirical_measured_repeats_per_arm": 1,
+    "schedule": "Unmeasured per-input warmups; simulations use alternating ABBA/BAAB; empirical pairs alternate AB/BA across inputs",
+    "timing": "RESULT.json.file_to_tree_seconds, including parsing, all initialization/refinement, support and output; retained engines",
+    "caveat": "Fixed38-input development panel; one empirical measurement per arm; not a universal speed guarantee",
+    "external_comparator_inference": false
+  },
+  "environments": {
+    "JC": {
+      "ready": true,
+      "affinity": [
+        128,
+        129,
+        130,
+        131,
+        132,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139,
+        140,
+        141,
+        142,
+        143
+      ],
+      "runtime": {
+        "cuda_visible_devices": "1",
+        "logical_device": "cuda:0",
+        "cpu_threads": 16,
+        "requested_cpu_threads": 16,
+        "caches": {
+          "TRITON_CACHE_DIR": "/home/student_su/publish_code/research-workbench/subprojects-main/concordtree-linux-distribution/app/.runtime/cache/triton",
+          "TORCH_EXTENSIONS_DIR": "/home/student_su/publish_code/research-workbench/subprojects-main/concordtree-linux-distribution/app/.runtime/cache/extensions",
+          "CUDA_CACHE_PATH": "/home/student_su/publish_code/research-workbench/subprojects-main/concordtree-linux-distribution/app/.runtime/cache/cuda",
+          "TMPDIR": "/home/student_su/publish_code/research-workbench/subprojects-main/concordtree-linux-distribution/app/.runtime/cache/tmp",
+          "XDG_CACHE_HOME": "/home/student_su/publish_code/research-workbench/subprojects-main/concordtree-linux-distribution/app/.runtime/cache/xdg",
+          "TORCHINDUCTOR_CACHE_DIR": "/home/student_su/publish_code/research-workbench/subprojects-main/concordtree-linux-distribution/app/.runtime/cache/inductor",
+          "TORCH_HOME": "/home/student_su/publish_code/research-workbench/subprojects-main/concordtree-linux-distribution/app/.runtime/cache/torch"
+        }
+      },
+      "frontend_sha256": "e6782f13a119dc7e50320a4da29371a54ff3efb6f7657c7af4eb8b436bc57dcd"
+    },
+    "K2P-gamma": {
+      "ready": true,
+      "affinity": [
+        128,
+        129,
+        130,
+        131,
+        132,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139,
+        140,
+        141,
+        142,
+        143
+      ],
+      "runtime": {
+        "cuda_visible_devices": "1",
+        "logical_device": "cuda:0",
+        "cpu_threads": 16,
+        "requested_cpu_threads": 16,
+        "caches": {
+          "TRITON_CACHE_DIR": "/home/student_su/publish_code/research-workbench/subprojects-main/concordtree-species-k2pgamma-20261108/app/.runtime/cache/triton",
+          "TORCH_EXTENSIONS_DIR": "/home/student_su/publish_code/research-workbench/subprojects-main/concordtree-species-k2pgamma-20261108/app/.runtime/cache/extensions",
+          "CUDA_CACHE_PATH": "/home/student_su/publish_code/research-workbench/subprojects-main/concordtree-species-k2pgamma-20261108/app/.runtime/cache/cuda",
+          "TMPDIR": "/home/student_su/publish_code/research-workbench/subprojects-main/concordtree-species-k2pgamma-20261108/app/.runtime/cache/tmp",
+          "XDG_CACHE_HOME": "/home/student_su/publish_code/research-workbench/subprojects-main/concordtree-species-k2pgamma-20261108/app/.runtime/cache/xdg",
+          "TORCHINDUCTOR_CACHE_DIR": "/home/student_su/publish_code/research-workbench/subprojects-main/concordtree-species-k2pgamma-20261108/app/.runtime/cache/inductor",
+          "TORCH_HOME": "/home/student_su/publish_code/research-workbench/subprojects-main/concordtree-species-k2pgamma-20261108/app/.runtime/cache/torch"
+        }
+      },
+      "frontend_sha256": "e60991a32d54105fb96a9faf0f0d09a4404c77e290d2ad1dbaaa7dd2bccd719a"
+    }
+  },
+  "summary": {
+    "simulation": {
+      "records": 28,
+      "jc_mean_seconds": 1.0390942681447737,
+      "k2pgamma_mean_seconds": 0.9564035283068993,
+      "ratio_of_means": 1.0864600949185748,
+      "ratio_ci95": [
+        1.0599407795752511,
+        1.1143378226989138
+      ],
+      "median_paired_ratio": 1.086860599267639,
+      "k2pgamma_time_change_percent": -7.957963235184861,
+      "faster": 25,
+      "slower": 3
+    },
+    "empirical-concatenated": {
+      "records": 10,
+      "jc_mean_seconds": 9.64475305834785,
+      "k2pgamma_mean_seconds": 9.040568374004215,
+      "ratio_of_means": 1.0668303871337277,
+      "ratio_ci95": [
+        1.0619208536055318,
+        1.0929419442818231
+      ],
+      "median_paired_ratio": 1.0835983304578414,
+      "k2pgamma_time_change_percent": -6.26438728590043,
+      "faster": 10,
+      "slower": 0
+    }
+  },
+  "records": [
+    {
+      "id": "species/small/n32/ILS/0",
+      "cohort": "simulation",
+      "taxa": 32,
+      "family": "ILS",
+      "jc_seconds": 0.12009059311822057,
+      "k2pgamma_seconds": 0.1123953671194613,
+      "jc_over_k2pgamma": 1.0684656867625182,
+      "time_change_fraction": -0.06407850772444657,
+      "measurements": {
+        "JC": [
+          0.12005312088876963,
+          0.12012806534767151
+        ],
+        "K2P-gamma": [
+          0.11298873461782932,
+          0.11180199962109327
+        ]
+      }
+    },
+    {
+      "id": "species/small/n32/ILS/25",
+      "cohort": "simulation",
+      "taxa": 32,
+      "family": "ILS",
+      "jc_seconds": 0.1169721013866365,
+      "k2pgamma_seconds": 0.10590226948261261,
+      "jc_over_k2pgamma": 1.1045287504989811,
+      "time_change_fraction": -0.09463651394475636,
+      "measurements": {
+        "JC": [
+          0.1156592033803463,
+          0.11828499939292669
+        ],
+        "K2P-gamma": [
+          0.10585797112435102,
+          0.1059465678408742
+        ]
+      }
+    },
+    {
+      "id": "species/small/n32/complex/0",
+      "cohort": "simulation",
+      "taxa": 32,
+      "family": "complex",
+      "jc_seconds": 0.10876208124682307,
+      "k2pgamma_seconds": 0.10356958722695708,
+      "jc_over_k2pgamma": 1.0501353163500344,
+      "time_change_fraction": -0.047741767722173534,
+      "measurements": {
+        "JC": [
+          0.10919361561536789,
+          0.10833054687827826
+        ],
+        "K2P-gamma": [
+          0.10397722478955984,
+          0.10316194966435432
+        ]
+      }
+    },
+    {
+      "id": "species/small/n32/complex/25",
+      "cohort": "simulation",
+      "taxa": 32,
+      "family": "complex",
+      "jc_seconds": 0.10081371385604143,
+      "k2pgamma_seconds": 0.09336341824382544,
+      "jc_over_k2pgamma": 1.0797988736097794,
+      "time_change_fraction": -0.07390160849400673,
+      "measurements": {
+        "JC": [
+          0.1012214059010148,
+          0.10040602181106806
+        ],
+        "K2P-gamma": [
+          0.09308717772364616,
+          0.09363965876400471
+        ]
+      }
+    },
+    {
+      "id": "species/small/n64/ILS/0",
+      "cohort": "simulation",
+      "taxa": 64,
+      "family": "ILS",
+      "jc_seconds": 0.23992500081658363,
+      "k2pgamma_seconds": 0.22389047779142857,
+      "jc_over_k2pgamma": 1.0716177087267305,
+      "time_change_fraction": -0.06683139718904507,
+      "measurements": {
+        "JC": [
+          0.23983703088015318,
+          0.2400129707530141
+        ],
+        "K2P-gamma": [
+          0.22294226195663214,
+          0.224838693626225
+        ]
+      }
+    },
+    {
+      "id": "species/small/n64/ILS/25",
+      "cohort": "simulation",
+      "taxa": 64,
+      "family": "ILS",
+      "jc_seconds": 0.2258891579695046,
+      "k2pgamma_seconds": 0.2054966506548226,
+      "jc_over_k2pgamma": 1.0992352296239405,
+      "time_change_fraction": -0.09027660954597483,
+      "measurements": {
+        "JC": [
+          0.22295704670250416,
+          0.22882126923650503
+        ],
+        "K2P-gamma": [
+          0.2040539849549532,
+          0.20693931635469198
+        ]
+      }
+    },
+    {
+      "id": "species/small/n64/complex/0",
+      "cohort": "simulation",
+      "taxa": 64,
+      "family": "complex",
+      "jc_seconds": 0.20618971530348063,
+      "k2pgamma_seconds": 0.18206393998116255,
+      "jc_over_k2pgamma": 1.1325126509116208,
+      "time_change_fraction": -0.11700765621024556,
+      "measurements": {
+        "JC": [
+          0.2066677426919341,
+          0.20571168791502714
+        ],
+        "K2P-gamma": [
+          0.18324976041913033,
+          0.18087811954319477
+        ]
+      }
+    },
+    {
+      "id": "species/small/n64/complex/25",
+      "cohort": "simulation",
+      "taxa": 64,
+      "family": "complex",
+      "jc_seconds": 0.18621318507939577,
+      "k2pgamma_seconds": 0.16966331796720624,
+      "jc_over_k2pgamma": 1.0975453463393212,
+      "time_change_fraction": -0.08887591448013288,
+      "measurements": {
+        "JC": [
+          0.18831373285502195,
+          0.1841126373037696
+        ],
+        "K2P-gamma": [
+          0.17032102961093187,
+          0.1690056063234806
+        ]
+      }
+    },
+    {
+      "id": "species/small/n128/ILS/0",
+      "cohort": "simulation",
+      "taxa": 128,
+      "family": "ILS",
+      "jc_seconds": 0.5474206218495965,
+      "k2pgamma_seconds": 0.6208457043394446,
+      "jc_over_k2pgamma": 0.8817337673811088,
+      "time_change_fraction": 0.13412918614896752,
+      "measurements": {
+        "JC": [
+          0.5490857791155577,
+          0.5457554645836353
+        ],
+        "K2P-gamma": [
+          0.6284903427585959,
+          0.6132010659202933
+        ]
+      }
+    },
+    {
+      "id": "species/small/n128/ILS/25",
+      "cohort": "simulation",
+      "taxa": 128,
+      "family": "ILS",
+      "jc_seconds": 0.4186512604355812,
+      "k2pgamma_seconds": 0.381950325332582,
+      "jc_over_k2pgamma": 1.0960882415037663,
+      "time_change_fraction": -0.08766469510879804,
+      "measurements": {
+        "JC": [
+          0.4162032902240753,
+          0.4210992306470871
+        ],
+        "K2P-gamma": [
+          0.3768354086205363,
+          0.38706524204462767
+        ]
+      }
+    },
+    {
+      "id": "species/small/n128/complex/0",
+      "cohort": "simulation",
+      "taxa": 128,
+      "family": "complex",
+      "jc_seconds": 0.4287891359999776,
+      "k2pgamma_seconds": 0.38437324529513717,
+      "jc_over_k2pgamma": 1.1155540643073014,
+      "time_change_fraction": -0.10358445906344682,
+      "measurements": {
+        "JC": [
+          0.43264269083738327,
+          0.4249355811625719
+        ],
+        "K2P-gamma": [
+          0.38349534943699837,
+          0.38525114115327597
+        ]
+      }
+    },
+    {
+      "id": "species/small/n128/complex/25",
+      "cohort": "simulation",
+      "taxa": 128,
+      "family": "complex",
+      "jc_seconds": 0.34589528758078814,
+      "k2pgamma_seconds": 0.3642749898135662,
+      "jc_over_k2pgamma": 0.949544430041204,
+      "time_change_fraction": 0.053136607790544854,
+      "measurements": {
+        "JC": [
+          0.3464919123798609,
+          0.3452986627817154
+        ],
+        "K2P-gamma": [
+          0.4151257174089551,
+          0.3134242622181773
+        ]
+      }
+    },
+    {
+      "id": "species/small/n192/ILS/0",
+      "cohort": "simulation",
+      "taxa": 192,
+      "family": "ILS",
+      "jc_seconds": 0.901497540064156,
+      "k2pgamma_seconds": 0.9567522266879678,
+      "jc_over_k2pgamma": 0.9422476529633076,
+      "time_change_fraction": 0.06129211025898029,
+      "measurements": {
+        "JC": [
+          0.9059723541140556,
+          0.8970227260142565
+        ],
+        "K2P-gamma": [
+          0.959909294731915,
+          0.9535951586440206
+        ]
+      }
+    },
+    {
+      "id": "species/small/n192/ILS/25",
+      "cohort": "simulation",
+      "taxa": 192,
+      "family": "ILS",
+      "jc_seconds": 0.7506189132109284,
+      "k2pgamma_seconds": 0.6355240549892187,
+      "jc_over_k2pgamma": 1.1811022845133097,
+      "time_change_fraction": -0.15333327764067062,
+      "measurements": {
+        "JC": [
+          0.7484620437026024,
+          0.7527757827192545
+        ],
+        "K2P-gamma": [
+          0.6311659729108214,
+          0.639882137067616
+        ]
+      }
+    },
+    {
+      "id": "species/small/n192/complex/0",
+      "cohort": "simulation",
+      "taxa": 192,
+      "family": "complex",
+      "jc_seconds": 0.5987444240599871,
+      "k2pgamma_seconds": 0.5561014623381197,
+      "jc_over_k2pgamma": 1.0766819809150936,
+      "time_change_fraction": -0.07122064107538983,
+      "measurements": {
+        "JC": [
+          0.6006260775029659,
+          0.5968627706170082
+        ],
+        "K2P-gamma": [
+          0.5570604084059596,
+          0.5551425162702799
+        ]
+      }
+    },
+    {
+      "id": "species/small/n192/complex/25",
+      "cohort": "simulation",
+      "taxa": 192,
+      "family": "complex",
+      "jc_seconds": 0.533964236266911,
+      "k2pgamma_seconds": 0.48812526231631637,
+      "jc_over_k2pgamma": 1.0939082188311122,
+      "time_change_fraction": -0.08584652461196163,
+      "measurements": {
+        "JC": [
+          0.5332959946244955,
+          0.5346324779093266
+        ],
+        "K2P-gamma": [
+          0.4878707733005285,
+          0.4883797513321042
+        ]
+      }
+    },
+    {
+      "id": "species/small/n256/ILS/0",
+      "cohort": "simulation",
+      "taxa": 256,
+      "family": "ILS",
+      "jc_seconds": 1.566660082899034,
+      "k2pgamma_seconds": 1.225468983873725,
+      "jc_over_k2pgamma": 1.2784167559645607,
+      "time_change_fraction": -0.21778246777944987,
+      "measurements": {
+        "JC": [
+          1.5640167128294706,
+          1.5693034529685974
+        ],
+        "K2P-gamma": [
+          1.220912708900869,
+          1.230025258846581
+        ]
+      }
+    },
+    {
+      "id": "species/small/n256/ILS/25",
+      "cohort": "simulation",
+      "taxa": 256,
+      "family": "ILS",
+      "jc_seconds": 0.887183097191155,
+      "k2pgamma_seconds": 0.7980777309276164,
+      "jc_over_k2pgamma": 1.1116499844695207,
+      "time_change_fraction": -0.10043627583263082,
+      "measurements": {
+        "JC": [
+          0.8766281204298139,
+          0.897738073952496
+        ],
+        "K2P-gamma": [
+          0.7993427142500877,
+          0.796812747605145
+        ]
+      }
+    },
+    {
+      "id": "species/small/n256/complex/0",
+      "cohort": "simulation",
+      "taxa": 256,
+      "family": "complex",
+      "jc_seconds": 0.7956821611151099,
+      "k2pgamma_seconds": 0.6978725832886994,
+      "jc_over_k2pgamma": 1.1401539194525832,
+      "time_change_fraction": -0.12292543757589736,
+      "measurements": {
+        "JC": [
+          0.7814755169674754,
+          0.8098888052627444
+        ],
+        "K2P-gamma": [
+          0.6966818869113922,
+          0.6990632796660066
+        ]
+      }
+    },
+    {
+      "id": "species/small/n256/complex/25",
+      "cohort": "simulation",
+      "taxa": 256,
+      "family": "complex",
+      "jc_seconds": 0.6862457999959588,
+      "k2pgamma_seconds": 0.6334939296357334,
+      "jc_over_k2pgamma": 1.0832713115192096,
+      "time_change_fraction": -0.07687022690781653,
+      "measurements": {
+        "JC": [
+          0.6819258509203792,
+          0.6905657490715384
+        ],
+        "K2P-gamma": [
+          0.6348108425736427,
+          0.632177016697824
+        ]
+      }
+    },
+    {
+      "id": "species/large/n512/ILS/0",
+      "cohort": "simulation",
+      "taxa": 512,
+      "family": "ILS",
+      "jc_seconds": 1.607677070889622,
+      "k2pgamma_seconds": 1.4450049134902656,
+      "jc_over_k2pgamma": 1.112575504678692,
+      "time_change_fraction": -0.10118459754441878,
+      "measurements": {
+        "JC": [
+          1.5624178862199187,
+          1.6529362555593252
+        ],
+        "K2P-gamma": [
+          1.4420640440657735,
+          1.4479457829147577
+        ]
+      }
+    },
+    {
+      "id": "species/large/n512/ILS/25",
+      "cohort": "simulation",
+      "taxa": 512,
+      "family": "ILS",
+      "jc_seconds": 1.726411973591894,
+      "k2pgamma_seconds": 1.5010555228218436,
+      "jc_over_k2pgamma": 1.1501319886864687,
+      "time_change_fraction": -0.13053457356483922,
+      "measurements": {
+        "JC": [
+          1.661001019179821,
+          1.7918229280039668
+        ],
+        "K2P-gamma": [
+          1.4991740640252829,
+          1.5029369816184044
+        ]
+      }
+    },
+    {
+      "id": "species/large/n512/complex/0",
+      "cohort": "simulation",
+      "taxa": 512,
+      "family": "complex",
+      "jc_seconds": 1.4895455036312342,
+      "k2pgamma_seconds": 1.3904522354714572,
+      "jc_over_k2pgamma": 1.0712669343339059,
+      "time_change_fraction": -0.06652584155247765,
+      "measurements": {
+        "JC": [
+          1.4827437475323677,
+          1.4963472597301006
+        ],
+        "K2P-gamma": [
+          1.392618809826672,
+          1.3882856611162424
+        ]
+      }
+    },
+    {
+      "id": "species/large/n512/complex/25",
+      "cohort": "simulation",
+      "taxa": 512,
+      "family": "complex",
+      "jc_seconds": 1.5578121300786734,
+      "k2pgamma_seconds": 1.4366047498770058,
+      "jc_over_k2pgamma": 1.0843707221572563,
+      "time_change_fraction": -0.07780616023033937,
+      "measurements": {
+        "JC": [
+          1.5610007671639323,
+          1.5546234929934144
+        ],
+        "K2P-gamma": [
+          1.4356750743463635,
+          1.437534425407648
+        ]
+      }
+    },
+    {
+      "id": "species/large/n1024/ILS/0",
+      "cohort": "simulation",
+      "taxa": 1024,
+      "family": "ILS",
+      "jc_seconds": 3.326216832268983,
+      "k2pgamma_seconds": 3.1175449788570404,
+      "jc_over_k2pgamma": 1.066934672900356,
+      "time_change_fraction": -0.06273549318478944,
+      "measurements": {
+        "JC": [
+          3.353576887398958,
+          3.298856777139008
+        ],
+        "K2P-gamma": [
+          3.130490254610777,
+          3.104599703103304
+        ]
+      }
+    },
+    {
+      "id": "species/large/n1024/ILS/25",
+      "cohort": "simulation",
+      "taxa": 1024,
+      "family": "ILS",
+      "jc_seconds": 3.3637404460459948,
+      "k2pgamma_seconds": 3.135348068084568,
+      "jc_over_k2pgamma": 1.072844345508649,
+      "time_change_fraction": -0.06789833568457915,
+      "measurements": {
+        "JC": [
+          3.3452088823542,
+          3.3822720097377896
+        ],
+        "K2P-gamma": [
+          3.105538315139711,
+          3.1651578210294247
+        ]
+      }
+    },
+    {
+      "id": "species/large/n1024/complex/0",
+      "cohort": "simulation",
+      "taxa": 1024,
+      "family": "complex",
+      "jc_seconds": 3.0274611692875624,
+      "k2pgamma_seconds": 2.8494113315828145,
+      "jc_over_k2pgamma": 1.062486533878506,
+      "time_change_fraction": -0.05881160079309866,
+      "measurements": {
+        "JC": [
+          3.0374104669317603,
+          3.0175118716433644
+        ],
+        "K2P-gamma": [
+          2.8215165892615914,
+          2.8773060739040375
+        ]
+      }
+    },
+    {
+      "id": "species/large/n1024/complex/25",
+      "cohort": "simulation",
+      "taxa": 1024,
+      "family": "complex",
+      "jc_seconds": 3.229566272813827,
+      "k2pgamma_seconds": 2.964671465102583,
+      "jc_over_k2pgamma": 1.0893504763780217,
+      "time_change_fraction": -0.08202179033794788,
+      "measurements": {
+        "JC": [
+          3.2057548528537154,
+          3.253377692773938
+        ],
+        "K2P-gamma": [
+          2.9875331623479724,
+          2.941809767857194
+        ]
+      }
+    },
+    {
+      "id": "empirical-concatenated/Bacteria",
+      "cohort": "empirical-concatenated",
+      "taxa": 33,
+      "family": "empirical",
+      "jc_seconds": 0.1475842073559761,
+      "k2pgamma_seconds": 0.13571737054735422,
+      "jc_over_k2pgamma": 1.087437862675665,
+      "time_change_fraction": -0.08040722663502087,
+      "measurements": {
+        "JC": [
+          0.1475842073559761
+        ],
+        "K2P-gamma": [
+          0.13571737054735422
+        ]
+      }
+    },
+    {
+      "id": "empirical-concatenated/fish",
+      "cohort": "empirical-concatenated",
+      "taxa": 35,
+      "family": "empirical",
+      "jc_seconds": 0.10088183172047138,
+      "k2pgamma_seconds": 0.09342996962368488,
+      "jc_over_k2pgamma": 1.079758798240018,
+      "time_change_fraction": -0.07386723624759817,
+      "measurements": {
+        "JC": [
+          0.10088183172047138
+        ],
+        "K2P-gamma": [
+          0.09342996962368488
+        ]
+      }
+    },
+    {
+      "id": "empirical-concatenated/mammal2",
+      "cohort": "empirical-concatenated",
+      "taxa": 60,
+      "family": "empirical",
+      "jc_seconds": 0.9916241969913244,
+      "k2pgamma_seconds": 0.921670988202095,
+      "jc_over_k2pgamma": 1.0758982431742667,
+      "time_change_fraction": -0.07054407204006685,
+      "measurements": {
+        "JC": [
+          0.9916241969913244
+        ],
+        "K2P-gamma": [
+          0.921670988202095
+        ]
+      }
+    },
+    {
+      "id": "empirical-concatenated/plant1",
+      "cohort": "empirical-concatenated",
+      "taxa": 244,
+      "family": "empirical",
+      "jc_seconds": 0.46161640714854,
+      "k2pgamma_seconds": 0.423115192912519,
+      "jc_over_k2pgamma": 1.0909946390036185,
+      "time_change_fraction": -0.08340521185944771,
+      "measurements": {
+        "JC": [
+          0.46161640714854
+        ],
+        "K2P-gamma": [
+          0.423115192912519
+        ]
+      }
+    },
+    {
+      "id": "empirical-concatenated/mammal82",
+      "cohort": "empirical-concatenated",
+      "taxa": 82,
+      "family": "empirical",
+      "jc_seconds": 4.163474189117551,
+      "k2pgamma_seconds": 3.891321513801813,
+      "jc_over_k2pgamma": 1.0699383678142402,
+      "time_change_fraction": -0.0653667257088053,
+      "measurements": {
+        "JC": [
+          4.163474189117551
+        ],
+        "K2P-gamma": [
+          3.891321513801813
+        ]
+      }
+    },
+    {
+      "id": "empirical-concatenated/plant",
+      "cohort": "empirical-concatenated",
+      "taxa": 1178,
+      "family": "empirical",
+      "jc_seconds": 7.6066536996513605,
+      "k2pgamma_seconds": 6.907824387773871,
+      "jc_over_k2pgamma": 1.1011648925404567,
+      "time_change_fraction": -0.09187079358029915,
+      "measurements": {
+        "JC": [
+          7.6066536996513605
+        ],
+        "K2P-gamma": [
+          6.907824387773871
+        ]
+      }
+    },
+    {
+      "id": "empirical-concatenated/ruminant44",
+      "cohort": "empirical-concatenated",
+      "taxa": 52,
+      "family": "empirical",
+      "jc_seconds": 11.105673578567803,
+      "k2pgamma_seconds": 10.381183383986354,
+      "jc_over_k2pgamma": 1.0697887868640314,
+      "time_change_fraction": -0.06523604259174343,
+      "measurements": {
+        "JC": [
+          11.105673578567803
+        ],
+        "K2P-gamma": [
+          10.381183383986354
+        ]
+      }
+    },
+    {
+      "id": "empirical-concatenated/Insecta",
+      "cohort": "empirical-concatenated",
+      "taxa": 46,
+      "family": "empirical",
+      "jc_seconds": 1.4312570625916123,
+      "k2pgamma_seconds": 1.3120532650500536,
+      "jc_over_k2pgamma": 1.0908528645268156,
+      "time_change_fraction": -0.0832860851185695,
+      "measurements": {
+        "JC": [
+          1.4312570625916123
+        ],
+        "K2P-gamma": [
+          1.3120532650500536
+        ]
+      }
+    },
+    {
+      "id": "empirical-concatenated/mammal241",
+      "cohort": "empirical-concatenated",
+      "taxa": 241,
+      "family": "empirical",
+      "jc_seconds": 2.120656198821962,
+      "k2pgamma_seconds": 1.932395812124014,
+      "jc_over_k2pgamma": 1.0974233050583047,
+      "time_change_fraction": -0.08877459099807306,
+      "measurements": {
+        "JC": [
+          2.120656198821962
+        ],
+        "K2P-gamma": [
+          1.932395812124014
+        ]
+      }
+    },
+    {
+      "id": "empirical-concatenated/butterfly",
+      "cohort": "empirical-concatenated",
+      "taxa": 38,
+      "family": "empirical",
+      "jc_seconds": 68.31810921151191,
+      "k2pgamma_seconds": 64.40697185602039,
+      "jc_over_k2pgamma": 1.0607253724679797,
+      "time_change_fraction": -0.05724891102273766,
+      "measurements": {
+        "JC": [
+          68.31810921151191
+        ],
+        "K2P-gamma": [
+          64.40697185602039
+        ]
+      }
+    }
+  ],
+  "bootstrap_replicates": 1000,
+  "bootstrap_seed": 20261105,
+  "bootstrap_unit": "whole selected input; empirical CI descriptive with10 heterogeneous datasets"
+}

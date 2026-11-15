@@ -1,0 +1,39 @@
+[
+  {
+    "name": "Insecta",
+    "taxa": 46,
+    "sites": 1691648,
+    "status": "source_download_unavailable",
+    "source": "https://doi.org/10.5061/dryad.2jm63xsxz",
+    "reason": "Original per-locus NEXUS identified (46Taxa.N123_All_Loci.nex / Occ66). Public download API returned HTTP 401 and file-stream endpoint returned 403; no verified public mirror recovered.",
+    "evidence": [
+      "originals/Insecta-files.json",
+      "downloads.log",
+      "originals/Insecta-zenodo-search.json"
+    ]
+  },
+  {
+    "name": "butterfly",
+    "taxa": 38,
+    "sites": 82883893,
+    "status": "no_verified_gene_boundaries",
+    "source": "https://doi.org/10.5061/dryad.bg79cnph0",
+    "reason": "CASTER archive supplies Alignment_butterfly.bz2; study data are SNPs. Gene-locus boundaries for the benchmark matrix were not established. The older Dryad 3xsj3txhj archive contains genome assemblies rather than this aligned matrix.",
+    "evidence": [
+      "originals/caster-zenodo.json",
+      "originals/butterfly-files.json"
+    ]
+  },
+  {
+    "name": "mammal241",
+    "taxa": 241,
+    "sites": 466232,
+    "status": "no_matching_locus_map",
+    "source": "https://zenodo.org/records/5823345",
+    "reason": "Original WholeGenome_Datasets.zip recovered (84,660,545 bytes). Available genome/neutral/reference-specific concatenations did not establish per-locus boundaries matching the 466,232-site benchmark.",
+    "evidence": [
+      "originals/mammal241-zenodo.json",
+      "originals/mammal241-WholeGenome_Datasets.zip.source.json"
+    ]
+  }
+]

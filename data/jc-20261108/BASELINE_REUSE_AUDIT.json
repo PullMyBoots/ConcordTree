@@ -1,0 +1,85 @@
+{
+  "records": 3700,
+  "comparator_inference": false,
+  "source": "subprojects-main/concordtree-technical-report-refresh-20261108/historical/BASELINE_EVALUATIONS.json",
+  "source_sha256": "7a5e4eeed168000d508b0a4e88d50272239984407722a73fd5ea986e8058b64c",
+  "counts": [
+    {
+      "method": "CASTER-site",
+      "status": "incomplete",
+      "count": 123
+    },
+    {
+      "method": "CASTER-site",
+      "status": "tree_present",
+      "count": 577
+    },
+    {
+      "method": "DIPPER GPU",
+      "status": "tree_missing",
+      "count": 200
+    },
+    {
+      "method": "DIPPER GPU",
+      "status": "tree_present",
+      "count": 700
+    },
+    {
+      "method": "FastME",
+      "status": "incomplete",
+      "count": 1
+    },
+    {
+      "method": "FastME",
+      "status": "tree_missing",
+      "count": 199
+    },
+    {
+      "method": "FastME",
+      "status": "tree_present",
+      "count": 200
+    },
+    {
+      "method": "FastTree",
+      "status": "incomplete",
+      "count": 4
+    },
+    {
+      "method": "FastTree",
+      "status": "tree_missing",
+      "count": 200
+    },
+    {
+      "method": "FastTree",
+      "status": "tree_present",
+      "count": 496
+    },
+    {
+      "method": "IQ-TREE --fast",
+      "status": "tree_missing",
+      "count": 200
+    },
+    {
+      "method": "RapidNJ",
+      "status": "tree_missing",
+      "count": 200
+    },
+    {
+      "method": "RapidNJ",
+      "status": "tree_present",
+      "count": 200
+    },
+    {
+      "method": "VeryFastTree",
+      "status": "tree_missing",
+      "count": 200
+    },
+    {
+      "method": "VeryFastTree",
+      "status": "tree_present",
+      "count": 200
+    }
+  ],
+  "present_tree_hash_mismatches": [],
+  "missing_tree_policy": "Reuse archived metrics; do not rerun comparators. New shared-correct-branch comparisons require raw trees and are marked unavailable when missing."
+}

@@ -1,0 +1,15 @@
+# DIPPER GPU timing correction
+
+The original report compared retained-engine ConcordTree times against historical DIPPER fresh-process wall times. The gene DIPPER campaign also used four workers sharing one GPU. The small-species wrapper included format conversion and reference evaluation in its outer timer; the gene wrapper excluded format conversion. These are inconsistent boundaries.
+
+The replacement campaign uses the same 200 gene and 700 species alignments and the pinned original DIPPER algorithm objects (commit `d80df351107f05ea2ac01076709defc4ab9d702e`). Gene options remain `-i m -o t -m 0 -d 2 --force-binary`; species options remain `-i m -o t -m 1 -K 10 -d 2 --force-binary`, including the large-species panel. The historical large-panel invocation is documented in `scripts/run_v174_vs_dipper_large_le1k.sh` and `scripts/run_dipper_gpu_prediction_panel.py` in the research project.
+
+The small outer harness preinitializes CUDA with eager modules, synchronizes, and warms TBB before invoking the original main. It synchronizes again after inference. Each measured input still runs in a fresh CLI process; this is not an in-process persistent DIPPER session. The metric includes decompression for compressed inputs, PHYLIP-to-FASTA conversion, native input parsing, compression, host/device transfers, inference and tree output. It excludes checksum audits, process loading, CUDA/TBB preinitialization and reference evaluation. A deterministic `time()` shim controls the algorithm's shuffle seed without replacing monotonic clocks. One process uses each GPU with 16 NUMA-local logical CPUs.
+
+The original, cold-harness and preinitialized-harness predictions are byte-identical in two matched-seed pilots. The original algorithm/CUDA object hashes and exact linking command are in `HARNESS.json`. One measured run is retained per alignment. This campaign is a correction to the timing protocol, not a pure experiment isolating startup cost: old-to-new differences also include worker concurrency, thread control, affinity and host state. Other comparator histories remain heterogeneous.
+
+The first compressed large-species input failed during input conversion, before inference. That failed attempt is retained under `failed-attempts/`. A streaming zstd reader was added; no successful timing was overwritten. Decompression remains inside the adapter timer.
+
+All original data are read-only. Outputs live here. `PREDICTION_BARRIER.json` freezes the 900 trees before offline reference evaluation. `RERUN_ACCURACY.json` checks the new predictions independently; historical report accuracy, original tree hashes and accuracy sources remain unchanged and are explicitly distinguished from the new runtime records. `TIMING_SUMMARY.json` contains per-scale and pooled old/new statistics. No historical runtime is silently discarded.
+
+Only reviewed runtime data, four runtime/ratio figures and provenance text are installed in the three local release copies. Scientific code, weights, ConcordTree measurements and other comparator measurements remain unchanged. Existing downloadable archives and external publications are not rebuilt by this correction.

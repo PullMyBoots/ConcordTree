@@ -1,0 +1,41 @@
+{
+  "groups": {
+    "2048": {
+      "records": 100,
+      "mean_engine_seconds": 9.213378389072604,
+      "mean_cli_wall_seconds": 13.719785811752663,
+      "mean_outside_engine_seconds": 4.506407422680058
+    },
+    "3072": {
+      "records": 94,
+      "mean_engine_seconds": 13.272177086051979,
+      "mean_cli_wall_seconds": 17.781181040330804,
+      "mean_outside_engine_seconds": 4.509003954278826
+    },
+    "4096": {
+      "records": 80,
+      "mean_engine_seconds": 16.39721272558927,
+      "mean_cli_wall_seconds": 20.93012593814965,
+      "mean_outside_engine_seconds": 4.532913212560379
+    },
+    "all": {
+      "records": 274,
+      "mean_engine_seconds": 12.70328285782222,
+      "mean_cli_wall_seconds": 17.218319978169102,
+      "mean_outside_engine_seconds": 4.515037120346882
+    }
+  },
+  "clock": "time.perf_counter (monotonic wall clock)",
+  "engine_start": "engine.py:131, after engine construction, configuration validation, path protection and output-directory creation; before input prepare/decompression",
+  "engine_stop": "engine.py:209, after final tree/support export and quality construction; before final RESULT.json and completion event",
+  "cli_start": "campaign.py before subprocess.run",
+  "cli_stop": "campaign.py after subprocess.run returns",
+  "gpu_completion": "Explicit torch.cuda.synchronize after AP-NJ, MSC setup and MSC search; required CPU export follows.",
+  "limitations": [
+    "Single execution per input, two simultaneous physical GPU workers; not repeated isolated performance measurement.",
+    "Startup, imports, runtime configuration and final process shutdown are outside engine timing.",
+    "Both CLI and engine metrics exclude queue time and upload time.",
+    "Initial compilation/install in an empty environment is not characterized.",
+    "Historical refinement-only times cannot be used as full-pipeline denominators."
+  ]
+}

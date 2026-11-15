@@ -1,0 +1,748 @@
+{
+  "status": "complete",
+  "planned": 120,
+  "complete_pairs": 120,
+  "missing": [],
+  "failed": [],
+  "bootstrap": {
+    "unit": "whole alignment",
+    "resamples": 5000,
+    "seed": 20261115,
+    "interval": "percentile 95%; paired resampling across stages and baseline"
+  },
+  "scope": "previously exposed development inputs; no independent generalization claim",
+  "times": {
+    "concordtree": "cumulative engine wall time from before input preparation; final includes branch support and output; excludes process/GPU startup",
+    "dipper": "PHYLIP-to-FASTA conversion plus synchronized native file-to-tree after CUDA/TBB warmup; excludes process/GPU startup",
+    "limits": "single run per input; two simultaneous GPU workers; checkpoint observation adds small reads; input and support protocols differ"
+  },
+  "input_protocol": "gene: same single alignment; species: ConcordTree uses 100 observed loci, DIPPER uses the concatenated alignment",
+  "groups": {
+    "gene": {
+      "n": 40,
+      "metrics": {
+        "apnj": {
+          "nrf": {
+            "mean": 0.2328487661861715,
+            "median": 0.20449548008795504,
+            "p95": 0.49670168580503293,
+            "bootstrap95_mean": [
+              0.19051337649645736,
+              0.2779871121426826
+            ]
+          },
+          "seconds": {
+            "mean": 2.159484604197496,
+            "median": 1.9722536924818996,
+            "p95": 2.905926327331689,
+            "bootstrap95_mean": [
+              2.0131903920133847,
+              2.320968578376851
+            ]
+          }
+        },
+        "distance": {
+          "nrf": {
+            "mean": 0.10065966283899341,
+            "median": 0.07732714390422674,
+            "p95": 0.24215734180307807,
+            "bootstrap95_mean": [
+              0.076599682384559,
+              0.12899554116784756
+            ]
+          },
+          "seconds": {
+            "mean": 2.351923815396731,
+            "median": 2.163321714993799,
+            "p95": 3.0954637316608555,
+            "bootstrap95_mean": [
+              2.2058504719555274,
+              2.5135166074852533
+            ]
+          }
+        },
+        "mlp": {
+          "nrf": {
+            "mean": 0.07311873931101882,
+            "median": 0.05399462496946006,
+            "p95": 0.2046176398729537,
+            "bootstrap95_mean": [
+              0.0576653738089421,
+              0.09191714512582452
+            ]
+          },
+          "seconds": {
+            "mean": 2.899352838197956,
+            "median": 2.753286456980277,
+            "p95": 3.724066383947501,
+            "bootstrap95_mean": [
+              2.747767512713071,
+              3.064632788847157
+            ]
+          }
+        },
+        "final": {
+          "nrf": {
+            "mean": 0.025494747129245054,
+            "median": 0.019545565599804544,
+            "p95": 0.06520889323234791,
+            "bootstrap95_mean": [
+              0.020204312240410457,
+              0.03135246151966773
+            ]
+          },
+          "seconds": {
+            "mean": 11.376528835624049,
+            "median": 8.337720928509953,
+            "p95": 26.571695346463812,
+            "bootstrap95_mean": [
+              9.256381192085973,
+              13.685945922117826
+            ]
+          }
+        },
+        "dipper": {
+          "nrf": {
+            "mean": 0.33147446860493524,
+            "median": 0.3223796726117762,
+            "p95": 0.6058514537014414,
+            "bootstrap95_mean": [
+              0.2847416320547276,
+              0.3804802406547764
+            ]
+          },
+          "seconds": {
+            "mean": 1.307574590550911,
+            "median": 1.1937853270132015,
+            "p95": 2.5866672659164727,
+            "bootstrap95_mean": [
+              1.1978102189589546,
+              1.4445634550280428
+            ]
+          }
+        }
+      },
+      "gpu_counts": {
+        "0": 40
+      },
+      "paired_transitions": {
+        "apnj_to_distance": {
+          "delta_nrf": {
+            "mean": -0.1321891033471781,
+            "median": -0.12301490349376984,
+            "p95": -0.009271927681407284,
+            "bootstrap95_mean": [
+              -0.1571962802345468,
+              -0.10828731981431713
+            ]
+          },
+          "improved_tied_worsened": [
+            40,
+            0,
+            0
+          ]
+        },
+        "distance_to_mlp": {
+          "delta_nrf": {
+            "mean": -0.027540923527974593,
+            "median": -0.012093818714879061,
+            "p95": 0.0063767407769362155,
+            "bootstrap95_mean": [
+              -0.040087038846811626,
+              -0.016558758856584414
+            ]
+          },
+          "improved_tied_worsened": [
+            34,
+            0,
+            6
+          ]
+        },
+        "mlp_to_final": {
+          "delta_nrf": {
+            "mean": -0.04762399218177377,
+            "median": -0.034326899584656734,
+            "p95": -0.014769118006352316,
+            "bootstrap95_mean": [
+              -0.06361501343757633,
+              -0.035004275592474966
+            ]
+          },
+          "improved_tied_worsened": [
+            40,
+            0,
+            0
+          ]
+        }
+      },
+      "final_minus_dipper_nrf": {
+        "mean": -0.3059797214756902,
+        "median": -0.3030784265819692,
+        "p95": -0.06231370632787698,
+        "bootstrap95_mean": [
+          -0.35256520278524306,
+          -0.26106065233325193
+        ]
+      },
+      "final_vs_dipper_win_tie_loss": [
+        40,
+        0,
+        0
+      ],
+      "previous_topology_matches": 40,
+      "previous_topology_differs": 0,
+      "previous_topology_unavailable": 0,
+      "parameter_convergence_unconfirmed": 17,
+      "search_convergence_unconfirmed": 0
+    },
+    "species": {
+      "n": 80,
+      "metrics": {
+        "apnj": {
+          "nrf": {
+            "mean": 0.12494197410212557,
+            "median": 0.0984607867090154,
+            "p95": 0.2571341314439286,
+            "bootstrap95_mean": [
+              0.10943615624236501,
+              0.14179116784754459
+            ]
+          },
+          "seconds": {
+            "mean": 11.187597655150602,
+            "median": 11.162949350487906,
+            "p95": 12.963957341574131,
+            "bootstrap95_mean": [
+              10.96639268219842,
+              11.419826926437981
+            ]
+          }
+        },
+        "distance": {
+          "nrf": {
+            "mean": 0.0956908135841681,
+            "median": 0.07549474712924506,
+            "p95": 0.2179086244808209,
+            "bootstrap95_mean": [
+              0.08176452174444172,
+              0.11114143049108233
+            ]
+          },
+          "seconds": {
+            "mean": 11.54846108155034,
+            "median": 11.539941289491253,
+            "p95": 13.368993730036891,
+            "bootstrap95_mean": [
+              11.319811128423753,
+              11.786591260164533
+            ]
+          }
+        },
+        "mlp": {
+          "nrf": {
+            "mean": 0.08873686782311263,
+            "median": 0.06853163938431468,
+            "p95": 0.217700952846323,
+            "bootstrap95_mean": [
+              0.07493869105790374,
+              0.1043772141461031
+            ]
+          },
+          "seconds": {
+            "mean": 12.175179415634194,
+            "median": 12.178126848011743,
+            "p95": 14.244939635935589,
+            "bootstrap95_mean": [
+              11.929679759474002,
+              12.430598600162666
+            ]
+          }
+        },
+        "final": {
+          "nrf": {
+            "mean": 0.06570364036159296,
+            "median": 0.051551429269484486,
+            "p95": 0.1382360127046176,
+            "bootstrap95_mean": [
+              0.0556101881260689,
+              0.07718383520645003
+            ]
+          },
+          "seconds": {
+            "mean": 15.833304090447928,
+            "median": 15.440641794499243,
+            "p95": 19.367877782983122,
+            "bootstrap95_mean": [
+              15.411276950320207,
+              16.274293831950672
+            ]
+          }
+        },
+        "dipper": {
+          "nrf": {
+            "mean": 0.16857744930368923,
+            "median": 0.14805765941851942,
+            "p95": 0.3637674077693622,
+            "bootstrap95_mean": [
+              0.1481915007329587,
+              0.1892758978744197
+            ]
+          },
+          "seconds": {
+            "mean": 4.426805854388262,
+            "median": 4.428008174986514,
+            "p95": 5.122833087667995,
+            "bootstrap95_mean": [
+              4.333840716284342,
+              4.520801402433464
+            ]
+          }
+        }
+      },
+      "gpu_counts": {
+        "0": 24,
+        "1": 56
+      },
+      "paired_transitions": {
+        "apnj_to_distance": {
+          "delta_nrf": {
+            "mean": -0.029251160517957488,
+            "median": -0.024309797214756904,
+            "p95": -0.004263376496457377,
+            "bootstrap95_mean": [
+              -0.03431804300024432,
+              -0.02437087710725629
+            ]
+          },
+          "improved_tied_worsened": [
+            78,
+            0,
+            2
+          ]
+        },
+        "distance_to_mlp": {
+          "delta_nrf": {
+            "mean": -0.00695394576105546,
+            "median": -0.004153432689958464,
+            "p95": 0.001490349376985096,
+            "bootstrap95_mean": [
+              -0.00921695577815783,
+              -0.005014659174199854
+            ]
+          },
+          "improved_tied_worsened": [
+            69,
+            3,
+            8
+          ]
+        },
+        "mlp_to_final": {
+          "delta_nrf": {
+            "mean": -0.02303322746151967,
+            "median": -0.01588077204984119,
+            "p95": -0.0036403615929635974,
+            "bootstrap95_mean": [
+              -0.027883123625702423,
+              -0.01867517713168825
+            ]
+          },
+          "improved_tied_worsened": [
+            80,
+            0,
+            0
+          ]
+        }
+      },
+      "final_minus_dipper_nrf": {
+        "mean": -0.10287380894209627,
+        "median": -0.08807720498411924,
+        "p95": -0.031920351820180805,
+        "bootstrap95_mean": [
+          -0.11638491021255802,
+          -0.0898109577327144
+        ]
+      },
+      "final_vs_dipper_win_tie_loss": [
+        80,
+        0,
+        0
+      ],
+      "previous_topology_matches": 80,
+      "previous_topology_differs": 0,
+      "previous_topology_unavailable": 0,
+      "parameter_convergence_unconfirmed": 0,
+      "search_convergence_unconfirmed": 0
+    },
+    "species_ILS": {
+      "n": 50,
+      "metrics": {
+        "apnj": {
+          "nrf": {
+            "mean": 0.11442462741265574,
+            "median": 0.09650623014903494,
+            "p95": 0.21198387490838005,
+            "bootstrap95_mean": [
+              0.0995794038602492,
+              0.1324313462008307
+            ]
+          },
+          "seconds": {
+            "mean": 11.141154115259415,
+            "median": 11.162949350487906,
+            "p95": 12.572033338758047,
+            "bootstrap95_mean": [
+              10.880772951775086,
+              11.395380802154511
+            ]
+          }
+        },
+        "distance": {
+          "nrf": {
+            "mean": 0.09108722208648913,
+            "median": 0.07634986562423651,
+            "p95": 0.2069142438309308,
+            "bootstrap95_mean": [
+              0.07697471292450525,
+              0.10858160273637919
+            ]
+          },
+          "seconds": {
+            "mean": 11.501709303382086,
+            "median": 11.537984187016264,
+            "p95": 12.999353570933453,
+            "bootstrap95_mean": [
+              11.234443984236714,
+              11.761626099998393
+            ]
+          }
+        },
+        "mlp": {
+          "nrf": {
+            "mean": 0.08424138773515759,
+            "median": 0.06792084045932079,
+            "p95": 0.20559491815294398,
+            "bootstrap95_mean": [
+              0.0698899340337161,
+              0.10221463474224286
+            ]
+          },
+          "seconds": {
+            "mean": 12.118804100257112,
+            "median": 12.178126848011743,
+            "p95": 13.761869595904136,
+            "bootstrap95_mean": [
+              11.833577854447503,
+              12.39919769724796
+            ]
+          }
+        },
+        "final": {
+          "nrf": {
+            "mean": 0.06216955778157831,
+            "median": 0.051184949914488145,
+            "p95": 0.13126068898118737,
+            "bootstrap95_mean": [
+              0.0520399462496946,
+              0.07507512826777422
+            ]
+          },
+          "seconds": {
+            "mean": 15.695154287257465,
+            "median": 15.524766279006144,
+            "p95": 18.562443512279422,
+            "bootstrap95_mean": [
+              15.246672745022602,
+              16.186759572121083
+            ]
+          }
+        },
+        "dipper": {
+          "nrf": {
+            "mean": 0.16189103347178108,
+            "median": 0.13742975812362568,
+            "p95": 0.28614708038113856,
+            "bootstrap95_mean": [
+              0.140600293183484,
+              0.18592401661373076
+            ]
+          },
+          "seconds": {
+            "mean": 4.388177772778355,
+            "median": 4.400149020486526,
+            "p95": 4.984813240988639,
+            "bootstrap95_mean": [
+              4.276727626867459,
+              4.500674821879941
+            ]
+          }
+        }
+      },
+      "gpu_counts": {
+        "0": 15,
+        "1": 35
+      },
+      "paired_transitions": {
+        "apnj_to_distance": {
+          "delta_nrf": {
+            "mean": -0.023337405326166624,
+            "median": -0.02064500366479355,
+            "p95": -0.0014414854629855825,
+            "bootstrap95_mean": [
+              -0.028112020522843884,
+              -0.018719521133642808
+            ]
+          },
+          "improved_tied_worsened": [
+            48,
+            0,
+            2
+          ]
+        },
+        "distance_to_mlp": {
+          "delta_nrf": {
+            "mean": -0.006845834351331543,
+            "median": -0.004153432689958464,
+            "p95": 0.0011360860004886366,
+            "bootstrap95_mean": [
+              -0.009694600537503055,
+              -0.004524676276569757
+            ]
+          },
+          "improved_tied_worsened": [
+            44,
+            1,
+            5
+          ]
+        },
+        "mlp_to_final": {
+          "delta_nrf": {
+            "mean": -0.02207182995357928,
+            "median": -0.015025653554849742,
+            "p95": -0.003396042022966038,
+            "bootstrap95_mean": [
+              -0.027838382604446616,
+              -0.017209626191057904
+            ]
+          },
+          "improved_tied_worsened": [
+            50,
+            0,
+            0
+          ]
+        }
+      },
+      "final_minus_dipper_nrf": {
+        "mean": -0.09972147569020276,
+        "median": -0.08502321035914977,
+        "p95": -0.03777180552162228,
+        "bootstrap95_mean": [
+          -0.1156087222086489,
+          -0.08525751282677743
+        ]
+      },
+      "final_vs_dipper_win_tie_loss": [
+        50,
+        0,
+        0
+      ],
+      "previous_topology_matches": 50,
+      "previous_topology_differs": 0,
+      "previous_topology_unavailable": 0,
+      "parameter_convergence_unconfirmed": 0,
+      "search_convergence_unconfirmed": 0
+    },
+    "species_complex": {
+      "n": 30,
+      "metrics": {
+        "apnj": {
+          "nrf": {
+            "mean": 0.14247088525124196,
+            "median": 0.10676765208893232,
+            "p95": 0.3249694600537501,
+            "bootstrap95_mean": [
+              0.11237763661535954,
+              0.17523495398648095
+            ]
+          },
+          "seconds": {
+            "mean": 11.26500355496925,
+            "median": 11.198822537495289,
+            "p95": 13.054519817070103,
+            "bootstrap95_mean": [
+              10.854574132880662,
+              11.66317656738252
+            ]
+          }
+        },
+        "distance": {
+          "nrf": {
+            "mean": 0.10336346608029971,
+            "median": 0.07512826777424872,
+            "p95": 0.2721475690202782,
+            "bootstrap95_mean": [
+              0.07802752667155308,
+              0.13361043244563892
+            ]
+          },
+          "seconds": {
+            "mean": 11.626380711830764,
+            "median": 11.57249239095836,
+            "p95": 13.453774170557153,
+            "bootstrap95_mean": [
+              11.204226511644666,
+              12.036333132326837
+            ]
+          }
+        },
+        "mlp": {
+          "nrf": {
+            "mean": 0.09622933463637103,
+            "median": 0.07097483508429026,
+            "p95": 0.26690691424383056,
+            "bootstrap95_mean": [
+              0.07162594673833372,
+              0.12625661698835408
+            ]
+          },
+          "seconds": {
+            "mean": 12.269138274595996,
+            "median": 12.203769647981972,
+            "p95": 14.258441499847686,
+            "bootstrap95_mean": [
+              11.816449751132797,
+              12.70613242091121
+            ]
+          }
+        },
+        "final": {
+          "nrf": {
+            "mean": 0.07159377799495073,
+            "median": 0.054238944539457615,
+            "p95": 0.1969948692890297,
+            "bootstrap95_mean": [
+              0.05337507125987458,
+              0.09425116051795748
+            ]
+          },
+          "seconds": {
+            "mean": 16.063553762432033,
+            "median": 15.440641794499243,
+            "p95": 20.589952197857194,
+            "bootstrap95_mean": [
+              15.291172006977625,
+              16.930196579891103
+            ]
+          }
+        },
+        "dipper": {
+          "nrf": {
+            "mean": 0.17972147569020275,
+            "median": 0.15489860737845101,
+            "p95": 0.4072807231859271,
+            "bootstrap95_mean": [
+              0.14189775225995602,
+              0.22075230067595075
+            ]
+          },
+          "seconds": {
+            "mean": 4.491185990404774,
+            "median": 4.443641993524327,
+            "p95": 5.241758146945956,
+            "bootstrap95_mean": [
+              4.328478919542245,
+              4.65182469239065
+            ]
+          }
+        }
+      },
+      "gpu_counts": {
+        "0": 9,
+        "1": 21
+      },
+      "paired_transitions": {
+        "apnj_to_distance": {
+          "delta_nrf": {
+            "mean": -0.03910741917094226,
+            "median": -0.034449059369655505,
+            "p95": -0.007390666992426097,
+            "bootstrap95_mean": [
+              -0.04919008062545809,
+              -0.03003481553872465
+            ]
+          },
+          "improved_tied_worsened": [
+            30,
+            0,
+            0
+          ]
+        },
+        "distance_to_mlp": {
+          "delta_nrf": {
+            "mean": -0.007134131443928658,
+            "median": -0.0035426337649645603,
+            "p95": 0.0014048375274859528,
+            "bootstrap95_mean": [
+              -0.010676765208893229,
+              -0.004014984933626517
+            ]
+          },
+          "improved_tied_worsened": [
+            25,
+            2,
+            3
+          ]
+        },
+        "mlp_to_final": {
+          "delta_nrf": {
+            "mean": -0.02463555664142031,
+            "median": -0.016369411189836303,
+            "p95": -0.004727583679452722,
+            "bootstrap95_mean": [
+              -0.03298314194967016,
+              -0.017289681570160434
+            ]
+          },
+          "improved_tied_worsened": [
+            30,
+            0,
+            0
+          ]
+        }
+      },
+      "final_minus_dipper_nrf": {
+        "mean": -0.10812769769525206,
+        "median": -0.09345223552406548,
+        "p95": -0.030161250916198392,
+        "bootstrap95_mean": [
+          -0.13255171430898283,
+          -0.08449324049189674
+        ]
+      },
+      "final_vs_dipper_win_tie_loss": [
+        30,
+        0,
+        0
+      ],
+      "previous_topology_matches": 30,
+      "previous_topology_differs": 0,
+      "previous_topology_unavailable": 0,
+      "parameter_convergence_unconfirmed": 0,
+      "search_convergence_unconfirmed": 0
+    }
+  },
+  "dipper_algorithm_selection": {
+    "gene": {
+      "options": "-m 0 -d 2 --force-binary",
+      "selection": "automatic",
+      "observed": "conventional NJ",
+      "records": 40
+    },
+    "species": {
+      "options": "-m 1 -K 10 -d 2 --force-binary",
+      "selection": "forced",
+      "observed": "k-closest placement",
+      "records": 80
+    },
+    "automatic_at_4096": "conventional NJ"
+  }
+}
