@@ -1,0 +1,35 @@
+{
+  "source_report_records_sha256": "b39706969a8c134f06ea9ce2441935208d0a7e449172e20d7d899b4a29a3e840",
+  "imported_records": 1370,
+  "historical_candidate_records": 274,
+  "historical_candidate_input_mode": "partitioned",
+  "historical_input_hashes_checked_against_source_manifests": 274,
+  "historical_concordtree_runtime": "refinement only; not used for full-inference time ratios",
+  "dipper_independent_rf_evaluations": 274,
+  "comparator_sources": [
+    {
+      "method": "DIPPER GPU",
+      "path": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/artifacts/baseline/dipper-gpu-large-n2048-n4096-20260913/records.pre_reference.json",
+      "sha256": "a65f33367fa7909222bfbd9c27b9871ae576c6eaca7e2af77aa0b4e9a944ad6e"
+    },
+    {
+      "method": "VeryFastTree",
+      "path": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/artifacts/baseline/veryfasttree-large-n2048-n4096-cpu200-20260913/records.json",
+      "sha256": "4b439c8fa3c9c930eb658e2b2355e8715b242cd1d75856431f1396be37dca858"
+    },
+    {
+      "method": "RapidNJ",
+      "path": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/artifacts/baseline/rapidnj-large-n2048-n4096-20260913/records.json",
+      "sha256": "e85f9deed56b2fffa69a79a198835794f9049ed9c493fa9bd398ea24d2a008a9"
+    },
+    {
+      "method": "FastME",
+      "path": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/artifacts/baseline/fastme-large-n2048-n4096-cpu256-workers-20260914/records.json",
+      "sha256": "4a576a1ae336acca9e858165cbc6a7fd7ff75c237750b6ef8a57ac12f343627f"
+    }
+  ],
+  "scientific_scope": "User-authorized reuse of historical topology results; not a new frozen-version benchmark.",
+  "inference_runs": 0,
+  "output": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/release/V1.0.2/technical-report/data/SPECIES_SIZE_RECORDS.csv",
+  "output_sha256": "3d006ebb58f09e2f4ad00ea49fc47477de4aa02800e8d7da8eac70338880d473"
+}

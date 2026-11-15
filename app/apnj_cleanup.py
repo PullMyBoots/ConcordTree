@@ -2,7 +2,7 @@
 import time
 import numpy as np
 
-def refine(neighbors,n,state,model,common,alpha,*,max_rounds=4,stop_ratio=0.,representatives=4,min_gain=0.,checkpoint=None):
+def refine(neighbors,n,state,model,common,alpha,*,max_rounds=4,stop_ratio=0.,representatives=4,min_gain=0.,checkpoint=None,backbone=None,names=None):
  import _ct_apnj_local as native
  started=time.perf_counter()
  history=[];times=dict(plan=0.,distance=0.,apply=0.)
@@ -18,6 +18,9 @@ def refine(neighbors,n,state,model,common,alpha,*,max_rounds=4,stop_ratio=0.,rep
   phase=time.perf_counter();dist=state.query(reps,mass,pairs,model,common,alpha).reshape(E,6);times['distance']+=time.perf_counter()-phase
   scores=np.column_stack([dist[:,0]+dist[:,1],dist[:,2]+dist[:,3],dist[:,4]+dist[:,5]]);best=np.argmin(scores,axis=1).astype(np.int64);margin=np.ascontiguousarray(scores[:,0]-scores[np.arange(E),best])
   if min_gain:best[margin<=min_gain]=0
+  if backbone is not None:
+   allowed=np.asarray(backbone.allowed_edges(neighbors,dict(enumerate(names)),edges),dtype=bool)
+   best[~allowed]=0; margin[~allowed]=0.
   phase=time.perf_counter();selected=native.apply(neighbors,edges,branches,best,margin);times['apply']+=time.perf_counter()-phase
   history.append(dict(pass_=iteration+1,edges=E,component_pairs=len(pairs),moves=len(selected),maximum_proposal_gain=float(margin.max())))
   if checkpoint:checkpoint(neighbors,dict(stage='distance',round=iteration+1,moves=len(selected),maximum_proposal_gain=float(margin.max())))

@@ -1,5 +1,7 @@
 # ConcordTree 1.0.2 — Linux GPU distribution
 
+**2026-11-15 source update:** This repository snapshot adds backbone-preserving gene/species tree completion and the latest technical report, including paired 4,096-taxon stage measurements. The scientific/Python environment is not in the source checkout. Earlier portable archives and containers were not rebuilt or revalidated for this update. See [tree completion](BACKBONE_COMPLETION.md) and the [Methods report](technical-report/method.html#stage-analysis-4096).
+
 Run this application on your own Linux / WSL NVIDIA computer:
 
 ```bash

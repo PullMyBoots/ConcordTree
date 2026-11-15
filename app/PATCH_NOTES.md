@@ -97,3 +97,39 @@ Inputs remain subject to available host/device memory and explicit structural
 index capacity. The repair does not replace invalid data or failed calculations
 with a placeholder tree. First-time compilation is separate from warm inference;
 the G16 model regression completed but its first JIT took about104 seconds.
+
+## 2026-11-13: optional backbone-constrained taxon completion
+
+- Added `--backbone`/Python `backbone=` and an optional web Newick upload for
+  both tasks. The browser completion mode presents two upload areas and queues
+  only after both files are selected, in either order.
+- AP-NJ guide-only subtrees initialize missing taxa on the fixed supplied
+  backbone. Distance, MLP, likelihood and species-kernel NNI filter out every
+  move changing the induced unrooted backbone topology, including custom module
+  orderings. Existing unconstrained scientific defaults are retained.
+- Every published checkpoint and final tree are verified. Invalid, mismatched
+  or unresolved backbones are rejected. Root placement and branch lengths are
+  not constrained, and supplied branches are not assigned artificial support.
+- No release version or model weights were created/changed. Details and
+  limitations: [BACKBONE_COMPLETION.md](BACKBONE_COMPLETION.md).
+
+## 2026-11-14: dedicated completion deployment and paired accuracy display
+
+- Gene completion now deploys the validated bounded cached local likelihood
+  implementation. Homogeneous MLP edge screening, shared bounded GTR+F+I+G4
+  reference fits, exact subtree repeats and incremental insertion caches run
+  directly on the incomplete backbone. Species completion retains the kernel.
+- Native code, sources and Python modules are contained in
+  `placement_likelihood/`. No experimental directory is imported at runtime.
+  Completion remains topology-only and verifies the induced backbone.
+- Accuracy adds gene/species completion panels with +1/+4/+8 selection, a
+  tie-aware within-input rank score and exact whole-batch recovery. Rankings
+  use shared completed inputs and equal alignment weighting. Estimated-gene
+  INSTRAL is a regular comparator; true-gene INSTRAL is an oracle excluded
+  from ranking. Native independent species outputs retain unresolved query
+  relationships and the protocol distinction is documented.
+- Gene local reference fits have finite budgets, not a global ML convergence
+  guarantee. The result reports global search convergence as unavailable,
+  with explicit finite candidate-completion metadata instead.
+- Regression evidence: `evidence/PLACEMENT_DEPLOYMENT_20261114.json`.
+  No new release version was created.

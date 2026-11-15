@@ -1,9 +1,10 @@
 'use strict';
 window.runDashboard = (() => {
   const el=id=>document.getElementById(id);
-  const names={apnj:'AP-NJ',distance:'Distance NNI',mlp:'MLP NNI',likelihood:'Likelihood',kernel:'Statistical kernel'};
+  const names={apnj:'AP-NJ',distance:'Distance NNI',mlp:'MLP NNI',likelihood:'Likelihood',kernel:'Statistical kernel',placement:'Taxon placement'};
   let signature='',selectedStage=null,lastLiveStage=null,lastJob=null,lastEvents=[];
   function plan(job) {
+    if(job.backbone?.enabled)return ['placement'];
     return ['apnj',...(job.configuration?.stages || [
       {id:'distance',enabled:true},{id:'mlp',enabled:true},{id:job.task==='species'?'kernel':'likelihood',enabled:true}
     ]).filter(s=>s.enabled).map(s=>s.id)];
@@ -72,6 +73,9 @@ window.runDashboard = (() => {
     for(const event of events) {
       if(moduleOf(event)!==id)continue;
       const info={...event,...event.detail};latest=event.elapsed_seconds??latest;
+      if(id==='placement'&&Number.isSafeInteger(info.placed)){
+        rows.push({placed:info.placed,total:info.total,taxon:info.taxon||'—',seconds:event.elapsed_seconds});continue;
+      }
       const round=info.round??info.sweep??info.pass;
       if(event.stage==='module_complete' && rows.length)continue;
       if(!Number.isSafeInteger(round)&&!(event.stage==='module_complete'||event.stage==='apnj'||typeof info.log_likelihood==='number'))continue;
@@ -84,13 +88,17 @@ window.runDashboard = (() => {
     // Only show fields meaningful for this stage and phase. Before NNI begins,
     // construction/model fitting needs time alone; its rounds do not exist yet.
     const metric={distance:'Distance gain',mlp:'Probability gain',likelihood:'Log likelihood',kernel:'Score gain'}[id];
-    const columns=refinement?[
+    const columns=id==='placement'?[
+      {label:'Placed',width:25,value:r=>`${r.placed} / ${r.total}`},
+      {label:'Taxon',width:45,value:r=>r.taxon},
+      {label:'Time (s)',width:30,value:r=>number(r.seconds)}
+    ]:refinement?[
       {label:'Round',width:15,value:r=>number(r.round,0)},
       {label:'Time (s)',width:24,value:r=>number(r.seconds),title:'Seconds since inference started, including pauses'},
       {label:metric,width:39,value:r=>r.score.text,title:r=>r.score.title},
       {label:'Moves',width:22,value:r=>number(r.moves,0)}
     ]:[{label:'Time (s)',width:100,value:r=>number(r.seconds),title:'Seconds since inference started, including pauses'}];
-    const visible=refinement?rows.filter(r=>r.round!==null):rows.length?[rows.at(-1)]:typeof latest==='number'?[{seconds:latest}]:[];
+    const visible=id==='placement'?rows:refinement?rows.filter(r=>r.round!==null):rows.length?[rows.at(-1)]:typeof latest==='number'?[{seconds:latest}]:[];
     const key=JSON.stringify([job.id,job.status,id,columns.map(c=>c.label),visible]);if(signature===key)return;signature=key;
     const panel=el('logTail'),follow=panel.scrollTop+panel.clientHeight>=panel.scrollHeight-30;
     el('logColumns').replaceChildren(...columns.map(c=>{const col=document.createElement('col');col.style.width=c.width+'%';return col;}));

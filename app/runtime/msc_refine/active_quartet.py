@@ -30,7 +30,7 @@ class ActiveQuartetScorer:
         self.timing = {}
 
 
-def refine_active(graph, scorer, *, stop_ratio=.005, callback=None,max_rounds=None,min_gain=0.):
+def refine_active(graph, scorer, *, stop_ratio=.005, callback=None,max_rounds=None,min_gain=0.,backbone=None,names=None):
     if not 0 <= stop_ratio < 1:
         raise ValueError('stop ratio must be in [0,1)')
     g = {u:set(v) for u,v in graph.items()}
@@ -57,7 +57,12 @@ def refine_active(graph, scorer, *, stop_ratio=.005, callback=None,max_rounds=No
             recovered = value-scorer.timing['new_evidence_objective']
             if not np.isclose(recovered, previous, rtol=1e-9, atol=1e-9):
                 raise ArithmeticError('accumulated global objective delta failed')
-        selected = select_moves(g, plan, np.where(scores>min_gain,scores,0.) if min_gain else scores)
+        candidate_scores=np.where(scores>min_gain,scores,0.) if min_gain else scores
+        if backbone is not None:
+            candidate_scores=candidate_scores.copy()
+            allowed=np.asarray(backbone.allowed_edges(g,dict(enumerate(names)),plan.edges),dtype=bool)
+            candidate_scores[~allowed,1:]=candidate_scores[~allowed,0,None]
+        selected = select_moves(g, plan, candidate_scores)
         for edge, choice, gain in selected:
             apply_move(g, plan.edges[edge], plan.branches[edge], choice)
         gain = sum(move[2] for move in selected)

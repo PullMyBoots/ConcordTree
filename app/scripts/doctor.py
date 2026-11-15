@@ -22,7 +22,8 @@ for name in ('_ct_apnj_graph', '_ct_apnj_local', '_ct_apnj_terminal',
              '_ct_apnj_topology', '_ct_apnj_packed'):
     importlib.import_module(name)
 modules = {}
-for name in ('torch', 'triton', 'numpy', 'scipy', 'ete3', 'concordtree'):
+for name in ('torch', 'triton', 'numpy', 'scipy', 'ete3', 'concordtree',
+             'taxon_placement', 'msc_refine.barycenter_tree_tiled'):
     module = importlib.import_module(name)
     modules[name] = dict(file=str(Path(module.__file__).resolve()),
                          version=getattr(module, '__version__', None))

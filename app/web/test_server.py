@@ -66,6 +66,33 @@ class InputTests(unittest.TestCase):
 
 
 class AppTests(unittest.TestCase):
+    def test_small_species_completion_has_no_nearest24_requirement(self):
+        matrix=PHY.replace(b'4 8',b'5 8')+b'e ACGTACGC\n'
+        files={'file':('input.phy',matrix),'backbone':('reference.nwk',b'((a,b),(c,d));')}
+        response=self.client.post('/api/jobs',data={'task':'species'},files=files)
+        self.assertEqual(response.status_code,202,response.text)
+        self.assertEqual(response.json()['backbone']['added_taxa'],1)
+        ordinary=self.client.post('/api/jobs',data={'task':'species'},files={'file':('input.phy',matrix)})
+        self.assertEqual(ordinary.status_code,422)
+
+    def test_optional_backbone_is_validated_and_forwarded(self):
+        text=b'((a,b),(c,d));'
+        response=self.client.post('/api/jobs',files={'file':('input.phy',PHY),'backbone':('reference.nwk',text)})
+        self.assertEqual(response.status_code,202,response.text)
+        job=response.json();directory=self.store.directory/job['id']
+        self.assertTrue(job['backbone']['enabled'])
+        self.assertEqual((directory/'backbone.nwk').read_bytes(),text)
+        command=server.command_for(job,directory)
+        self.assertEqual(command[command.index('--backbone')+1],str(directory/'backbone.nwk'))
+        self.assertNotIn('torch',__import__('sys').modules)
+        for bad in (b'',b'(a,b,c,d);',b'((a,b),(c,z));',b'\xff'):
+            response=self.client.post('/api/jobs',files={'file':('input.phy',PHY),'backbone':('reference.nwk',bad)})
+            self.assertEqual(response.status_code,422,response.text)
+        # A later ordinary job must not inherit the preceding constraint.
+        plain=self.upload().json()
+        self.assertFalse(plain['backbone']['enabled'])
+        self.assertNotIn('--backbone',server.command_for(plain,self.store.directory/plain['id']))
+
     def test_compute_resources_are_validated_and_frozen_per_job(self):
         import json
         resources=dict(cpu_threads=2,gpu=1)

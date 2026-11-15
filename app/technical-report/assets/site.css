@@ -102,3 +102,73 @@ table{width:100%;border-collapse:collapse}
 .table-wrap{scrollbar-width:thin}.figure{background:white}
 .species-family+.species-family{margin-top:48px}.species-family h3{font-size:22px;font-weight:500;margin:26px 0 20px}
 @media(max-width:600px){.header-tools{gap:14px}.method-flow .method-fork{grid-template-columns:1fr}.result-table td{padding:10px}.downloads{gap:12px 18px}}
+
+
+
+
+
+
+
+
+
+/* Species size panels */
+.species-topology-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:30px 26px;margin-top:22px}
+.species-panel{min-width:0;background:#fff;border:1px solid var(--line);border-radius:5px;padding:18px 12px 7px}
+.species-panel>header{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:4px 12px;padding:0 8px}
+.species-panel h3{margin:0;font-size:20px}.species-panel header>span{font-size:11px;color:var(--muted);white-space:nowrap}
+.species-panel .figure{margin:10px 0 0}.species-panel .figure img{width:100%;height:auto}
+.species-comparison-note,.paired-ratio-note,.historical-runtime-note{font-size:12px;line-height:1.75;color:var(--muted)}
+@media(max-width:760px){.species-topology-grid{grid-template-columns:1fr;gap:18px}.species-panel{padding:16px 10px 6px}}
+/* End species size panels */
+
+
+
+
+
+
+
+/* Runtime ratio matrix */
+.ratio-heading{display:flex;align-items:baseline;justify-content:space-between;gap:16px;margin:32px 0 8px}.ratio-heading h3{margin:0}.ratio-heading>span{font-size:11px;color:var(--muted);white-space:nowrap;letter-spacing:.03em}
+.ratio-matrix-wrap{max-width:100%;overflow-x:auto;margin:18px 0 14px;scrollbar-width:thin;overscroll-behavior-x:contain}
+.ratio-matrix{border-collapse:separate;border-spacing:5px;width:100%;font-size:12px;font-variant-numeric:tabular-nums}
+.ratio-matrix caption.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+.ratio-matrix th{border:0;text-align:center;color:#53635c;padding:11px 5px;font-weight:600;white-space:nowrap}
+.ratio-matrix th:first-child{text-align:left;min-width:114px;position:sticky;left:0;background:var(--paper);z-index:1;padding-left:0}
+.ratio-matrix th span{font-weight:400;color:var(--muted);font-size:10px}.ratio-matrix td{border:0;border-radius:5px;min-width:67px;padding:12px 5px;text-align:center;line-height:1.5}
+.ratio-matrix td span{display:block;white-space:nowrap}.ratio-matrix small{font-size:10px;margin-left:1px}.ratio-faster{background:#e4eee8;color:#325e4c}.ratio-slower{background:#f3e7dd;color:#835a3c}.ratio-mixed{background:#eef0f1;color:#58656c}.ratio-missing{background:#f2f3f0;color:#9aa39d}
+.ratio-legend{display:flex;flex-wrap:wrap;gap:9px 20px;font-size:10px;color:var(--muted);align-items:center;margin:12px 0}.ratio-key::before{content:"";display:inline-block;width:9px;height:9px;border-radius:2px;margin-right:6px}.ratio-key.faster::before{background:#b2cbbb}.ratio-key.slower::before{background:#d8bca5}.ratio-key.mixed::before{background:#c8ced2}
+.ratio-downloads{display:flex;gap:16px;margin-top:15px;font-size:11px}.timing-details{border-top:1px solid var(--line);margin:42px 0 0;padding:20px 0 5px;color:var(--muted);font-size:12px;line-height:1.8}.timing-details summary{cursor:pointer;width:fit-content;color:var(--accent);font-size:13px}.timing-details p{max-width:860px}
+@media(max-width:650px){.ratio-heading{align-items:flex-start;flex-direction:column;gap:4px}.ratio-matrix{font-size:11px;border-spacing:4px;min-width:600px}.ratio-matrix th:first-child{min-width:100px}.ratio-matrix td{min-width:63px;padding:10px 4px}.ratio-legend{font-size:10px;gap:8px 14px}}
+/* End runtime ratio matrix */
+
+/* Completion comparisons: one readable chart per task, counts as small tabs. */
+.placement-task{margin:28px 0 38px;border:1px solid var(--line);background:#fff;border-radius:8px;overflow:hidden}
+.placement-task>header{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:18px 24px;border-bottom:1px solid var(--line)}
+.placement-task h3{margin:0;font-size:22px}
+.placement-tabs{display:inline-flex;gap:3px;padding:3px;background:#f0f3f1;border-radius:7px}
+.placement-tabs button{border:0;background:transparent;color:#65726e;border-radius:5px;padding:5px 15px;line-height:1.6;font-size:13px;font-variant-numeric:tabular-nums}
+.placement-tabs button[aria-selected=true]{background:#fff;color:#285f52;box-shadow:0 1px 3px #20352b16;font-weight:650}
+.placement-view .figure{margin:0;padding:6px 14px}
+.placement-view img{display:block;width:100%;height:auto}
+.placement-definition{font-size:13px;color:var(--muted);margin-top:10px}
+.placement-definition summary{cursor:pointer;color:var(--accent)}
+.placement-downloads{font-size:12px;margin-top:14px;color:var(--muted)}
+@media(max-width:600px){.placement-task>header{padding:15px 12px;flex-wrap:wrap}.placement-task h3{font-size:20px}.placement-tabs button{padding:4px 14px}.placement-view .figure{padding:4px 0}}
+.placement-mobile{display:none}
+@media(max-width:600px){
+.placement-view .figure{display:none}
+.placement-mobile{display:block;padding:12px}
+.placement-mobile-row,.placement-mobile-labels{display:grid;grid-template-columns:minmax(0,1fr) 44px 50px;gap:9px;align-items:center;font-size:12px;line-height:1.5}
+.placement-mobile-labels{font-size:11px;color:var(--muted);padding-bottom:9px}
+.placement-mobile-row{min-height:53px;padding:9px 0;border-top:1px solid #edf0ed;font-variant-numeric:tabular-nums}
+.placement-mobile-row>:not(:first-child),.placement-mobile-labels>:not(:first-child){text-align:right;font-weight:400}
+.placement-mobile-row>span:first-child{position:relative;padding-bottom:9px}
+.placement-mobile-row meter{width:100%;height:4px;position:absolute;left:0;bottom:0;border:0;background:#f0f3f1;border-radius:3px}
+.placement-mobile-row meter::-webkit-meter-bar{background:#f0f3f1;border:0}
+.placement-mobile-row meter::-webkit-meter-optimum-value{background:#b3bebd}
+.placement-mobile-row meter::-moz-meter-bar{background:#b3bebd}
+.placement-mobile-row[data-method=concordtree]{color:#285f52;font-weight:650}
+.placement-mobile-row[data-method=concordtree] meter::-webkit-meter-optimum-value{background:#39766a}
+.placement-mobile-row[data-method=concordtree] meter::-moz-meter-bar{background:#39766a}
+.placement-mobile-row>span:first-child{overflow-wrap:break-word}
+}

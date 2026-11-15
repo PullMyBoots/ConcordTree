@@ -2,15 +2,15 @@
 
 ## Current application source
 
-The `app/` directory contains the latest local Linux/WSL NVIDIA application source, updated on 2026-11-08. The Web interface includes modular Gene Tree and Species Tree pipelines, per-job CPU/GPU selection, pause/download/resume, continuous GPU monitoring, stage-specific progress tables, and seasonal/geometry/photo backgrounds. Unused experimental runtime branches have been removed and the technical report has been updated.
+The `app/` directory contains the latest local Linux/WSL NVIDIA application source, updated on 2026-11-15. The Web interface includes modular Gene Tree and Species Tree pipelines, per-job CPU/GPU selection, pause/download/resume, continuous GPU monitoring, stage-specific progress tables, and seasonal/geometry/photo backgrounds. Unused experimental runtime branches have been removed and the technical report has been updated.
 
 **Technical report:** [Overview and input formats](app/technical-report/index.html) · [Accuracy](app/technical-report/accuracy.html) · [Runtime and resources](app/technical-report/performance.html) · [Method](app/technical-report/method.html).
 
-These links open the report HTML source on GitHub. To read the rendered report, start the local application and open [Technical Report](http://127.0.0.1:8765/report/) (use your chosen port if different), or click **Technical Report** in the application footer. The report includes the current results, figures and configuration/provenance records.
+The [rendered technical report](https://pullmyboots.github.io/ConcordTree/) includes the 4,096-taxon stage analysis and its DIPPER protocol. These links open the report HTML source on GitHub. To read the rendered report, start the local application and open [Technical Report](http://127.0.0.1:8765/report/) (use your chosen port if different), or click **Technical Report** in the application footer. The report includes the current results, figures and configuration/provenance records.
 
 The stage strip highlights the running algorithm. AP-NJ shows elapsed time; NNI tables show the fields relevant to their own criterion. Configure algorithms and advanced parameters with the settings gear. Local inference has no application-imposed upload-size or execution-time limit.
 
-See [pipeline settings](app/PIPELINE_SETTINGS.md), [Web behavior](app/web/README.md), and [current source checks](SOURCE_UPDATE.md). The source checkout includes model assets and native extensions but excludes the multi-gigabyte scientific/Python runtime, local jobs, caches and research datasets. Cloning the repository alone does not create the packaged runtime.
+See [pipeline settings](app/PIPELINE_SETTINGS.md), [Web behavior](app/web/README.md), and [current source checks](SOURCE_UPDATE_20261115.md). The source checkout includes model assets and native extensions but excludes the multi-gigabyte scientific/Python runtime, local jobs, caches and research datasets. Cloning the repository alone does not create the packaged runtime.
 
 **Prebuilt archives and containers have not been rebuilt for this source update.** The installation commands and 48-case packaging measurements below describe the earlier frozen distribution; they require matching published assets and do not validate the latest source changes.
 

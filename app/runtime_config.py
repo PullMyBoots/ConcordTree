@@ -40,7 +40,7 @@ def configure_runtime(*, gpu=None, cpu_threads=16):
     generic = {p.stem for folder in (HERE/'runtime/gene', HERE/'runtime/gene/runtime')
                for p in folder.glob('*.py')}
     generic.update(('concordtree', 'msc_refine', 'frontend', 'array_mlp_nni','branch_support','search_progress',
-                    'apnj_frontend','apnj_core','apnj_cleanup','_ct_apnj_graph',
+                    'apnj_frontend','apnj_core','apnj_cleanup','backbone','taxon_placement','_ct_apnj_graph',
                     '_ct_apnj_topology','_ct_apnj_local','_ct_apnj_terminal','_ct_apnj_packed'))
     for name, module in tuple(sys.modules.items()):
         origin = getattr(module, '__file__', None)
@@ -73,11 +73,6 @@ def configure_runtime(*, gpu=None, cpu_threads=16):
             cache = owned_path(default)
         cache.mkdir(parents=True, exist_ok=True)
         os.environ[key] = str(cache); caches[key] = str(cache)
-        if key == 'TMPDIR' and os.environ.get('CONCORDTREE_SAFE_TMPDIR'):
-            alias = os.environ['CONCORDTREE_SAFE_TMPDIR']
-            if Path(alias).resolve() != cache:
-                raise ValueError('temporary-path alias must point to the owned release cache')
-            os.environ[key] = alias
     for key in ['OMP_NUM_THREADS','MKL_NUM_THREADS','OPENBLAS_NUM_THREADS','NUMEXPR_NUM_THREADS']:
         os.environ[key] = str(cpu_threads)
     os.environ.setdefault('OMP_WAIT_POLICY', 'PASSIVE')

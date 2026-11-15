@@ -102,6 +102,8 @@ def command_for(job, directory):
         command += ['--loci', str(directory / 'loci.jsonl')]
     if job.get('configuration') is not None:
         command += ['--configuration',str(directory/'configuration.json')]
+    if job.get('backbone',{}).get('enabled'):
+        command += ['--backbone',str(directory/'backbone.nwk')]
     if not job['support']: command.append('--no-support')
     return command
 
@@ -170,7 +172,7 @@ class JobStore:
                         compute_enabled=self.enabled,
                         accepting_jobs=self.enabled and running + queued < MAX_ACTIVE_JOBS)
 
-    def add(self, raw, filename, task, model, support, configuration=None, resources=None):
+    def add(self, raw, filename, task, model, support, configuration=None, resources=None, backbone=None):
         if not self.enabled: raise HTTPException(503, 'Inference is paused.')
         if task not in {'gene', 'species'} or (task == 'gene' and model not in MODELS):
             raise HTTPException(422, 'Invalid task options.')
@@ -180,8 +182,15 @@ class JobStore:
             configuration=normalize_pipeline(json.loads(configuration) if isinstance(configuration,str) else configuration,task)
             if not explicit and task=='gene':next(s for s in configuration['stages'] if s['id']=='likelihood')['advanced']['model']=model
             if task=='gene':model=next(s for s in configuration['stages'] if s['id']=='likelihood')['advanced']['model']
-            data, metadata, lengths = normalize_alignment(raw, task)
-        except ValueError as error:
+            data, metadata, lengths = normalize_alignment(raw, task,completion=backbone is not None)
+            backbone_meta=dict(enabled=False)
+            backbone_text=None
+            if backbone is not None:
+                from backbone import Backbone
+                backbone_text=backbone.decode('utf-8-sig')
+                names=[line.split(maxsplit=1)[0] for line in data.decode().splitlines()[1:]]
+                backbone_meta=Backbone(backbone_text,names).metadata
+        except (ValueError,UnicodeError) as error:
             raise HTTPException(422, str(error))
         with self.lock:
             if sum(j['status'] in ACTIVE for j in self.jobs.values()) >= MAX_ACTIVE_JOBS:
@@ -191,10 +200,12 @@ class JobStore:
             directory.mkdir()
             (directory / 'alignment.phy').write_bytes(data)
             (directory/'configuration.json').write_text(json.dumps(configuration,indent=2)+'\n')
+            if backbone_text is not None:
+                (directory/'backbone.nwk').write_text(backbone_text,encoding='utf-8')
             if metadata['partitioned']:
                 (directory / 'loci.jsonl').write_text(''.join(json.dumps(dict(alignment_length=n))+'\n' for n in lengths))
             job = dict(id=identifier, task=task, filename=Path(filename or 'input.phy').name[:180],
-                       model=model if task == 'gene' else None, support=support, metadata=metadata,configuration=configuration,resources=resources,
+                       model=model if task == 'gene' else None, support=support, metadata=metadata,configuration=configuration,resources=resources,backbone=backbone_meta,
                        version=RELEASE_VERSION, status='queued', created_at=now(), error=None)
             self.jobs[identifier] = job
             self.persist(job)
@@ -360,20 +371,26 @@ def create_app(enabled=False, directory=None, *, allow_server_files=False):
 
     @app.post('/api/jobs', status_code=202)
     async def submit(file: UploadFile = File(...), task: str = Form('gene'), model: str = Form('GTR+FO+I+G4'),
-                     support: bool = Form(True), configuration: str = Form(None), resources: str = Form(None)):
+                     support: bool = Form(True), configuration: str = Form(None), resources: str = Form(None),backbone: UploadFile = File(None)):
         try:
             if not enabled: raise HTTPException(503, 'Inference is not available yet.')
             raw = await file.read()
-            return await run_in_threadpool(store.add, raw, file.filename, task, model, support,configuration,resources)
+            constraint=await backbone.read() if backbone is not None else None
+            return await run_in_threadpool(store.add, raw, file.filename, task, model, support,configuration,resources,constraint)
         finally:
             await file.close()
+            if backbone is not None:await backbone.close()
 
     @app.post('/api/jobs/from-server', status_code=202)
-    def submit_server_file(path: str = Form(...), task: str = Form('gene'),
-                           model: str = Form('GTR+FO+I+G4'), support: bool = Form(True), configuration: str = Form(None), resources: str = Form(None)):
+    async def submit_server_file(path: str = Form(...), task: str = Form('gene'),
+                           model: str = Form('GTR+FO+I+G4'), support: bool = Form(True), configuration: str = Form(None), resources: str = Form(None),backbone: UploadFile = File(None)):
         if not enabled or not allow_server_files: raise HTTPException(403, 'Server file import is disabled. Start with --allow-server-files for local debugging.')
-        raw, filename = read_server_alignment(path, store.input_roots)
-        return store.add(raw, filename, task, model, support,configuration,resources)
+        try:
+            raw, filename = await run_in_threadpool(read_server_alignment,path,store.input_roots)
+            constraint=await backbone.read() if backbone is not None else None
+            return await run_in_threadpool(store.add,raw,filename,task,model,support,configuration,resources,constraint)
+        finally:
+            if backbone is not None:await backbone.close()
 
     @app.get('/api/jobs/{identifier}')
     def job(identifier: str): return store.get(identifier)
@@ -469,10 +486,9 @@ if __name__ == '__main__':
     import uvicorn
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--port', type=int, default=8765)
-    parser.add_argument('--host', choices=['127.0.0.1', '0.0.0.0'], default='127.0.0.1')
     parser.add_argument('--preview', action='store_true', help='serve the UI without accepting inference jobs')
     parser.add_argument('--enable-compute', action='store_true', help=argparse.SUPPRESS)
     parser.add_argument('--runs', type=Path, default=DEFAULT_RUNS)
     parser.add_argument('--allow-server-files', action='store_true', help='temporarily accept workspace paths from VS Code drag-and-drop')
     args = parser.parse_args()
-    uvicorn.run(create_app(not args.preview, args.runs, allow_server_files=args.allow_server_files), host=args.host, port=args.port, log_level='warning')
+    uvicorn.run(create_app(not args.preview, args.runs, allow_server_files=args.allow_server_files), host='127.0.0.1', port=args.port, log_level='warning')

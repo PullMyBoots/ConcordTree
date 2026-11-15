@@ -3,7 +3,7 @@ const $ = id => document.getElementById(id);
 const NS = 'http://www.w3.org/2000/svg';
 const PREVIEW_LIMIT = 400;
 const labels = {gene: 'Gene Tree', species: 'Species Tree'};
-const state = {task: 'gene', file: null, compute: false, busy: false, submitting: false, tree: null, supportMethod: null, job: null, poll: null, fileSequence: 0, queue: null, queueStatus: 'loading'};
+const state = {task: 'gene', file: null, serverPath: null, completion: false, backbone: null, compute: false, busy: false, submitting: false, tree: null, supportMethod: null, job: null, poll: null, fileSequence: 0, queue: null, queueStatus: 'loading'};
 
 function error(message = '') {
   $('formError').textContent = message;
@@ -23,7 +23,7 @@ function refreshControls() {
 }
 function selectTask(task, restored = false) {
   if ((state.busy && !restored) || !Object.hasOwn(labels, task)) return;
-  if (state.task !== task) clearFile();
+  if (state.task !== task) { clearFile(); clearBackbone(); }
   state.task = task;
   $('alignmentFile').accept = task === 'gene' ? '.phy,.phylip,.txt' : '.phy,.phylip,.paml,.txt';
   document.querySelectorAll('[data-task]').forEach(button => {
@@ -36,6 +36,7 @@ function selectTask(task, restored = false) {
 function clearFile() {
   state.fileSequence++;
   state.file = null;
+  state.serverPath = null;
   $('alignmentFile').value = '';
   $('fileCard').hidden = true;
   $('uploadTrigger').hidden = false;
@@ -80,7 +81,7 @@ async function useFile(file) {
     $('fileCard').hidden = false;
     $('uploadTrigger').hidden = true;
     refreshControls();
-    await submitAlignment();
+    await submitWhenReady();
   } catch (e) { if (sequence === state.fileSequence) error(e.message || 'Could not read the file.'); }
 }
 // Iterative parser/layout: avoid recursion depth failures on ladder-like trees.
@@ -449,7 +450,8 @@ function updateProgress(job) {
   window.runDashboard.stages(job);
   const {ids,completed,active}=window.runDashboard.position(job);
   const waiting=job.status==='queued';
-  const step=waiting?0:Math.min(ids.length-.05,completed+(completed<ids.length ? .35 : 0));
+  const placing=job.backbone?.enabled&&job.progress?.stage==='placement';
+  const step=waiting?0:placing ? .1+.8*(job.progress.total?job.progress.placed/job.progress.total:0) : Math.min(ids.length-.05,completed+(completed<ids.length ? .35 : 0));
   showProgress(waiting?'Waiting':'Inferring','',{step,total:ids.length,mode:waiting?'waiting':'running'});
 }
 function clearResult() {
@@ -569,8 +571,12 @@ async function route() {
     if (state.job?.id === match[1]) { state.busy = false; refreshControls(); setStatus('Could not load task', e.message, true); }
   }
 }
+async function submitWhenReady() {
+  if (state.file && (!state.completion || state.backbone)) await submitAlignment(state.serverPath);
+}
 async function submitAlignment(serverPath = null) {
   if (!state.file || state.busy) return;
+  if (state.completion && !state.backbone) return;
   error(); clearResult(); state.busy = true; state.submitting = true; state.job = null;
   refreshControls(); setPage(true); setStatus('Connecting');
   showProgress('Checking host', '');
@@ -585,10 +591,11 @@ async function submitAlignment(serverPath = null) {
   const form = new FormData();
   if (serverPath) form.append('path', serverPath); else form.append('file', state.file);
   form.append('task', state.task);
-  form.append('support', String($('showSupport').checked));
+  form.append('support', String(!state.completion&&$('showSupport').checked));
+  if (state.completion && state.backbone) form.append('backbone',state.backbone);
   try {
     if (window.pipelineSettings) {
-      form.append('configuration',JSON.stringify(await window.pipelineSettings.configuration(state.task)));
+      if(!state.completion)form.append('configuration',JSON.stringify(await window.pipelineSettings.configuration(state.task)));
       form.append('resources',JSON.stringify(await window.pipelineSettings.resources()));
     }
     const job = await api(serverPath ? '/api/jobs/from-server' : '/api/jobs', {method: 'POST', body: form, signal: null});
@@ -614,7 +621,7 @@ async function submitAlignment(serverPath = null) {
 // Module and resource drafts are managed in settings.js.
 (() => {
   const dialog=$('settingsDialog');
-  $('settingsButton').addEventListener('click',async()=>{dialog.showModal();await window.pipelineSettings.open(state.task);});
+  $('settingsButton').addEventListener('click',async()=>{dialog.showModal();await window.pipelineSettings.open(state.task,state.completion);});
   $('closeSettings').addEventListener('click',()=>dialog.close());
   dialog.addEventListener('click',event=>{
     const box=dialog.getBoundingClientRect();
@@ -622,7 +629,39 @@ async function submitAlignment(serverPath = null) {
   });
 })();
 $('taskForm').addEventListener('submit', event => event.preventDefault());
-$('backButton').addEventListener('click', () => { if (!state.busy) { clearTimeout(state.poll); state.job = null; clearFile(); location.hash = 'submit'; setPage(false); } });
+function clearBackbone(){
+  state.backbone=null;$('backboneFile').value='';$('backboneName').textContent='';
+  $('backboneCard').hidden=true;$('backboneTrigger').hidden=false;
+}
+async function useBackbone(file){
+  if(state.busy||!file)return;
+  if(!file.size){$('backboneFile').value='';return error('The Newick file is empty.');}
+  state.backbone=file;$('backboneName').textContent=file.name;
+  $('backboneCard').hidden=false;$('backboneTrigger').hidden=true;error();
+  await submitWhenReady();
+}
+$('completionMode').addEventListener('change',()=>{
+  state.completion=$('completionMode').checked;clearFile();clearBackbone();
+  $('uploadPanels').classList.toggle('completion',state.completion);
+  $('backbonePanel').hidden=!state.completion;$('msaLabel').hidden=!state.completion;
+  $('exampleButton').hidden=state.completion;
+  $('showSupport').closest('label').hidden=state.completion;
+});
+$('backboneTrigger').addEventListener('click',()=> $('backboneFile').click());
+$('backboneFile').addEventListener('change',()=>useBackbone($('backboneFile').files[0]));
+$('removeBackbone').addEventListener('click',()=>{clearBackbone();$('backboneFile').click();});
+for(const name of ['dragenter','dragover']) $('backboneTrigger').addEventListener(name,event=>{
+  event.preventDefault();event.stopPropagation();if(!state.busy){event.dataTransfer.dropEffect='copy';$('backboneTrigger').classList.add('dragging');}
+});
+for(const name of ['dragleave','drop']) $('backboneTrigger').addEventListener(name,event=>{
+  event.preventDefault();event.stopPropagation();$('backboneTrigger').classList.remove('dragging');
+});
+$('backboneTrigger').addEventListener('drop',event=>{
+  if(state.busy)return;
+  if(event.dataTransfer.files.length!==1)return error('Upload one Newick file.');
+  useBackbone(event.dataTransfer.files[0]);
+});
+$('backButton').addEventListener('click', () => { if (!state.busy) { clearTimeout(state.poll); state.job = null; clearFile(); clearBackbone(); location.hash = 'submit'; setPage(false); } });
 $('pauseButton').addEventListener('click', async () => {
   if(!state.job)return;
   $('pauseButton').disabled=true;
@@ -671,11 +710,12 @@ async function useServerFile(path) {
   let name = path.split('/').pop();
   try { name = decodeURIComponent(name); } catch {}
   state.file = {name};
+  state.serverPath = path;
   $('fileName').textContent = name;
   $('fileMeta').textContent = 'Server file';
   $('fileCard').hidden = false;
   $('uploadTrigger').hidden = true;
-  await submitAlignment(path);
+  await submitWhenReady();
 }
 $('uploadTrigger').addEventListener('drop', event => {
   event.preventDefault(); event.stopPropagation();

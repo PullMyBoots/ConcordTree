@@ -9,7 +9,7 @@ import numpy as np
 from search_progress import ExactRecurrence
 
 def refine(adjacency,n_taxa,predict,*,plan_backend,nni,passes=10000,
-           representatives=4,min_margin=.10,stop_moves_at_most=None,progress=None,batch_size=65536,checkpoint=None):
+           representatives=4,min_margin=.10,stop_moves_at_most=None,progress=None,batch_size=65536,checkpoint=None,backbone=None,names=None):
     from concordtree.assets import load_candidate_graph_backend
     backend=load_candidate_graph_backend()
     neighbors=nni._adjacency_neighbor_array(adjacency,n_taxa)
@@ -37,6 +37,9 @@ def refine(adjacency,n_taxa,predict,*,plan_backend,nni,passes=10000,
         best=np.asarray(np.argsort(scores,axis=1)[:,-1],dtype=np.int64)
         margins=np.zeros(len(scores),dtype=np.float64);rows=np.nonzero(best!=0)[0]
         margins[rows]=scores[rows,best[rows]]-scores[rows,0]
+        if backbone is not None:
+            allowed=np.asarray(backbone.allowed_edges(neighbors,dict(enumerate(names)),edges),dtype=bool)
+            best[~allowed]=0; margins[~allowed]=0.
         timing['evidence_seconds']+=perf_counter()-start;start=perf_counter()
         selected=backend.apply_nni_moves(neighbors,edges,branches,best,margins,min_margin)
         timing['apply_seconds']+=perf_counter()-start

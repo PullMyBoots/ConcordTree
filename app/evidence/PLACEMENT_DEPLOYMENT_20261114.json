@@ -1,0 +1,185 @@
+{
+  "status": "passed",
+  "arithmetic": [
+    {
+      "task": "gene",
+      "missing": 1,
+      "shared": 500,
+      "status": "passed"
+    },
+    {
+      "task": "gene",
+      "missing": 4,
+      "shared": 499,
+      "status": "passed"
+    },
+    {
+      "task": "gene",
+      "missing": 8,
+      "shared": 498,
+      "status": "passed"
+    },
+    {
+      "task": "species",
+      "missing": 1,
+      "shared": 168,
+      "status": "passed"
+    },
+    {
+      "task": "species",
+      "missing": 4,
+      "shared": 168,
+      "status": "passed"
+    },
+    {
+      "task": "species",
+      "missing": 8,
+      "shared": 168,
+      "status": "passed"
+    }
+  ],
+  "service_actual_backend": "Cached local likelihood placement",
+  "service_result": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/release/V1.0.2/runs/web/461af5f38dd14ae5be9601094541f97d/output/RESULT.json",
+  "service_topology_matches_candidate": true,
+  "created_at": "2026-11-14T10:31:26.942696+00:00",
+  "algorithms": {
+    "gene": "homogeneous MLP shortlist -> bounded cached GTR+F+I+G4 local likelihood",
+    "species": "observed-locus kernel quartet potentials -> all-edge reroot DP"
+  },
+  "gene_regression": {
+    "status": "passed",
+    "cases": [
+      {
+        "task": "gene",
+        "id": "60280-m1",
+        "identical_validated_candidate": true,
+        "seconds": 0.6082362809975166
+      },
+      {
+        "task": "gene",
+        "id": "45219-m1",
+        "identical_validated_candidate": true,
+        "seconds": 0.08546783501515165
+      },
+      {
+        "task": "gene",
+        "id": "60280-m4",
+        "identical_validated_candidate": true,
+        "seconds": 0.2846528129884973
+      },
+      {
+        "task": "gene",
+        "id": "45219-m4",
+        "identical_validated_candidate": true,
+        "seconds": 0.3828640370047651
+      },
+      {
+        "task": "gene",
+        "id": "60280-m8",
+        "identical_validated_candidate": true,
+        "seconds": 0.45792828701087274
+      },
+      {
+        "task": "gene",
+        "id": "45219-m8",
+        "identical_validated_candidate": true,
+        "seconds": 0.5942372790013906
+      }
+    ]
+  },
+  "species_regression": [
+    {
+      "id": "small-n32-ILS-16-m1",
+      "verified": true,
+      "prediction": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/output/placement-deploy-report-20261114/species-small-n32-ILS-16-m1/prediction.nwk",
+      "expected_candidates": [],
+      "seconds": 1.1029130920069292,
+      "identical_saved_kernel": true,
+      "expected": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/output/species-placement-fast-20261113/main-ml/kernel/small-n32-ILS-16-m1/prediction.nwk"
+    },
+    {
+      "id": "small-n32-ILS-13-m4",
+      "verified": true,
+      "prediction": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/output/placement-deploy-report-20261114/species-small-n32-ILS-13-m4/prediction.nwk",
+      "expected_candidates": [],
+      "seconds": 0.0988885440165177,
+      "identical_saved_kernel": true,
+      "expected": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/output/species-placement-fast-20261113/main-ml/kernel/small-n32-ILS-13-m4/prediction.nwk"
+    },
+    {
+      "id": "small-n32-ILS-28-m8",
+      "verified": true,
+      "prediction": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/output/placement-deploy-report-20261114/species-small-n32-ILS-28-m8/prediction.nwk",
+      "expected_candidates": [],
+      "seconds": 0.10041700801230036,
+      "identical_saved_kernel": true,
+      "expected": "/home/student_su/publish_code/research-workbench/subprojects-single/scalable-neural-phylogeny/output/species-placement-fast-20261113/main-ml/kernel/small-n32-ILS-28-m8/prediction.nwk"
+    }
+  ],
+  "edge_cases": [
+    {
+      "case": "none",
+      "passed": true,
+      "warnings": []
+    },
+    {
+      "case": "constant",
+      "passed": true,
+      "warnings": [
+        "No discriminatory likelihood among shortlisted positions for e.",
+        "No discriminatory likelihood among shortlisted positions for f."
+      ]
+    },
+    {
+      "case": "unobserved",
+      "passed": true,
+      "warnings": [
+        "No observed reference/query overlap for e. Placement is not identified by the sequences.",
+        "No discriminatory likelihood among shortlisted positions for e."
+      ]
+    }
+  ],
+  "report_metric": "Mean within-input pairwise superiority (tie-aware normalized rank)",
+  "report_data": "technical-report/data/PLACEMENT_SUMMARY.json",
+  "tests": {
+    "backbone": ".....\n----------------------------------------------------------------------\nRan 5 tests in 0.745s\n\nOK\n",
+    "placement": "......\n----------------------------------------------------------------------\nRan 6 tests in 0.233s\n\nOK\n",
+    "runtime": "...\n----------------------------------------------------------------------\nRan 3 tests in 2.443s\n\nOK\n",
+    "pipeline": "...\n----------------------------------------------------------------------\nRan 3 tests in 0.214s\n\nOK\n",
+    "web": "e-packages/fastapi/testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.\n  from starlette.testclient import TestClient as TestClient  # noqa\n..................................\n----------------------------------------------------------------------\nRan 34 tests in 71.488s\n\nOK\n"
+  },
+  "limitations": [
+    "Exposed development datasets, not an independent final holdout.",
+    "Scores depend on the displayed comparator set; do not compare absolute values between gene and species panels.",
+    "Gene baselines use sequential adapters except native TIPars and IQ-TREE constrained search.",
+    "Species APPLES-2 and INSTRAL place independently on the original backbone; coincident queries remain unresolved. ConcordTree inserts jointly/sequentially. Whole-output topology evaluates these actual outputs.",
+    "IQ-TREE fast + INSTRAL uses estimated observed-locus gene trees (one individual per species). True-gene-tree INSTRAL is privileged and excluded from rankings."
+  ],
+  "native_libraries": {
+    "repeat_prune.so": {
+      "sha256": "187a0394fbfb6bbe3295573935b8cc1eb0170be1d5f505b95f3abf75c8446396",
+      "same_as_validated_candidate": true
+    },
+    "insertion_newton.so": {
+      "sha256": "671f1397aaedd431b1c682c5c9a7ceee5740c84cc3d3428ef658dcb5270441f0",
+      "same_as_validated_candidate": true
+    },
+    "native.so": {
+      "sha256": "dbe1e469bc63e1b1da063f8ff67ca76384b23511cc102f5587d0df3a81aab0bc",
+      "same_as_validated_candidate": true
+    },
+    "model_gradient.so": {
+      "sha256": "a7c54cdf3b4cade4a612bef4674909f3fdf0b0a7d725ce5fc3cadc01d3e93080",
+      "same_as_validated_candidate": true
+    }
+  },
+  "http_download": {
+    "status": "passed",
+    "download_sha256": "07397641a1781e27b7cd22f9e8685fd2f7810d9eea0553fe7eb2afc92ad270af",
+    "preview_fields": [
+      "newick",
+      "branch_support"
+    ],
+    "content_disposition": "attachment; filename=\"tree.nwk\""
+  }
+}

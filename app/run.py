@@ -21,6 +21,7 @@ def main():
     parser.add_argument('--views',type=int,default=1,help='gene initialization views; species requires 1')
     parser.add_argument('--rounds',type=int,help='gene posterior sweep budget; excludes explicit --stop-ratio')
     parser.add_argument('--loci',type=Path,help='species only: observed locus JSONL manifest')
+    parser.add_argument('--backbone',type=Path,help='direct topology-only placement on an optional binary Newick backbone; preserve its unrooted topology, skip de novo inference')
     parser.add_argument('--gpu',type=int,default=0,help='physical CUDA GPU index')
     parser.add_argument('--cpu-threads',type=int,default=16)
     parser.add_argument('--pause-request',type=Path,help=argparse.SUPPRESS)
@@ -35,6 +36,7 @@ def main():
         parser.error('--model, multiple --views, and --rounds are for gene trees only')
     if not args.input.is_file():parser.error('input file does not exist')
     if args.loci is not None and not args.loci.is_file():parser.error('locus manifest does not exist')
+    if args.backbone is not None and not args.backbone.is_file():parser.error('backbone tree does not exist')
     configuration=None
     if args.configuration is not None:
         try:
@@ -53,7 +55,7 @@ def main():
         result=UnifiedEngine(gpu=args.gpu,cpu_threads=args.cpu_threads).infer(
             args.input,args.out,task=args.task,model=args.model,loci=args.loci,
             sample_fraction=args.sample_fraction,views=args.views,max_rounds=args.rounds,
-            stop_ratio=args.stop_ratio,missing_data_model=args.missing_data_model,branch_support=not args.no_support,configuration=configuration,pause_request=args.pause_request,
+            stop_ratio=args.stop_ratio,missing_data_model=args.missing_data_model,branch_support=not args.no_support,configuration=configuration,pause_request=args.pause_request,backbone=args.backbone,
             progress=live_log if os.environ.get('CONCORDTREE_LIVE_LOG') == '1' else None)
     except (ValueError,FileNotFoundError) as exc:parser.error(str(exc))
     print(result['prediction'])

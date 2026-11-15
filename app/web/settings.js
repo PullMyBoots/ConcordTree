@@ -3,7 +3,7 @@
 window.pipelineSettings = (() => {
   const el=id=>document.getElementById(id), clone=value=>JSON.parse(JSON.stringify(value));
   const storageKey='concordtree-pipelines-v1',computeKey='concordtree-compute-v1';
-  let schema, saved, draft, computeSchema, savedResources, draftResources, devices=[], task='gene', loading, dragged;
+  let schema, saved, draft, computeSchema, savedResources, draftResources, devices=[], task='gene', loading, dragged, placement=false;
   async function load() {
     if (schema) return;
     if (loading) return loading;
@@ -84,6 +84,7 @@ window.pipelineSettings = (() => {
   }
   function preview() {
     const box=el('pipelinePreview');box.replaceChildren();
+    if(placement){box.append(node('span','pipeline-chip','Direct placement'));return;}
     [node('span','pipeline-chip','AP-NJ'),...draft[task].stages.filter(s=>s.enabled).map(s=>node('span','pipeline-chip',schema.modules[s.id].label))].forEach((n,i)=>{
       if(i)box.append(node('span','pipeline-arrow','→'));box.append(n);
     });
@@ -96,6 +97,8 @@ window.pipelineSettings = (() => {
   }
   function render() {
     const config=draft[task],box=el('pipelineBlocks');box.replaceChildren();preview();
+    document.querySelector('.pipeline-toolbar').hidden=placement;
+    if(placement)return;
     document.querySelectorAll('[data-pipeline-task]').forEach(b=>{
       const selected=b.dataset.pipelineTask===task;b.classList.toggle('active',selected);b.setAttribute('aria-pressed',String(selected));
     });
@@ -138,9 +141,9 @@ window.pipelineSettings = (() => {
     }
     return true;
   }
-  async function open(type) {
+  async function open(type,completion=false) {
     el('settingsError').hidden=true;
-    try {await load();task=type;draft=clone(saved);draftResources=clone(savedResources);el('settingsMessage').textContent='';render();renderResources();void refreshDevices();}
+    try {await load();task=type;placement=completion;draft=clone(saved);draftResources=clone(savedResources);el('settingsMessage').textContent='';render();renderResources();void refreshDevices();}
     catch(e){el('settingsError').textContent=e.message;el('settingsError').hidden=false;}
   }
   document.addEventListener('DOMContentLoaded',()=>{

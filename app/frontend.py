@@ -92,7 +92,7 @@ class MLPWarmstart:
                     checkpoint_sha256=self.checkpoint_sha256)
 
     @torch.no_grad()
-    def refine(self, tree, names, msa, *, stop_ratio=.005, progress=None, packed_data=None, max_rounds=None, representatives=4, min_margin=.10, batch_size=65536, checkpoint=None):
+    def refine(self, tree, names, msa, *, stop_ratio=.005, progress=None, packed_data=None, max_rounds=None, representatives=4, min_margin=.10, batch_size=65536, checkpoint=None, backbone=None):
         start = time.perf_counter()
         load_seconds = self.load()
         if packed_data is None:
@@ -142,7 +142,7 @@ class MLPWarmstart:
         result = refine(
             adjacency, len(names), predict, passes=max_rounds or 10000, representatives=representatives,
             min_margin=min_margin,batch_size=batch_size, stop_moves_at_most=math.floor(stop_ratio * (len(names)-3)),
-            plan_backend=self.plan, nni=self.nni, progress=progress,checkpoint=checkpoint_neighbors if checkpoint else None)
+            plan_backend=self.plan, nni=self.nni, progress=progress,checkpoint=checkpoint_neighbors if checkpoint else None,backbone=backbone,names=names)
         torch.cuda.synchronize()
         search_seconds = time.perf_counter() - search_start
         if result['stop']=='emergency_pass_guard' and max_rounds is not None:

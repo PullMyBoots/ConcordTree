@@ -35,16 +35,33 @@
         </div>
         <div class="inference-options" aria-label="Inference options">
           <label class="support-option"><input id="showSupport" type="checkbox" checked><span>Branch support</span></label>
+          <label class="support-option"><input id="completionMode" type="checkbox"><span>Taxon completion</span></label>
         </div>
-        <input type="file" id="alignmentFile" accept=".phy,.phylip,.txt" hidden>
-        <button class="dropzone" id="uploadTrigger" type="button" aria-label="Upload alignment and start inference">
-          <span class="upload-mark" aria-hidden="true"><svg viewBox="0 0 40 40"><path d="M20 27V10m-6 6 6-6 6 6M10 25v5a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3v-5"/></svg></span>
-        </button>
+        <div id="uploadPanels" class="upload-panels">
+          <div class="upload-panel">
+            <div id="msaLabel" class="upload-label" hidden><span>MSA</span><span>PHYLIP</span></div>
+            <input type="file" id="alignmentFile" accept=".phy,.phylip,.txt" hidden>
+            <button class="dropzone" id="uploadTrigger" type="button" aria-label="Upload MSA alignment">
+              <span class="upload-mark" aria-hidden="true"><svg viewBox="0 0 40 40"><path d="M20 27V10m-6 6 6-6 6 6M10 25v5a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3v-5"/></svg></span>
+            </button>
+            <div class="file-card" id="fileCard" hidden>
+              <div><strong id="fileName"></strong><span id="fileMeta"></span></div>
+              <button id="removeFile" class="text-button" type="button" aria-label="Choose another alignment">Change</button>
+            </div>
+          </div>
+          <div id="backbonePanel" class="upload-panel" hidden>
+            <div class="upload-label"><span>Newick</span></div>
+            <input type="file" id="backboneFile" accept=".nwk,.newick,.tree,.tre,.treefile,.txt" hidden>
+            <button class="dropzone" id="backboneTrigger" type="button" aria-label="Upload existing Newick tree">
+              <span class="upload-mark" aria-hidden="true"><svg viewBox="0 0 40 40"><path d="M20 30V19m0 0H10V10m10 9h10V10M7 10h6m14 0h6M17 30h6"/></svg></span>
+            </button>
+            <div id="backboneCard" class="file-card" hidden>
+              <div><strong id="backboneName"></strong></div>
+              <button id="removeBackbone" class="text-button" type="button" aria-label="Choose another Newick tree">Change</button>
+            </div>
+          </div>
+        </div>
         <button id="exampleButton" class="text-button example-button" type="button">Try example</button>
-        <div class="file-card" id="fileCard" hidden>
-          <div><strong id="fileName"></strong><span id="fileMeta"></span></div>
-          <button id="removeFile" class="text-button" type="button" aria-label="Choose another file">Change</button>
-        </div>
         <p class="error" id="formError" role="alert" hidden></p>
         <details id="hostLoad" class="host-load" data-status="loading" aria-label="Current host load">
           <summary class="host-header"><span class="host-title"><i class="host-dot" aria-hidden="true"></i>Host load</span><span id="hostSummary">Connecting…</span><span class="host-chevron" aria-hidden="true"></span></summary>

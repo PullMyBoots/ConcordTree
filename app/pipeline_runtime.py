@@ -31,7 +31,7 @@ def relabel_tree(tree,names):
     return Tree({mapping[u]:{mapping[v] for v in vs} for u,vs in tree.graph.items()},
         dict(enumerate(names)),{edge(mapping[a],mapping[b]):v for (a,b),v in tree.lengths.items()})
 
-def distance_refine(tree,names,packed,sites,configuration,options,cpu_threads,checkpoint=None):
+def distance_refine(tree,names,packed,sites,configuration,options,cpu_threads,checkpoint=None,backbone=None):
     from concordtree._core.learned_nni import _adjacency_neighbor_array
     from concordtree.treeio import Tree
     import _ct_apnj_packed as native
@@ -43,7 +43,7 @@ def distance_refine(tree,names,packed,sites,configuration,options,cpu_threads,ch
     def publish(adj,event):
         if checkpoint:checkpoint(Tree(topology.export_graph(adj,len(names),True),dict(enumerate(names)),{}),event)
     result=refine(neighbors,len(names),state,model,True,alpha,checkpoint=publish if checkpoint else None,
-        max_rounds=options['max_rounds'],stop_ratio=options['stop_ratio'],**options['advanced'])
+        max_rounds=options['max_rounds'],stop_ratio=options['stop_ratio'],backbone=backbone,names=names,**options['advanced'])
     result['gamma_shape']=alpha
     return Tree(topology.export_graph(neighbors,len(names),True),dict(enumerate(names)),{}),result
 
@@ -78,11 +78,11 @@ def execute(engine,msa,out,task,configuration,loci,model,fraction,views,missing,
         id=s['id'];directory=out/'modules'/f'{index+1:02d}-{id}';directory.mkdir(parents=True)
         progress(dict(stage='module_started',module=id));started=time.perf_counter()
         if id=='distance':
-            tree,record=distance_refine(tree,names,packed,sites,configuration,s,engine.runtime['cpu_threads'],engine._checkpoint)
+            tree,record=distance_refine(tree,names,packed,sites,configuration,s,engine.runtime['cpu_threads'],engine._checkpoint,backbone=engine._backbone)
             branch_lengths=False;support=dict(enabled=False,requested=branch_support,reason='Final distance NNI has no branch support.')
         elif id=='mlp':
             tree,record=engine.predictors[task].refine(tree,names,msa,packed_data=(packed,names,sites),
-                max_rounds=s['max_rounds'],stop_ratio=s['stop_ratio'],checkpoint=engine._checkpoint,**s['advanced'],
+                max_rounds=s['max_rounds'],stop_ratio=s['stop_ratio'],checkpoint=engine._checkpoint,backbone=engine._backbone,**s['advanced'],
                 progress=lambda row:progress(dict(stage='mlp',**row)))
             info.update(mlp_seconds=record['seconds'],mlp_stop=record['stop'],mlp_converged=record['converged'],
                 mlp_predictor=engine.predictors[task].predictor,mlp_checkpoint_sha256=record['checkpoint_sha256'])

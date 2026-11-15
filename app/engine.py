@@ -26,6 +26,7 @@ def write_json(path, value, *, indent=2):
 class UnifiedEngine:
     def __init__(self, *, gpu=None, cpu_threads=16):
         self._checkpoint=None
+        self._backbone=None
         self.runtime = configure_runtime(gpu=gpu, cpu_threads=cpu_threads)
         import torch
         if not torch.cuda.is_available():raise RuntimeError('this release requires a CUDA GPU')
@@ -38,6 +39,7 @@ class UnifiedEngine:
         self.predictors = {task: MLPWarmstart(name) for task, name in TASK_PREDICTOR.items()}
 
     def _initialize(self, task, msa, out, names, states, seed, missing, packed_data, *, view=0, progress=None,configuration=None):
+        if self._backbone is not None:raise RuntimeError('backbone tasks must use dedicated direct placement')
         import torch
         from apnj_frontend import initialize as build_apnj
         from concordtree.treeio import newick_python
@@ -51,7 +53,8 @@ class UnifiedEngine:
         options=configuration['apnj'] if configuration else None
         if options:seed=(options['seed']+view)%(2**32)
         cleanup=dict(max_rounds=distance['max_rounds'],stop_ratio=distance['stop_ratio'],**distance['advanced']) if distance and distance['enabled'] else (dict(max_rounds=0) if distance else None)
-        tree, info = build_apnj(names, packed_data, task=task, seed=seed, cpu_threads=self.runtime['cpu_threads'],options=options,cleanup_options=cleanup,checkpoint=self._checkpoint)
+        tree, info = build_apnj(names, packed_data, task=task, seed=seed, cpu_threads=self.runtime['cpu_threads'],options=options,
+            cleanup_options=cleanup,checkpoint=self._checkpoint)
         torch.cuda.synchronize(); apnj_seconds = time.perf_counter() - started
         suffix = '' if view == 0 else f'-{view:02d}'
         (out / f'apnj{suffix}.nwk').write_text(newick_python(tree) + '\n')
@@ -65,7 +68,7 @@ class UnifiedEngine:
             if progress:progress(dict(stage='module_started', module='mlp'))
             tree, neural = self.predictors[task].refine(tree, names, msa, stop_ratio=mlp['stop_ratio'] if mlp else .005,
                 packed_data=packed_data, progress=(lambda row: progress(dict(stage='mlp', view=view, **row))) if progress else None,
-                checkpoint=self._checkpoint,**(dict(max_rounds=mlp['max_rounds'],**mlp['advanced']) if mlp else {}))
+                checkpoint=self._checkpoint,backbone=self._backbone,**(dict(max_rounds=mlp['max_rounds'],**mlp['advanced']) if mlp else {}))
         else:
             neural=dict(seconds=0.,passes=[],moves=0,stop='disabled',converged=True,warnings=[],checkpoint_sha256=None)
         if progress and (mlp is None or mlp['enabled']):
@@ -82,13 +85,14 @@ class UnifiedEngine:
         return tree, info
 
     def infer(self, msa, out, *, task, model=None, loci=None, sample_fraction=None,
-              views=1, max_rounds=None, stop_ratio=.005, missing_data_model='standard', progress=None,branch_support=True,configuration=None,pause_request=None):
+              views=1, max_rounds=None, stop_ratio=.005, missing_data_model='standard', progress=None,branch_support=True,configuration=None,pause_request=None,backbone=None):
         with _LOCK:
             return self._infer(msa, out, task=task, model=model, loci=loci,
                 sample_fraction=sample_fraction, views=views, max_rounds=max_rounds,
-                stop_ratio=stop_ratio, missing_data_model=missing_data_model, progress=progress,branch_support=branch_support,configuration=configuration,pause_request=pause_request)
+                stop_ratio=stop_ratio, missing_data_model=missing_data_model, progress=progress,branch_support=branch_support,configuration=configuration,pause_request=pause_request,backbone=backbone)
 
-    def _infer(self, msa, out, *, task, model, loci, sample_fraction, views, max_rounds, stop_ratio, missing_data_model, progress,branch_support,configuration,pause_request):
+    def _infer(self, msa, out, *, task, model, loci, sample_fraction, views, max_rounds, stop_ratio, missing_data_model, progress,branch_support,configuration,pause_request,backbone):
+        self._backbone=None
         if not isinstance(branch_support,bool):raise ValueError('branch_support must be a boolean')
         if task not in self.predictors:raise ValueError('task must be gene or species')
         if sample_fraction is not None and not 0 < sample_fraction <= 1:raise ValueError('sample fraction must be in (0,1]')
@@ -118,7 +122,8 @@ class UnifiedEngine:
         if task=='gene':model=posterior_options['advanced']['model']
         msa = Path(msa).resolve(strict=True)
         loci = Path(loci).resolve(strict=True) if loci is not None else None
-        out = owned_path(out, inputs=[msa] + ([loci] if loci else []))
+        backbone = Path(backbone).resolve(strict=True) if backbone is not None else None
+        out = owned_path(out, inputs=[msa] + ([loci] if loci else []) + ([backbone] if backbone else []))
         if out.exists():raise ValueError('fresh output directory required')
         out.mkdir(parents=True)
         from checkpoints import Checkpoints
@@ -133,6 +138,7 @@ class UnifiedEngine:
             write_json(out/'progress.json', event)
             if progress:progress(event)
         def checkpoint(tree, event=None):
+            if self._backbone is not None:self._backbone.assert_tree(tree)
             event = event or {}
             if event.get('stage') == 'apnj':
                 emit(dict(stage='module_complete', module='apnj'))
@@ -145,8 +151,19 @@ class UnifiedEngine:
         try:
             from inputs import prepare_input
             actual = prepare_input(msa, out)
+            if backbone is not None:
+                from backbone import Backbone
+                with actual.open() as handle:
+                    next(handle)
+                    names=[line.split(maxsplit=1)[0] for line in handle if line.strip()]
+                text=backbone.read_text(encoding='utf-8-sig')
+                self._backbone=Backbone(text,names)
+                (out/'backbone.nwk').write_text(text,encoding='utf-8')
+                emit(dict(stage='backbone_ready',**self._backbone.metadata))
             emit(dict(stage='input_ready'))
-            if not canonical_route(configuration):
+            if self._backbone is not None:
+                details=self._complete(actual,out,task,loci,emit,branch_support)
+            elif not canonical_route(configuration):
                 from pipeline_runtime import execute
                 details=execute(self,actual,out,task,configuration,loci,model or 'GTR+FO+I+G4',sample_fraction,views,missing_data_model,emit,branch_support)
             elif task == 'gene':
@@ -155,13 +172,18 @@ class UnifiedEngine:
             else:
                 details = self._species(actual, out, loci, sample_fraction, stop_ratio, missing_data_model, emit,branch_support,configuration=configuration)
             support_details=details.pop('branch_support',dict(enabled=False))
+            if self._backbone is not None:
+                from concordtree.treeio import parse_newick
+                self._backbone.assert_tree(parse_newick((out/'prediction.nwk').read_text()))
+                support_details['backbone_constrained']=True
+                support_details['constraint_note']='Backbone topology verified. Placement score gaps do not assign branch supports.'
             posterior=details['posterior']
             interventions=[]
             for item in details['initialization']:
                 if not item.get('mlp_converged',True):
                     interventions.append(dict(stage='mlp',reason=item.get('mlp_stop')))
             search_converged=posterior.get('search_converged',True)
-            if not search_converged:
+            if search_converged is False:
                 interventions.append(dict(stage='posterior',reason=posterior.get('stop')))
             for item in posterior.get('parameter_interventions',[]):
                 interventions.append(dict(stage='parameter_fit',**item))
@@ -173,11 +195,17 @@ class UnifiedEngine:
                 initialization_informative=all(item.get('health',{}).get('informative',True) for item in details['initialization']),
                 initialization_warnings=initialization_warnings,
                 warnings=[f"{r['stage']}: {r['reason']}" for r in interventions]+initialization_warnings)
+            mlp_used=(task=='gene' and self._backbone.metadata['added_taxa']>0) if self._backbone is not None else module_options(configuration,'mlp')['enabled']
+            if self._backbone is not None:
+                write_json(out/'requested-configuration.json',configuration)
+                write_json(out/'configuration.json',details['placement_configuration'])
             result = dict(status='complete', version='1.0.2', task=task,
                 input=str(msa), prediction=str(out/'prediction.nwk'),
-                mlp_predictor=self.predictors[task].predictor if module_options(configuration,'mlp')['enabled'] else None,
-                mlp_checkpoint_sha256=getattr(self.predictors[task],'checkpoint_sha256',None) if module_options(configuration,'mlp')['enabled'] else None,
-                pipeline=' -> '.join(['AP-NJ']+[s['id'] for s in configuration['stages'] if s['enabled']]),configuration=configuration,
+                backbone=dict(self._backbone.metadata,verified=True,input=str(backbone)) if self._backbone else dict(enabled=False),
+                mlp_predictor=self.predictors[task].predictor if mlp_used else None,
+                mlp_checkpoint_sha256=getattr(self.predictors[task],'checkpoint_sha256',None) if mlp_used else None,
+                pipeline=('Cached local likelihood placement' if task=='gene' else 'Kernel quartet placement') if self._backbone is not None else ' -> '.join(['AP-NJ']+[s['id'] for s in configuration['stages'] if s['enabled']]),
+                configuration=details.get('placement_configuration',configuration),
                 file_to_tree_seconds=time.perf_counter()-started-checkpoints.paused_seconds,paused_seconds=checkpoints.paused_seconds,
                 branch_lengths_inferred=details.get('branch_lengths_inferred',task=='gene'), details=details,branch_support=support_details,quality=quality)
             write_json(out/'RESULT.json',result); emit(dict(stage='complete'))
@@ -186,6 +214,99 @@ class UnifiedEngine:
             write_json(out/'RESULT.json',dict(status='failed',task=task,version='1.0.2',error=str(exc)))
             emit(dict(stage='failed',error=str(exc)))
             raise
+        finally:
+            self._backbone=None
+            self._checkpoint=None
+
+    def _complete(self,msa,out,task,loci,progress,branch_support):
+        """Direct placement only: no AP-NJ guide or whole-tree refinement."""
+        if task=='gene':return self._complete_gene(msa,out,progress,branch_support)
+        from exact_site_patterns import PackedPatterns
+        from taxon_placement import QuartetPredictor,place
+        from concordtree.treeio import newick_python,Tree
+        started=time.perf_counter();alignment=PackedPatterns(msa)
+        names=alignment.names
+        missing=[name for name in names if name not in self._backbone.taxa]
+        settings=dict(method='direct_quartet_placement',predictor='mlp' if task=='gene' else 'kernel',
+            representatives=2 if task=='gene' else 4,aggregation='log' if task=='gene' else 'raw',
+            correction_passes=0,stages=[dict(id='placement',enabled=True)])
+        progress(dict(stage='placement',module='placement',placed=0,total=len(missing)))
+        predictor=None
+        if missing:
+            predictor=QuartetPredictor(alignment.packed,names,alignment.original_sites,task,
+                kind=settings['predictor'],loci=loci,mlp=self.predictors[task])
+        elif loci:
+            from msc_refine.observations import read_boundaries
+            read_boundaries(loci,alignment.original_sites)
+        tree=Tree({u:set(vs) for u,vs in self._backbone.tree.graph.items()},dict(self._backbone.tree.names),{})
+        count=0
+        def placed(_tree,row):
+            nonlocal count
+            count+=1
+            progress(dict(stage='placement',module='placement',placed=count,total=len(missing),
+                taxon=row['taxon'],quartets=row['quartets'],score_gap=row['score_gap']))
+        tree,info=place(tree,names,missing,predictor,representatives=settings['representatives'],
+            aggregation=settings['aggregation'],callback=placed)
+        self._backbone.assert_tree(tree)
+        (out/'prediction.nwk').write_text(newick_python(tree)+'\n')
+        info.update(setup_seconds=predictor.setup_seconds if predictor else 0.,parse_seconds=alignment.parse_seconds,
+            seconds=time.perf_counter()-started,
+            health=dict(informative=all(row['informative'] for row in info['placements']),warnings=info['warnings']))
+        info['predictor']='homogeneous MLP' if task=='gene' else ('observed_loci' if loci else 'msa_only')
+        info['predictor_sha256']=getattr(self.predictors[task],'checkpoint_sha256',None) if task=='gene' else MSC_ASSETS['observed_loci' if loci else 'msa_only'][1]
+        write_json(out/'placement.json',info)
+        self._checkpoint(tree,dict(stage='placement',placed=len(missing)))
+        progress(dict(stage='module_complete',module='placement',seconds=info['seconds']))
+        return dict(initialization=[info],posterior=dict(method='direct placement; no subsequent refinement',
+            search_converged=True,placement_objective_maximized_at_each_step=True,parameter_fit_performed=False,
+            input_mode=('observed_loci' if loci else 'msa_only') if task=='species' else None),branch_lengths_inferred=False,
+            placement_configuration=settings,branch_support=dict(enabled=False,requested=branch_support,
+                reason='Direct placement outputs topology and uncalibrated placement score gaps in placement.json; it does not estimate whole-tree branch support.'))
+
+    def _complete_gene(self,msa,out,progress,branch_support):
+        """Candidate-guided local likelihood; no de novo tree or full-tree refinement."""
+        from exact_site_patterns import PackedPatterns
+        from concordtree.treeio import Tree,newick_python
+        from placement_likelihood.repeat_plan import activate
+        from placement_likelihood.grouped_placement import complete,CONFIG
+        activate()
+        started=time.perf_counter();alignment=PackedPatterns(msa)
+        missing=[name for name in alignment.names if name not in self._backbone.taxa]
+        tree=Tree({u:set(vs) for u,vs in self._backbone.tree.graph.items()},dict(self._backbone.tree.names),{})
+        progress(dict(stage='placement',module='placement',placed=0,total=len(missing)))
+        count=0
+        def placed(current,row):
+            nonlocal count
+            count+=1
+            progress(dict(stage='placement',module='placement',placed=count,total=len(missing),taxon=row['query']))
+        tree,info=complete(tree,alignment,self.predictors['gene'],missing,callback=placed)
+        self._backbone.assert_tree(tree)
+        (out/'prediction.nwk').write_text(newick_python(tree)+'\n')
+        warnings=[]
+        for row in info['placements']:
+            if not row['has_observed_overlap']:
+                warnings.append('No observed reference/query overlap for '+row['query']+'. Placement is not identified by the sequences.')
+            values=[trial['log_likelihood'] for trial in row['trials']]
+            if values and max(values)-min(values)<1e-8:
+                warnings.append('No discriminatory likelihood among shortlisted positions for '+row['query']+'.')
+        settings=dict(method='cached_local_likelihood_placement',**CONFIG,stages=[dict(id='placement',enabled=True)])
+        info.update(method=settings['method'],parse_seconds=alignment.parse_seconds,seconds=time.perf_counter()-started,
+            predictor='homogeneous MLP shortlist + GTR+F+I+G4 local likelihood',
+            predictor_sha256=getattr(self.predictors['gene'],'checkpoint_sha256',None),
+            warnings=warnings,health=dict(informative=not warnings,warnings=warnings),
+            backbone_preserved=True,full_tree_branch_lengths_inferred=False,
+            limitations=['Likelihood is optimized on shortlisted edges in bounded local contexts.',
+                'Reference nuisance fits use a finite budget; fit metadata retains iteration caps.',
+                'Placement scores are not calibrated branch support.'])
+        write_json(out/'placement.json',info)
+        self._checkpoint(tree,dict(stage='placement',placed=len(missing)))
+        progress(dict(stage='module_complete',module='placement',seconds=info['seconds']))
+        return dict(initialization=[info],posterior=dict(method='cached local likelihood placement; no subsequent refinement',
+            search_converged=None,candidate_evaluation_completed=True,convergence_scope='finite candidate evaluation; no global ML convergence claim',placement_objective_maximized_at_each_step=False,
+            parameter_fit_performed=bool(missing),parameter_scope='bounded local reference and insertion branches'),
+            branch_lengths_inferred=False,placement_configuration=settings,
+            branch_support=dict(enabled=False,requested=branch_support,
+                reason='Local placement likelihoods do not estimate calibrated whole-tree branch support.'))
 
     def _gene(self, msa, out, model, fraction, views, rounds, stop_ratio, missing, progress,branch_support,configuration=None,supplied_tree=None,supplied_info=None):
         import algorithm
@@ -206,7 +327,7 @@ class UnifiedEngine:
         tree, details = algorithm.infer(msa, posterior, model=model, sample_fraction=fraction,
             views=views, max_rounds=rounds, stop_ratio=stop_ratio, missing_data_model=missing,
             initialize_fn=initialize, initializer_uses_all_sites=True,
-            progress=lambda row: progress(dict(stage='gene_refinement', detail=row)),support_sink=evidence,checkpoint_fn=self._checkpoint,
+            progress=lambda row: progress(dict(stage='gene_refinement', detail=row)),support_sink=evidence,checkpoint_fn=self._checkpoint,backbone=self._backbone,
             **({k:v for k,v in module_options(configuration,'likelihood')['advanced'].items() if k!='model'} if configuration else {}))
         details.update(supplied_neural_tree_or_fit=True,
                        initialization_provider='supplied pipeline tree' if supplied_tree is not None else 'configured AP-NJ frontend')
@@ -261,7 +382,7 @@ class UnifiedEngine:
             self._checkpoint(Tree(graph,dict(enumerate(names)),{}),dict(stage='kernel',round=row['sweep']))
             progress(dict(stage='species_refinement',**row))
         final, details = refine_active(graph,scorer,stop_ratio=stop_ratio,
-            callback=kernel_progress,
+            callback=kernel_progress,backbone=self._backbone,names=names,
             **(dict(max_rounds=options['max_rounds'],min_gain=options['advanced']['min_gain']) if options else {}))
         torch.cuda.synchronize(); search_seconds=time.perf_counter()-phase
         validate_topology(final,len(names))

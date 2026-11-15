@@ -1,0 +1,28 @@
+{
+  "status": "accepted after render and browser inspection",
+  "surface": "technical-report appendix",
+  "reviewed_at": "2026-11-15T05:39:45.512302+00:00",
+  "source_data": "technical-report/data/NNI_STAGE_4096_SUMMARY.json",
+  "generating_script": "output/nni-stage-4096-20261115/plot_stages.py",
+  "style_template": "deepscientist-paper-plot line_training_curve, adapted to paired nRF and timing panels",
+  "exports": [
+    "technical-report/assets/benchmark/nni-stages-gene.svg",
+    "technical-report/assets/benchmark/nni-stages-gene.png",
+    "technical-report/assets/benchmark/nni-stages-gene-mobile.svg",
+    "technical-report/assets/benchmark/nni-stages-gene-mobile.png",
+    "technical-report/assets/benchmark/nni-stages-species.svg",
+    "technical-report/assets/benchmark/nni-stages-species.png",
+    "technical-report/assets/benchmark/nni-stages-species-mobile.svg",
+    "technical-report/assets/benchmark/nni-stages-species-mobile.png"
+  ],
+  "comparison": "Four consecutive stage means with matched DIPPER-GPU reference and whole-alignment bootstrap intervals.",
+  "review_notes": [
+    "Inspected final PNGs and desktop/mobile report rendering.",
+    "Revised the mobile version to stack the two metric plots; confirmed 390 px viewport without horizontal page overflow.",
+    "Tables retain exact rounded values and figures show interval uncertainty."
+  ],
+  "screenshots": [
+    "output/playwright/stage-desktop-final.png",
+    "output/playwright/stage-mobile-final.png"
+  ]
+}

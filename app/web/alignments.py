@@ -61,7 +61,7 @@ def _interleaved(lines, start, n, length):
     return rows, pos
 
 
-def normalize_alignment(raw: bytes, task='gene'):
+def normalize_alignment(raw: bytes, task='gene', *, completion=False):
     """Return one normalized matrix, summary, and ordered locus lengths.
 
     A single species block uses msa_only; two or more use observed_loci.
@@ -96,7 +96,7 @@ def normalize_alignment(raw: bytes, task='gene'):
         blocks.append(rows); lengths.append(length)
         if task == 'gene' and pos < len(lines):
             raise ValueError('Gene Tree accepts exactly one PHYLIP alignment. Use Species Tree for multiple locus blocks.')
-    minimum = 4 if task == 'gene' else 24
+    minimum = 4 if task == 'gene' or completion else 24
     if len(names) < minimum: raise ValueError(f'{"Gene" if task == "gene" else "Species"} Tree requires at least {minimum} taxa across the input.')
     if set(names) - observed: raise ValueError('Every taxon needs at least one observed A/C/G/T base across its loci.')
     data = f'{len(names)} {total}\n' + ''.join(

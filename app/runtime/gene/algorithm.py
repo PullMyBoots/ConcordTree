@@ -68,7 +68,7 @@ def fit(tree,names,sample,model,previous=None,*,max_iter=32):
 
 def infer(msa,out,*,model='GTR+FO+I+G4',sample_fraction=None,views=1,
           max_rounds=None,stop_ratio=.005,missing_data_model='standard',progress=None,initialize_fn=None,support_sink=None,
-          initializer_uses_all_sites=False,optimizer_iterations=32,min_gain=.001,checkpoint_fn=None):
+          initializer_uses_all_sites=False,optimizer_iterations=32,min_gain=.001,checkpoint_fn=None,backbone=None):
     if initialize_fn is None:raise ValueError('use UnifiedEngine to supply the release AP-NJ + MLP initializer')
     if views<1 or (max_rounds is not None and max_rounds<1):raise ValueError('positive views/rounds required')
     if sample_fraction is not None and not 0<sample_fraction<=1:raise ValueError('sample fraction in (0,1]')
@@ -149,6 +149,9 @@ def infer(msa,out,*,model='GTR+FO+I+G4',sample_fraction=None,views=1,
             scan_state=state_version
             scan_evidence=(plan.internal_edges,plan.branches,values['deltas'],values['profiled_baseline_gain'])
         proposals=plan.proposals(values,min_gain=min_gain) if nni and propose else []
+        if backbone is not None and proposals:
+            allowed=backbone.allowed_edges(tree.graph,tree.names,[p['edge'] for p in proposals])
+            proposals=[p for p,ok in zip(proposals,allowed) if ok]
         return values,proposals
     best=None;init_records=[]
     for view in range(views):
