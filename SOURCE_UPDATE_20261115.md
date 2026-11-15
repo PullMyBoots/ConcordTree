@@ -5,3 +5,5 @@ This source update synchronizes the current ConcordTree V1.0.2 application, back
 The public app retains its portable Web launchers, vendored Web dependencies, third-party notices, and the existing glibc-2.34 sequence-parser binary and hash guard. Its C++ source is byte-identical to the current local source. The app manifest records the complete public source inventory and local manifest hash.
 
 The complete local runtime, research inputs, run directories and raw experiment outputs are excluded from this public source checkout. No binary archive, container, GitHub Release or hardware portability claim was rebuilt or revalidated for this update. Earlier distribution validation remains historical; cloning this repository alone does not provide the scientific runtime.
+
+The public report retains only figures and compact data directly linked from its pages. Full experiment outputs, generated intermediates and runtime environments are stored in the separate workstation backup.
